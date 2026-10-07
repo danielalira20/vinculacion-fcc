@@ -8,6 +8,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from markupsafe import Markup
 from embeds import prepare_page, render_embed
+from presentation import prepare_presentation
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "src"
@@ -26,8 +27,9 @@ def build():
     site, pages, media = load("site.json"), load("pages.json"), load("media.json")
     experiences = load("experiences.json")
     media_titles = load("embedded-resources.json")
+    processes, employers = load("processes.json"), load("employers.json")
     page_titles = {p["path"]: p["title"] for p in pages}
-    pages = [prepare_page(page, media_titles, page_titles) for page in pages]
+    pages = [prepare_presentation(prepare_page(page, media_titles, page_titles), processes) for page in pages]
     for page in pages:
         if page["path"] == "academias/coordinaciones/index.html":
             page["title"] = "Coordinaciones de Academias"
@@ -46,8 +48,16 @@ def build():
             raise ValueError(f"Duplicate output: {path}")
         written.add(path)
         url = lambda target: relative(target, path)
-        local_body = lambda body: Markup(re.sub(r'@/([^"\s<>]+)', lambda m: url(m.group(1)), body))
-        html = env.get_template(template).render(site=site, pages=pages, media=media, experiences=experiences, coordinations=coordinations, url=url, local_body=local_body, current_path=path, **context)
+        flow_count = 0
+        def local_body(body):
+            def process(match):
+                nonlocal flow_count
+                flow_count += 1
+                key = match.group(1)
+                return env.get_template("components/process-flow.html").render(flow=processes[key], flow_id=f"{key}-{flow_count}", url=url)
+            body = re.sub(r'<!-- process-flow:([a-z]+) -->', process, body)
+            return Markup(re.sub(r'@/([^"\s<>]+)', lambda m: url(m.group(1)), body))
+        html = env.get_template(template).render(site=site, pages=pages, media=media, experiences=experiences, coordinations=coordinations, processes=processes, url=url, local_body=local_body, current_path=path, **context)
         target = DIST / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html, encoding="utf-8")
@@ -58,8 +68,9 @@ def build():
     for page in pages:
         active = page["section"] if page["section"] != "archivo" else "recursos"
         experience = experiences["academies"].get(page["path"])
-        template = "pages/coordinations.html" if page["path"] == "academias/coordinaciones/index.html" else "pages/academy.html" if experience else "pages/about.html" if page["path"] == "nosotros/index.html" else "pages/article.html"
-        render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience)
+        employer = employers.get(page["path"])
+        template = "pages/employer.html" if employer else "pages/coordinations.html" if page["path"] == "academias/coordinaciones/index.html" else "pages/academy.html" if experience else "pages/about.html" if page["path"] == "nosotros/index.html" else "pages/article.html"
+        render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience, employer=employer)
     render("buscar/index.html", "pages/search.html", title="Buscar", active="", description="Encuentra academias, certificaciones, trámites y recursos de Vinculación FCC.")
     search_index = [
         {"title": p["title"], "path": p["path"], "section": p["section"],

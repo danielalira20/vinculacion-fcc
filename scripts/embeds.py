@@ -1,6 +1,7 @@
 """Render supported media from migrated URLs without depending on WordPress."""
 import html
 import re
+from pathlib import Path
 from urllib.parse import parse_qs, urlencode, urlsplit
 
 UNAVAILABLE_VIDEOS = {
@@ -44,7 +45,7 @@ def render_embed(href, title):
         raise ValueError(f"Unsupported embedded resource: {href}")
     if spec["key"] in UNAVAILABLE_VIDEOS:
         return (f'<div class="resource-embed embed-unavailable"><div class="embed-heading"><strong>{html.escape(title)}</strong></div>'
-                f'<div class="media-unavailable"><span aria-hidden="true">▷</span><p>{html.escape(UNAVAILABLE_VIDEOS[spec["key"]])}</p>'
+                f'<div class="media-unavailable"><span aria-hidden="true">{(Path(__file__).resolve().parents[1] / "src/assets/icons/play.svg").read_text()}</span><p>{html.escape(UNAVAILABLE_VIDEOS[spec["key"]])}</p>'
                 '<a href="mailto:vinculacion.fcc@correo.buap.mx">Consultar el material con Vinculación</a></div></div>')
     if spec["key"] in PDF_PREVIEWS:
         prefix, count = PDF_PREVIEWS[spec["key"]]

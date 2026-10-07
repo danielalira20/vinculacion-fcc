@@ -34,6 +34,8 @@ src/
   content/                 Información, navegación y procedencia
     site.json              Textos del inicio, tarjetas y servicios
     experiences.json       Portadas, identidades y accesos de las Academias
+    employers.json         Bolsa de Trabajo y registros de Empresas/Vacantes
+    processes.json         Procesos nativos y sus requisitos
     coordinations.json     Directorio y presentaciones de las Academias
     embedded-resources.json Nombres de videos y materiales integrados
     pages.json             41 registros recuperados del sitio anterior
@@ -51,6 +53,7 @@ src/
     media/                 102 recursos recuperados y 18 vistas de la guía PDF
 scripts/
   build.py                 Generación de HTML y del índice de búsqueda
+  presentation.py         Procesos e iconos del contenido público
   embeds.py                Visores y normalización de recursos recuperados
   test_embeds.py           Pruebas de la migración multimedia
   check.py                 Comprobación de enlaces, archivos y estructura
@@ -65,6 +68,8 @@ docs/
 
 - Portada, Academias, Certificaciones, Empresas, Egresados, Nosotros y Recursos.
 - Menú móvil, filtros de Academias y búsqueda local que reconoce consultas sin acentos.
+- Bolsa de Trabajo y Vacantes con portadas propias, glass moderado y formularios integrados.
+- Cinco flujos en HTML seleccionable con detalles desplegables; iconos SVG sin emojis en la interfaz.
 - Coordinaciones con portada, directorio de contacto y galería de videos.
 - Videos, presentaciones de Canva, cinco formularios y guía PDF integrados en sus páginas.
 - Interfaz sin enlaces de procedencia ni dependencias del dominio que se retirará.

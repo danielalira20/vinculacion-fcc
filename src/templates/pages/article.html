@@ -22,7 +22,7 @@
 <p>Consulta con el Departamento de Vinculación para conocer los recursos disponibles.</p>
 <a class="button" href="mailto:{{ site.email }}">Contactar a Vinculación {{ icon('arrow') }}</a>
 </div>{% endif %}
-  {% if page.id in ['contenido-151', 'contenido-865', 'contenido-291', 'contenido-891'] %}<section class="transcription">
+  {% if page.id in ['contenido-151', 'contenido-865', 'contenido-291', 'contenido-891'] and not page.has_process_flow %}<section class="transcription">
 <h2>Información del material publicado</h2>{% for image in page.images if image.text_status == 'revisado contra imagen' %}<div class="transcription-text">{{ image.text }}</div>{% endfor %}</section>{% endif %}
   {% if page.pending_books %}<aside class="soft-note">{{ icon('book') }}<p>Para consultar los materiales completos, contacta a la coordinación de esta Academia.</p>
 </aside>{% endif %}

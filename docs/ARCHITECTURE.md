@@ -11,6 +11,9 @@ El navegador recibe archivos estáticos. Python se usa únicamente para construi
 - `site.json`: navegación, textos editoriales, catálogo de Academias y certificaciones, servicios y contacto.
 - `experiences.json`: composición editorial, identidad, accesos y contactos de las portadas. No sustituye el contenido original de `pages.json`.
 - `pages.json`: contenido recuperado, ruta nueva, procedencia, recursos y notas de vigencia. El texto original permanece junto al contenido convertido.
+- `employers.json`: contenido editorial de Bolsa de Trabajo y registros de Empresas y Vacantes.
+- `processes.json`: cinco procesos nativos, requisitos, acciones y referencias a las imágenes originales sustituidas.
+- `presentation.py`: adaptación de gráficos a marcadores de componentes y de emojis a SVG sin modificar los registros originales; los marcadores se renderizan con la plantilla común `process-flow.html`.
 - `coordinations.json`: personas, contactos, fotografías recuperadas y videos del directorio de Academias.
 - `embedded-resources.json`: nombres descriptivos de los materiales integrados.
 - `asset-sources.json`: trazabilidad de las imágenes y PDF locales. Los nombres derivados del hash evitan colisiones entre archivos llamados `image.png`.
@@ -40,3 +43,5 @@ Moodle: primero definir si solo se enlazarán cursos o si se necesitan cuentas c
 Edición de contenido: si el departamento requiere un panel, decidir quién edita, qué permisos tiene y cómo aprueba cambios. La arquitectura actual asume actualización mediante archivos y generación del sitio. No se implementa un panel ficticio.
 
 Publicación: alojamiento estático, dominio oficial y redirecciones por confirmar. La configuración de indexación y el aviso de privacidad deben revisarse antes de activar la versión pública.
+
+Los pasos usan elementos `details` nativos abiertos inicialmente. `process.js` añade únicamente el control conjunto para abrir/cerrar los detalles; el contenido y las acciones no dependen de JavaScript. La reconstrucción visual mantiene requisitos y contactos publicados, sin simular registro, validación ni finalización del trámite.

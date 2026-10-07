@@ -37,3 +37,9 @@ Los hallazgos completos, las transcripciones verificadas y el esquema visible de
 - Centro Certificador `7sViLbTvDKk`: retirado; Autodesk `Ar2L2i2A0aY`: privado. Sus lugares muestran una tarjeta de consulta con Vinculación y necesitan un nuevo material aprobado. Las referencias originales permanecen en `pages.json`.
 - Los otros 12 videos únicos muestran reproductor disponible; hay 14 instancias integradas porque algunos aparecen en varias páginas. Las tres presentaciones de Canva y los cinco formularios cargan en el navegador.
 - Los seis libros del plugin anterior siguen pendientes de sus archivos originales; no se sustituyen por documentos inventados.
+
+## Sustitución de gráficos de procesos
+
+Los gráficos de empresas, vacantes, compra y liberación se revisan como texto y se reconstruyen con elementos HTML. Los originales siguen en el respaldo y los recursos locales. La transcripción de Vacantes queda revisada contra su imagen. El recorrido AWS utiliza las instrucciones escritas del mismo registro; el gráfico original coloca varias flechas de Sí/No de forma incongruente. La falta de confirmación se presenta como una alternativa de ayuda, no como un paso obligatorio posterior al acceso. Los plazos y cifras conservan su condición de datos publicados que requieren actualización editorial.
+
+Los emojis heredados se reemplazan por SVG en la copia pública. `original_text` permanece intacto como registro histórico. Los botones con imágenes de Compra se sustituyen por enlaces legibles con las mismas acciones.

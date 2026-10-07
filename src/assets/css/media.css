@@ -14,6 +14,7 @@
 .embed-caption a { text-decoration: underline; text-underline-offset: 4px; }
 .media-unavailable { display: grid; justify-items: start; gap: 15px; padding: 28px; background: linear-gradient(120deg, #e7dfd1, #ded6e4); }
 .media-unavailable > span { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; border: 1px solid #292724; font-size: 34px; }
+.media-unavailable > span svg { width: 24px; height: 24px; }
 .media-unavailable p { margin: 0; font-size: 17px; }
 .media-unavailable a { font-size: 15px; text-decoration: underline; text-underline-offset: 4px; }
 .article-body .embed-heading strong { font-weight: 600; }

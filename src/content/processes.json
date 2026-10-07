@@ -1,0 +1,259 @@
+{
+  "vacantes": {
+    "asset": "assets/media/8e0f50617d4d96b1.png",
+    "eyebrow": "DE TU EMPRESA A NUESTRA COMUNIDAD",
+    "title": "Una vacante. Tres pasos.",
+    "emphasis": "Así la hacemos llegar.",
+    "intro": "Selecciona cada etapa para consultar su detalle.",
+    "note": "Este proceso se realiza por cada vacante que nos compartes.",
+    "steps": [
+      {
+        "title": "Registro",
+        "summary": "Cuéntanos qué perfil buscas.",
+        "body": "Llena la información requerida en el formulario de registro de vacantes.",
+        "icon": "document",
+        "theme": "peach",
+        "items": [],
+        "href": "#formulario",
+        "action": "Ir al formulario"
+      },
+      {
+        "title": "Correo y validación",
+        "summary": "Revisamos los detalles contigo.",
+        "body": "Envía el flyer de tu vacante a vinculacion.fcc@correo.buap.mx. Validamos que la información sea clara y completa.",
+        "icon": "mail",
+        "theme": "lavender",
+        "items": [],
+        "href": "mailto:vinculacion.fcc@correo.buap.mx",
+        "action": "Enviar correo"
+      },
+      {
+        "title": "Publicación",
+        "summary": "La oportunidad llega a la FCC.",
+        "body": "Publicamos en nuestras redes sociales y enviamos por correo a nuestra base de alumnos y egresados para difundir tus vacantes.",
+        "icon": "megaphone",
+        "theme": "sage",
+        "items": [],
+        "href": "",
+        "action": ""
+      }
+    ]
+  },
+  "empresas": {
+    "asset": "assets/media/4186965779d1135f.png",
+    "eyebrow": "EMPECEMOS UNA BUENA CONEXIÓN",
+    "title": "Tu empresa, más cerca",
+    "emphasis": "de nuestra comunidad.",
+    "intro": "Conoce el registro y los documentos que solicita Vinculación.",
+    "note": "El proceso publicado indica una respuesta en un lapso de 24 horas hábiles tras validar la información.",
+    "steps": [
+      {
+        "title": "Registra tu empresa",
+        "summary": "El primer punto de encuentro.",
+        "body": "Responde el formulario de registro de empresas.",
+        "icon": "building",
+        "theme": "peach",
+        "items": [],
+        "href": "#formulario",
+        "action": "Ir al formulario"
+      },
+      {
+        "title": "Envía tus documentos",
+        "summary": "La información que necesitamos.",
+        "body": "Envía los documentos a vinculacion.fcc@correo.buap.mx.",
+        "icon": "mail",
+        "theme": "lavender",
+        "items": [
+          "RFC de la empresa",
+          "INE del representante legal",
+          "Comprobante de domicilio de la empresa"
+        ],
+        "href": "mailto:vinculacion.fcc@correo.buap.mx",
+        "action": "Enviar correo"
+      },
+      {
+        "title": "Comparte tus vacantes",
+        "summary": "Abrimos el siguiente paso.",
+        "body": "Validamos tu información y te damos respuesta en un lapso de 24 horas hábiles para poder recibir tus vacantes.",
+        "icon": "briefcase",
+        "theme": "sage",
+        "items": [],
+        "href": "@/empresas/vacantes/index.html",
+        "action": "Conocer el registro de vacantes"
+      }
+    ]
+  },
+  "certificaciones": {
+    "asset": "assets/media/12dfe70a735d6cb4.png",
+    "eyebrow": "TU CERTIFICACIÓN, PASO A PASO",
+    "title": "Del registro al examen.",
+    "emphasis": "Un camino más claro.",
+    "intro": "Consulta el detalle de cada etapa antes de iniciar.",
+    "note": "Se debe generar una ficha de referencia por cada certificación cuando solicites más de una.",
+    "steps": [
+      {
+        "title": "Regístrate",
+        "summary": "Todos los días hábiles del año.",
+        "body": "Regístrate para solicitar el examen. Si solicitas más de una certificación, realiza un registro por cada una.",
+        "icon": "document",
+        "theme": "peach",
+        "items": [],
+        "href": "#formulario",
+        "action": "Ir al formulario"
+      },
+      {
+        "title": "Descarga tu ficha",
+        "summary": "Genera la referencia de pago.",
+        "body": "Descarga la ficha de pago en SiPAGO BUAP. Puedes consultar la guía de pagos en esta página.",
+        "icon": "download",
+        "theme": "sage",
+        "items": [],
+        "href": "https://sipago.buap.mx/",
+        "action": "Acceder a SiPAGO"
+      },
+      {
+        "title": "Envía tus comprobantes",
+        "summary": "Reúne los documentos.",
+        "body": "Envía los documentos a vinculacion.fcc@correo.buap.mx. Para comunidad BUAP, incluye el comprobante que lo acredite.",
+        "icon": "mail",
+        "theme": "lavender",
+        "items": [
+          "Comprobante de pago",
+          "Ficha de pago",
+          "INE"
+        ],
+        "href": "mailto:vinculacion.fcc@correo.buap.mx",
+        "action": "Enviar correo"
+      },
+      {
+        "title": "Verificación",
+        "summary": "Una vez recibido el pago.",
+        "body": "Verificamos los datos y proporcionamos el material de estudio.",
+        "icon": "check",
+        "theme": "rose",
+        "items": [],
+        "href": "",
+        "action": ""
+      }
+    ]
+  },
+  "liberacion": {
+    "asset": "assets/media/059790ba629a1388.png",
+    "eyebrow": "CIERRA UNA ETAPA, ABRE LA SIGUIENTE",
+    "title": "Tu liberación,",
+    "emphasis": "paso a paso.",
+    "intro": "Consulta los requisitos y el recorrido de tu solicitud.",
+    "note": "El proceso publicado indica un plazo no mayor a 24 horas hábiles para recibir por correo el folio de seguimiento, después de la revisión.",
+    "steps": [
+      {
+        "title": "Responde la encuesta",
+        "summary": "Comparte tu experiencia.",
+        "body": "Completa la encuesta de egresados que aparece en esta página.",
+        "icon": "document",
+        "theme": "peach",
+        "items": [],
+        "href": "#formulario",
+        "action": "Ir a la encuesta"
+      },
+      {
+        "title": "Guarda tu captura",
+        "summary": "Al terminar la encuesta.",
+        "body": "Toma una captura de pantalla que muestre que finalizaste el formulario.",
+        "icon": "capture",
+        "theme": "sage",
+        "items": [],
+        "href": "",
+        "action": ""
+      },
+      {
+        "title": "Envía tu solicitud",
+        "summary": "Todo en un mismo correo.",
+        "body": "Envía los siguientes datos a vinculacion.fcc@correo.buap.mx.",
+        "icon": "mail",
+        "theme": "lavender",
+        "items": [
+          "Captura de finalización del formulario",
+          "Nombre completo",
+          "Matrícula y carrera"
+        ],
+        "href": "mailto:vinculacion.fcc@correo.buap.mx",
+        "action": "Enviar correo"
+      },
+      {
+        "title": "Recibe tu folio",
+        "summary": "Revisamos tu estatus.",
+        "body": "Revisamos tu estatus en el departamento. En un plazo no mayor a 24 horas hábiles recibirás por correo el folio de seguimiento.",
+        "icon": "check",
+        "theme": "rose",
+        "items": [],
+        "href": "",
+        "action": ""
+      }
+    ]
+  },
+  "aws": {
+    "asset": "assets/media/ffbf35fc2dfd853c.png",
+    "eyebrow": "INSCRIPCIÓN A AWS ACADEMY",
+    "title": "De la convocatoria",
+    "emphasis": "a tu primer curso.",
+    "intro": "Consulta qué hacer antes y después de enviar tu registro.",
+    "note": "Confirma la convocatoria, sus fechas y los requisitos con la coordinación de AWS Academy antes de registrarte.",
+    "steps": [
+      {
+        "title": "Consulta la convocatoria",
+        "summary": "Primero, revisa el periodo.",
+        "body": "Espera la convocatoria publicada en los canales de la Facultad y el correo institucional. Si no hay convocatoria abierta, espera el siguiente periodo.",
+        "icon": "clock",
+        "theme": "peach",
+        "items": [],
+        "href": "",
+        "action": ""
+      },
+      {
+        "title": "Envía el registro",
+        "summary": "Cuando se abra la convocatoria.",
+        "body": "Usa el enlace proporcionado, selecciona tus cursos y envía el formulario. Guarda el comprobante.",
+        "icon": "document",
+        "theme": "sage",
+        "items": [
+          "Nombre completo",
+          "Matrícula",
+          "Correo institucional",
+          "Carrera y semestre"
+        ],
+        "href": "",
+        "action": ""
+      },
+      {
+        "title": "Confirma tu inscripción",
+        "summary": "Revisa el correo institucional.",
+        "body": "El manual indica un plazo de 3 a 5 días hábiles para recibir los cursos asignados, fechas, horarios y el enlace para activar tu cuenta.",
+        "icon": "mail",
+        "theme": "lavender",
+        "items": [],
+        "href": "",
+        "action": ""
+      },
+      {
+        "title": "Activa tu cuenta",
+        "summary": "Accede a la plataforma.",
+        "body": "Utiliza el enlace recibido para acceder a AWS Academy y completar la bienvenida a la plataforma.",
+        "icon": "cloud",
+        "theme": "rose",
+        "items": [],
+        "href": "",
+        "action": ""
+      }
+    ],
+    "alternative": {
+      "title": "¿No llegó el correo?",
+      "summary": "Revisa también la carpeta de spam.",
+      "body": "Si no recibes la confirmación, revisa spam y contacta a academia.aws@correo.buap.mx.",
+      "icon": "search",
+      "theme": "sage",
+      "items": [],
+      "href": "mailto:academia.aws@correo.buap.mx",
+      "action": "Contactar a AWS Academy"
+    }
+  }
+}

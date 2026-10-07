@@ -72,3 +72,11 @@ Comparar una referencia principal de color/tipografía, una de catálogo y una d
 ## Coordinaciones y materiales
 
 Portada arena/salvia con círculos decorativos y cuatro piezas pastel inclinadas con los logotipos recuperados. Directorio en tarjetas amplias con fotografías existentes, símbolos para las coordinaciones sin retrato, ubicación y correo legible. La galería conserva las mismas curvas y superficies cálidas. Los visores usan un marco sólido para proteger la legibilidad del contenido del proveedor; no se aplica glass sobre videos, documentos o formularios.
+
+## Bolsa de Trabajo y registro de oportunidades
+
+La Bolsa de Trabajo utiliza una red visual nativa que conecta Talento FCC con empleo, prácticas y servicio social. Vacantes y Empresas usan una pieza editorial en forma de tarjeta inclinada, con pequeñas superficies glass superpuestas. Las ilustraciones se dibujan con HTML, CSS e iconos locales, para que texto y formas se adapten al tamaño de pantalla. Los formularios conservan superficies sólidas y legibles.
+
+Los procesos se convierten en tarjetas conectadas y numeradas. Cada tarjeta permite consultar detalles, requisitos y acciones correspondientes. El glass se reserva a acentos sobre fondos cálidos; la animación aparece en hover y revelado, respetando la preferencia de movimiento reducido.
+
+Regla de la usuaria: PROHIBIDO EMOJIS en la interfaz. Usar iconos SVG locales. Los símbolos heredados se sustituyen durante la generación; las copias históricas permanecen como respaldo.

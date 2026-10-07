@@ -1,0 +1,64 @@
+{
+  "empresas/bolsa-de-trabajo/index.html": {
+    "kind": "board",
+    "eyebrow": "BOLSA DE TRABAJO · FCC BUAP",
+    "headline": "El talento encuentra",
+    "emphasis": "su siguiente paso.",
+    "intro": "Conectamos a estudiantes y egresados con oportunidades laborales, prácticas profesionales y servicio social.",
+    "primary": "Encuentra tu camino",
+    "primary_href": "#oportunidades",
+    "secondary": "Soy una empresa",
+    "secondary_href": "#empresas",
+    "paragraphs": [
+      "La Bolsa de Trabajo de la Facultad de Ciencias de la Computación tiene el compromiso de ser un centro de información y consulta que vincule a nuestros alumnos y egresados con las necesidades profesionales de las empresas y organizaciones, brindando una alternativa viable y sustentable que cubra el perfil que solicitan.",
+      "Coordinación Bolsa de Trabajo:",
+      "Correo: bolsadetrabajo.fcc@correo.buap.mx",
+      "¡ BIENVENIDOS !",
+      "Tenemos más de 100 empresas Globales vinculadas a nuestra Bolsa de Trabajo.",
+      "Tenemos la fortuna de tener ese acercamiento con cada empresa que quiere apoyar y aportar a nuestra comunidad.",
+      "Empresas que ofrecen Practicas Profesionales y Servicio Social, además de vacantes, realizamos convenios legales para asegurar los beneficios oficialmente por ambas partes."
+    ],
+    "mission": "La Bolsa de Trabajo de la Facultad de Ciencias de la Computación tiene el compromiso de ser un centro de información y consulta que vincule a nuestros alumnos y egresados con las necesidades profesionales de las empresas y organizaciones, brindando una alternativa viable y sustentable que cubra el perfil que solicitan.",
+    "connection": "Tenemos la fortuna de tener ese acercamiento con cada empresa que quiere apoyar y aportar a nuestra comunidad.",
+    "agreements": "Empresas que ofrecen Practicas Profesionales y Servicio Social, además de vacantes, realizamos convenios legales para asegurar los beneficios oficialmente por ambas partes."
+  },
+  "empresas/vacantes/index.html": {
+    "kind": "vacancies",
+    "eyebrow": "EMPRESAS · REGISTRO DE VACANTES",
+    "headline": "Una oportunidad.",
+    "emphasis": "Muchas posibilidades.",
+    "intro": "Acerca tu vacante al talento de la Facultad de Ciencias de la Computación. Te acompañamos desde el registro hasta la difusión.",
+    "primary": "Registrar una vacante",
+    "primary_href": "#formulario",
+    "secondary": "Conocer el proceso",
+    "secondary_href": "#proceso",
+    "flow": "vacantes",
+    "form": "https://forms.office.com/Pages/ResponsePage.aspx?id=x8fjOlHq3kaVQBL0EQ6sm1LztMIMB2hMjDa-DDMcbbdUOE4yMVc0UDhJUU83MkZTSUZNM1BVWEFCSy4u&embed=true",
+    "form_title": "Registro de vacantes · Bolsa de Trabajo FCC",
+    "paragraphs": [
+      "Una vez que se ha validado la constitución legal de una empresa, esta puede solicitar vacantes de acuerdo con los perfiles de egreso de la Facultad de Ciencias de la Computación.",
+      "Guiamos a las empresas en la información necesaria para definir el perfil de una vacante, enfocada a los perfiles de egreso de nuestra Facultad y definida por la Coordinación de Bolsa de Trabajo de la FCC."
+    ]
+  },
+  "empresas/registro/index.html": {
+    "kind": "registration",
+    "eyebrow": "EMPRESAS · CONECTA CON LA FCC",
+    "headline": "Las buenas alianzas",
+    "emphasis": "empiezan aquí.",
+    "intro": "Forma parte de la Bolsa de Trabajo y acerca tus oportunidades a estudiantes y egresados de la FCC.",
+    "primary": "Registrar mi empresa",
+    "primary_href": "#formulario",
+    "secondary": "Conocer el proceso",
+    "secondary_href": "#proceso",
+    "flow": "empresas",
+    "form": "https://forms.office.com/Pages/ResponsePage.aspx?id=x8fjOlHq3kaVQBL0EQ6sm1LztMIMB2hMjDa-DDMcbbdUQTI1SDFIVVM0UFVWR1FCWVlJRjZOVUk4MC4u&embed=true",
+    "form_title": "Registro de empresas · Bolsa de Trabajo FCC",
+    "paragraphs": [
+      "En la Facultad de Ciencias de la Computación estamos muy interesados en vincularnos con las empresas de tal forma nuestra comunidad pueda insertarse en cualquier sector productivo. Será un placer poder participar activamente con las empresas que ofrezcan oportunidades laborales para nuestros alumnos y egresados.",
+      "Tenemos más de 100 empresas Globales vinculadas a nuestra Bolsa de Trabajo.",
+      "Tenemos la fortuna de tener ese acercamiento con cada empresa que quiere apoyar y aportar a nuestra comunidad.",
+      "Empresas que ofrecen Practicas Profesionales y Servicio Social, además de vacantes, realizamos convenios legales para asegurar los beneficios oficialmente por ambas partes.",
+      "Si tu empresa está interesada en ser parte de nuestra Bolsa de Trabajo, por favor llena el siguiente formulario para tu registro:"
+    ]
+  }
+}

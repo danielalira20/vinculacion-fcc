@@ -3,7 +3,7 @@
 ## Generación y archivos
 
 - 48 páginas HTML generadas a partir de 41 registros recuperados y las páginas nuevas de presentación y búsqueda.
-- Comprobación de 1353 destinos locales entre páginas, imágenes, estilos, scripts y fragmentos de navegación.
+- Comprobación de 1337 destinos locales entre páginas, imágenes, estilos, scripts y fragmentos de navegación.
 - Verificación de importaciones CSS y JavaScript, identificadores HTML únicos, un título principal por página, idioma español y región principal de contenido.
 - Sin manejadores de eventos inline ni scripts del WordPress anterior. Visores limitados a YouTube, Canva, Microsoft Forms y un PDF local; títulos accesibles, carga diferida y política de referencia comprobados.
 - Tipografía local cargada en el navegador.
@@ -39,3 +39,12 @@ Las capturas están en `docs/previews/`. No se han enviado formularios ni realiz
 - Coordinaciones y páginas de visores comprobadas a 320 px: sin desbordamiento horizontal; los reproductores conservan al menos 200 px de alto y se ajustan al ancho disponible.
 - Guía SiPAGO: 18 páginas renderizadas localmente y revisadas visualmente. Visor con desplazamiento, foco de teclado, ampliación por página y enlace al PDF original; evita el panel vacío del visor PDF del navegador.
 - Oracle reprodujo dentro de la página durante la prueba. La disponibilidad de proveedores externos puede cambiar.
+
+## Bolsa de Trabajo, Vacantes y procesos nativos
+
+- Bolsa de Trabajo, Registro de Vacantes y Registro de Empresas usan una composición editorial propia con geometría nativa, glass moderado y contactos reales. No se crean ofertas de empleo ficticias.
+- Cinco flujos reconstruidos en HTML seleccionable: registro de empresas, registro de vacantes, compra de certificaciones, liberación y registro AWS. Cada paso usa un elemento `details` nativo; un botón permite desplegar o contraer todos los pasos. El formulario conserva su incrustación original.
+- Ratón y teclado comprobados para el control conjunto y un paso individual. Los detalles quedan abiertos en el HTML inicial para que el contenido esté disponible sin JavaScript.
+- Páginas afectadas comprobadas a 320 y 390 px, y Bolsa, Vacantes, Empresas y Compra a 900 px, sin desbordamiento horizontal. El formulario de Vacantes muestra sus campos dentro de la página; no se envían datos.
+- La revisión automática de las 48 páginas rechaza emojis en el HTML público y cualquier referencia a las cinco imágenes de flujo reemplazadas. Los iconos son SVG locales.
+- Los textos originales y las referencias de los 41 registros se compararon con la revisión anterior y permanecen intactos. Se revisó contra la imagen la transcripción del flujo de Vacantes.

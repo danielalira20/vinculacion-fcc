@@ -6,6 +6,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 from embeds import embed_spec
+from presentation import EMOJI
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -61,6 +62,8 @@ def check():
         document = Document()
         html = path.read_text(encoding="utf-8")
         document.feed(html)
+        if EMOJI.search(html):
+            document.errors.append("Emoji exposed in the public interface")
         if any(label in html for label in ("Fuente de esta información", "Fuentes de información", "Consultar publicación original", "Abrir recurso externo", "Ver recurso externo", "vinculacion.cs.buap.mx")):
             document.errors.append("Legacy provenance or external-resource placeholder exposed in the interface")
         documents[path.resolve()] = document
@@ -99,6 +102,11 @@ def check():
             if not (path.parent / reference).is_file():
                 errors.append(f"{path.name}: missing stylesheet/module asset {reference}")
     pages = json.loads((ROOT / "src/content/pages.json").read_text())
+    processes = json.loads((ROOT / "src/content/processes.json").read_text())
+    for path, document in documents.items():
+        for reference in document.references:
+            if any(urlsplit(reference).path.endswith(flow["asset"]) for flow in processes.values()):
+                errors.append(f"{path.name}: process still rendered as a raster image")
     for page in pages:
         if (DIST / page["path"]).resolve() not in documents:
             errors.append(f"Missing recovered page {page['id']}")
