@@ -29,10 +29,10 @@ def embed_spec(href):
         match = re.fullmatch(r"/design/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/view", parsed.path)
         if match:
             return {"key": match.group(1), "kind": "presentation", "src": f"https://www.canva.com{parsed.path}?embed", "link": f"https://www.canva.com{parsed.path}", "action": "Abrir presentación en Canva"}
-    if parsed.scheme == "https" and parsed.hostname == "forms.office.com" and parsed.path.lower() == "/pages/responsepage.aspx":
+    if parsed.scheme == "https" and parsed.hostname in {"forms.office.com", "forms.cloud.microsoft"} and parsed.path.lower() == "/pages/responsepage.aspx":
         form_id = query.get("id", [""])[0]
         if re.fullmatch(r"[A-Za-z0-9_-]+", form_id):
-            base = "https://forms.office.com/Pages/ResponsePage.aspx"
+            base = f"https://{parsed.hostname}/Pages/ResponsePage.aspx"
             return {"key": form_id, "kind": "form", "src": base + "?" + urlencode({"id": form_id, "embed": "true"}), "link": base + "?" + urlencode({"id": form_id}), "action": "Abrir formulario en una ventana"}
     if re.fullmatch(r"@/assets/media/[a-f0-9]{16}\.pdf", href):
         return {"key": href, "kind": "pdf", "src": href, "link": href, "action": "Abrir documento PDF"}

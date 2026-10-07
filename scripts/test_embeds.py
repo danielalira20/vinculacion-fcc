@@ -40,6 +40,14 @@ class EmbedTests(unittest.TestCase):
         self.assertIn("sipago-page-18.jpg", pdf)
         self.assertIn('href="@/assets/media/a68c6efe6ff18ca9.pdf"', pdf)
 
+    def test_microsoft_forms_current_host_is_allowed_without_lookalikes(self):
+        spec = embed_spec("https://forms.cloud.microsoft/pages/responsepage.aspx?id=abc_DEF-123&route=shorturl")
+        self.assertEqual(spec["kind"], "form")
+        self.assertIn("https://forms.cloud.microsoft/", spec["src"])
+        self.assertIn("embed=true", spec["src"])
+        self.assertNotIn("route=", spec["src"])
+        self.assertIsNone(embed_spec("https://forms.cloud.microsoft.evil.test/pages/responsepage.aspx?id=abc"))
+
     def test_retired_videos_have_no_broken_player(self):
         markup = render_embed("https://www.youtube.com/embed/Ar2L2i2A0aY", "Autodesk")
         self.assertNotIn("<iframe", markup)

@@ -1,0 +1,27 @@
+<div class="learning-content wrap theme-{{ experience.theme }}" id="informacion">
+  <section class="learning-intro"><p class="eyebrow">CONOCE {{ experience.name }}</p><h2>{{ learning.heading }}<br><span class="serif">{{ learning.emphasis }}</span></h2><div><p>{{ learning.summary }}</p>{% if learning.kind == 'oracle' %}<p>{{ learning.promise }}</p>{% endif %}</div></section>
+  {% if learning.kind == 'oracle' %}
+  <section class="oracle-workbench" aria-labelledby="oracle-areas">
+    <div class="learning-section-head"><div><p class="eyebrow">CURSOS Y TALLERES</p><h2 id="oracle-areas">Elige por dónde empezar.</h2></div><a class="text-link" href="{{ url(learning.catalog) }}">Explorar los 8 cursos {{ icon('arrow') }}</a></div>
+    <div class="oracle-areas">{% for item in learning.areas %}<a href="{{ url(learning.catalog) }}" class="oracle-area"><span class="learning-line-icon">{{ icon(item[0]) }}</span><span class="learning-index">0{{ loop.index }}</span><h3>{{ item[1] }}</h3><p>{{ item[2] }}</p><span class="text-link">Ver cursos {{ icon('arrow') }}</span></a>{% endfor %}</div>
+    <div class="oracle-community"><div><span class="learning-line-icon">{{ icon('facebook') }}</span><h3>La conversación también sigue fuera del aula.</h3><p>Consulta publicaciones y avisos de Oracle Academy FCC BUAP.</p></div><a class="button button-light" href="{{ experience.social }}" target="_blank" rel="noopener">Visitar Facebook {{ icon('external') }}</a></div>
+  </section>
+  {% elif learning.kind == 'aws' %}
+  <section class="benefit-workbench" data-learning-panels aria-labelledby="benefits-title">
+    <div class="learning-section-head"><div><p class="eyebrow">BENEFICIOS DEL PROGRAMA</p><h2 id="benefits-title">Una nube. Distintas posibilidades.</h2></div><img class="aws-partner" src="{{ url('assets/media/0345cc0abb099e69.png') }}" alt="AWS Partner · Education Competency · Consulting" width="193" height="194" loading="lazy"></div>
+    <div class="learning-tabs" data-panel-controls hidden aria-label="Beneficios por audiencia">{% for benefit in learning.benefits %}<button type="button" data-panel-target="benefit-{{ loop.index }}">{{ icon(benefit.icon) }}{{ benefit.name }}</button>{% endfor %}</div>
+    {% for benefit in learning.benefits %}<section class="benefit-panel" id="benefit-{{ loop.index }}" data-learning-panel><div class="benefit-title"><span class="learning-line-icon">{{ icon(benefit.icon) }}</span><p>{{ benefit.name }}</p><h3>{{ benefit.lead }}</h3></div><ol>{% for item in benefit['items'] %}<li><span>0{{ loop.index }}</span><p>{{ item }}</p></li>{% endfor %}</ol></section>{% endfor %}
+    <p class="learning-fineprint">{{ learning.benefit_note }}</p>
+  </section>
+  <section class="learning-media-row"><div><p class="eyebrow">CONOCE AWS</p><h2>Aprender<br><span class="serif">en la nube.</span></h2><p>Conoce una experiencia de formación con AWS Academy y explora los recursos del programa.</p><a class="text-link" href="{{ url('recursos/inscripcion-aws/index.html') }}">Preparar mi inscripción {{ icon('arrow') }}</a></div>{{ embedded_media(learning.video, 'AWS Academy Emerging Talent · Una experiencia de formación') }}</section>
+  {% else %}
+  <section class="program-workbench" data-learning-panels aria-labelledby="programs-title">
+    <div class="learning-section-head"><div><p class="eyebrow">PROGRAMAS DE LA ACADEMIA</p><h2 id="programs-title">Tres maneras de profundizar.</h2></div><span class="learning-line-icon">{{ icon('shield') }}</span></div>
+    <div class="learning-tabs program-tabs" data-panel-controls hidden aria-label="Programas EC-Council">{% for program in learning.programs %}<button type="button" data-panel-target="program-{{ loop.index }}">{{ icon(program.icon) }}<span><strong>{{ program.code }}</strong><small>{{ program.name }}</small></span></button>{% endfor %}</div>
+    {% for program in learning.programs %}<section class="program-panel" id="program-{{ loop.index }}" data-learning-panel><div class="program-description"><img src="{{ url(program.logo) }}" alt="{{ program.code }}" width="220" height="100" loading="lazy"><p class="eyebrow">{{ program.code }}</p><h3>{{ program.name }}</h3><p>{{ program.description }}</p></div>{{ embedded_media(program.embed, 'Presentación · ' + program.name) }}</section>{% endfor %}
+  </section>
+  <section class="security-map" aria-labelledby="security-map-title"><div class="learning-section-head"><div><p class="eyebrow">MAPA GENERAL EC-COUNCIL</p><h2 id="security-map-title">Un campo con muchas rutas.</h2></div><p>Explora sus niveles y especialidades. La oferta local de esta Academia se presenta arriba.</p></div><ol class="security-stages">{% for stage in learning.map %}<li><details {% if loop.index == 4 %}open{% endif %}><summary><span class="map-number">0{{ loop.index }}</span><span><small>{{ stage.detail }}</small><strong>{{ stage.name }}</strong></span><span class="map-expand" aria-hidden="true">{{ icon('arrow') }}</span></summary><ul>{% for code in stage.codes %}<li>{{ code }}</li>{% endfor %}</ul></details></li>{% endfor %}</ol></section>
+  <section class="learning-media-row"><div><p class="eyebrow">EN VIDEO</p><h2>Acércate a<br><span class="serif">EC-Council.</span></h2><p>Consulta la presentación de la Academia sin salir de esta página.</p></div>{{ embedded_media(learning.video, 'Presentación de EC-Council') }}</section>
+  {% endif %}
+  {% include 'components/learning-contact.html' %}
+</div>

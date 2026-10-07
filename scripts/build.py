@@ -27,6 +27,7 @@ def relative(target, current):
 def build():
     site, pages, media = load("site.json"), load("pages.json"), load("media.json")
     experiences = load("experiences.json")
+    learning_data = load("learning.json")
     media_titles = load("embedded-resources.json")
     processes, employers = load("processes.json"), load("employers.json")
     page_titles = {p["path"]: p["title"] for p in pages}
@@ -93,12 +94,14 @@ def build():
         active = page["section"] if page["section"] != "archivo" else "recursos"
         experience = experiences["academies"].get(page["path"])
         employer = employers.get(page["path"])
-        template = "pages/employer.html" if employer else "pages/coordinations.html" if page["path"] == "academias/coordinaciones/index.html" else "pages/academy.html" if experience else "pages/about.html" if page["path"] == "nosotros/index.html" else "pages/article.html"
-        render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience, employer=employer)
+        catalog = learning_data["catalogs"].get(page["path"])
+        learning = learning_data["profiles"].get(page["path"])
+        template = "pages/learning-catalog.html" if catalog else "pages/aws-guide.html" if page["path"] == "recursos/inscripcion-aws/index.html" else "pages/employer.html" if employer else "pages/coordinations.html" if page["path"] == "academias/coordinaciones/index.html" else "pages/academy.html" if experience else "pages/about.html" if page["path"] == "nosotros/index.html" else "pages/article.html"
+        render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience, employer=employer, catalog=catalog, learning=learning)
     render("buscar/index.html", "pages/search.html", title="Buscar", active="", description="Encuentra academias, certificaciones, trámites y recursos de Vinculación FCC.")
     search_index = [
         {"title": p["title"], "path": p["path"], "section": p["section"],
-         "text": p["original_text"] + "\n" + "\n".join(image["text"] for image in p["images"] if image["text_status"] == "revisado contra imagen"),
+         "text": p["original_text"] + "\n" + "\n".join(course["name"] for course in learning_data["catalogs"].get(p["path"], {}).get("courses", [])) + "\n" + "\n".join(image["text"] for image in p["images"] if image["text_status"] == "revisado contra imagen"),
          "summary": p["summary"]}
         for p in pages if p["id"] != "contenido-2141"
     ]

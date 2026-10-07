@@ -212,7 +212,7 @@
       {
         "title": "Envía el registro",
         "summary": "Cuando se abra la convocatoria.",
-        "body": "Usa el enlace proporcionado, selecciona tus cursos y envía el formulario. Guarda el comprobante.",
+        "body": "Usa el enlace de la convocatoria, selecciona tus cursos y guarda el comprobante. Sigue las instrucciones del formulario sobre registros individuales por curso.",
         "icon": "document",
         "theme": "sage",
         "items": [

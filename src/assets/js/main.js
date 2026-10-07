@@ -5,9 +5,13 @@ import { initializeMotion } from './motion.js';
 import { initializeProcesses } from './process.js';
 import { initializeAcademyVideos } from './academy-video.js';
 
+import { initializeLearning } from './learning.js';
+
 initializeNavigation();
 initializeCatalog();
 initializeSearch();
 initializeMotion();
 initializeProcesses();
 initializeAcademyVideos();
+
+initializeLearning();

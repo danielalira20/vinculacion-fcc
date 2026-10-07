@@ -36,6 +36,7 @@ src/
     experiences.json       Portadas, identidades y accesos de las Academias
     employers.json         Bolsa de Trabajo y registros de Empresas/Vacantes
     processes.json         Procesos nativos y sus requisitos
+    learning.json          Cursos, beneficios y programas transcritos a HTML
     coordinations.json     Directorio y presentaciones de las Academias
     embedded-resources.json Nombres de videos y materiales integrados
     pages.json             41 registros recuperados del sitio anterior
@@ -62,6 +63,7 @@ docs/
   DESIGN.md                Decisiones visuales y referencias
   ARCHITECTURE.md          Arquitectura y mantenimiento
   MIGRATION.md             Cobertura y asuntos pendientes
+  ACADEMY-REDESIGN.md       Referencias de Refero y revisión de las seis páginas
 ```
 
 ## Qué incluye
@@ -72,7 +74,9 @@ docs/
 - Bolsa de Trabajo y Vacantes con portadas propias, glass moderado y formularios integrados.
 - Cinco flujos en HTML seleccionable con detalles desplegables; iconos SVG sin emojis en la interfaz.
 - Coordinaciones con portada, directorio de contacto y galería de videos.
-- Videos, presentaciones de Canva, cinco formularios y guía PDF integrados en sus páginas.
+- Videos, presentaciones de Canva, seis formularios y guía PDF integrados en sus páginas.
+- Catálogos filtrables: ocho cursos de Oracle y nueve de AWS; beneficios por audiencia, selector de programas EC-Council y mapa de formación en HTML.
+- Guía de inscripción AWS compacta, lista de preparación y preguntas desplegables.
 - Interfaz sin enlaces de procedencia ni dependencias del dominio que se retirará.
 - Texto accesible de cuatro materiales gráficos revisados durante el respaldo.
 - Notas de vigencia para precios y convocatorias históricas.
@@ -84,9 +88,9 @@ docs/
 
 Es una versión de revisión, no una publicación oficial. La generación incluye `noindex` y `robots.txt` para evitar indexación accidental. Antes de publicar hay que validar responsables, contactos, precios, convocatorias, textos de carteles y materiales faltantes con el departamento; revisar el aviso de privacidad institucional aplicable; y definir dominio, alojamiento y redirecciones. La tabla `redirect-map.json` se genera como referencia, pero no configura el servidor por sí sola.
 
-Los formularios se abren mediante enlaces a sus proveedores actuales. El sitio no captura ni almacena datos personales. Moodle está pendiente de requisitos; todavía no hay cuentas, seguimiento de progreso ni sincronización con esa plataforma.
+Los formularios integrados se sirven desde sus proveedores actuales y también ofrecen un enlace opcional para abrirlos aparte. El sitio no captura ni almacena datos personales. Moodle está pendiente de requisitos; todavía no hay cuentas, seguimiento de progreso ni sincronización con esa plataforma.
 
-El repositorio es local. No se ha creado un repositorio remoto ni publicado el sitio. Refero no está conectado: se usaron las referencias visuales compartidas en la conversación.
+El repositorio es local. No se ha creado un repositorio remoto ni publicado el sitio. Las herramientas MCP de Refero no están conectadas. Se usaron las referencias visuales del usuario y se investigaron Podia, Heptabase y Syllabus en la biblioteca pública de Refero Styles; ver `docs/ACADEMY-REDESIGN.md`.
 
 ## Reimportar un respaldo
 

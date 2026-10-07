@@ -1,0 +1,303 @@
+{
+  "catalogs": {
+    "academias/oracle/recursos/index.html": {
+      "brand": "Oracle Academy",
+      "theme": "rose",
+      "icon": "code",
+      "logo": "assets/media/905a4aaa1e22a320.png",
+      "heading": "Una biblioteca para tus próximas ideas.",
+      "intro": "Explora los cursos y talleres publicados para la plataforma Oracle Academy.",
+      "period": "20 de mayo — 4 de junio de 2025",
+      "period_label": "Inscripciones de la convocatoria publicada",
+      "notice": "Esta convocatoria corresponde a 2025. Consulta con la coordinación las próximas fechas y los materiales disponibles.",
+      "poster": "assets/media/be4a26217a1d640a.png",
+      "contact": "coord_oracleacademia.fcc@correo.buap.mx",
+      "person": "Mtra. María Antonia Ruíz Díaz",
+      "parent": "academias/oracle/index.html",
+      "form": "https://forms.office.com/r/cHBckaBpNM",
+      "form_status": "El formulario publicado no permite el acceso público. Solicita el registro vigente a la coordinación.",
+      "facts": [
+        [
+          "08",
+          "Cursos publicados"
+        ],
+        [
+          "04",
+          "Áreas de formación"
+        ]
+      ],
+      "groups": [
+        "Java",
+        "Bases de datos",
+        "Desarrollo",
+        "Cloud"
+      ],
+      "courses": [
+        {
+          "name": "Java Fundamentals",
+          "group": "Java"
+        },
+        {
+          "name": "Java Foundations",
+          "group": "Java"
+        },
+        {
+          "name": "Java for AP Computer Science A",
+          "group": "Java"
+        },
+        {
+          "name": "Database Foundations",
+          "group": "Bases de datos"
+        },
+        {
+          "name": "Database Design",
+          "group": "Bases de datos"
+        },
+        {
+          "name": "Application Development Foundations",
+          "group": "Desarrollo"
+        },
+        {
+          "name": "Applied Database Systems",
+          "group": "Bases de datos"
+        },
+        {
+          "name": "Oracle Cloud Infrastructure Foundations I",
+          "group": "Cloud"
+        }
+      ]
+    },
+    "academias/aws/oferta/index.html": {
+      "brand": "AWS Academy",
+      "theme": "peach",
+      "icon": "cloud",
+      "logo": "assets/media/172ae1b4f68a707b.png",
+      "heading": "Tu siguiente habilidad vive en la nube.",
+      "intro": "Formación en cloud, datos e inteligencia artificial para la comunidad BUAP. Encuentra los cursos de la oferta publicada.",
+      "period": "15 de noviembre — 28 de febrero de 2026",
+      "period_label": "Periodo de la oferta publicada",
+      "notice": "Esta oferta finalizó el 28 de febrero de 2026. Consulta con AWS Academy las próximas convocatorias.",
+      "poster": "assets/media/a23012c9e4ee4fa3.png",
+      "contact": "academia.aws@correo.buap.mx",
+      "person": "Dr. Juan Manuel González Calleros · CC03-007 · Ext. 3923",
+      "parent": "academias/aws/index.html",
+      "form": "https://forms.office.com/r/iEY2jMfJ4g",
+      "form_status": "El enlace publicado ahora muestra un formulario titulado «Inscripción a cursos de la academia AWS BUAP Otoño 2026». Confirma las fechas y condiciones del periodo con la Academia. El formulario solicita un registro individual por cada curso.",
+      "facts": [
+        [
+          "09",
+          "Cursos publicados"
+        ],
+        [
+          "≈20 h",
+          "Por curso"
+        ],
+        [
+          "Sin costo",
+          "Alumnos BUAP"
+        ],
+        [
+          "A tu ritmo",
+          "Autogestivos"
+        ]
+      ],
+      "groups": [
+        "Cloud",
+        "Datos e IA",
+        "Seguridad"
+      ],
+      "courses": [
+        {
+          "name": "AWS Academy Cloud Foundations",
+          "group": "Cloud"
+        },
+        {
+          "name": "AWS Academy Cloud Architecting",
+          "group": "Cloud"
+        },
+        {
+          "name": "AWS Academy Cloud Developing",
+          "group": "Cloud"
+        },
+        {
+          "name": "AWS Academy Cloud Operations",
+          "group": "Cloud"
+        },
+        {
+          "name": "AWS Academy Cloud Security Foundations",
+          "group": "Seguridad"
+        },
+        {
+          "name": "AWS Academy Data Engineering",
+          "group": "Datos e IA"
+        },
+        {
+          "name": "AWS Academy Machine Learning Foundations",
+          "group": "Datos e IA"
+        },
+        {
+          "name": "AWS Academy Generative AI Foundations",
+          "group": "Datos e IA"
+        },
+        {
+          "name": "AWS Academy Machine Learning for Natural Language Processing",
+          "group": "Datos e IA"
+        }
+      ],
+      "form_embed": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=x8fjOlHq3kaVQBL0EQ6sm4RLAG_G8tZKng1QYFfnU1NUMEdNQUZEOVFITEVORTBUMTBVMFcxUjJSRC4u"
+    }
+  },
+  "profiles": {
+    "academias/oracle/index.html": {
+      "kind": "oracle",
+      "summary": "Oracle Academy impulsa el conocimiento, la innovación, el desarrollo de habilidades y la diversidad en los campos de la tecnología, con enseñanza de computación a nivel mundial.",
+      "promise": "Oracle Academy FCC BUAP ofrece la posibilidad de tomar certificaciones y cursos.",
+      "catalog": "academias/oracle/recursos/index.html",
+      "areas": [
+        [
+          "code",
+          "Java",
+          "Fundamentos y desarrollo con Java."
+        ],
+        [
+          "network",
+          "Bases de datos",
+          "Diseño, fundamentos y sistemas aplicados."
+        ],
+        [
+          "cloud",
+          "Cloud y aplicaciones",
+          "Infraestructura y desarrollo de aplicaciones."
+        ]
+      ],
+      "heading": "Conocimiento que",
+      "emphasis": "se pone en práctica."
+    },
+    "academias/aws/index.html": {
+      "kind": "aws",
+      "summary": "AWS Academy ofrece formación en computación en la nube para instituciones académicas. La BUAP forma parte de este programa.",
+      "video": "https://www.youtube.com/embed/5FDYTw8CWws",
+      "benefits": [
+        {
+          "name": "Instituciones",
+          "icon": "building",
+          "lead": "Formar a quienes construirán la nube.",
+          "items": [
+            "Convertirse en un líder de la educación en la nube.",
+            "Desarrollar y retener educadores.",
+            "Preparar graduados para carreras profesionales en la nube con gran demanda."
+          ]
+        },
+        {
+          "name": "Educadores",
+          "icon": "book",
+          "lead": "Enseñar con recursos del sector.",
+          "items": [
+            "Acceso a cursos innovadores sobre la nube.",
+            "Capacitación profesional gratuita de AWS.",
+            "Descuentos del 50 % para los exámenes de AWS Certification."
+          ]
+        },
+        {
+          "name": "Estudiantes",
+          "icon": "graduate",
+          "lead": "Habilidades que conectan con tu carrera.",
+          "items": [
+            "Preparación para empleos bien remunerados en un sector de rápido crecimiento.",
+            "Adquirir habilidades valoradas por quienes contratan.",
+            "Acceso exclusivo a la comunidad de talento emergente al finalizar el curso."
+          ]
+        }
+      ],
+      "benefit_note": "Beneficios descritos por el programa; consulta con la Academia la vigencia y las condiciones de los descuentos y accesos.",
+      "heading": "Formación que conecta",
+      "emphasis": "con el mundo cloud."
+    },
+    "academias/ec-council/index.html": {
+      "kind": "ec",
+      "summary": "EC-Council ofrece certificaciones y cursos para desarrollar tu carrera en ciberseguridad. Sus programas apoyan a los estudiantes en sus objetivos profesionales.",
+      "video": "https://www.youtube.com/embed/ozqsnoyFmIg",
+      "programs": [
+        {
+          "code": "C|EH",
+          "name": "Certificación Ethical Hacker",
+          "logo": "assets/media/f13018f19e01149b.png",
+          "icon": "code",
+          "description": "El programa C|EH te ayuda a adquirir habilidades para descubrir vulnerabilidades y proteger sistemas, redes, aplicaciones, bases de datos y datos críticos de piratas informáticos malintencionados.",
+          "embed": "https://www.canva.com/design/DAF66t1rdWo/iATjcEcqsyYL6Ay-lpOFxA/view"
+        },
+        {
+          "code": "C|ND",
+          "name": "Certified Network Defender",
+          "logo": "assets/media/0cc5ed97e5752ab8.png",
+          "icon": "shield",
+          "description": "Este curso cubre conceptos neutrales del proveedor, como prácticas, tecnologías, marcos y principios de seguridad en la nube, y materiales específicos del proveedor para configurar plataformas como AWS, Azure y GCP.",
+          "embed": "https://www.canva.com/design/DAF66uhynds/uZ5prFIz3tcrYm_Gyvtt1w/view"
+        },
+        {
+          "code": "N|DE",
+          "name": "Network Defence Essentials",
+          "logo": "assets/media/953c229275534648.png",
+          "icon": "network",
+          "description": "Este programa cubre los fundamentos de la seguridad de la información y la defensa de la red.",
+          "embed": "https://www.canva.com/design/DAF66gtf3EE/SbBCJMM0A2ih_br3dC-WPg/view"
+        }
+      ],
+      "map": [
+        {
+          "name": "Usuario y conocimiento",
+          "codes": [
+            "CSCU",
+            "ECES"
+          ],
+          "detail": "End User / Knowledge Worker"
+        },
+        {
+          "name": "Primeros fundamentos",
+          "codes": [
+            "NDE",
+            "EHE",
+            "DFE"
+          ],
+          "detail": "Cyber Novice"
+        },
+        {
+          "name": "Base técnica",
+          "codes": [
+            "CCT"
+          ],
+          "detail": "Technician"
+        },
+        {
+          "name": "Núcleo profesional",
+          "codes": [
+            "CND · Network Defense",
+            "CEH · Ethical Hacking"
+          ],
+          "detail": "Core"
+        },
+        {
+          "name": "Especialización",
+          "codes": [
+            "CHFI / ECIH · Forense y respuesta a incidentes",
+            "CPENT · Pentesting",
+            "CASE Java / CASE .NET · Aplicaciones",
+            "CSA / CTIA · Operaciones de seguridad",
+            "CCSE · Seguridad cloud",
+            "Disaster Recovery Professional"
+          ],
+          "detail": "Specialization"
+        },
+        {
+          "name": "Dirección de seguridad",
+          "codes": [
+            "CCISO"
+          ],
+          "detail": "Executive"
+        }
+      ],
+      "heading": "Habilidades para",
+      "emphasis": "una tecnología más segura."
+    }
+  }
+}
