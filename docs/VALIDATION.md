@@ -57,3 +57,10 @@ Las capturas están en `docs/previews/`. No se han enviado formularios ni realiz
 - Miniaturas reales cargadas para las cuatro academias. Enlaces separados a las páginas de cada academia y a YouTube; sin navegación obligatoria al reproducir.
 - Galería revisada visualmente en escritorio y reproducción móvil a 390 px; sin desbordamiento a 320 y 390 px. Los reproductores mantienen el ancho de la tarjeta y al menos 200 px de alto.
 - Capturas: `academias-videos-desktop.png` y `academias-video-mobile.png`. No se enviaron datos de formularios.
+
+## Actualización de estilos y módulos en Chrome
+
+- Se reprodujo el problema en Google Chrome: su hoja principal conservaba siete importaciones y omitía `academy-video.css`; las miniaturas tenían posición estática y los controles seguían siendo enlaces externos.
+- La generación ahora versiona por contenido los archivos de entrada y sus dependencias CSS/JS. Una recarga normal en la misma pestaña de Chrome cargó las ocho hojas de estilo versionadas y los botones de reproducción en la tarjeta.
+- Diseño revisado en Chrome a su ancho real de 1470 px, sin desbordamiento horizontal; apertura y cierre del reproductor Cisco comprobados dentro de la página.
+- Captura de la página corregida en Chrome: `academias-chrome-corregido.png`. Las 48 páginas y seis pruebas multimedia siguen pasando.

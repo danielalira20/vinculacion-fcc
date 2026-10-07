@@ -6,6 +6,8 @@ Contenido JSON + plantillas Jinja2 → `scripts/build.py` → HTML, CSS, JavaScr
 
 El navegador recibe archivos estáticos. Python se usa únicamente para construirlos; no existe un backend en ejecución. Las rutas usan archivos `index.html` explícitos y enlaces relativos, por lo que el sitio funciona tanto en la raíz de un dominio como dentro de una subcarpeta.
 
+La generación calcula una huella del contenido de todos los archivos CSS y JavaScript. Esa versión se añade a los enlaces de entrada del HTML y a las importaciones de hojas de estilo y módulos. Si cambia cualquier dependencia, los navegadores solicitan las nuevas versiones; se evita combinar HTML actualizado con estilos o módulos antiguos en caché. El código fuente mantiene rutas simples y las URLs versionadas solo aparecen en `dist/`.
+
 ## Responsabilidades
 
 - `site.json`: navegación, textos editoriales, catálogo de Academias y certificaciones, servicios y contacto.

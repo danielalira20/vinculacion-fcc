@@ -99,7 +99,7 @@ def check():
         for reference in re.findall(pattern, text):
             if reference.startswith(("https:", "data:", "#")):
                 continue
-            if not (path.parent / reference).is_file():
+            if not (path.parent / urlsplit(reference).path).is_file():
                 errors.append(f"{path.name}: missing stylesheet/module asset {reference}")
     pages = json.loads((ROOT / "src/content/pages.json").read_text())
     processes = json.loads((ROOT / "src/content/processes.json").read_text())

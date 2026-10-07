@@ -1,5 +1,6 @@
 """Render a portable static website. No network requests, secrets or server required."""
 import json
+import hashlib
 import os
 import re
 import shutil
@@ -47,7 +48,21 @@ def build():
         shutil.rmtree(DIST)
     DIST.mkdir()
     shutil.copytree(SOURCE / "assets", DIST / "assets")
+    # Version the entire CSS/JS dependency graph, including nested imports.
+    # Otherwise browsers can combine fresh HTML with a cached entry point.
+    code_assets = sorted(p for p in (SOURCE / "assets").rglob("*") if p.suffix in {".css", ".js"})
+    fingerprint = hashlib.sha256()
+    for asset in code_assets:
+        fingerprint.update(asset.relative_to(SOURCE).as_posix().encode())
+        fingerprint.update(asset.read_bytes())
+    asset_version = fingerprint.hexdigest()[:12]
+    for asset in code_assets:
+        text = asset.read_text(encoding="utf-8")
+        pattern = r"(@import\s+url\(['\"]?)(\./[^'\"\s)]+)(['\"]?\))" if asset.suffix == ".css" else r"(\bfrom\s+['\"])(\./[^'\"]+)(['\"])"
+        text = re.sub(pattern, lambda m: f"{m[1]}{m[2]}?v={asset_version}{m[3]}", text)
+        (DIST / asset.relative_to(SOURCE)).write_text(text, encoding="utf-8")
     env = Environment(loader=FileSystemLoader(SOURCE / "templates"), autoescape=select_autoescape(["html"]), undefined=StrictUndefined)
+    env.globals["asset_version"] = asset_version
     env.globals["icon"] = lambda name: Markup((SOURCE / "assets/icons" / f"{name}.svg").read_text())
     env.globals["embedded_media"] = lambda href, title: Markup(render_embed(href, title))
     written = set()
