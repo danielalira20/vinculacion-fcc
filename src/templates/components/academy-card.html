@@ -1,5 +1,5 @@
 <article class="academy-card" data-searchable data-category="{{ item.short }}" data-search="{{ item.name }} {{ item.area }} {{ item.description }} {{ item.tags|join(' ') }}">
-  {% if current_path == 'academias/index.html' %}
+  {% if current_path in ['index.html', 'academias/index.html'] %}
   {% set preview = academy_previews[item.path] %}
   {% include 'components/academy-video.html' %}
   {% else %}
@@ -21,7 +21,7 @@
 <a href="{{ url(item.path) }}">{{ item.name }}</a>
 </h3>
 <p>{{ item.description }}</p>
-{% if current_path == 'academias/index.html' %}
+{% if current_path in ['index.html', 'academias/index.html'] %}
 <div class="academy-video-links"><a class="text-link" href="{{ url(item.path) }}">Conocer academia {{ icon('arrow') }}</a><a href="{{ preview.link }}" target="_blank" rel="noopener">Ver en YouTube {{ icon('external') }}</a></div>
 {% endif %}
 <div class="card-bottom">

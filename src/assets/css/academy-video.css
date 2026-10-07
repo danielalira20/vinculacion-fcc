@@ -36,3 +36,19 @@
   .academy-video-play strong { font-size: 18px; }
   .academy-video-hint { left: 83px; }
 }
+
+/* Home keeps its compact four-card overview while sharing the inline player. */
+.home-academy-videos .academy-video { border-radius: 17px; }
+.home-academy-videos .academy-video-screen { min-height: 0; }
+.home-academy-videos .academy-video-brand { top: 12px; left: 12px; padding: 6px 9px; font-size: 12px; gap: 6px; }
+.home-academy-videos .academy-video-brand svg { width: 16px; height: 16px; }
+.home-academy-videos .academy-video-play { left: 14px; bottom: 16px; gap: 10px; }
+.home-academy-videos .academy-video-play > span { width: 40px; height: 40px; }
+.home-academy-videos .academy-video-play svg { width: 20px; height: 20px; }
+.home-academy-videos .academy-video-play strong { font-size: 16px; }
+.home-academy-videos .academy-video-hint { display: none; }
+.home-academy-videos .academy-video-links { align-items: start; flex-direction: column; gap: 0; }
+.home-academy-videos .academy-video-controls { padding: 8px; }
+.home-academy-videos .academy-video-controls button { min-height: 44px; }
+@media (max-width: 1000px) { .home-academy-videos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .home-academy-videos { grid-template-columns: 1fr; } }

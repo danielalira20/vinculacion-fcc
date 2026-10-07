@@ -63,3 +63,8 @@ Facebook solo en Inicio y perfiles Cisco/Oracle, donde ya existe espacio de comu
 - Inspección en computadora, 900 px, 390 px y 320 px sin desplazamiento horizontal. Frame a 320 px ajustado a 238 px, dentro de los límites del proveedor. Botón de menú compacto para que la cabecera permanezca en una fila. Se corrigió el cierre prematuro por transferencia de foco al summary antes de entregar.
 - Capturas de revisión: `outputs/academy-review/navigation-community.png` y `facebook-community.png` en el directorio de trabajo.
 - Comprobaciones finales aprobadas: 48 páginas, 2,314 referencias locales, exactamente 3 timelines de Facebook y 9 pruebas de medios.
+
+## Videos en Inicio · ajuste sobre el componente aprobado
+
+La captura del usuario muestra el grid de Inicio con iconos. Se conserva esa composición de cuatro tarjetas y se reutiliza la miniatura, controles glass y reproductor de la página Academias. Los cuatro videos son los originales ya recuperados; clic reproduce dentro de la tarjeta, un solo reproductor activo, cierre devuelve foco y acceso opcional a YouTube. El tamaño del componente se adapta al grid de Inicio, sin cambiar los tokens ni rediseñar el resto de la portada.
+- Verificado en Chrome: cuatro miniaturas en Inicio; Cisco reproduce en la misma URL, cambiar a AWS deja un solo reproductor y volver a miniatura detiene el video y devuelve foco. Vista de 320 px sin desbordamiento, Oracle abre dentro de su tarjeta. Captura `outputs/academy-review/home-videos.png`. Construcción de 48 páginas y 9 pruebas de medios aprobadas.
