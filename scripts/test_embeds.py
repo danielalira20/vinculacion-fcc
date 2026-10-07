@@ -53,6 +53,13 @@ class EmbedTests(unittest.TestCase):
         self.assertNotIn("<iframe", markup)
         self.assertIn("está privado", markup)
 
+    def test_google_form_uses_only_the_published_form_path(self):
+        spec = embed_spec("https://docs.google.com/forms/d/e/abc_DEF-123/viewform?usp=sharing")
+        self.assertEqual(spec["src"], "https://docs.google.com/forms/d/e/abc_DEF-123/viewform?embedded=true")
+        self.assertNotIn("usp", spec["link"])
+        for href in ("https://docs.google.com.evil.test/forms/d/e/abc/viewform", "https://docs.google.com/document/d/abc/edit", "http://docs.google.com/forms/d/e/abc/viewform", "https://docs.google.com/forms/d/e/%22/viewform"):
+            self.assertIsNone(embed_spec(href))
+
 
 if __name__ == "__main__":
     unittest.main()

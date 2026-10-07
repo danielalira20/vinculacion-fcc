@@ -9,6 +9,7 @@
 .circle-link svg { width: 18px; height: 18px; transform: rotate(-35deg); }
 .circle-link:hover { transform: translateY(-2px); }
 .theme-sage { --theme-bg: var(--color-sage); --theme-ink: #465c48; background-color: var(--theme-bg); }
+.theme-sand { --theme-bg: var(--color-sand); --theme-ink: #655747; background-color: var(--theme-bg); }
 .theme-peach { --theme-bg: var(--color-peach); --theme-ink: #77523e; background-color: var(--theme-bg); }
 .theme-rose { --theme-bg: var(--color-rose); --theme-ink: #765151; background-color: var(--theme-bg); }
 .theme-lavender { --theme-bg: var(--color-lavender); --theme-ink: #5b547a; background-color: var(--theme-bg); }

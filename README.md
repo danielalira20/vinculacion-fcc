@@ -37,6 +37,7 @@ src/
     employers.json         Bolsa de Trabajo y registros de Empresas/Vacantes
     processes.json         Procesos nativos y sus requisitos
     learning.json          Cursos, beneficios y programas transcritos a HTML
+    cisco.json             Cinco rutas y grupos CCNA con sus horarios publicados
     coordinations.json     Directorio y presentaciones de las Academias
     embedded-resources.json Nombres de videos y materiales integrados
     pages.json             41 registros recuperados del sitio anterior
@@ -63,7 +64,7 @@ docs/
   DESIGN.md                Decisiones visuales y referencias
   ARCHITECTURE.md          Arquitectura y mantenimiento
   MIGRATION.md             Cobertura y asuntos pendientes
-  ACADEMY-REDESIGN.md       Referencias de Refero y revisión de las seis páginas
+  ACADEMY-REDESIGN.md       Referencias de Refero y revisión de las Academias
 ```
 
 ## Qué incluye
@@ -74,8 +75,9 @@ docs/
 - Bolsa de Trabajo y Vacantes con portadas propias, glass moderado y formularios integrados.
 - Cinco flujos en HTML seleccionable con detalles desplegables; iconos SVG sin emojis en la interfaz.
 - Coordinaciones con portada, directorio de contacto y galería de videos.
-- Videos, presentaciones de Canva, seis formularios y guía PDF integrados en sus páginas.
+- Videos, presentaciones de Canva, siete formularios y guía PDF integrados en sus páginas.
 - Catálogos filtrables: ocho cursos de Oracle y nueve de AWS; beneficios por audiencia, selector de programas EC-Council y mapa de formación en HTML.
+- Cisco: cinco rutas con 29 cursos seleccionables, conexiones y glosario; tres grupos CCNA con fechas, horarios e instructores de Primavera 2023. Google permite una vista previa del formulario histórico, con acceso opcional al registro del proveedor.
 - Guía de inscripción AWS compacta, lista de preparación y preguntas desplegables.
 - Interfaz sin enlaces de procedencia ni dependencias del dominio que se retirará.
 - Texto accesible de cuatro materiales gráficos revisados durante el respaldo.

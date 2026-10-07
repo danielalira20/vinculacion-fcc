@@ -1,5 +1,5 @@
 <aside class="learning-contact glass-card">
   <span class="learning-contact-icon">{{ icon('mail') }}</span>
-  <div><p class="eyebrow">TU ACADEMIA, CERCA</p><h2>{{ experience.coordinator if experience else catalog.person }}</h2><a href="mailto:{{ experience.contact if experience else catalog.contact }}">{{ experience.contact if experience else catalog.contact }}</a>{% if learning is defined and learning %}{% for contact in coordinations.academies %}{% if contact.path == current_path %}<p class="learning-contact-location">{{ contact.location }}{% if contact.extension %} · Ext. {{ contact.extension }}{% endif %}</p>{% endif %}{% endfor %}{% endif %}</div>
+  <div><p class="eyebrow">TU ACADEMIA, CERCA</p><h2>{{ experience.coordinator if experience else catalog.person }}</h2><a href="mailto:{{ experience.contact if experience else catalog.contact }}">{{ experience.contact if experience else catalog.contact }}</a>{% if experience %}{% for contact in coordinations.academies %}{% if contact.email == experience.contact %}<p class="learning-contact-location">{{ contact.location }}{% if contact.extension %} · Ext. {{ contact.extension }}{% endif %}</p>{% endif %}{% endfor %}{% endif %}</div>
   <a class="circle-link" href="{{ url('academias/coordinaciones/index.html') }}" aria-label="Consultar coordinaciones">{{ icon('arrow') }}</a>
 </aside>

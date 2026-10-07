@@ -1,0 +1,236 @@
+{
+  "routes": [
+    {
+      "id": "it",
+      "name": "IT",
+      "label": "Tecnología de la información",
+      "icon": "cube",
+      "theme": "peach",
+      "lead": "Entiende lo que hace posible la tecnología.",
+      "description": "Explora la conectividad y los fundamentos de los equipos informáticos.",
+      "branches": [
+        {
+          "name": "Conectividad y soporte",
+          "courses": [
+            "Get Connected",
+            "IT Essentials"
+          ],
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "id": "networking",
+      "name": "Redes",
+      "label": "Networking",
+      "icon": "network",
+      "theme": "sage",
+      "lead": "De la primera conexión a redes más complejas.",
+      "description": "Un recorrido por las herramientas, los fundamentos CCNA y la formación CCNP.",
+      "branches": [
+        {
+          "name": "Herramientas y fundamentos",
+          "courses": [
+            "Intro to Packet Tracer",
+            "Networking Essentials"
+          ],
+          "connected": true
+        },
+        {
+          "name": "CCNA",
+          "courses": [
+            "CCNA ITN",
+            "CCNA SRWE",
+            "CCNA ENSA"
+          ],
+          "connected": true,
+          "transition": "Conocimientos previos recomendados: Networking Essentials → CCNA ITN."
+        },
+        {
+          "name": "CCNP",
+          "courses": [
+            "CCNP ENCOR",
+            "CCNP ENARSI"
+          ],
+          "connected": true,
+          "transition": "Conocimientos previos requeridos: CCNA ENSA → CCNP ENCOR."
+        }
+      ]
+    },
+    {
+      "id": "programmable",
+      "name": "Programación",
+      "label": "Programmable Infrastructure",
+      "icon": "code",
+      "theme": "lavender",
+      "lead": "Código, sistemas y dispositivos que trabajan juntos.",
+      "description": "El mapa reúne Linux, programación e Internet de las cosas en distintas ramas de aprendizaje.",
+      "branches": [
+        {
+          "name": "Exploración",
+          "courses": [
+            "Linux Unhatched",
+            "Intro to IoT",
+            "Python Essentials"
+          ]
+        },
+        {
+          "name": "Linux",
+          "courses": [
+            "Linux Essentials",
+            "Linux I",
+            "Linux II"
+          ],
+          "connected": true
+        },
+        {
+          "name": "Lenguaje C",
+          "courses": [
+            "C Essentials",
+            "C Advanced"
+          ],
+          "connected": true
+        },
+        {
+          "name": "Lenguaje C++",
+          "courses": [
+            "C++ Essentials",
+            "C++ Advanced"
+          ],
+          "connected": true
+        },
+        {
+          "name": "Dispositivos y datos",
+          "courses": [
+            "Connecting Things",
+            "Big Data Analytics"
+          ],
+          "recommended": true
+        },
+        {
+          "name": "Automatización",
+          "courses": [
+            "DevNet Assoc"
+          ]
+        }
+      ],
+      "notes": [
+        "Linux Unhatched → Linux Essentials: conocimientos previos recomendados.",
+        "Intro to IoT → Connecting Things: conocimientos previos requeridos.",
+        "Python Essentials → DevNet Assoc y CCNA ENSA → DevNet Assoc: conocimientos previos recomendados."
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Ciberseguridad",
+      "label": "Cybersecurity",
+      "icon": "shield",
+      "theme": "rose",
+      "lead": "Aprende a proteger lo que nos conecta.",
+      "description": "Fundamentos de ciberseguridad y cursos orientados a redes, IoT y operaciones de seguridad.",
+      "branches": [
+        {
+          "name": "Fundamentos",
+          "courses": [
+            "Intro to Cybersecurity",
+            "Cybersecurity Essentials"
+          ],
+          "connected": true
+        },
+        {
+          "name": "Áreas de profundización",
+          "courses": [
+            "IoT Security",
+            "Network Security",
+            "CyberOps Assoc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "name": "Negocios",
+      "label": "Business",
+      "icon": "briefcase",
+      "theme": "sand",
+      "lead": "Dale una dirección a tus ideas.",
+      "description": "Emprendimiento y design thinking como parte de los caminos de aprendizaje de Cisco.",
+      "branches": [
+        {
+          "name": "Ideas y colaboración",
+          "courses": [
+            "Entrepreneurship",
+            "Hackathon Playbook (Design Thinking)"
+          ],
+          "recommended": true
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    [
+      "ITN",
+      "Introduction to Networks"
+    ],
+    [
+      "SRWE",
+      "Switching, Routing & Wireless Essentials"
+    ],
+    [
+      "ENSA",
+      "Enterprise Networking, Security & Automation"
+    ],
+    [
+      "ENCOR",
+      "CCNP Enterprise Core Networking"
+    ],
+    [
+      "ENARSI",
+      "CCNP Enterprise Advanced Routing"
+    ]
+  ],
+  "cohorts": [
+    {
+      "code": "CCNA 1 · ITN",
+      "name": "Introducción a las redes",
+      "group": "ITN",
+      "instructor": "M.C. Adriana Hernández Beristaín",
+      "start": "2023-02-07",
+      "start_label": "7 de febrero",
+      "end": "2023-05-23",
+      "end_label": "23 de mayo de 2023",
+      "days": "Lunes y martes",
+      "hours": "17:00 — 20:00",
+      "theme": "sage"
+    },
+    {
+      "code": "CCNA 2 · SRWE",
+      "name": "Fundamentos de conmutación, enrutamiento e inalámbricos",
+      "group": "SRWE",
+      "instructor": "Dr. Javier Caldera Miguel",
+      "start": "2023-02-04",
+      "start_label": "4 de febrero",
+      "end": "2023-05-20",
+      "end_label": "20 de mayo de 2023",
+      "days": "Sábado",
+      "hours": "09:00 — 14:00",
+      "theme": "lavender"
+    },
+    {
+      "code": "CCNA 2 · SRWE",
+      "name": "Fundamentos de conmutación, enrutamiento e inalámbricos",
+      "group": "SRWE",
+      "instructor": "LCC. Marco Antonio Pérez López",
+      "start": "2023-02-01",
+      "start_label": "1 de febrero",
+      "end": "2023-05-17",
+      "end_label": "17 de mayo de 2023",
+      "days": "Miércoles y viernes",
+      "hours": "17:00 — 20:00",
+      "theme": "peach"
+    }
+  ],
+  "form": "https://docs.google.com/forms/d/e/1FAIpQLSe4AeUP4sx3ZE24VpzXhz2g4eZOiEKVLZz4VZy1ljKP_H3G1g/viewform",
+  "map": "assets/media/d6492d35df2262dd.png",
+  "poster": "assets/media/fb22d72b00e12e9b.png"
+}

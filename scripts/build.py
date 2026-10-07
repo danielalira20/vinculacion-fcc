@@ -28,6 +28,7 @@ def build():
     site, pages, media = load("site.json"), load("pages.json"), load("media.json")
     experiences = load("experiences.json")
     learning_data = load("learning.json")
+    cisco = load("cisco.json")
     media_titles = load("embedded-resources.json")
     processes, employers = load("processes.json"), load("employers.json")
     page_titles = {p["path"]: p["title"] for p in pages}
@@ -96,8 +97,9 @@ def build():
         employer = employers.get(page["path"])
         catalog = learning_data["catalogs"].get(page["path"])
         learning = learning_data["profiles"].get(page["path"])
-        template = "pages/learning-catalog.html" if catalog else "pages/aws-guide.html" if page["path"] == "recursos/inscripcion-aws/index.html" else "pages/employer.html" if employer else "pages/coordinations.html" if page["path"] == "academias/coordinaciones/index.html" else "pages/academy.html" if experience else "pages/about.html" if page["path"] == "nosotros/index.html" else "pages/article.html"
-        render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience, employer=employer, catalog=catalog, learning=learning)
+        cisco_template = {"academias/cisco/ruta/index.html": "pages/cisco-route.html", "academias/cisco/cursos/index.html": "pages/cisco-courses.html"}.get(page["path"])
+        template = cisco_template or ("pages/learning-catalog.html" if catalog else "pages/aws-guide.html" if page["path"] == "recursos/inscripcion-aws/index.html" else "pages/employer.html" if employer else "pages/coordinations.html" if page["path"] == "academias/coordinaciones/index.html" else "pages/academy.html" if experience else "pages/about.html" if page["path"] == "nosotros/index.html" else "pages/article.html")
+        render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience, employer=employer, catalog=catalog, learning=learning, cisco=cisco)
     render("buscar/index.html", "pages/search.html", title="Buscar", active="", description="Encuentra academias, certificaciones, trámites y recursos de Vinculación FCC.")
     search_index = [
         {"title": p["title"], "path": p["path"], "section": p["section"],
@@ -106,6 +108,9 @@ def build():
         for p in pages if p["id"] != "contenido-2141"
     ]
     search_index += [{"title": l["title"], "path": l["path"], "section": l["key"], "text": l["description"], "summary": l["description"]} for l in site["landings"]]
+    for record in search_index:
+        if record["path"] == "academias/cisco/ruta/index.html":
+            record["text"] += "\n" + "\n".join(course for route in cisco["routes"] for branch in route["branches"] for course in branch["courses"])
     (DIST / "assets/search-index.json").write_text(json.dumps(search_index, ensure_ascii=False), encoding="utf-8")
     (DIST / "robots.txt").write_text("# Preview: enable indexing only after editorial approval.\nUser-agent: *\nDisallow: /\n", encoding="utf-8")
     aliases = [{"source": p["source_url"], "target": p["path"]} for p in pages]

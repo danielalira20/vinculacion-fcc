@@ -15,11 +15,12 @@ export function initializeLearning() {
       let visible = 0;
       courses.forEach(course => {
         const matches = (selected === 'all' || course.dataset.courseGroup === selected)
-          && normalize(course.querySelector('h3').textContent).includes(query);
+          && normalize(course.textContent).includes(query);
         course.hidden = !matches;
         if (matches) visible += 1;
       });
-      count.textContent = `${visible} ${visible === 1 ? 'curso' : 'cursos'} de ${courses.length}`;
+      const noun = visible === 1 ? (catalog.dataset.countSingular || 'curso') : (catalog.dataset.countPlural || 'cursos');
+      count.textContent = `${visible} ${noun} de ${courses.length}`;
       empty.hidden = visible > 0;
     };
     filters.forEach(button => button.addEventListener('click', () => {
@@ -63,7 +64,15 @@ export function initializeLearning() {
       panel.setAttribute('aria-labelledby', `${panel.id}-tab`);
       panel.tabIndex = 0;
     });
-    activate(0);
+    const activateFromLocation = () => {
+      const id = window.location.hash.slice(1);
+      const index = buttons.findIndex(button => button.dataset.panelTarget === id);
+      if (index >= 0) activate(index);
+    };
+    const initial = buttons.findIndex(button => button.dataset.panelTarget === workbench.dataset.defaultPanel);
+    activate(initial >= 0 ? initial : 0);
+    activateFromLocation();
+    window.addEventListener('hashchange', activateFromLocation);
     controls.hidden = false;
   });
 }

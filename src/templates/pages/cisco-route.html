@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<div class="learning-page cisco-learning theme-sage">
+{% include 'components/cisco-breadcrumbs.html' %}
+<section class="learning-cover cisco-cover wrap" aria-labelledby="cisco-title">
+  <div><p class="eyebrow">CISCO NETWORKING ACADEMY · FCC BUAP</p><h1 id="cisco-title">Encuentra tu ruta.<br><span class="serif">Conecta tus habilidades.</span></h1><p>Cinco caminos para aprender e identificar una elección de carrera. Explora cómo se relacionan las habilidades de cada área.</p><a class="button" href="#rutas">Explorar el mapa {{ icon('arrow') }}</a></div>
+  {% include 'components/cisco-cover-art.html' %}
+</section>
+<section class="cisco-map wrap" id="rutas" data-learning-panels data-default-panel="path-networking" aria-labelledby="routes-title">
+  <div class="learning-section-head"><div><p class="eyebrow">MAPA DE APRENDIZAJE</p><h2 id="routes-title">Un punto de partida.<br><span class="serif">Muchas posibilidades.</span></h2></div><p>Selecciona un área y explora sus cursos. El mapa reúne caminos generales de Cisco; confirma la oferta local con la Academia.</p></div>
+  <div class="learning-tabs cisco-route-tabs glass-card" data-panel-controls hidden aria-label="Áreas de aprendizaje Cisco">{% for route in cisco.routes %}<button type="button" data-panel-target="path-{{ route.id }}">{{ icon(route.icon) }}<span>{{ route.name }}</span></button>{% endfor %}</div>
+  {% for route in cisco.routes %}
+  <section class="cisco-route-panel theme-{{ route.theme }}" id="path-{{ route.id }}" data-learning-panel>
+    <div class="route-heading"><span class="learning-line-icon">{{ icon(route.icon) }}</span><div><p class="eyebrow">{{ route.label }}</p><h3>{{ route.lead }}</h3><p>{{ route.description }}</p></div><span class="route-course-total"><strong>{{ route.branches|map(attribute='courses')|map('length')|sum }}</strong><span>cursos en el mapa</span></span></div>
+    <div class="route-branches">{% for branch in route.branches %}<section class="route-branch"><div class="route-branch-heading"><span>{{ '%02d'|format(loop.index) }}</span><h4>{{ branch.name }}</h4></div>{% if branch.get('transition') %}<p class="branch-transition">{{ branch.transition }}</p>{% endif %}<ol class="route-nodes {% if branch.get('connected') %}nodes-connected{% elif branch.get('recommended') %}nodes-recommended{% endif %}">{% for course in branch.courses %}<li><span class="node-port" aria-hidden="true"></span><span>{{ course }}</span>{% if (branch.get('connected') or branch.get('recommended')) and not loop.last %}<span class="node-connector" aria-hidden="true">{{ icon('arrow') }}</span>{% endif %}</li>{% endfor %}</ol>{% if branch.get('connected') or branch.get('recommended') %}<p class="node-relation">{{ 'Conocimientos previos recomendados' if branch.get('recommended') else 'Conocimientos previos requeridos' }} entre los cursos conectados.</p>{% endif %}</section>{% endfor %}</div>
+  </section>
+  {% endfor %}
+  <div class="route-key"><span><i aria-hidden="true"></i>Requeridos</span><span><i class="key-dashed" aria-hidden="true"></i>Recomendados</span><p>Las ramas organizan el mapa por tema. Consulta el mapa completo para las conexiones entre áreas, distintivos y preparación para certificación.</p><a class="text-link" href="{{ url(cisco.map) }}" target="_blank" rel="noopener">Mapa completo {{ icon('external') }}</a></div>
+</section>
+<section class="cisco-route-notes wrap"><div class="cisco-glossary"><details><summary>¿Qué significan las siglas de CCNA y CCNP? {{ icon('arrow') }}</summary><dl>{% for term in cisco.glossary %}<div><dt>{{ term[0] }}</dt><dd>{{ term[1] }}</dd></div>{% endfor %}</dl></details><p class="learning-fineprint">El mapa también menciona talleres de tecnologías emergentes: REST APIs y Model-Driven Programmability.</p></div><div class="cisco-next-step"><p class="eyebrow">DEL MAPA AL AULA</p><h2>Tu siguiente paso,<br><span class="serif">con la Academia.</span></h2><p>En un campo tecnológico, ampliar tus conocimientos siempre suma. Consulta qué cursos se imparten en el periodo actual.</p><a class="button" href="{{ url('academias/cisco/cursos/index.html') }}">Cursos con instructor {{ icon('arrow') }}</a></div></section>
+<div class="wrap">{% with experience=experiences.academies['academias/cisco/index.html'] %}{% include 'components/learning-contact.html' %}{% endwith %}</div>
+</div>
+{% endblock %}

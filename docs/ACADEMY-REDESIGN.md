@@ -33,3 +33,19 @@ Construcción y comprobaciones existentes, conservación de texto/recursos origi
 - Guía: lista de preparación operativa y proceso de cuatro pasos como HTML (solo el logo permanece como imagen), detalles individuales y control de grupo nativos.
 - Microsoft Forms: el vínculo de AWS ha sido reutilizado por el propietario y ahora muestra Otoño 2026 y un registro por curso. Formulario integrado confirmado dentro de la página, sin enviar datos. La oferta transcrita sigue identificada como la publicación que finalizó en febrero de 2026. Oracle devuelve falta de permiso público; conservar el enlace y contacto sin prometer acceso.
 - Registro original `pages.json`: sin modificaciones; activos originales conservados.
+
+## Ampliación Cisco · referencia fijada antes de implementar
+
+Se reutiliza la dirección Podia/Heptabase ya aprobada para que las tres páginas Cisco pertenezcan a Academias. Sage y arena como territorios; las cinco áreas se distinguen con los pasteles existentes. Logo pequeño, glass en la placa de datos, video original dentro del perfil y dibujos de nodos con SVG/CSS.
+
+- Ruta: transcribir los 29 cursos de `d6492d35df2262dd.png` a cinco paneles con ramas, relaciones explícitas y glosario. Las agrupaciones son editoriales; no inventar un orden obligatorio. Mantener el mapa completo como consulta opcional para sus conexiones entre áreas y distintivos. No enlazar las antiguas páginas de `ciscointeractivepathways.com`: el dominio ahora muestra un anuncio de venta, comprobado en Chrome.
+- Cursos con instructor: tres grupos, dos cursos, docentes, días, horas y fechas de Primavera 2023. Importe del cartel $1,800 identificado como histórico, sin inferir moneda ni vigencia. Cartel y formulario opcionales. Google muestra solo una vista previa al integrar el formulario, y pide cuenta para completar el registro con archivos; indicarlo sin simular un registro nuevo.
+- Perfil: mismo hero compacto del resto de academias, dos modos de aprendizaje y acceso directo a las cinco rutas. Conservar YouTube, Facebook y los identificadores sociales del gráfico original. Sin carteles gigantes ni infografías como contenido central.
+
+### Verificación Cisco
+
+- 29 cursos transcritos; los 3 grupos conservan docentes, fechas y horarios del cartel. Registro original `pages.json` sin cambios. Mapa y cartel completos conservados como consulta opcional local.
+- Chrome: cinco áreas operativas, cambio mediante flechas y acceso directo IT desde el perfil. Glosario desplegable confirmado.
+- Filtros: SRWE devuelve 2 grupos; búsqueda Marco devuelve 1; búsqueda sin coincidencias muestra ayuda. Video original de Cisco presenta el reproductor de YouTube dentro de la página. Google muestra la vista previa histórica dentro del panel, sin enviar datos.
+- Inspección visual de las tres páginas en computadora y a 390/320 px; desbordamiento de la portada a 320 px corregido en el grid. Conectores pasan a orientación vertical en celular.
+- 48 páginas generadas; enlaces locales, importaciones y ausencia de emojis/procedencia antigua comprobados. Ocho pruebas de medios aprobadas, incluida la ruta exacta de Google Forms y rechazo de dominios parecidos.

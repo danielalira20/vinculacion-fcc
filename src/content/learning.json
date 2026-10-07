@@ -298,6 +298,29 @@
       ],
       "heading": "Habilidades para",
       "emphasis": "una tecnología más segura."
+    },
+    "academias/cisco/index.html": {
+      "kind": "cisco",
+      "heading": "Conocimiento para",
+      "emphasis": "conectar el mundo.",
+      "summary": "Cisco es una empresa multinacional, líder mundial en soluciones de red e infraestructuras para Internet. Su división educativa produce material para la formación de profesionales en el diseño, administración y mantenimiento de redes informáticas.",
+      "video": "https://www.youtube.com/embed/NiZWvLqGL3s",
+      "modes": [
+        {
+          "icon": "book",
+          "title": "Cursos sin instructor",
+          "text": "Explora los caminos de aprendizaje y las habilidades de cada área. Consulta con la Academia los cursos autogestivos disponibles.",
+          "action": "Explorar las rutas",
+          "path": "academias/cisco/ruta/index.html"
+        },
+        {
+          "icon": "graduate",
+          "title": "Cursos con instructor",
+          "text": "Conoce los cursos CCNA publicados, sus docentes y horarios. La oferta conservada corresponde a Primavera 2023.",
+          "action": "Ver cursos y grupos",
+          "path": "academias/cisco/cursos/index.html"
+        }
+      ]
     }
   }
 }

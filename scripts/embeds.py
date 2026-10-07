@@ -34,6 +34,11 @@ def embed_spec(href):
         if re.fullmatch(r"[A-Za-z0-9_-]+", form_id):
             base = f"https://{parsed.hostname}/Pages/ResponsePage.aspx"
             return {"key": form_id, "kind": "form", "src": base + "?" + urlencode({"id": form_id, "embed": "true"}), "link": base + "?" + urlencode({"id": form_id}), "action": "Abrir formulario en una ventana"}
+    if parsed.scheme == "https" and parsed.hostname == "docs.google.com":
+        match = re.fullmatch(r"/forms/d/e/([A-Za-z0-9_-]+)/viewform", parsed.path)
+        if match:
+            base = f"https://docs.google.com{parsed.path}"
+            return {"key": match.group(1), "kind": "form", "src": base + "?embedded=true", "link": base, "action": "Abrir formulario en Google"}
     if re.fullmatch(r"@/assets/media/[a-f0-9]{16}\.pdf", href):
         return {"key": href, "kind": "pdf", "src": href, "link": href, "action": "Abrir documento PDF"}
     return None
