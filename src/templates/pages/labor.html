@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<div class="wrap landing-breadcrumbs"><nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="{{ url('index.html') }}">Inicio</a><span aria-hidden="true">/</span><a href="{{ url('nosotros/index.html') }}">Nosotros</a><span aria-hidden="true">/</span><span>Labor</span></nav></div>
+<section class="wrap connection-cover" aria-labelledby="labor-title">
+  <div class="connection-cover-copy"><p class="eyebrow">NUESTRA LABOR · VINCULACIÓN FCC</p><h1 id="labor-title">Acercamos mundos.<br><span class="serif">Abrimos caminos.</span></h1><p>Conectamos la formación de estudiantes y egresados con los diversos sectores de la sociedad.</p><a class="button" href="#conexiones">Así lo hacemos {{ icon('arrow') }}</a><div class="connection-signature">{{ icon('network') }}<span>Comunidad FCC <span aria-hidden="true">↔</span> Sector externo</span></div></div>
+  <figure class="connection-photo"><img src="{{ url(media.community) }}" alt="Participantes de una actividad de Vinculación con Oracle" width="960" height="720" fetchpriority="high"><figcaption><span class="connection-photo-icon">{{ icon('network') }}</span><div><small>EL ENCUENTRO ES EL INICIO</small><strong>Conocimiento que conecta.</strong></div></figcaption></figure>
+</section>
+<section class="wrap connection-work" id="conexiones" aria-labelledby="work-title">
+  <div class="connection-work-heading"><p class="eyebrow">UN PUENTE ENTRE PERSONAS E INSTITUCIONES</p><h2 id="work-title">De la formación<br><span class="serif">a nuevas posibilidades.</span></h2></div>
+  <div class="connection-work-copy"><p>A través de la creación de sinergias con otras instituciones de educación superior, organismos no gubernamentales, e instituciones públicas y privadas buscamos mejores oportunidades profesionales para alumnos y egresados.</p><p>Promovemos y fomentamos convenios de colaboración para vincular a los estudiantes y egresados con el sector externo.</p></div>
+  <div class="connection-map" aria-label="Vinculación enlaza a estudiantes y egresados con instituciones y el sector externo">
+    <div class="connection-node"><span class="connection-node-icon">{{ icon('graduate') }}</span><small>EL PUNTO DE PARTIDA</small><h3>Estudiantes<br>y egresados</h3><span>Comunidad FCC</span></div>
+    <span class="connection-line" aria-hidden="true"></span>
+    <div class="connection-node connection-node-hub"><span class="connection-node-icon">{{ icon('network') }}</span><small>CREAMOS SINERGIAS</small><h3>Vinculación</h3><span>Convenios de colaboración</span></div>
+    <span class="connection-line" aria-hidden="true"></span>
+    <div class="connection-sectors"><div>{{ icon('book') }}<span>Educación superior</span></div><div>{{ icon('network') }}<span>Organismos no gubernamentales</span></div><div>{{ icon('building') }}<span>Instituciones públicas</span></div><div>{{ icon('briefcase') }}<span>Instituciones privadas</span></div></div>
+  </div>
+</section>
+<section class="wrap connection-next" aria-labelledby="next-title"><div><p class="eyebrow">UNA CONEXIÓN, MUCHOS CAMINOS</p><h2 id="next-title">Encuentra tu<br><span class="serif">punto de encuentro.</span></h2></div><div class="connection-next-links"><a href="{{ url('academias/index.html') }}"><span>{{ icon('book') }}Academias y formación</span>{{ icon('arrow') }}</a><a href="{{ url('empresas/index.html') }}"><span>{{ icon('briefcase') }}Vinculación con empresas</span>{{ icon('arrow') }}</a><a href="{{ url('nosotros/coordinaciones/index.html') }}"><span>{{ icon('network') }}Conoce a las coordinaciones</span>{{ icon('arrow') }}</a></div></section>
+{% endblock %}

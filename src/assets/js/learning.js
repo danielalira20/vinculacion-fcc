@@ -29,6 +29,13 @@ export function initializeLearning() {
       update();
     }));
     input.addEventListener('input', update);
+    catalog.querySelector('[data-catalog-reset]')?.addEventListener('click', () => {
+      selected = 'all';
+      input.value = '';
+      filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter.dataset.learningFilter === 'all')));
+      update();
+      input.focus();
+    });
     controls.hidden = false;
   });
 

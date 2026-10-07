@@ -1,0 +1,60 @@
+{
+  "library_sections": {
+    "academias": "Academias",
+    "certificaciones": "Certificaciones",
+    "empresas": "Empresas",
+    "egresados": "Egresados",
+    "nosotros": "Nosotros",
+    "recursos": "Guías y recursos"
+  },
+  "library_themes": {
+    "academias": "sage",
+    "certificaciones": "lavender",
+    "empresas": "peach",
+    "egresados": "rose",
+    "nosotros": "sand",
+    "recursos": "peach"
+  },
+  "library_icons": {
+    "academias": "book",
+    "certificaciones": "shield",
+    "empresas": "briefcase",
+    "egresados": "graduate",
+    "nosotros": "network",
+    "recursos": "document"
+  },
+  "library_titles": {
+    "recursos/informacion/index.html": "Información y recursos",
+    "academias/presentacion/index.html": "Presentación de las academias",
+    "egresados/seguimiento/index.html": "Seguimiento de egresados",
+    "egresados/comunidad/index.html": "Comunidad de egresados",
+    "recursos/inscripcion-aws/index.html": "Guía de inscripción a AWS Academy",
+    "academias/oracle/recursos/index.html": "Cursos y herramientas de Oracle Academy"
+  },
+  "library_features": [
+    {
+      "title": "Inscríbete a AWS Academy",
+      "text": "Consulta los pasos y requisitos de inscripción.",
+      "type": "GUÍA DE INSCRIPCIÓN",
+      "theme": "peach",
+      "icon": "cloud",
+      "path": "recursos/inscripcion-aws/index.html"
+    },
+    {
+      "title": "Traza tu ruta en Cisco",
+      "text": "Explora los caminos de aprendizaje y sus cursos.",
+      "type": "RUTA DE FORMACIÓN",
+      "theme": "sage",
+      "icon": "network",
+      "path": "academias/cisco/ruta/index.html"
+    },
+    {
+      "title": "Aprende con Oracle",
+      "text": "Encuentra cursos, herramientas y materiales.",
+      "type": "BIBLIOTECA DE RECURSOS",
+      "theme": "rose",
+      "icon": "code",
+      "path": "academias/oracle/recursos/index.html"
+    }
+  ]
+}
