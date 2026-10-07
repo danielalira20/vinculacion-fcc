@@ -48,3 +48,12 @@ Las capturas están en `docs/previews/`. No se han enviado formularios ni realiz
 - Páginas afectadas comprobadas a 320 y 390 px, y Bolsa, Vacantes, Empresas y Compra a 900 px, sin desbordamiento horizontal. El formulario de Vacantes muestra sus campos dentro de la página; no se envían datos.
 - La revisión automática de las 48 páginas rechaza emojis en el HTML público y cualquier referencia a las cinco imágenes de flujo reemplazadas. Los iconos son SVG locales.
 - Los textos originales y las referencias de los 41 registros se compararon con la revisión anterior y permanecen intactos. Se revisó contra la imagen la transcripción del flujo de Vacantes.
+
+## Videos en las tarjetas de Academias
+
+- Las cuatro miniaturas corresponden a las presentaciones de Cisco, AWS, Oracle y EC-Council del directorio recuperado. Oracle mantiene la sustitución oficial documentada, porque el video original fue retirado.
+- Las cuatro presentaciones cargaron sus reproductores dentro de la página en el navegador; Cisco y AWS mostraron reproducción en curso. La dirección de Academias se mantiene durante la reproducción.
+- Al abrir AWS después de Cisco queda un solo iframe. Filtrar a Oracle elimina el reproductor de AWS. El cierre devuelve la miniatura y el foco; Enter abre el video y Escape lo cierra desde los controles de la tarjeta.
+- Miniaturas reales cargadas para las cuatro academias. Enlaces separados a las páginas de cada academia y a YouTube; sin navegación obligatoria al reproducir.
+- Galería revisada visualmente en escritorio y reproducción móvil a 390 px; sin desbordamiento a 320 y 390 px. Los reproductores mantienen el ancho de la tarjeta y al menos 200 px de alto.
+- Capturas: `academias-videos-desktop.png` y `academias-video-mobile.png`. No se enviaron datos de formularios.

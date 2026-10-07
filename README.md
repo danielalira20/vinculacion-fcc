@@ -68,6 +68,7 @@ docs/
 
 - Portada, Academias, Certificaciones, Empresas, Egresados, Nosotros y Recursos.
 - Menú móvil, filtros de Academias y búsqueda local que reconoce consultas sin acentos.
+- Tarjetas de Academias con miniaturas y reproducción en la misma página; enlaces opcionales a la academia y a YouTube. Solo se carga un reproductor al pulsar y se detiene al ocultar su tarjeta.
 - Bolsa de Trabajo y Vacantes con portadas propias, glass moderado y formularios integrados.
 - Cinco flujos en HTML seleccionable con detalles desplegables; iconos SVG sin emojis en la interfaz.
 - Coordinaciones con portada, directorio de contacto y galería de videos.

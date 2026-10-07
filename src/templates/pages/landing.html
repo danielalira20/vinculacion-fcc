@@ -4,6 +4,7 @@
 <section class="wrap landing-content" id="explorar">
 <div class="section-heading catalog-heading"><div><p class="eyebrow">{{ experiences.landings[landing.key].caption }}</p><h2>{% if landing.kind == 'academies' %}Elige tu <span class="serif">siguiente camino.</span>{% elif landing.kind == 'certifications' %}Tu talento, <span class="serif">con respaldo.</span>{% elif landing.kind == 'resources' %}Encuentra <span class="serif">lo que necesitas.</span>{% else %}Empieza <span class="serif">por aquí.</span>{% endif %}</h2></div></div>
   {% if landing.kind == 'academies' %}
+  <p class="academy-video-intro">Conoce cada academia en video. Reproduce su presentación aquí o explora sus cursos y recursos.</p>
   <div class="catalog-tools" data-catalog>
 <label class="search-field">{{ icon('search') }}<input type="search" placeholder="Busca por academia o área de interés" aria-label="Buscar academias" data-catalog-search>
 </label>
@@ -11,7 +12,7 @@
 <button type="button" class="is-active" data-filter="all" aria-pressed="true">Todas</button>{% for item in site.academies %}<button type="button" data-filter="{{ item.short }}" aria-pressed="false">{{ item.short }}</button>{% endfor %}</div>
 </div>
   <p class="result-count" data-catalog-count role="status">4 academias</p>
-<div class="academy-grid catalog-grid">{% for item in site.academies %}
+<div class="academy-grid catalog-grid academy-video-grid">{% for item in site.academies %}
 {% include 'components/academy-card.html' %}
 {% endfor %}</div>
 <p class="empty-state" data-catalog-empty hidden>No encontramos coincidencias. Prueba con otra palabra o selecciona Todas.</p>

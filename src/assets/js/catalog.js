@@ -19,6 +19,7 @@ export function initializeCatalog() {
       const text = normalizeText(card.dataset.search);
       const match = (category === 'all' || card.dataset.category === category)
         && words.every((word) => text.includes(word));
+      if (!match && !card.hidden) card.dispatchEvent(new Event('catalog:hide'));
       card.hidden = !match;
       if (match) visible += 1;
     }

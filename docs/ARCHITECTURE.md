@@ -28,6 +28,8 @@ Jinja2 usa escape automático y variables estrictas. El HTML recuperado se convi
 
 ## Actualizaciones
 
+En la portada de Academias, `academy-video.html` y `academy-video.js` presentan los videos de `coordinations.json`, normalizados con la misma lista permitida de `embeds.py`. La miniatura se solicita a YouTube; el iframe solo se crea tras la acción de reproducir. Esta acción inicia el video solicitado, mientras la carga inicial permanece silenciosa. Al abrir otra tarjeta, volver a la miniatura o filtrar una tarjeta activa, el iframe se retira para detener el audio. El control de cierre recibe el foco sin cambiar la posición de lectura. Sin JavaScript la miniatura conserva su enlace a YouTube, y los enlaces a la academia siguen disponibles. Las tarjetas del Inicio conservan su composición original.
+
 1. Editar contenido o componentes de `src/`.
 2. Generar el sitio.
 3. Ejecutar `scripts/check.py`.

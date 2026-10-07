@@ -1,0 +1,12 @@
+<div class="academy-video theme-{{ item.theme }}" data-inline-video data-video-src="{{ preview.src }}" data-video-title="{{ preview.title }}">
+  <div class="academy-video-screen" id="video-{{ preview.key }}" data-video-screen>
+    <a class="academy-video-cover" href="{{ preview.link }}" target="_blank" rel="noopener" data-video-launch aria-label="Reproducir presentación de {{ item.name }}">
+      <img class="academy-video-thumbnail" src="{{ preview.thumbnail }}" alt="" loading="lazy" width="480" height="360">
+      <span class="academy-video-brand">{{ icon(item.icon) }} {{ item.short }}</span>
+      <span class="academy-video-play"><span>{{ icon('play') }}</span><strong>Ver presentación</strong></span>
+      <span class="academy-video-hint">Conoce la academia</span>
+    </a>
+  </div>
+  <div class="academy-video-controls" hidden data-video-controls><span>Presentación · {{ item.short }}</span><button type="button" data-video-close>{{ icon('close') }} Volver a miniatura</button></div>
+  <p class="sr-only" data-video-status role="status"></p>
+</div>

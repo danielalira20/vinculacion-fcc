@@ -7,7 +7,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from markupsafe import Markup
-from embeds import prepare_page, render_embed
+from embeds import embed_spec, prepare_page, render_embed
 from presentation import prepare_presentation
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +34,15 @@ def build():
         if page["path"] == "academias/coordinaciones/index.html":
             page["title"] = "Coordinaciones de Academias"
     coordinations = load("coordinations.json")
+    academy_previews = {}
+    for academy in coordinations["academies"]:
+        spec = embed_spec(academy["video"])
+        if not spec or spec["kind"] != "video":
+            raise ValueError(f"Unsupported academy video: {academy['path']}")
+        academy_previews[academy["path"]] = {
+            **spec, "title": media_titles[spec["key"]],
+            "thumbnail": f"https://i.ytimg.com/vi/{spec['key']}/hqdefault.jpg",
+        }
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir()
@@ -57,7 +66,7 @@ def build():
                 return env.get_template("components/process-flow.html").render(flow=processes[key], flow_id=f"{key}-{flow_count}", url=url)
             body = re.sub(r'<!-- process-flow:([a-z]+) -->', process, body)
             return Markup(re.sub(r'@/([^"\s<>]+)', lambda m: url(m.group(1)), body))
-        html = env.get_template(template).render(site=site, pages=pages, media=media, experiences=experiences, coordinations=coordinations, processes=processes, url=url, local_body=local_body, current_path=path, **context)
+        html = env.get_template(template).render(site=site, pages=pages, media=media, experiences=experiences, coordinations=coordinations, academy_previews=academy_previews, processes=processes, url=url, local_body=local_body, current_path=path, **context)
         target = DIST / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html, encoding="utf-8")
