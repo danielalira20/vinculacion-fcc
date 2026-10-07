@@ -1,0 +1,21 @@
+<div class="institutional-bar wrap">
+  <span>Benemérita Universidad Autónoma de Puebla</span>
+  <a href="https://www.cs.buap.mx/">Facultad de Ciencias de la Computación {{ icon('external') }}</a>
+</div>
+<header class="site-header wrap">
+  <a class="brand" href="{{ url('index.html') }}" aria-label="Vinculación FCC, inicio">
+    <span class="brand-mark">
+<img src="{{ url(media.logo) }}" alt="" width="300" height="300">
+</span>
+    <span class="brand-name">Vinculación <strong>FCC</strong>
+<small>Conocimiento que conecta.</small>
+</span>
+  </a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navegacion">
+<span>Menú</span>{{ icon('menu') }}</button>
+  <nav id="navegacion" class="site-nav" aria-label="Navegación principal">
+    {% for item in site.nav %}<a href="{{ url(item.path) }}" {% if active == item.key %}aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
+    <a class="nav-search" href="{{ url('buscar/index.html') }}" aria-label="Buscar en el sitio">{{ icon('search') }}</a>
+    <a class="button button-small nav-contact" href="{{ url('index.html') }}#contacto">Hablemos {{ icon('arrow') }}</a>
+  </nav>
+</header>

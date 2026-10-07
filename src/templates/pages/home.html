@@ -1,0 +1,131 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-copy">
+<p class="eyebrow">
+<span class="status-dot">
+</span> VINCULACIÓN · FCC · BUAP</p>
+<h1 id="hero-title">Conecta lo<br>que sabes con<br>
+<span class="serif">lo que viene.</span>
+</h1>
+<p class="hero-description">Academias, certificaciones y oportunidades para seguir creciendo. Tu siguiente paso comienza aquí.</p>
+<div class="hero-actions">
+<a class="button" href="{{ url('academias/index.html') }}">Explorar academias {{ icon('arrow') }}</a>
+<a class="text-link" href="{{ url('egresados/index.html') }}">Soy egresado {{ icon('arrow') }}</a>
+</div>
+<div class="hero-footnote">
+<span class="small-symbol">{{ icon('network') }}</span>
+<span>Un vínculo entre tu formación<br>y las oportunidades profesionales.</span>
+</div>
+</div>
+  <div class="hero-visual">
+<img class="hero-photo" src="{{ url(media.hero) }}" alt="Birretes al aire durante una celebración de graduación" width="1024" height="682" fetchpriority="high">
+<div class="hero-photo-shade">
+</div>
+<span class="hero-image-tag">Tu futuro, en movimiento.</span>
+<div class="glass-card hero-glass">
+<span class="glass-symbol">{{ icon('spark') }}</span>
+<div>
+<span class="eyebrow">SIGUE CRECIENDO</span>
+<p>El siguiente capítulo<br>
+<strong>lo construyes tú.</strong>
+</p>
+</div>
+<a class="circle-link" href="{{ url('certificaciones/index.html') }}" aria-label="Conocer certificaciones">{{ icon('arrow') }}</a>
+</div>
+<span class="hero-seal">FCC<br>
+<small>BUAP</small>
+</span>
+</div>
+</section>
+<section class="quick-links wrap" aria-label="Accesos a servicios">
+  <a href="{{ url('academias/index.html') }}">
+<span class="quick-icon theme-sage">{{ icon('book') }}</span>
+<span>
+<strong>Quiero aprender</strong>
+<small>Conoce nuestras academias</small>
+</span>{{ icon('arrow') }}</a>
+  <a href="{{ url('empresas/index.html') }}">
+<span class="quick-icon theme-peach">{{ icon('briefcase') }}</span>
+<span>
+<strong>Busco conectar</strong>
+<small>Empresas y oportunidades</small>
+</span>{{ icon('arrow') }}</a>
+  <a href="{{ url('egresados/index.html') }}">
+<span class="quick-icon theme-lavender">{{ icon('graduate') }}</span>
+<span>
+<strong>Soy parte de la FCC</strong>
+<small>Servicios para egresados</small>
+</span>{{ icon('arrow') }}</a>
+</section>
+<section class="section wrap" id="academias" aria-labelledby="academy-title">
+  <div class="section-heading">
+<div>
+<p class="eyebrow">APRENDE ALGO QUE TE LLEVE MÁS LEJOS</p>
+<h2 id="academy-title">Encuentra tu <span class="serif">próximo camino.</span>
+</h2>
+</div>
+<a class="text-link" href="{{ url('academias/index.html') }}">Todas las academias {{ icon('arrow') }}</a>
+</div>
+  <div class="academy-grid" data-reveal>{% for item in site.academies %}
+{% include 'components/academy-card.html' %}
+{% endfor %}</div>
+</section>
+<section class="certification-feature wrap" aria-labelledby="cert-title" data-reveal>
+  <div class="certification-copy">
+<p class="eyebrow">CENTRO DE PRUEBA AUTORIZADO · CERTIPORT</p>
+<h2 id="cert-title">Lo sabes.<br>Ahora, <span class="serif">acredítalo.</span>
+</h2>
+<p>Da reconocimiento a tus habilidades con las certificaciones que ofrece la Facultad de Ciencias de la Computación.</p>
+<a class="button" href="{{ url('certificaciones/index.html') }}">Conocer certificaciones {{ icon('arrow') }}</a>
+</div>
+  <div class="credential-stack">
+<div class="credential-top">
+<span>{{ icon('check') }}</span>
+<span>CONOCIMIENTO<br>QUE ABRE PUERTAS</span>
+</div>
+<div class="credential-list">{% for item in site.certifications %}<a href="{{ url(item.path) }}">
+<span class="credential-icon theme-{{ item.theme }}">{{ icon(item.icon) }}</span>
+<span>{{ item.name }}</span>{{ icon('arrow') }}</a>{% endfor %}</div>
+</div>
+</section>
+<section class="section wrap community" aria-labelledby="community-title">
+<div class="community-photo">
+<img src="{{ url(media.community) }}" alt="Grupo de participantes en una actividad de Oracle" width="960" height="720" loading="lazy">
+<span class="photo-caption">Aprender también es conectar.</span>
+</div>
+<div class="community-copy">
+<p class="eyebrow">UNA COMUNIDAD, MUCHAS POSIBILIDADES</p>
+<h2 id="community-title">El conocimiento crece<br>
+<span class="serif">cuando se comparte.</span>
+</h2>
+<p>El Departamento de Vinculación establece el enlace entre nuestra comunidad y los diversos sectores de la sociedad, en beneficio de la formación de nuestros estudiantes.</p>
+<a class="text-link" href="{{ url('nosotros/index.html') }}">Conoce Vinculación {{ icon('arrow') }}</a>
+<div class="community-services">
+<a href="{{ url('empresas/registro/index.html') }}">{{ icon('building') }} Vincula tu empresa {{ icon('arrow') }}</a>
+<a href="{{ url('egresados/liberacion/index.html') }}">{{ icon('document') }} Consulta tu liberación {{ icon('arrow') }}</a>
+</div>
+</div>
+</section>
+<section class="section resources-section wrap" aria-labelledby="resource-title">
+<div class="section-heading">
+<div>
+<p class="eyebrow">INFORMACIÓN QUE TE ACOMPAÑA</p>
+<h2 id="resource-title">A un paso de <span class="serif">lo que buscas.</span>
+</h2>
+</div>
+<a class="text-link" href="{{ url('recursos/index.html') }}">Ver recursos {{ icon('arrow') }}</a>
+</div>
+<div class="resource-grid">{% for resource in site.home_resources %}<article class="resource-card theme-{{ resource.theme }}" data-reveal>
+<span class="resource-icon">{{ icon(resource.icon) }}</span>
+<div>
+<p class="eyebrow">{{ resource.category }}</p>
+<h3>
+<a href="{{ url(resource.path) }}">{{ resource.title }}</a>
+</h3>
+<p>{{ resource.description }}</p>
+</div>
+<a class="circle-link" href="{{ url(resource.path) }}" aria-label="{{ resource.title }}">{{ icon('arrow') }}</a>
+</article>{% endfor %}</div>
+</section>
+{% endblock %}

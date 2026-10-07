@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<section class="page-intro wrap">
+<p class="eyebrow">ENCUENTRA TU SIGUIENTE PASO</p>
+<h1>¿Qué estás buscando?</h1>
+<p class="lead">Academias, certificaciones, servicios y recursos en un mismo lugar.</p>
+</section>
+<section class="wrap search-page" data-site-search>
+<form class="site-search-form" role="search">
+<label class="search-field">{{ icon('search') }}<input name="q" type="search" placeholder="Por ejemplo: AWS, liberación o certificaciones" aria-label="Buscar en Vinculación" required>
+</label>
+<button class="button" type="submit">Buscar {{ icon('arrow') }}</button>
+</form>
+<p class="result-count" data-search-status role="status">Escribe una palabra para comenzar.</p>
+<div class="search-results" data-search-results>
+</div>
+<noscript>
+<p>La búsqueda necesita JavaScript. Puedes encontrar todas las páginas en <a href="{{ url('recursos/index.html') }}">Recursos</a>.</p>
+</noscript>
+</section>
+{% endblock %}

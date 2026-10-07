@@ -1,0 +1,67 @@
+"""Render a portable static website. No network requests, secrets or server required."""
+import json
+import os
+import re
+import shutil
+from pathlib import Path
+
+from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
+from markupsafe import Markup
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE = ROOT / "src"
+DIST = ROOT / "dist"
+
+
+def load(name):
+    return json.loads((SOURCE / "content" / name).read_text(encoding="utf-8"))
+
+
+def relative(target, current):
+    return os.path.relpath(target, Path(current).parent).replace(os.sep, "/")
+
+
+def build():
+    site, pages, media = load("site.json"), load("pages.json"), load("media.json")
+    if DIST.exists():
+        shutil.rmtree(DIST)
+    DIST.mkdir()
+    shutil.copytree(SOURCE / "assets", DIST / "assets")
+    env = Environment(loader=FileSystemLoader(SOURCE / "templates"), autoescape=select_autoescape(["html"]), undefined=StrictUndefined)
+    env.globals["icon"] = lambda name: Markup((SOURCE / "assets/icons" / f"{name}.svg").read_text())
+    written = set()
+
+    def render(path, template, **context):
+        if path in written:
+            raise ValueError(f"Duplicate output: {path}")
+        written.add(path)
+        url = lambda target: relative(target, path)
+        local_body = lambda body: Markup(re.sub(r'@/([^"\s<>]+)', lambda m: url(m.group(1)), body))
+        html = env.get_template(template).render(site=site, pages=pages, media=media, url=url, local_body=local_body, current_path=path, **context)
+        target = DIST / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(html, encoding="utf-8")
+
+    render("index.html", "pages/home.html", title="Vinculación FCC · BUAP", active="inicio", description=site["description"])
+    for landing in site["landings"]:
+        render(landing["path"], "pages/landing.html", title=landing["title"], active=landing["key"], description=landing["description"], landing=landing)
+    for page in pages:
+        active = page["section"] if page["section"] != "archivo" else "recursos"
+        render(page["path"], "pages/article.html", title=page["title"], active=active, description=page["summary"] or page["title"], page=page)
+    render("buscar/index.html", "pages/search.html", title="Buscar", active="", description="Encuentra academias, certificaciones, trámites y recursos de Vinculación FCC.")
+    search_index = [
+        {"title": p["title"], "path": p["path"], "section": p["section"],
+         "text": p["original_text"] + "\n" + "\n".join(image["text"] for image in p["images"] if image["text_status"] == "revisado contra imagen"),
+         "summary": p["summary"]}
+        for p in pages if p["id"] != "contenido-2141"
+    ]
+    search_index += [{"title": l["title"], "path": l["path"], "section": l["key"], "text": l["description"], "summary": l["description"]} for l in site["landings"]]
+    (DIST / "assets/search-index.json").write_text(json.dumps(search_index, ensure_ascii=False), encoding="utf-8")
+    (DIST / "robots.txt").write_text("# Preview: enable indexing only after editorial approval.\nUser-agent: *\nDisallow: /\n", encoding="utf-8")
+    aliases = [{"source": p["source_url"], "target": p["path"]} for p in pages]
+    (DIST / "redirect-map.json").write_text(json.dumps(aliases, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Built {len(written)} HTML pages in {DIST}")
+
+
+if __name__ == "__main__":
+    build()

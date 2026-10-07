@@ -1,0 +1,322 @@
+{
+  "navegacion": {
+    "text": "Home\n\nNosotros\n\nCertificaciones\n\nOferta Académica\n\nProceso de compra\n\nPrecios por Certificación\n\nAcademias\n\nAcademia Cisco\n\nAcademia de Amazon Web Services (AWS)\n\nAcademia Oracle\n\nEC-COUNCIL\n\nBolsa de Trabajo\n\nRegistro de Empresas\n\nRegistro de Vacantes\n\nEgresados\n\nProceso Liberación\n\nRegistro egresados\n\nRecursos\n\nÁreas asociadas\n\nDiplomado\n\nEducación Continua FCC -Certificaciones Eduit",
+    "references": [
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": "home"
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/wp-content/uploads/2023/08/logoBlanco-transparente.png",
+        "tag": "img",
+        "attr": "src",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/wp-content/uploads/2023/08/logoBlanco-transparente.png",
+        "tag": "img",
+        "attr": "srcset",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/wp-content/uploads/2023/08/logoBlanco-transparente-300x300.png",
+        "tag": "img",
+        "attr": "srcset",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/wp-content/uploads/2023/08/logoBlanco-transparente-1024x1024.png",
+        "tag": "img",
+        "attr": "srcset",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/wp-content/uploads/2023/08/logoBlanco-transparente-150x150.png",
+        "tag": "img",
+        "attr": "srcset",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/wp-content/uploads/2023/08/logoBlanco-transparente-768x768.png",
+        "tag": "img",
+        "attr": "srcset",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/wp-content/uploads/2023/08/logoBlanco-transparente-500x500.png",
+        "tag": "img",
+        "attr": "srcset",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/wp-content/uploads/2023/08/logoBlanco-transparente-400x400.png",
+        "tag": "img",
+        "attr": "srcset",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=967.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=303.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=303.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=291.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=891.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=88.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=100.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=1852.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=98.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=96.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=1015.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=865.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=877.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=127.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=151.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=150.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=152.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=177.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://diplomado.cs.buap.mx/",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://redesociales.my.canva.site/educacion-continua-certificaciones-eduit",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      }
+    ],
+    "source_url": "https://vinculacion.cs.buap.mx/index.html"
+  },
+  "pie_de_pagina": {
+    "text": "Enlaces institucionales \n\nhttp://www.cs.buap.mx/\n\nhttps://secreacademica.cs.buap.mx/\n\nhttps://www.buap.mx/\n\nhttp://www.escolar.buap.mx/\n\nCategorías\n\nCursos CCNA\n\nEgresados\n\nManuales\n\nServicios\n\nVacantes\n\nRecent News \n\n Manual Completo de Inscripción a Cursos AWS Academy – BUAP \n\n Cursos y Herramientas de la Plataforma\nOracle Academy \n\nContacto\n\n2 29 55 00 ext 7200\n\nvinculacion.fcc@correo.buap.mx\n\nhttps://www.cs.buap.mx/\n\n Facultad de Cienciad de la Computación\n\nAv. San Claudio y 14 Sur\n\n Ciudad Universitaria\n\n C.P. 72570\n\n Puebla, Puebla. México.\n\n8:00 AM - 4:00 PM",
+    "references": [
+      {
+        "url": "http://www.cs.buap.mx/",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://secreacademica.cs.buap.mx/",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://www.buap.mx/",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "http://www.escolar.buap.mx/",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=100.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=127.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fcat=2.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fcat=1.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fcat=6.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=1945.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://vinculacion.cs.buap.mx/index.html%3Fp=1404.html",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://www.facebook.com/VinculandoteFcc",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      },
+      {
+        "url": "https://instagram.com/vinculacionfcc",
+        "tag": "a",
+        "attr": "href",
+        "label": "",
+        "rel": ""
+      }
+    ],
+    "source_url": "https://vinculacion.cs.buap.mx/index.html"
+  }
+}

@@ -1,0 +1,128 @@
+[
+  {
+    "priority": "Alta",
+    "title": "Libros de Oracle sin contenido recuperable",
+    "evidence": "Se publican literalmente los códigos [3d-flip-book] con IDs 1839, 1831, 1829, 1836 y 1834. El HTML no expone los archivos originales de esos libros.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=1404.html",
+    "action": "Solicitar al responsable los documentos originales o una exportación del plugin."
+  },
+  {
+    "priority": "Alta",
+    "title": "Libro de AWS pendiente",
+    "evidence": "La oferta de AWS publica [3d-flip-book id=\"1926\"]. Se conservó el cartel y el texto, pero el archivo del libro no está expuesto en ese HTML.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=1924.html",
+    "action": "Recuperar el archivo fuente del libro antes de cerrar la migración."
+  },
+  {
+    "priority": "Alta",
+    "title": "Menú móvil sin desplegar en la prueba",
+    "evidence": "En un ancho de 390 px, al pulsar el botón del menú la URL pasó a # y la navegación siguió con altura 0. El inicio no presentó desbordamiento horizontal.",
+    "source": "https://vinculacion.cs.buap.mx/index.html",
+    "action": "Construir y verificar un menú accesible que permita llegar a las secciones."
+  },
+  {
+    "priority": "Alta",
+    "title": "Imagen de coordinación rota",
+    "evidence": "Las rutas FCC-2025-64*.png.html entregan HTML de inicio, no una imagen. Las rutas PNG relacionadas devuelven 404.",
+    "source": "https://vinculacion.cs.buap.mx/wp-content/uploads/2025/11/FCC-2025-64-1024x1024.png.html",
+    "action": "Obtener la fotografía o gráfico original del departamento."
+  },
+  {
+    "priority": "Alta",
+    "title": "Formulario de Cisco con acceso restringido",
+    "evidence": "El Google Forms enlazado desde Cursos con instructor devolvió 401 en la consulta pública.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=991.html",
+    "action": "Conservar el enlace y confirmar con su propietario el acceso y la vigencia."
+  },
+  {
+    "priority": "Alta",
+    "title": "Formularios de varias pantallas",
+    "evidence": "Empresa, vacantes y encuesta de liberación requieren contestar campos obligatorios para avanzar. Se documentó su primera pantalla y se conservaron las URLs completas.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=865.html",
+    "action": "Reutilizar las incrustaciones actuales o pedir al propietario una exportación completa de preguntas y reglas."
+  },
+  {
+    "priority": "Media",
+    "title": "Vigencia de precios antigua",
+    "evidence": "Los precios indican vigencia a marzo de 2025 y advierten posibles variaciones. Se preservaron como información publicada, no como precios confirmados para octubre de 2026.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=891.html",
+    "action": "Confirmar importes y fechas antes de publicarlos como oferta vigente."
+  },
+  {
+    "priority": "Media",
+    "title": "Convocatorias vencidas",
+    "evidence": "Cisco incluye Primavera 2023; Oracle anuncia registro del 20 de mayo al 4 de junio de 2025; AWS describe cursos hasta el 28 de febrero de 2026.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=991.html",
+    "action": "Preservar históricos con fechas y confirmar las convocatorias actuales."
+  },
+  {
+    "priority": "Media",
+    "title": "Número de academias inconsistente",
+    "evidence": "Academias FCC menciona tres Academias, pero enumera Cisco, EC-Council, AWS y Oracle. La tarjeta inicial solo menciona Cisco y Oracle.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=88.html",
+    "action": "Validar cuatro academias y armonizar las descripciones."
+  },
+  {
+    "priority": "Media",
+    "title": "Información importante dentro de imágenes",
+    "evidence": "Proceso de compra, precios, registro de empresas, vacantes, liberación y oferta de cursos contienen información que no aparece en el texto HTML.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=291.html",
+    "action": "Convertirla en texto, listas y tablas accesibles; conservar ilustraciones como apoyo."
+  },
+  {
+    "priority": "Media",
+    "title": "Enlaces internos antiguos y duplicados",
+    "evidence": "Coexisten p= y page_id= para el mismo contenido. Los enlaces /?p=131 y /?p=129 devolvieron 404, aunque sus versiones estáticas sí existen.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fpage_id=131.html",
+    "action": "Asignar rutas claras y mantener una tabla de redirecciones si se conserva el dominio."
+  },
+  {
+    "priority": "Media",
+    "title": "Correo del gráfico con acento",
+    "evidence": "El gráfico de compra escribe vinculación.fcc@correo.buap.mx; los textos y formularios publican vinculacion.fcc@correo.buap.mx.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=291.html",
+    "action": "Confirmar la dirección institucional y corregir el gráfico en la nueva presentación."
+  },
+  {
+    "priority": "Media",
+    "title": "Opción sin nombre en certificaciones",
+    "evidence": "El formulario de exámenes muestra Option 6 entre las opciones de carrera.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=291.html",
+    "action": "Pedir al propietario del formulario que revise esa opción."
+  },
+  {
+    "priority": "Media",
+    "title": "Dependencia de servicios externos",
+    "evidence": "Se usan Microsoft Forms, Google Forms, YouTube, Canva, Facebook, Certiport y otros sitios. Su HTTP 200 no prueba que las inscripciones o envíos estén operativos.",
+    "source": "https://vinculacion.cs.buap.mx/index.html",
+    "action": "Mantener sus URLs y revisar funcionalidad con el departamento durante la migración."
+  },
+  {
+    "priority": "Baja",
+    "title": "Recursos sin contenido principal",
+    "evidence": "La página Recursos no presenta texto ni referencias dentro de entry-content. La categoría Manuales muestra un listado sin entradas.",
+    "source": "https://vinculacion.cs.buap.mx/index.html%3Fp=152.html",
+    "action": "Confirmar si deben llenarse, enlazarse correctamente o archivarse."
+  },
+  {
+    "priority": "Baja",
+    "title": "Textos residuales de plantilla",
+    "evidence": "El HTML de inicio conserva Request a Quote, texto de demostración y un shortcode de Contact Form 7. No todo ese contenido está visible en el diseño actual. Otros listados conservan descripciones de prueba.",
+    "source": "https://vinculacion.cs.buap.mx/index.html",
+    "action": "Mantenerlo en el respaldo y excluir demostraciones del contenido editorial nuevo tras revisión."
+  },
+  {
+    "priority": "Baja",
+    "title": "Lenguaje y errores de presentación",
+    "evidence": "Aparecen Home, Recent News y View All Members, además de Cienciad en la dirección del pie de página.",
+    "source": "https://vinculacion.cs.buap.mx/index.html",
+    "action": "Unificar etiquetas en español y corregir erratas sin alterar hechos."
+  },
+  {
+    "priority": "Baja",
+    "title": "Enlace Escolar no verificado",
+    "evidence": "La consulta de Escolar falló al validar el certificado de su destino HTTPS. No se omitió la validación ni se afirmó que el sitio esté caído.",
+    "source": "http://www.escolar.buap.mx/",
+    "action": "Revisar el enlace institucional correcto con la facultad."
+  }
+]

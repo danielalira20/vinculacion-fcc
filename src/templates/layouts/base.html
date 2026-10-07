@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description }}">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f7f4ef">
+  <title>{{ title }}{% if title != 'Vinculación FCC · BUAP' %} · Vinculación FCC{% endif %}</title>
+  <link rel="icon" href="{{ url('assets/icons/favicon.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url('assets/css/main.css') }}">
+  <script type="module" src="{{ url('assets/js/main.js') }}">
+</script>
+</head>
+<body data-root="{{ url('index.html').removesuffix('index.html') or './' }}">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  {% include 'components/header.html' %}
+  <main id="contenido">{% block content %}
+{% endblock %}</main>
+  {% include 'components/footer.html' %}
+</body>
+</html>

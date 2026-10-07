@@ -1,0 +1,55 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<section class="page-intro article-intro wrap">
+<nav class="breadcrumbs" aria-label="Ruta de navegación">
+<a href="{{ url('index.html') }}">Inicio</a>
+<span aria-hidden="true">/</span>{% if page.section not in ['archivo', 'nosotros'] %}<a href="{{ url(page.section + '/index.html') }}">{{ page.section|capitalize }}</a>
+<span aria-hidden="true">/</span>{% endif %}<span>{{ page.title }}</span>
+</nav>
+<p class="eyebrow">{{ page.section|upper }} · VINCULACIÓN FCC</p>
+<h1>{{ page.title }}</h1>
+</section>
+<div class="article-layout wrap">
+<article class="article-content">
+  {% if page.notice %}<aside class="soft-note historical-note">{{ icon('clock') }}<div>
+<strong>Información de una publicación anterior</strong>
+<p>{{ page.notice }}</p>
+</div>
+</aside>{% endif %}
+  <div class="article-body">{{ local_body(page.body) }}</div>
+  {% if not page.original_text and not page.images %}<div class="empty-content">
+<h2>¿Necesitas información de esta sección?</h2>
+<p>Consulta con el Departamento de Vinculación para conocer los recursos disponibles.</p>
+<a class="button" href="mailto:{{ site.email }}">Contactar a Vinculación {{ icon('arrow') }}</a>
+</div>{% endif %}
+  {% if page.id in ['contenido-151', 'contenido-865', 'contenido-291', 'contenido-891'] %}<section class="transcription">
+<h2>Información del material publicado</h2>{% for image in page.images if image.text_status == 'revisado contra imagen' %}<div class="transcription-text">{{ image.text }}</div>{% endfor %}</section>{% endif %}
+  {% if page.pending_books %}<aside class="soft-note">{{ icon('book') }}<p>Para consultar los materiales completos, contacta a la coordinación de esta Academia.</p>
+</aside>{% endif %}
+  {% if page.resources %}<section class="article-resources">
+<h2>Enlaces y recursos</h2>
+<div class="resource-directory">{% for resource in page.resources %}<a href="{% if resource.href.startswith('@/') %}{{ url(resource.href[2:]) }}{% else %}{{ resource.href }}{% endif %}">
+<span>{{ resource.label }}</span>{{ icon('external') if not resource.href.startswith('@/') else icon('arrow') }}</a>{% endfor %}</div>
+</section>{% endif %}
+  <details class="source-note">
+<summary>Fuente de esta información</summary>
+<p>Contenido recuperado del sitio de Vinculación FCC el 6 de octubre de 2026. Los datos de contacto, fechas y requisitos requieren validación antes de la publicación final.</p>
+<a href="{{ page.source_url }}">Consultar publicación original {{ icon('external') }}</a>
+</details>
+  {% if page.section == 'archivo' %}<details class="source-note">
+<summary>Texto conservado de la publicación</summary>
+<div class="transcription-text">{{ page.original_text }}</div>
+</details>{% endif %}
+</article>
+<aside class="article-sidebar">
+<div class="sidebar-card">
+<p class="eyebrow">¿TE ACOMPAÑAMOS?</p>
+<h2>Una buena conexión empieza aquí.</h2>
+<p>Si tienes dudas sobre los servicios, escribe al departamento o a la coordinación correspondiente.</p>
+<a class="button" href="mailto:{{ site.email }}">Escríbenos {{ icon('arrow') }}</a>
+</div>
+<nav class="sidebar-nav" aria-label="Servicios relacionados">{% for item in site.nav %}<a href="{{ url(item.path) }}">{{ item.label }} {{ icon('arrow') }}</a>{% endfor %}<a href="{{ url('recursos/index.html') }}">Recursos {{ icon('arrow') }}</a>
+</nav>
+</aside>
+</div>
+{% endblock %}

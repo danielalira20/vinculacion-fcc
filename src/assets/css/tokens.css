@@ -1,0 +1,33 @@
+/* Shared design values. Update this file when refining the Refero direction. */
+:root {
+  --color-canvas: #f7f4ef;
+  --color-paper: #fffdfa;
+  --color-ink: #292724;
+  --color-muted: #68635d;
+  --color-border: #e4dfd7;
+  --color-sand: #e8ded2;
+  --color-sage: #dfe7dd;
+  --color-peach: #f0dece;
+  --color-rose: #ead7d3;
+  --color-lavender: #dedbea;
+  --color-focus: #17354a;
+  --font-body: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  --font-editorial: Georgia, 'Times New Roman', serif;
+  --radius-small: 12px;
+  --radius-card: 24px;
+  --radius-large: 36px;
+  --radius-pill: 999px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --content-width: 1240px;
+  --shadow-card: 0 10px 30px rgb(57 47 36 / 5%);
+  --transition-fast: 180ms ease;
+  --transition-soft: 280ms ease;
+}
