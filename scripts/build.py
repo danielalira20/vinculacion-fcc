@@ -32,11 +32,14 @@ def build():
     cisco = load("cisco.json")
     media_titles = load("embedded-resources.json")
     processes, employers = load("processes.json"), load("employers.json")
+    alumni = load("alumni.json")
     page_titles = {p["path"]: p["title"] for p in pages}
     pages = [prepare_presentation(prepare_page(page, media_titles, page_titles), processes) for page in pages]
     for page in pages:
         if page["path"] == "academias/coordinaciones/index.html":
             page["title"] = "Coordinaciones de Academias"
+        elif page["path"] == "egresados/seguimiento/index.html":
+            page["title"] = "Seguimiento a Egresados"
     coordinations = load("coordinations.json")
     department = load("department-team.json")
     library = load("resource-library.json")
@@ -106,8 +109,8 @@ def build():
         learning = learning_data["profiles"].get(page["path"])
         cisco_template = {"academias/cisco/ruta/index.html": "pages/cisco-route.html", "academias/cisco/cursos/index.html": "pages/cisco-courses.html"}.get(page["path"])
         template = cisco_template or ("pages/learning-catalog.html" if catalog else "pages/aws-guide.html" if page["path"] == "recursos/inscripcion-aws/index.html" else "pages/employer.html" if employer else "pages/coordinations.html" if page["path"] == "academias/coordinaciones/index.html" else "pages/academy.html" if experience else "pages/about.html" if page["path"] == "nosotros/index.html" else "pages/article.html")
-        template = {"nosotros/labor/index.html": "pages/labor.html", "nosotros/coordinaciones/index.html": "pages/team.html"}.get(page["path"], template)
-        render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience, employer=employer, catalog=catalog, learning=learning, cisco=cisco)
+        template = {"nosotros/labor/index.html": "pages/labor.html", "nosotros/coordinaciones/index.html": "pages/team.html", "egresados/seguimiento/index.html": "pages/alumni-followup.html"}.get(page["path"], template)
+        render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience, employer=employer, catalog=catalog, learning=learning, cisco=cisco, alumni=alumni)
     render("buscar/index.html", "pages/search.html", title="Buscar", active="", description="Encuentra academias, certificaciones, trámites y recursos de Vinculación FCC.")
     search_index = [
         {"title": p["title"], "path": p["path"], "section": p["section"],

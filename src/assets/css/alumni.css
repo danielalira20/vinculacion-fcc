@@ -1,0 +1,103 @@
+/* Alumni services are independent destinations; keep the cover compact and warm. */
+.alumni-page a, .alumni-page summary { scroll-margin-top: 130px; }
+.alumni-cover { margin-top: 28px; display: grid; grid-template-columns: 1.05fr .95fr; background: var(--color-sand); border-radius: 36px; overflow: hidden; }
+.alumni-cover-copy { padding: 37px; min-width: 0; }
+.alumni-cover h1 { font-size: clamp(40px, 4.5vw, 60px); line-height: 1.08; letter-spacing: -.055em; margin-top: 18px; }
+.alumni-cover-copy > p:not(.eyebrow) { font-size: 17px; line-height: 1.8; margin-block: 22px; max-width: 550px; }
+.alumni-cover .button { font-size: 15px; }
+.alumni-cover-photo { position: relative; margin: 0; min-height: 395px; border-radius: 105px 0 0; overflow: hidden; }
+.alumni-cover-photo > img { width: 100%; height: 100%; position: absolute; object-fit: cover; object-position: 55% center; }
+.alumni-photo-orbit { position: absolute; width: 225px; height: 225px; border: 1px solid #ffffff80; border-radius: 50%; top: -40px; right: -30px; }
+.alumni-photo-seal { position: absolute; display: grid; place-items: center; top: 24px; right: 24px; width: 54px; height: 54px; border-radius: 18px; color: var(--color-ink); background: #fffdfabc; border: 1px solid #fffdfaa8; transform: rotate(8deg); }
+.alumni-photo-seal svg { width: 27px; height: 27px; transform: rotate(-8deg); }
+.alumni-cover-photo figcaption { position: absolute; bottom: 22px; left: 22px; right: 22px; padding: 21px 24px; border: 1px solid #ffffff8c; border-radius: 22px; background: #fffdfaeb; }
+@supports (backdrop-filter: blur(12px)) { .alumni-cover-photo figcaption, .alumni-photo-seal { background: #fffdfabe; backdrop-filter: blur(14px); } }
+.alumni-cover-photo figcaption small { display: block; font-size: 10px; font-weight: 700; letter-spacing: .12em; margin-bottom: 10px; }
+.alumni-cover-photo figcaption strong { font-size: 26px; line-height: 1.15; font-weight: 500; letter-spacing: -.04em; }
+.alumni-services { margin-top: 42px; }
+.alumni-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 22px; }
+.alumni-section-heading h2 { font-size: 38px; margin-top: 12px; }
+.alumni-section-heading > p { font-size: 15px; color: var(--color-muted); }
+.alumni-service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.alumni-service { min-width: 0; display: flex; flex-direction: column; padding: 26px; border: 1px solid #fffdfa; border-radius: 24px 55px 24px 24px; }
+.alumni-service:nth-child(2) { border-radius: 24px 24px 24px 55px; }
+.alumni-service-icon { width: 46px; height: 46px; display: grid; place-items: center; background: #fffdfaab; border: 1px solid #fffdfab8; border-radius: 16px; }
+.alumni-service h3 { font-size: 27px; line-height: 1.15; margin-top: 19px; }
+.alumni-service > p { font-size: 16px; line-height: 1.75; margin-top: 16px; }
+.alumni-service .alumni-service-note { font-size: 13px; line-height: 1.6; color: #595367; margin-top: 12px; }
+.alumni-service-action { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 15px; font-weight: 600; min-height: 44px; margin-top: auto; padding-top: 25px; }
+.alumni-service-action svg { width: 19px; height: 19px; }
+.alumni-service-action:hover { text-decoration: underline; text-underline-offset: 4px; }
+.alumni-registration { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); gap: 28px; margin-top: 52px; align-items: start; }
+.alumni-registration-guide { padding: 30px; border: 1px solid #ded4c8; border-radius: 28px; background: #eee7dd; }
+.alumni-registration-guide > h2 { font-size: 36px; margin-top: 16px; }
+.alumni-registration-guide > p:not(.eyebrow) { margin-top: 20px; font-size: 16px; line-height: 1.75; }
+.alumni-preparation { margin-top: 26px; padding-top: 23px; border-top: 1px solid #cdbfae; }
+.alumni-preparation > div { display: flex; gap: 11px; align-items: start; margin-top: 18px; font-size: 15px; line-height: 1.6; }
+.alumni-preparation > div strong { display: block; margin-bottom: 3px; font-size: 16px; }
+.alumni-preparation > div svg { width: 20px; height: 20px; margin-top: 4px; }
+.alumni-optional { margin-top: 19px; font-size: 13px; color: var(--color-muted); }
+.alumni-registration-help { margin-top: 26px; padding: 19px; background: #fffdfaa8; border: 1px solid #fffdfa; border-radius: 19px 38px 19px 19px; }
+.alumni-registration-help > span { display: grid; place-items: center; width: 40px; height: 40px; background: var(--color-rose); border-radius: 12px; margin-bottom: 16px; }
+.alumni-registration-help h3 { font-size: 23px; }
+.alumni-registration-help p { font-size: 15px; line-height: 1.6; margin-top: 12px; }
+.alumni-registration-help a { display: flex; align-items: center; gap: 10px; font-size: 14px; line-height: 1.6; margin-top: 17px; overflow-wrap: anywhere; }
+.alumni-registration-help a svg { width: 17px; height: 17px; }
+.alumni-registration-form { min-width: 0; }
+.alumni-registration-form .resource-embed { margin: 0; border-radius: 28px; }
+.alumni-registration-form .embed-heading { background: #e1e8df; font-size: 17px; }
+.alumni-registration-form .embed-viewport { height: 780px; }
+.alumni-registration-form .embed-caption { background: #e7e0d5; }
+.alumni-more { margin-top: 45px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 32px; border: 1px solid #fffdfa; background: var(--color-rose); border-radius: 28px 70px 28px 28px; }
+.alumni-more h2 { font-size: 36px; margin-top: 14px; }
+.alumni-more nav a { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 16px 0; border-bottom: 1px solid #c6b5ad; font-size: 16px; }
+.alumni-more nav a span { display: flex; align-items: center; gap: 12px; }
+.alumni-more nav a:hover { color: #614a40; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) { .alumni-service-icon { transition: transform 180ms ease; } .alumni-service:hover .alumni-service-icon { transform: rotate(-7deg); } }
+@media (max-width: 1000px) {
+  .alumni-cover-copy { padding: 30px; }
+  .alumni-cover h1 { font-size: 43px; }
+  .alumni-service { padding: 21px; }
+  .alumni-service h3 { font-size: 25px; }
+  .alumni-service > p { font-size: 16px; }
+  .alumni-registration { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 20px; }
+  .alumni-registration-guide { padding: 24px; }
+}
+@media (max-width: 760px) {
+  .alumni-cover { grid-template-columns: 1fr; }
+  .alumni-cover h1 { font-size: 46px; }
+  .alumni-cover-photo { min-height: 0; height: 265px; border-radius: 70px 0 0; }
+  .alumni-cover-photo figcaption { left: 18px; right: 18px; bottom: 18px; padding: 18px; }
+  .alumni-cover-photo figcaption strong { font-size: 24px; }
+  .alumni-section-heading { display: block; }
+  .alumni-section-heading > p { margin-top: 14px; }
+  .alumni-service-grid { grid-template-columns: 1fr; gap: 13px; }
+  .alumni-service { padding: 24px; display: grid; grid-template-columns: 45px minmax(0, 1fr); gap: 0 16px; }
+  .alumni-service h3 { margin: 0; font-size: 25px; align-self: center; }
+  .alumni-service h3 br { display: none; }
+  .alumni-service > p, .alumni-service-action { grid-column: 1/-1; }
+  .alumni-service-action { padding-top: 20px; }
+  .alumni-registration { grid-template-columns: 1fr; margin-top: 35px; }
+  .alumni-registration-guide { padding: 27px; }
+  .alumni-registration-help { padding: 20px; }
+  .alumni-registration-form .embed-viewport { height: 690px; }
+  .alumni-more { grid-template-columns: 1fr; padding: 27px; gap: 18px; margin-top: 30px; }
+}
+@media (max-width: 420px) {
+  .alumni-cover { margin-top: 20px; border-radius: 27px; }
+  .alumni-cover-copy { padding: 26px 23px; }
+  .alumni-cover h1 { font-size: 38px; }
+  .alumni-cover-copy > p:not(.eyebrow) { font-size: 17px; line-height: 1.75; }
+  .alumni-cover .button { padding-inline: 16px; font-size: 14px; gap: 12px; }
+  .alumni-cover-photo { height: 245px; }
+  .alumni-photo-seal { top: 17px; right: 17px; width: 44px; height: 44px; }
+  .alumni-services { margin-top: 32px; }
+  .alumni-section-heading h2 { font-size: 33px; }
+  .alumni-service { padding: 21px; gap: 0 13px; }
+  .alumni-service h3 { font-size: 24px; }
+  .alumni-registration-guide { padding: 24px; }
+  .alumni-registration-guide > h2, .alumni-more h2 { font-size: 32px; }
+  .alumni-registration-help { padding: 17px; }
+  .alumni-more { padding: 24px; border-top-right-radius: 50px; }
+  .alumni-more nav a { font-size: 15px; }
+}
