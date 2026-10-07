@@ -5,6 +5,7 @@ from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from embeds import embed_spec
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -17,6 +18,7 @@ class Document(HTMLParser):
         self.h1_count = 0
         self.has_main = False
         self.lang = None
+        self.embeds = Counter()
 
     def handle_starttag(self, tag, attributes):
         attributes = dict(attributes)
@@ -30,11 +32,22 @@ class Document(HTMLParser):
             self.ids.append(attributes["id"])
         if tag == "img" and "alt" not in attributes:
             self.errors.append("Image without alt attribute")
+        if "pdf-pages" in attributes.get("class", "").split():
+            self.embeds["pdf"] += 1
         for name in attributes:
             if name.startswith("on"):
                 self.errors.append("Inline event handler in generated content")
         if tag == "iframe":
-            self.errors.append("Unexpected third-party embed loaded on page view")
+            src = attributes.get("src", "")
+            parsed = urlsplit(src)
+            spec = embed_spec(src)
+            if not spec and not (not parsed.scheme and not parsed.netloc and parsed.path.endswith(".pdf")):
+                self.errors.append("Unsupported embedded resource")
+            if not attributes.get("title") or attributes.get("loading") != "lazy":
+                self.errors.append("Embedded resource without accessible title or lazy loading")
+            if attributes.get("referrerpolicy") != "strict-origin-when-cross-origin":
+                self.errors.append("Embedded resource without provider-compatible referrer policy")
+            self.embeds[spec["kind"] if spec else "pdf"] += 1
         for name in ("href", "src"):
             if attributes.get(name):
                 self.references.append(attributes[name])
@@ -46,7 +59,10 @@ def check():
     documents, errors = {}, []
     for path in DIST.rglob("*.html"):
         document = Document()
-        document.feed(path.read_text(encoding="utf-8"))
+        html = path.read_text(encoding="utf-8")
+        document.feed(html)
+        if any(label in html for label in ("Fuente de esta información", "Fuentes de información", "Consultar publicación original", "Abrir recurso externo", "Ver recurso externo", "vinculacion.cs.buap.mx")):
+            document.errors.append("Legacy provenance or external-resource placeholder exposed in the interface")
         documents[path.resolve()] = document
         label = str(path.relative_to(DIST))
         errors.extend(f"{label}: {error}" for error in document.errors)
@@ -58,6 +74,8 @@ def check():
     for path, document in documents.items():
         for reference in document.references:
             parsed = urlsplit(reference)
+            if parsed.hostname == "vinculacion.cs.buap.mx":
+                errors.append(f"{path.name}: destination still depends on retired website")
             if parsed.scheme:
                 if parsed.scheme not in {"https", "http", "mailto", "tel"}:
                     errors.append(f"{path.name}: unsupported URL scheme: {parsed.scheme}")
@@ -89,7 +107,8 @@ def check():
         errors.append("Graduation release process missing from search index")
     if errors:
         raise SystemExit("\n".join(errors))
-    print(f"PASS: {len(documents)} pages, {reference_count} local references, {len(pages)} recovered records, CSS/JS imports and HTML basics.")
+    embeds = sum((document.embeds for document in documents.values()), Counter())
+    print(f"PASS: {len(documents)} pages, {reference_count} local references, {len(pages)} recovered records, embeds {dict(embeds)}, CSS/JS imports and HTML basics.")
 
 
 if __name__ == "__main__":

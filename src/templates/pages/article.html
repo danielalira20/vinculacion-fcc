@@ -31,11 +31,6 @@
 <div class="resource-directory">{% for resource in page.resources %}<a href="{% if resource.href.startswith('@/') %}{{ url(resource.href[2:]) }}{% else %}{{ resource.href }}{% endif %}">
 <span>{{ resource.label }}</span>{{ icon('external') if not resource.href.startswith('@/') else icon('arrow') }}</a>{% endfor %}</div>
 </section>{% endif %}
-  <details class="source-note">
-<summary>Fuente de esta información</summary>
-<p>Contenido recuperado del sitio de Vinculación FCC el 6 de octubre de 2026. Los datos de contacto, fechas y requisitos requieren validación antes de la publicación final.</p>
-<a href="{{ page.source_url }}">Consultar publicación original {{ icon('external') }}</a>
-</details>
   {% if page.section == 'archivo' %}<details class="source-note">
 <summary>Texto conservado de la publicación</summary>
 <div class="transcription-text">{{ page.original_text }}</div>

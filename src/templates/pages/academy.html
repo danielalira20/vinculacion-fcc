@@ -25,7 +25,6 @@
     <div class="article-body">{{ local_body(page.body) }}</div>
     {% if page.pending_books %}<aside class="soft-note">{{ icon('book') }}<p>Para consultar los materiales completos, contacta a la coordinación de esta Academia.</p></aside>{% endif %}
     {% if page.resources %}<section class="article-resources"><h2>Enlaces y recursos</h2><div class="resource-directory">{% for resource in page.resources %}<a href="{% if resource.href.startswith('@/') %}{{ url(resource.href[2:]) }}{% else %}{{ resource.href }}{% endif %}"><span>{{ resource.label }}</span>{{ icon('external') if not resource.href.startswith('@/') else icon('arrow') }}</a>{% endfor %}</div></section>{% endif %}
-    <details class="source-note"><summary>Fuente de esta información</summary><p>Contenido recuperado del sitio de Vinculación FCC el 6 de octubre de 2026.</p><a href="{{ page.source_url }}">Consultar publicación original {{ icon('external') }}</a></details>
   </div>
   <aside class="academy-connect">
     {% if experience.social %}<a class="academy-facebook theme-{{ experience.theme }}" href="{{ experience.social }}"><span class="social-icon">{{ icon('facebook') }}</span><p class="eyebrow">FACEBOOK · {{ experience.name }}</p><h2>También aprendemos<br><span class="serif">en comunidad.</span></h2><p>Consulta publicaciones y avisos de la Academia en su perfil.</p><span class="social-action">Visitar Facebook {{ icon('external') }}</span></a>{% endif %}

@@ -11,6 +11,8 @@ El navegador recibe archivos estáticos. Python se usa únicamente para construi
 - `site.json`: navegación, textos editoriales, catálogo de Academias y certificaciones, servicios y contacto.
 - `experiences.json`: composición editorial, identidad, accesos y contactos de las portadas. No sustituye el contenido original de `pages.json`.
 - `pages.json`: contenido recuperado, ruta nueva, procedencia, recursos y notas de vigencia. El texto original permanece junto al contenido convertido.
+- `coordinations.json`: personas, contactos, fotografías recuperadas y videos del directorio de Academias.
+- `embedded-resources.json`: nombres descriptivos de los materiales integrados.
 - `asset-sources.json`: trazabilidad de las imágenes y PDF locales. Los nombres derivados del hash evitan colisiones entre archivos llamados `image.png`.
 - `layouts/`: estructura, metadatos, hojas de estilo y punto de entrada de JavaScript.
 - `components/`: elementos comunes sin duplicación entre páginas.
@@ -19,7 +21,7 @@ El navegador recibe archivos estáticos. Python se usa únicamente para construi
 - `editorial.css`: composiciones expresivas de las portadas y perfiles; las plantillas `academy.html` y `about.html` conservan también el contenido completo recuperado.
 - JavaScript: un módulo por responsabilidad. La búsqueda usa `textContent` para presentar resultados, sin interpretar HTML de las consultas.
 
-Jinja2 usa escape automático y variables estrictas. El HTML recuperado se convierte durante una importación manual con una lista permitida de etiquetas; se retiran scripts, estilos, manejadores de eventos y elementos de formulario del WordPress anterior. Los iframes pasan a enlaces explícitos, evitando cargar proveedores externos al visitar una página.
+Jinja2 usa escape automático y variables estrictas. El HTML recuperado se convierte durante una importación manual con una lista permitida de etiquetas; se retiran scripts, estilos, manejadores de eventos y elementos de formulario del WordPress anterior. Durante la generación, `scripts/embeds.py` restaura los visores de YouTube, Canva, Microsoft Forms y el PDF local desde una lista permitida de dominios y rutas. El PDF utiliza 18 imágenes locales renderizadas a partir del original, dentro de una región desplazable con ampliación por página y descarga del documento; su inventario está en `PDF_PREVIEWS` de `scripts/embeds.py`. Cada visor de terceros tiene título accesible, carga diferida y un enlace alternativo específico. Los videos no se reproducen automáticamente. Los enlaces repetidos de una misma presentación se unifican. Los videos retirados o privados detectados se presentan como tarjetas de disponibilidad, sin un reproductor roto. La procedencia permanece en los archivos de contenido y documentación, fuera de la interfaz pública.
 
 ## Actualizaciones
 

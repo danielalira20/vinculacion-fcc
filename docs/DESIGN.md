@@ -68,3 +68,7 @@ Facebook aparece como una sección visual de comunidad en Inicio, Academias, Egr
 ## Próxima revisión con Refero
 
 Comparar una referencia principal de color/tipografía, una de catálogo y una de glass. Documentar la adaptación aquí antes de modificar los valores comunes. Cualquier DESIGN.md externo se usa como material de referencia, no reemplaza estas decisiones ni las instrucciones de la usuaria. Comprobar legibilidad, versión móvil y consistencia de botones tras cada cambio.
+
+## Coordinaciones y materiales
+
+Portada arena/salvia con círculos decorativos y cuatro piezas pastel inclinadas con los logotipos recuperados. Directorio en tarjetas amplias con fotografías existentes, símbolos para las coordinaciones sin retrato, ubicación y correo legible. La galería conserva las mismas curvas y superficies cálidas. Los visores usan un marco sólido para proteger la legibilidad del contenido del proveedor; no se aplica glass sobre videos, documentos o formularios.

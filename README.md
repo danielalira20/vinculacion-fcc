@@ -22,6 +22,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 python scripts/build.py
 python scripts/check.py
+python scripts/test_embeds.py
 ```
 
 Cada generación reemplaza `dist/`. Edita `src/`, nunca `dist/`. La generación es local: no solicita información a servicios externos.
@@ -33,6 +34,8 @@ src/
   content/                 Información, navegación y procedencia
     site.json              Textos del inicio, tarjetas y servicios
     experiences.json       Portadas, identidades y accesos de las Academias
+    coordinations.json     Directorio y presentaciones de las Academias
+    embedded-resources.json Nombres de videos y materiales integrados
     pages.json             41 registros recuperados del sitio anterior
     media.json             Fotografías y logotipo del sitio original
     asset-sources.json     Relación entre recursos locales y sus fuentes
@@ -45,9 +48,11 @@ src/
     js/                    Navegación, filtros, búsqueda y movimiento
     icons/                 Iconos SVG propios
     fonts/                 Manrope y licencia OFL
-    media/                 102 recursos recuperados, incluidos imágenes y PDF
+    media/                 102 recursos recuperados y 18 vistas de la guía PDF
 scripts/
   build.py                 Generación de HTML y del índice de búsqueda
+  embeds.py                Visores y normalización de recursos recuperados
+  test_embeds.py           Pruebas de la migración multimedia
   check.py                 Comprobación de enlaces, archivos y estructura
   import_content.py        Importación manual del respaldo revisado
 docs/
@@ -60,7 +65,9 @@ docs/
 
 - Portada, Academias, Certificaciones, Empresas, Egresados, Nosotros y Recursos.
 - Menú móvil, filtros de Academias y búsqueda local que reconoce consultas sin acentos.
-- Páginas recuperadas con enlaces a formularios y recursos originales.
+- Coordinaciones con portada, directorio de contacto y galería de videos.
+- Videos, presentaciones de Canva, cinco formularios y guía PDF integrados en sus páginas.
+- Interfaz sin enlaces de procedencia ni dependencias del dominio que se retirará.
 - Texto accesible de cuatro materiales gráficos revisados durante el respaldo.
 - Notas de vigencia para precios y convocatorias históricas.
 - Portadas con campos de color nude y pastel, formas curvas, fotografías y tarjetas superpuestas; textos más grandes y glass localizado.
@@ -84,6 +91,7 @@ python -m pip install -r requirements-dev.txt
 python scripts/import_content.py /ruta/al/respaldo-vinculacion-fcc
 python scripts/build.py
 python scripts/check.py
+python scripts/test_embeds.py
 ```
 
 Este paso sustituye `pages.json`, `media.json` y el mapa de recursos. Revisa los cambios antes de confirmar la nueva versión. El respaldo completo anterior se conserva separado de este proyecto.

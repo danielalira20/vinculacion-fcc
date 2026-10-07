@@ -7,6 +7,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from markupsafe import Markup
+from embeds import prepare_page, render_embed
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "src"
@@ -24,12 +25,20 @@ def relative(target, current):
 def build():
     site, pages, media = load("site.json"), load("pages.json"), load("media.json")
     experiences = load("experiences.json")
+    media_titles = load("embedded-resources.json")
+    page_titles = {p["path"]: p["title"] for p in pages}
+    pages = [prepare_page(page, media_titles, page_titles) for page in pages]
+    for page in pages:
+        if page["path"] == "academias/coordinaciones/index.html":
+            page["title"] = "Coordinaciones de Academias"
+    coordinations = load("coordinations.json")
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir()
     shutil.copytree(SOURCE / "assets", DIST / "assets")
     env = Environment(loader=FileSystemLoader(SOURCE / "templates"), autoescape=select_autoescape(["html"]), undefined=StrictUndefined)
     env.globals["icon"] = lambda name: Markup((SOURCE / "assets/icons" / f"{name}.svg").read_text())
+    env.globals["embedded_media"] = lambda href, title: Markup(render_embed(href, title))
     written = set()
 
     def render(path, template, **context):
@@ -38,7 +47,7 @@ def build():
         written.add(path)
         url = lambda target: relative(target, path)
         local_body = lambda body: Markup(re.sub(r'@/([^"\s<>]+)', lambda m: url(m.group(1)), body))
-        html = env.get_template(template).render(site=site, pages=pages, media=media, experiences=experiences, url=url, local_body=local_body, current_path=path, **context)
+        html = env.get_template(template).render(site=site, pages=pages, media=media, experiences=experiences, coordinations=coordinations, url=url, local_body=local_body, current_path=path, **context)
         target = DIST / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html, encoding="utf-8")
@@ -49,7 +58,7 @@ def build():
     for page in pages:
         active = page["section"] if page["section"] != "archivo" else "recursos"
         experience = experiences["academies"].get(page["path"])
-        template = "pages/academy.html" if experience else "pages/about.html" if page["path"] == "nosotros/index.html" else "pages/article.html"
+        template = "pages/coordinations.html" if page["path"] == "academias/coordinaciones/index.html" else "pages/academy.html" if experience else "pages/about.html" if page["path"] == "nosotros/index.html" else "pages/article.html"
         render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience)
     render("buscar/index.html", "pages/search.html", title="Buscar", active="", description="Encuentra academias, certificaciones, trámites y recursos de Vinculación FCC.")
     search_index = [
