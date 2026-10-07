@@ -1,4 +1,4 @@
-<section class="social-section wrap" aria-labelledby="social-title" data-reveal>
+<section class="social-section wrap" id="comunidad" aria-labelledby="social-title" data-reveal>
   <div class="social-story">
     <p class="eyebrow">LA CONVERSACIÓN SIGUE</p>
     <h2 id="social-title">Más cerca.<br><span class="serif">Más conectados.</span></h2>
@@ -10,13 +10,11 @@
     </div>
   </div>
   <div class="social-links">
-    <a class="social-main" href="https://www.facebook.com/VinculandoteFcc">
-      <span class="social-icon">{{ icon('facebook') }}</span>
-      <span class="eyebrow">FACEBOOK · VINCULACIÓN FCC</span>
-      <h3>Lo que pasa<br>en nuestra comunidad.</h3>
-      <p>Visita el perfil de Vinculación para consultar sus publicaciones.</p>
-      <span class="social-action">Ir a Facebook {{ icon('external') }}</span>
-    </a>
+    {% if current_path == 'index.html' %}
+    {% with fb_page='https://www.facebook.com/VinculandoteFcc', fb_name='Vinculación FCC · BUAP' %}{% include 'components/facebook-feed.html' %}{% endwith %}
+    {% else %}
+    <a class="social-main" href="https://www.facebook.com/VinculandoteFcc"><span class="social-icon">{{ icon('facebook') }}</span><span class="eyebrow">FACEBOOK · VINCULACIÓN FCC</span><h3>Lo que pasa<br>en nuestra comunidad.</h3><p>Visita el perfil de Vinculación para consultar sus publicaciones.</p><span class="social-action">Ir a Facebook {{ icon('external') }}</span></a>
+    {% endif %}
     <div class="social-academies">
       <a href="https://www.facebook.com/BUAPFCCAcademiadeOracle"><span>{{ icon('facebook') }} Oracle Academy BUAP</span>{{ icon('external') }}</a>
       <a href="https://www.facebook.com/Academia-CISCO-BUAP-107611248503423"><span>{{ icon('facebook') }} Academia Cisco BUAP</span>{{ icon('external') }}</a>

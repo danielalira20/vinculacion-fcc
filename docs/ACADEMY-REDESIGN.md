@@ -49,3 +49,17 @@ Se reutiliza la dirección Podia/Heptabase ya aprobada para que las tres página
 - Filtros: SRWE devuelve 2 grupos; búsqueda Marco devuelve 1; búsqueda sin coincidencias muestra ayuda. Video original de Cisco presenta el reproductor de YouTube dentro de la página. Google muestra la vista previa histórica dentro del panel, sin enviar datos.
 - Inspección visual de las tres páginas en computadora y a 390/320 px; desbordamiento de la portada a 320 px corregido en el grid. Conectores pasan a orientación vertical en celular.
 - 48 páginas generadas; enlaces locales, importaciones y ausencia de emojis/procedencia antigua comprobados. Ocho pruebas de medios aprobadas, incluida la ruta exacta de Google Forms y rechazo de dominios parecidos.
+
+## Navegación y comunidad · referencia fijada antes de implementar
+
+Se conserva la dirección aprobada Podia/Heptabase y el encabezado glass existente. El respaldo `elementos-globales.json` fija las subsecciones originales: academias individuales, oferta/proceso/precios de certificaciones, empresas/vacantes, seguimiento/liberación/registro y áreas asociadas. Paneles de navegación con iconos del sistema, descripción corta, accesos de sección y agrupación en dos columnas; sin cambiar tipografía o introducir otra paleta. Despliegue nativo con `details`, control por clic/teclado y un panel por vez. En móvil, paneles dentro del menú con altura limitada y desplazamiento.
+
+Facebook solo en Inicio y perfiles Cisco/Oracle, donde ya existe espacio de comunidad y hay una página publicada en el respaldo. Se utiliza el Page Plugin oficial con pestaña timeline, idioma español, sin facepile y carga diferida; no se copian ni simulan anuncios. Superficie cálida exterior y marco de lectura blanco: el contenido del proveedor conserva su presentación. Enlace opcional siempre disponible. Ancho de 180–500 px y actualización al cambiar el contenedor, conforme a la documentación oficial: https://developers.facebook.com/documentation/plugins/page-plugin. No hace falta SDK, credenciales ni un backend para estos paneles públicos. Refero MCP no está disponible; la investigación reutiliza las referencias fijadas de la biblioteca y los patrones ya aprobados, contrastados con el respaldo y la documentación del proveedor.
+
+### Verificación navegación y Facebook
+
+- Chrome: timeline real cargada en Inicio, Cisco y Oracle; los demás espacios de comunidad conservan acceso al perfil sin agregar otro iframe. El contenido externo conserva su formato y puede contener los emojis de sus autores; la interfaz FCC utiliza SVG y el validador comprueba ausencia de emojis en nuestro HTML.
+- Navegación: los cinco submenús muestran destinos recuperados. Apertura mediante clic y Enter, navegación con Tab, un desplegable por vez, cierre por Escape/clic fuera y regreso del foco. En móvil, Escape cierra primero la subsección y después el menú general. Enlace Cisco comprobado desde el desplegable de Oracle.
+- Inspección en computadora, 900 px, 390 px y 320 px sin desplazamiento horizontal. Frame a 320 px ajustado a 238 px, dentro de los límites del proveedor. Botón de menú compacto para que la cabecera permanezca en una fila. Se corrigió el cierre prematuro por transferencia de foco al summary antes de entregar.
+- Capturas de revisión: `outputs/academy-review/navigation-community.png` y `facebook-community.png` en el directorio de trabajo.
+- Comprobaciones finales aprobadas: 48 páginas, 2,314 referencias locales, exactamente 3 timelines de Facebook y 9 pruebas de medios.

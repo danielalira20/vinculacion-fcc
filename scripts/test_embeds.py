@@ -1,5 +1,7 @@
 """Regression checks for the media migration and its URL allowlist."""
 import unittest
+from urllib.parse import parse_qs, urlsplit, urlencode
+from community import facebook_timeline_src
 from embeds import embed_spec, prepare_page, render_embed
 
 
@@ -59,6 +61,20 @@ class EmbedTests(unittest.TestCase):
         self.assertNotIn("usp", spec["link"])
         for href in ("https://docs.google.com.evil.test/forms/d/e/abc/viewform", "https://docs.google.com/document/d/abc/edit", "http://docs.google.com/forms/d/e/abc/viewform", "https://docs.google.com/forms/d/e/%22/viewform"):
             self.assertIsNone(embed_spec(href))
+
+    def test_facebook_uses_only_recovered_pages_and_timeline(self):
+        src = facebook_timeline_src("https://www.facebook.com/VinculandoteFcc", width=280)
+        params = parse_qs(urlsplit(src).query)
+        self.assertEqual(params["width"], ["280"])
+        self.assertEqual(params["tabs"], ["timeline"])
+        self.assertEqual(params["show_facepile"], ["false"])
+        self.assertEqual(embed_spec(src)["kind"], "facebook")
+        self.assertEqual(parse_qs(urlsplit(facebook_timeline_src("https://www.facebook.com/VinculandoteFcc", 999)).query)["width"], ["500"])
+        for page in ("https://www.facebook.com.evil.test/VinculandoteFcc", "javascript:alert(1)", "https://www.facebook.com/unknown", "https://www.facebook.com:443/VinculandoteFcc"):
+            with self.subTest(page=page):
+                with self.assertRaises(ValueError):
+                    facebook_timeline_src(page)
+                self.assertIsNone(embed_spec("https://www.facebook.com/plugins/page.php?" + urlencode({"href": page})))
 
 
 if __name__ == "__main__":

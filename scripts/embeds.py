@@ -4,6 +4,8 @@ import re
 from pathlib import Path
 from urllib.parse import parse_qs, urlencode, urlsplit
 
+from community import facebook_frame_spec
+
 UNAVAILABLE_VIDEOS = {
     "7sViLbTvDKk": "El video de presentación ya no está disponible en YouTube.",
     "Ar2L2i2A0aY": "El video de presentación está privado en YouTube.",
@@ -15,6 +17,9 @@ def embed_spec(href):
     href = html.unescape(href)
     parsed = urlsplit(href)
     query = parse_qs(parsed.query)
+    facebook = facebook_frame_spec(href)
+    if facebook:
+        return facebook
     if parsed.scheme == "https" and parsed.hostname in {"www.youtube.com", "www.youtube-nocookie.com"}:
         match = re.fullmatch(r"/embed/([A-Za-z0-9_-]{11})", parsed.path)
         if match:
@@ -74,7 +79,7 @@ def prepare_page(page, titles, page_titles):
     seen = set()
 
     def title_for(spec):
-        default = {"video": "Video", "presentation": "Presentación", "form": "Formulario", "pdf": "Documento PDF"}[spec["kind"]]
+        default = {"video": "Video", "presentation": "Presentación", "form": "Formulario", "pdf": "Documento PDF", "facebook": "Publicaciones de Facebook"}[spec["kind"]]
         return titles.get(spec["key"], f"{default} · {page['title']}")
 
     def replace_anchor(match):

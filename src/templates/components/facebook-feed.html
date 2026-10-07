@@ -1,0 +1,5 @@
+<div class="facebook-feed">
+  <div class="facebook-feed-heading"><span aria-hidden="true">{{ icon('facebook') }}</span><div><strong>{{ fb_name }}</strong><small>PUBLICACIONES Y AVISOS</small></div><a href="{{ fb_page }}" target="_blank" rel="noopener" aria-label="Abrir {{ fb_name }} en Facebook">{{ icon('external') }}</a></div>
+  <div class="facebook-frame"><iframe src="{{ facebook_timeline_src(fb_page) }}" data-facebook-frame title="Publicaciones de {{ fb_name }} en Facebook" width="500" height="500" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen"></iframe></div>
+  <p class="facebook-feed-caption">¿No se muestran los avisos? <a href="{{ fb_page }}" target="_blank" rel="noopener">Consulta el perfil {{ icon('external') }}</a></p>
+</div>

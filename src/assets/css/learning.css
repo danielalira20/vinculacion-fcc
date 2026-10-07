@@ -45,12 +45,6 @@
 .oracle-area p { max-width: 280px; }
 .oracle-area .text-link { margin-top: 12px; }
 .oracle-area:hover { transform: translateY(-3px); }
-.oracle-community { border-top: 1px solid #29272426; padding-top: 24px; display: flex; align-items: center; gap: 26px; justify-content: space-between; }
-.oracle-community > div { display: grid; grid-template-columns: 46px 1fr; gap: 5px 16px; align-items: start; }
-.oracle-community .learning-line-icon { grid-row: 1 / 3; width: 44px; height: 44px; }
-.oracle-community h3 { margin: 0; font-size: 21px; }
-.oracle-community p { grid-column: 2; margin: 0; font-size: 15px; }
-.oracle-community .button { flex-shrink: 0; background: var(--color-paper); color: var(--color-ink); }
 .learning-contact { position: relative; display: flex; gap: 20px; align-items: center; padding: 24px 28px; border-radius: 26px; background: #e8ded2b8; margin-bottom: 10px; }
 .learning-contact > div { min-width: 0; }
 .learning-contact h2 { font-size: 22px; margin: 4px 0 8px; }
@@ -222,7 +216,6 @@
   .oracle-area .learning-index { grid-column: 3; grid-row: 1; }
   .oracle-area h3 { margin: 0; }
   .oracle-area p { max-width: none; font-size: 15px; }
-  .oracle-community { align-items: start; flex-direction: column; gap: 18px; }
   .benefit-panel { grid-template-columns: 1fr; gap: 18px; }
   .benefit-title { padding: 0; display: grid; grid-template-columns: 50px 1fr; gap: 0 16px; }
   .benefit-title .learning-line-icon { grid-row: 1 / 3; width: 46px; height: 46px; }

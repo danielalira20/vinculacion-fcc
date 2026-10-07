@@ -6,6 +6,7 @@ import { initializeProcesses } from './process.js';
 import { initializeAcademyVideos } from './academy-video.js';
 
 import { initializeLearning } from './learning.js';
+import { initializeCommunity } from './community.js';
 
 initializeNavigation();
 initializeCatalog();
@@ -15,3 +16,4 @@ initializeProcesses();
 initializeAcademyVideos();
 
 initializeLearning();
+initializeCommunity();

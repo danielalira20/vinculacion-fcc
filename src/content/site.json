@@ -7,11 +7,192 @@
   "address": "Av. San Claudio y 14 Sur, Ciudad Universitaria. C.P. 72570, Puebla, Puebla, México.",
   "hours": "8:00 a 16:00 h",
   "nav": [
-    {"key": "academias", "label": "Academias", "path": "academias/index.html"},
-    {"key": "certificaciones", "label": "Certificaciones", "path": "certificaciones/index.html"},
-    {"key": "empresas", "label": "Empresas", "path": "empresas/index.html"},
-    {"key": "egresados", "label": "Egresados", "path": "egresados/index.html"},
-    {"key": "nosotros", "label": "Nosotros", "path": "nosotros/index.html"}
+    {
+      "key": "academias",
+      "label": "Academias",
+      "path": "academias/index.html",
+      "links": [
+        {
+          "label": "Cisco",
+          "path": "academias/cisco/index.html",
+          "icon": "network",
+          "description": "Redes y conectividad",
+          "theme": "sage"
+        },
+        {
+          "label": "AWS",
+          "path": "academias/aws/index.html",
+          "icon": "cloud",
+          "description": "Computación en la nube",
+          "theme": "peach"
+        },
+        {
+          "label": "Oracle",
+          "path": "academias/oracle/index.html",
+          "icon": "code",
+          "description": "Programación y desarrollo",
+          "theme": "rose"
+        },
+        {
+          "label": "EC-Council",
+          "path": "academias/ec-council/index.html",
+          "icon": "shield",
+          "description": "Ciberseguridad",
+          "theme": "lavender"
+        }
+      ],
+      "related": [
+        {
+          "label": "Coordinaciones de Academias",
+          "path": "academias/coordinaciones/index.html"
+        }
+      ]
+    },
+    {
+      "key": "certificaciones",
+      "label": "Certificaciones",
+      "path": "certificaciones/index.html",
+      "links": [
+        {
+          "label": "IT Specialist",
+          "path": "certificaciones/it-specialist/index.html",
+          "icon": "code",
+          "description": "Tecnología de la información",
+          "theme": "lavender"
+        },
+        {
+          "label": "Microsoft Office Specialist",
+          "path": "certificaciones/microsoft-office/index.html",
+          "icon": "document",
+          "description": "Productividad",
+          "theme": "sage"
+        },
+        {
+          "label": "Adobe Certified Professional",
+          "path": "certificaciones/adobe/index.html",
+          "icon": "spark",
+          "description": "Creatividad digital",
+          "theme": "rose"
+        },
+        {
+          "label": "Autodesk Certified User",
+          "path": "certificaciones/autodesk/index.html",
+          "icon": "cube",
+          "description": "Diseño y modelado",
+          "theme": "peach"
+        }
+      ],
+      "related": [
+        {
+          "label": "Oferta académica",
+          "path": "certificaciones/oferta/index.html"
+        },
+        {
+          "label": "Proceso de compra",
+          "path": "certificaciones/proceso/index.html"
+        },
+        {
+          "label": "Precios por certificación",
+          "path": "certificaciones/precios/index.html"
+        }
+      ]
+    },
+    {
+      "key": "empresas",
+      "label": "Empresas",
+      "path": "empresas/index.html",
+      "links": [
+        {
+          "label": "Bolsa de Trabajo",
+          "path": "empresas/bolsa-de-trabajo/index.html",
+          "icon": "briefcase",
+          "description": "Oportunidades para la comunidad",
+          "theme": "sage"
+        },
+        {
+          "label": "Registro de empresas",
+          "path": "empresas/registro/index.html",
+          "icon": "building",
+          "description": "Proceso y documentación",
+          "theme": "peach"
+        },
+        {
+          "label": "Registro de vacantes",
+          "path": "empresas/vacantes/index.html",
+          "icon": "document",
+          "description": "Comparte una oportunidad",
+          "theme": "lavender"
+        }
+      ],
+      "related": []
+    },
+    {
+      "key": "egresados",
+      "label": "Egresados",
+      "path": "egresados/index.html",
+      "links": [
+        {
+          "label": "Registro de egresados",
+          "path": "egresados/registro/index.html",
+          "icon": "graduate",
+          "description": "Mantén tus datos de contacto",
+          "theme": "rose"
+        },
+        {
+          "label": "Proceso de liberación",
+          "path": "egresados/liberacion/index.html",
+          "icon": "check",
+          "description": "Pasos y documentos del trámite",
+          "theme": "sage"
+        },
+        {
+          "label": "Seguimiento a egresados",
+          "path": "egresados/seguimiento/index.html",
+          "icon": "network",
+          "description": "Tu vínculo con la FCC",
+          "theme": "lavender"
+        }
+      ],
+      "related": []
+    },
+    {
+      "key": "nosotros",
+      "label": "Nosotros",
+      "path": "nosotros/index.html",
+      "links": [
+        {
+          "label": "Nuestra labor",
+          "path": "nosotros/labor/index.html",
+          "icon": "building",
+          "description": "Conoce el departamento",
+          "theme": "peach"
+        },
+        {
+          "label": "Coordinaciones",
+          "path": "nosotros/coordinaciones/index.html",
+          "icon": "network",
+          "description": "Encuentra tu punto de contacto",
+          "theme": "sage"
+        },
+        {
+          "label": "Recursos",
+          "path": "recursos/index.html",
+          "icon": "book",
+          "description": "Guías e información a tu alcance",
+          "theme": "lavender"
+        }
+      ],
+      "related": [
+        {
+          "label": "Diplomado",
+          "external": "https://diplomado.cs.buap.mx/"
+        },
+        {
+          "label": "Educación continua · Eduit",
+          "external": "https://redesociales.my.canva.site/educacion-continua-certificaciones-eduit"
+        }
+      ]
+    }
   ],
   "academies": [
     {"name": "Cisco Networking Academy", "short": "Cisco", "theme": "sage", "icon": "network", "area": "Redes y conectividad", "description": "Desarrolla habilidades en redes, infraestructura y tecnologías de Internet.", "path": "academias/cisco/index.html", "contact": "buap.cisco@correo.buap.mx", "tags": ["Redes", "Tecnología"]},

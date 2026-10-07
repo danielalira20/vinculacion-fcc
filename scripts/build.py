@@ -10,6 +10,7 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoes
 from markupsafe import Markup
 from embeds import embed_spec, prepare_page, render_embed
 from presentation import prepare_presentation
+from community import facebook_timeline_src
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "src"
@@ -65,6 +66,7 @@ def build():
         (DIST / asset.relative_to(SOURCE)).write_text(text, encoding="utf-8")
     env = Environment(loader=FileSystemLoader(SOURCE / "templates"), autoescape=select_autoescape(["html"]), undefined=StrictUndefined)
     env.globals["asset_version"] = asset_version
+    env.globals["facebook_timeline_src"] = facebook_timeline_src
     env.globals["icon"] = lambda name: Markup((SOURCE / "assets/icons" / f"{name}.svg").read_text())
     env.globals["embedded_media"] = lambda href, title: Markup(render_embed(href, title))
     written = set()

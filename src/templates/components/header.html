@@ -4,17 +4,23 @@
 </div>
 <header class="site-header wrap">
   <a class="brand" href="{{ url('index.html') }}" aria-label="Vinculación FCC, inicio">
-    <span class="brand-mark">
-<img src="{{ url(media.logo) }}" alt="" width="300" height="300">
-</span>
-    <span class="brand-name">Vinculación <strong>FCC</strong>
-<small>Conocimiento que conecta.</small>
-</span>
+    <span class="brand-mark"><img src="{{ url(media.logo) }}" alt="" width="300" height="300"></span>
+    <span class="brand-name">Vinculación <strong>FCC</strong><small>Conocimiento que conecta.</small></span>
   </a>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navegacion">
-<span>Menú</span>{{ icon('menu') }}</button>
+  <button class="menu-toggle" type="button" aria-label="Menú" aria-expanded="false" aria-controls="navegacion"><span>Menú</span>{{ icon('menu') }}</button>
   <nav id="navegacion" class="site-nav" aria-label="Navegación principal">
-    {% for item in site.nav %}<a href="{{ url(item.path) }}" {% if active == item.key %}aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
+    {% for item in site.nav %}
+    <details class="nav-dropdown" {% if active == item.key %}data-current-section{% endif %}>
+      <summary>{{ item.label }}<span class="nav-chevron" aria-hidden="true">{{ icon('arrow') }}</span></summary>
+      <div class="nav-panel">
+        <div class="nav-panel-heading"><span class="eyebrow">EXPLORA · {{ item.label }}</span><a href="{{ url(item.path) }}" {% if current_path == item.path %}aria-current="page"{% endif %}>{{ 'Conócenos' if item.key == 'nosotros' else 'Ver ' + item.label | lower }} {{ icon('arrow') }}</a></div>
+        <div class="nav-panel-links">
+          {% for entry in item.links %}<a class="nav-destination theme-{{ entry.theme }}" href="{{ url(entry.path) }}" {% if current_path == entry.path %}aria-current="page"{% endif %}><span class="nav-destination-icon" aria-hidden="true">{{ icon(entry.icon) }}</span><span><strong>{{ entry.label }}</strong><small>{{ entry.description }}</small></span>{{ icon('arrow') }}</a>{% endfor %}
+        </div>
+        {% if item.related %}<div class="nav-panel-related">{% for entry in item.related %}<a href="{{ entry.external if entry.get('external') else url(entry.path) }}" {% if entry.get('external') %}target="_blank" rel="noopener"{% endif %}>{{ entry.label }}{{ icon('external' if entry.get('external') else 'arrow') }}</a>{% endfor %}</div>{% endif %}
+      </div>
+    </details>
+    {% endfor %}
     <a class="nav-search" href="{{ url('buscar/index.html') }}" aria-label="Buscar en el sitio">{{ icon('search') }}</a>
     <a class="button button-small nav-contact" href="{{ url('index.html') }}#contacto">Hablemos {{ icon('arrow') }}</a>
   </nav>
