@@ -2,6 +2,7 @@
 @import url('./layout.css');
 @import url('./components.css');
 @import url('./pages.css');
+@import url('./editorial.css');
 
 @font-face {
   font-family: 'Manrope';

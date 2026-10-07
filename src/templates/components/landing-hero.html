@@ -1,0 +1,27 @@
+<div class="wrap landing-breadcrumbs">
+  <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="{{ url('index.html') }}">Inicio</a><span aria-hidden="true">/</span><span>{{ landing.key|capitalize }}</span></nav>
+</div>
+{% set scene = experiences.landings[landing.key] %}
+<section class="destination-hero wrap scene-{{ landing.key }} theme-{{ scene.theme }}" aria-labelledby="destination-title">
+  <div class="destination-copy">
+    <p class="eyebrow">{{ landing.eyebrow }}</p>
+    <h1 id="destination-title">{{ scene.headline }}<br><span class="serif">{{ scene.emphasis }}</span></h1>
+    <p>{{ landing.description }}</p>
+    <a class="button" href="#explorar">{{ scene.action }} {{ icon('arrow') }}</a>
+    <div class="destination-footnote">{{ icon(scene.icon) }}<span>{{ scene.caption }}</span></div>
+  </div>
+  <div class="destination-art">
+    <span class="scene-ring" aria-hidden="true"></span>
+    <span class="scene-grid" aria-hidden="true"></span>
+    {% if scene.photo %}
+    <img class="scene-photo" src="{{ url(media[scene.photo]) }}" alt="{{ scene.alt }}" fetchpriority="high">
+    {% else %}
+    <div class="scene-emblem" aria-hidden="true">{{ icon(scene.icon) }}</div>
+    {% endif %}
+    <span class="scene-word" aria-hidden="true">{{ scene.word }}</span>
+    <span class="scene-spark" aria-hidden="true">{{ icon('spark') }}</span>
+    <div class="scene-cards">
+      {% for card in scene.cards %}<a class="scene-card scene-card-{{ loop.index }}" href="{{ url(card.path) }}"><span>{{ icon(card.icon) }}</span><div><small>{{ card.label }}</small><strong>{{ card.title }}</strong></div>{{ icon('arrow') }}</a>{% endfor %}
+    </div>
+  </div>
+</section>

@@ -126,7 +126,9 @@ def migrate(backup):
                 attrs = dict(tag.attrs)
                 tag.attrs = {}
                 if tag.name == "a":
-                    href = resolve(attrs.get("href", ""), page["source_url"])
+                    label = tag.get_text(strip=True)
+                    # The original directory points some email labels back to itself.
+                    href = "mailto:" + label if re.fullmatch(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", label) else resolve(attrs.get("href", ""), page["source_url"])
                     if href:
                         tag["href"] = href
                         if not tag.get_text(strip=True) and not tag.find("img"):
@@ -155,6 +157,9 @@ def migrate(backup):
             for text in list(fragment.find_all(string=re.compile(r"\[/?3d-flip-book"))):
                 replacement = re.sub(r"\[/?3d-flip-book[^\]]*\]", "", str(text)).strip()
                 text.replace_with(replacement)
+            for heading in fragment.find_all(["h2", "h3", "h4", "h5", "h6"]):
+                if not heading.get_text(strip=True) and not heading.find("img"):
+                    heading.decompose()
             body = str(fragment)
         images = []
         for image in page.get("images", []):

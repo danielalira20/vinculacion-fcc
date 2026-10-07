@@ -1,9 +1,9 @@
-.button { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 50px; padding: 13px 21px; border: 1px solid var(--color-ink); background: var(--color-ink); color: white; border-radius: var(--radius-pill); font-size: 12px; font-weight: 600; line-height: 1.4; transition: background var(--transition-fast); }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 50px; padding: 13px 21px; border: 1px solid var(--color-ink); background: var(--color-ink); color: white; border-radius: var(--radius-pill); font-size: 15px; font-weight: 600; line-height: 1.4; transition: background var(--transition-fast); }
 .button svg { width: 18px; height: 18px; transition: transform var(--transition-fast); }
 .button:hover { background: #51463d; }
 .button:hover svg, .text-link:hover svg { transform: translateX(3px); }
-.button-small { min-height: 40px; padding: 10px 16px; font-size: 11px; gap: 13px; }
-.text-link { display: inline-flex; align-items: center; gap: 14px; font-size: 12px; font-weight: 600; padding-block: 7px; }
+.button-small { min-height: 40px; padding: 10px 16px; font-size: 14px; gap: 13px; }
+.text-link { display: inline-flex; align-items: center; gap: 14px; font-size: 15px; font-weight: 600; padding-block: 7px; }
 .text-link svg { width: 18px; height: 18px; transition: transform var(--transition-fast); }
 .circle-link { display: grid; place-items: center; flex: 0 0 auto; width: 42px; height: 42px; border-radius: 50%; background: var(--color-paper); border: 1px solid var(--color-border); transition: transform var(--transition-fast); }
 .circle-link svg { width: 18px; height: 18px; transform: rotate(-35deg); }
@@ -25,38 +25,38 @@
 .orbit-two { left: -48px; bottom: -85px; width: 180px; height: 180px; }
 .art-icon { display: grid; place-items: center; width: 84px; height: 84px; background: rgb(255 255 255 / 50%); border: 1px solid rgb(255 255 255 / 60%); border-radius: 26px; transform: rotate(-8deg); }
 .art-icon svg { width: 46px; height: 46px; stroke-width: 1.25; transform: rotate(8deg); }
-.art-label { position: absolute; bottom: 14px; left: 16px; font-size: 12px; font-weight: 700; letter-spacing: -.03em; }
+.art-label { position: absolute; bottom: 14px; left: 16px; font-size: 15px; font-weight: 700; letter-spacing: -.03em; }
 .art-corner { position: absolute; top: 13px; right: 13px; }
 .art-corner svg { width: 14px; height: 14px; transform: rotate(-35deg); }
 .academy-copy { padding: 20px 10px 11px; }
-.academy-copy .eyebrow { font-size: 8px; letter-spacing: .07em; margin-bottom: 9px; }
+.academy-copy .eyebrow { font-size: 12px; letter-spacing: .07em; margin-bottom: 9px; }
 .academy-copy h3, .card-title { font-size: 18px; line-height: 1.35; min-height: 49px; letter-spacing: -.035em; }
-.academy-copy > p:not(.eyebrow) { font-size: 13px; line-height: 1.75; color: var(--color-muted); margin-top: 12px; min-height: 91px; }
+.academy-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.75; color: var(--color-muted); margin-top: 12px; min-height: 91px; }
 .card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 22px; }
 .tags { display: flex; flex-wrap: wrap; gap: 5px; }
-.tags span { font-size: 8px; background: #f2efe9; padding: 5px 8px; border-radius: var(--radius-pill); }
+.tags span { font-size: 12px; background: #f2efe9; padding: 5px 8px; border-radius: var(--radius-pill); }
 .card-bottom .circle-link { width: 34px; height: 34px; }
 .search-field { display: flex; align-items: center; gap: 12px; border: 1px solid var(--color-border); background: var(--color-paper); padding: 14px 18px; border-radius: var(--radius-pill); }
-.search-field input { border: 0; background: transparent; outline: 0; min-width: 0; width: 100%; color: var(--color-ink); font-size: 13px; }
+.search-field input { border: 0; background: transparent; outline: 0; min-width: 0; width: 100%; color: var(--color-ink); font-size: 16px; }
 .search-field:focus-within { outline: 2px solid var(--color-focus); outline-offset: 3px; }
 .search-field input::placeholder { color: var(--color-muted); }
 .search-field svg { width: 18px; height: 18px; }
 .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.filter-chips button { border: 1px solid var(--color-border); background: transparent; color: var(--color-ink); border-radius: var(--radius-pill); padding: 10px 18px; font-size: 11px; min-height: 44px; }
+.filter-chips button { border: 1px solid var(--color-border); background: transparent; color: var(--color-ink); border-radius: var(--radius-pill); padding: 10px 18px; font-size: 14px; min-height: 44px; }
 .filter-chips button.is-active { background: var(--color-ink); color: white; border-color: var(--color-ink); }
-.result-count { font-size: 12px; color: var(--color-muted); margin-block: 24px; }
-.soft-note { display: flex; gap: 16px; padding: 22px 26px; border: 1px solid var(--color-border); border-radius: 18px; background: #eee9e0; font-size: 13px; line-height: 1.7; margin-block: 35px; }
+.result-count { font-size: 15px; color: var(--color-muted); margin-block: 24px; }
+.soft-note { display: flex; gap: 16px; padding: 22px 26px; border: 1px solid var(--color-border); border-radius: 18px; background: #eee9e0; font-size: 16px; line-height: 1.7; margin-block: 35px; }
 .soft-note svg { width: 19px; height: 19px; margin-top: 3px; }
 .soft-note strong { display: block; margin-bottom: 5px; }
 .historical-note { background: #f2e7d9; margin-top: 0; }
 .resource-directory { display: grid; gap: 10px; }
-.resource-directory > a { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border: 1px solid var(--color-border); border-radius: 15px; background: var(--color-paper); font-size: 13px; transition: background var(--transition-fast); }
+.resource-directory > a { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border: 1px solid var(--color-border); border-radius: 15px; background: var(--color-paper); font-size: 16px; transition: background var(--transition-fast); }
 .resource-directory > a:hover { background: #eee9e1; }
-.resource-directory small { display: block; font-size: 10px; color: var(--color-muted); margin-bottom: 4px; }
+.resource-directory small { display: block; font-size: 12px; color: var(--color-muted); margin-bottom: 4px; }
 .resource-directory strong { font-weight: 600; }
-.historical-label { display: inline-block; margin-left: 10px; padding: 3px 8px; border-radius: 6px; background: #f2e7d9; font-size: 9px; }
+.historical-label { display: inline-block; margin-left: 10px; padding: 3px 8px; border-radius: 6px; background: #f2e7d9; font-size: 12px; }
 .empty-state { padding: 38px; border: 1px dashed #c2b8aa; border-radius: 20px; text-align: center; }
-.breadcrumbs { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: var(--color-muted); margin-bottom: 40px; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; color: var(--color-muted); margin-bottom: 40px; }
 .breadcrumbs a { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 1000px) {
   .academy-grid { gap: 14px; }
@@ -70,18 +70,18 @@
   .academy-art { height: 180px; }
   .academy-copy { padding: 20px 10px 11px; }
   .academy-copy h3 { font-size: 20px; }
-  .academy-copy > p:not(.eyebrow) { min-height: 59px; font-size: 12px; }
-  .tags span { font-size: 9px; }
+  .academy-copy > p:not(.eyebrow) { min-height: 59px; font-size: 15px; }
+  .tags span { font-size: 12px; }
 }
 @media (max-width: 480px) {
   .academy-grid { grid-template-columns: 1fr; }
   .academy-art { height: 200px; }
   .academy-copy h3, .card-title, .academy-copy > p:not(.eyebrow) { min-height: 0; }
   .academy-copy h3 { font-size: 23px; }
-  .academy-copy > p:not(.eyebrow) { font-size: 14px; }
-  .academy-copy .eyebrow { font-size: 10px; }
+  .academy-copy > p:not(.eyebrow) { font-size: 17px; }
+  .academy-copy .eyebrow { font-size: 12px; }
   .card-bottom { margin-top: 18px; }
   .card-bottom .circle-link { width: 44px; height: 44px; }
-  .soft-note { padding: 20px; font-size: 13px; }
+  .soft-note { padding: 20px; font-size: 16px; }
   .resource-directory > a { padding: 18px; }
 }

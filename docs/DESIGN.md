@@ -11,6 +11,9 @@ Numeración según las trece imágenes compartidas en la conversación:
 | Referencia | Decisión aplicada |
 | --- | --- |
 | 1 · Oxford | Fotografía protagonista, navegación ligera y composición editorial |
+| 2 · Orizon | Composiciones contenidas, tarjetas superpuestas y una placa de glass sobre imagen |
+| 3 · Vespa | Título e imagen en una portada continua, módulos que se encajan y accesos integrados |
+| 4 · Travorra | Curvas amplias en fotografías, serif editorial y accesos destacados |
 | 8 · Q2 planning | Marfil, arena, calidez y contraste con elementos oscuros |
 | 9 · Custom Syllabus | Lavanda, rosa y salvia; bordes suaves y uso localizado de transparencia |
 | 10 · Hippo Campus | Tarjetas de catálogo con jerarquía y estructura constantes |
@@ -45,13 +48,22 @@ Los pasteles distinguen áreas y fondos decorativos; no sustituyen nombres ni es
 - Georgia en cursiva para una frase editorial breve dentro de títulos de portada.
 - Contenedor máximo de 1240 px; cuatro tarjetas en escritorio, dos en tablet y una en móvil estrecho.
 - Radios de 12, 24 y 36 px según escala; botones redondeados.
-- Información importante sobre superficies sólidas y con espacio para leer.
+- Texto general de 17 px; descripciones de portada de 17–18 px, botones de 15 px y etiquetas de al menos 12 px.
+- La frase de portada «Un vínculo entre tu formación…» usa 15 px en escritorio y 14 px en móvil.
+- Inicio, las cinco secciones principales, Nosotros y las cuatro Academias tienen composiciones propias: campos de color, curvas, órbitas, mosaicos y tarjetas superpuestas.
+- Información importante sobre superficies sólidas y con espacio para leer. Los documentos y contenidos históricos permanecen completos.
 
 ## Glass y movimiento
 
-Glass limitado al encabezado y la tarjeta sobre la fotografía de portada. `backdrop-filter` tiene una alternativa de fondo opaco. No se aplica blur a párrafos, precios, requisitos ni procedimientos.
+Glass limitado al encabezado y las placas sobre las fotografías o composiciones de las Academias. `backdrop-filter` tiene una alternativa de fondo opaco. No se aplica blur a párrafos, precios, requisitos ni procedimientos.
 
 Transiciones de 180–280 ms en interacción; aparición única de 500 ms con desplazamiento de 14 px en unas pocas secciones. El contenido sigue visible sin JavaScript. `prefers-reduced-motion` elimina movimiento; no hay animaciones continuas, reproducción automática, scroll forzado ni cursor personalizado.
+
+## Comunidad y redes
+
+Facebook aparece como una sección visual de comunidad en Inicio, Academias, Egresados y Nosotros, y como una tarjeta propia en Oracle y Cisco. Se usan los destinos publicados por el sitio original. Son accesos a perfiles oficiales, no un feed incrustado ni publicaciones inventadas. AWS y EC-Council muestran sus contactos institucionales sin asignarles cuentas sociales no verificadas.
+
+`experiences.json` centraliza los textos, temas y accesos de estas portadas; `editorial.css` añade sus composiciones sobre la estructura compartida. Las fotografías son recursos recuperados, no las capturas de inspiración.
 
 ## Próxima revisión con Refero
 

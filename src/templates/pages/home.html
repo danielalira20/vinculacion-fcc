@@ -1,11 +1,12 @@
 {% extends 'layouts/base.html' %}
 {% block content %}
-<section class="hero wrap" aria-labelledby="hero-title">
+<section class="hero home-stage wrap" aria-labelledby="hero-title">
+<span class="home-orbit" aria-hidden="true"></span>
   <div class="hero-copy">
 <p class="eyebrow">
 <span class="status-dot">
 </span> VINCULACIÓN · FCC · BUAP</p>
-<h1 id="hero-title">Conecta lo<br>que sabes con<br>
+<h1 id="hero-title">Lo que sabes<br>te conecta con<br>
 <span class="serif">lo que viene.</span>
 </h1>
 <p class="hero-description">Academias, certificaciones y oportunidades para seguir creciendo. Tu siguiente paso comienza aquí.</p>
@@ -18,10 +19,11 @@
 <span>Un vínculo entre tu formación<br>y las oportunidades profesionales.</span>
 </div>
 </div>
-  <div class="hero-visual">
+<div class="hero-visual">
 <img class="hero-photo" src="{{ url(media.hero) }}" alt="Birretes al aire durante una celebración de graduación" width="1024" height="682" fetchpriority="high">
 <div class="hero-photo-shade">
 </div>
+<span class="home-photo-word" aria-hidden="true">FCC</span>
 <span class="hero-image-tag">Tu futuro, en movimiento.</span>
 <div class="glass-card hero-glass">
 <span class="glass-symbol">{{ icon('spark') }}</span>
@@ -128,4 +130,5 @@
 <a class="circle-link" href="{{ url(resource.path) }}" aria-label="{{ resource.title }}">{{ icon('arrow') }}</a>
 </article>{% endfor %}</div>
 </section>
+{% include 'components/social.html' %}
 {% endblock %}

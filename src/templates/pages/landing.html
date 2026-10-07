@@ -1,16 +1,8 @@
 {% extends 'layouts/base.html' %}
 {% block content %}
-<section class="page-intro wrap">
-<nav class="breadcrumbs" aria-label="Ruta de navegación">
-<a href="{{ url('index.html') }}">Inicio</a>
-<span aria-hidden="true">/</span>
-<span>{{ landing.key|capitalize }}</span>
-</nav>
-<p class="eyebrow">{{ landing.eyebrow }}</p>
-<h1>{{ landing.title }}</h1>
-<p class="lead">{{ landing.description }}</p>
-</section>
-<section class="wrap landing-content">
+{% include 'components/landing-hero.html' %}
+<section class="wrap landing-content" id="explorar">
+<div class="section-heading catalog-heading"><div><p class="eyebrow">{{ experiences.landings[landing.key].caption }}</p><h2>{% if landing.kind == 'academies' %}Elige tu <span class="serif">siguiente camino.</span>{% elif landing.kind == 'certifications' %}Tu talento, <span class="serif">con respaldo.</span>{% elif landing.kind == 'resources' %}Encuentra <span class="serif">lo que necesitas.</span>{% else %}Empieza <span class="serif">por aquí.</span>{% endif %}</h2></div></div>
   {% if landing.kind == 'academies' %}
   <div class="catalog-tools" data-catalog>
 <label class="search-field">{{ icon('search') }}<input type="search" placeholder="Busca por academia o área de interés" aria-label="Buscar academias" data-catalog-search>
@@ -71,4 +63,5 @@
   {% if landing.links %}<div class="related-links">
 <h2>También te puede servir</h2>{% for link in landing.links %}<a href="{{ url(link.path) }}">{{ link.label }} {{ icon('arrow') }}</a>{% endfor %}</div>{% endif %}
 </section>
+{% if landing.key in ['academias', 'egresados'] %}{% include 'components/social.html' %}{% endif %}
 {% endblock %}

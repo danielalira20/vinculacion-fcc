@@ -32,6 +32,7 @@ Cada generación reemplaza `dist/`. Edita `src/`, nunca `dist/`. La generación 
 src/
   content/                 Información, navegación y procedencia
     site.json              Textos del inicio, tarjetas y servicios
+    experiences.json       Portadas, identidades y accesos de las Academias
     pages.json             41 registros recuperados del sitio anterior
     media.json             Fotografías y logotipo del sitio original
     asset-sources.json     Relación entre recursos locales y sus fuentes
@@ -62,7 +63,9 @@ docs/
 - Páginas recuperadas con enlaces a formularios y recursos originales.
 - Texto accesible de cuatro materiales gráficos revisados durante el respaldo.
 - Notas de vigencia para precios y convocatorias históricas.
-- Tonos nude y pastel, glass en el encabezado y una tarjeta de portada, movimiento suave con respeto a la preferencia de reducir animaciones.
+- Portadas con campos de color nude y pastel, formas curvas, fotografías y tarjetas superpuestas; textos más grandes y glass localizado.
+- Sección de comunidad con accesos destacados a Facebook de Vinculación, Oracle y Cisco.
+- Movimiento suave con respeto a la preferencia de reducir animaciones.
 
 ## Estado de la entrega
 

@@ -1,0 +1,35 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<div class="wrap landing-breadcrumbs"><nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="{{ url('index.html') }}">Inicio</a><span aria-hidden="true">/</span><a href="{{ url('academias/index.html') }}">Academias</a><span aria-hidden="true">/</span><span>{{ experience.name }}</span></nav></div>
+<section class="academy-stage wrap theme-{{ experience.theme }}" aria-labelledby="academy-heading">
+  <div class="academy-stage-copy">
+    <p class="eyebrow">ACADEMIAS FCC · {{ experience.area }}</p>
+    <h1 id="academy-heading">{{ experience.headline }}<br><span class="serif">{{ experience.emphasis }}</span></h1>
+    <p>{{ experience.description }}</p>
+    <a class="button" href="{{ url(experience.cards[0].path) }}">{{ experience.cards[0].title }} {{ icon('arrow') }}</a>
+    <div class="stage-tags">{% for tag in experience.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+  </div>
+  <div class="academy-stage-visual">
+    {% if experience.photo %}<img class="academy-stage-photo" src="{{ url(media[experience.photo]) }}" alt="{{ experience.photo_alt }}" width="960" height="720" fetchpriority="high">{% else %}<div class="academy-sculpture" aria-hidden="true"><span class="sculpture-orbit"></span><span class="sculpture-orbit second"></span><span class="sculpture-center">{{ icon(experience.icon) }}</span><span class="sculpture-node node-a">{{ icon('spark') }}</span><span class="sculpture-node node-b">{{ icon('code') }}</span></div>{% endif %}
+    <div class="academy-brand"><img src="{{ url(experience.logo) }}" alt="{{ experience.name }}"><span>{{ experience.name }}</span></div>
+    <div class="stage-photo-note glass-card"><span>{{ icon(experience.icon) }}</span><div><small>FORMACIÓN QUE CONECTA</small><strong>{{ experience.name }}</strong></div><a class="circle-link" href="#informacion" aria-label="Información de {{ experience.name }}">{{ icon('arrow') }}</a></div>
+    <span class="stage-corner" aria-hidden="true">FCC<br><small>BUAP</small></span>
+  </div>
+</section>
+<section class="academy-paths wrap" aria-label="Accesos de la Academia">
+{% for card in experience.cards %}<a class="path-card" href="{{ url(card.path) }}"><span class="path-icon theme-{{ experience.theme }}">{{ icon(card.icon) }}</span><div><h2>{{ card.title }}</h2><p>{{ card.text }}</p></div>{{ icon('arrow') }}</a>{% endfor %}
+</section>
+<section class="academy-information wrap" id="informacion">
+  <div class="academy-detail">
+    <p class="eyebrow">CONOCE LA ACADEMIA</p><h2>Conocimiento para<br><span class="serif">crear posibilidades.</span></h2>
+    <div class="article-body">{{ local_body(page.body) }}</div>
+    {% if page.pending_books %}<aside class="soft-note">{{ icon('book') }}<p>Para consultar los materiales completos, contacta a la coordinación de esta Academia.</p></aside>{% endif %}
+    {% if page.resources %}<section class="article-resources"><h2>Enlaces y recursos</h2><div class="resource-directory">{% for resource in page.resources %}<a href="{% if resource.href.startswith('@/') %}{{ url(resource.href[2:]) }}{% else %}{{ resource.href }}{% endif %}"><span>{{ resource.label }}</span>{{ icon('external') if not resource.href.startswith('@/') else icon('arrow') }}</a>{% endfor %}</div></section>{% endif %}
+    <details class="source-note"><summary>Fuente de esta información</summary><p>Contenido recuperado del sitio de Vinculación FCC el 6 de octubre de 2026.</p><a href="{{ page.source_url }}">Consultar publicación original {{ icon('external') }}</a></details>
+  </div>
+  <aside class="academy-connect">
+    {% if experience.social %}<a class="academy-facebook theme-{{ experience.theme }}" href="{{ experience.social }}"><span class="social-icon">{{ icon('facebook') }}</span><p class="eyebrow">FACEBOOK · {{ experience.name }}</p><h2>También aprendemos<br><span class="serif">en comunidad.</span></h2><p>Consulta publicaciones y avisos de la Academia en su perfil.</p><span class="social-action">Visitar Facebook {{ icon('external') }}</span></a>{% endif %}
+    <div class="coordinator-card"><p class="eyebrow">TU PUNTO DE CONTACTO</p><h2>Conversemos.</h2><p>{{ experience.coordinator }}</p><a class="contact-mail" href="mailto:{{ experience.contact }}">{{ experience.contact }} {{ icon('arrow') }}</a><a class="text-link" href="{{ url('academias/coordinaciones/index.html') }}">Ver coordinación {{ icon('arrow') }}</a></div>
+  </aside>
+</section>
+{% endblock %}

@@ -9,12 +9,14 @@ El navegador recibe archivos estáticos. Python se usa únicamente para construi
 ## Responsabilidades
 
 - `site.json`: navegación, textos editoriales, catálogo de Academias y certificaciones, servicios y contacto.
+- `experiences.json`: composición editorial, identidad, accesos y contactos de las portadas. No sustituye el contenido original de `pages.json`.
 - `pages.json`: contenido recuperado, ruta nueva, procedencia, recursos y notas de vigencia. El texto original permanece junto al contenido convertido.
 - `asset-sources.json`: trazabilidad de las imágenes y PDF locales. Los nombres derivados del hash evitan colisiones entre archivos llamados `image.png`.
 - `layouts/`: estructura, metadatos, hojas de estilo y punto de entrada de JavaScript.
 - `components/`: elementos comunes sin duplicación entre páginas.
 - `pages/`: composición propia de cada tipo de página.
 - CSS: valores centrales, estructura, componentes y estilos particulares separados.
+- `editorial.css`: composiciones expresivas de las portadas y perfiles; las plantillas `academy.html` y `about.html` conservan también el contenido completo recuperado.
 - JavaScript: un módulo por responsabilidad. La búsqueda usa `textContent` para presentar resultados, sin interpretar HTML de las consultas.
 
 Jinja2 usa escape automático y variables estrictas. El HTML recuperado se convierte durante una importación manual con una lista permitida de etiquetas; se retiran scripts, estilos, manejadores de eventos y elementos de formulario del WordPress anterior. Los iframes pasan a enlaces explícitos, evitando cargar proveedores externos al visitar una página.
