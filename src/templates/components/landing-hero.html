@@ -18,7 +18,7 @@
     {% else %}
     <div class="scene-emblem" aria-hidden="true">{{ icon(scene.icon) }}</div>
     {% endif %}
-    <span class="scene-word" aria-hidden="true">{{ scene.word }}</span>
+
     <span class="scene-spark" aria-hidden="true">{{ icon('spark') }}</span>
     <div class="scene-cards">
       {% for card in scene.cards %}<a class="scene-card scene-card-{{ loop.index }}" href="{{ url(card.path) }}"><span>{{ icon(card.icon) }}</span><div><small>{{ card.label }}</small><strong>{{ card.title }}</strong></div>{{ icon('arrow') }}</a>{% endfor %}

@@ -24,3 +24,11 @@ Se conserva `pages.json` y los activos originales. Las imágenes de botones se s
 - Proceso: expansión conjunta de cuatro etapas operativa. Registro oficial cargado dentro de la página, sin introducir datos ni enviar respuestas. Manual expandible con 18 páginas y 520 px de altura máxima en computadora / 440 px en móvil, más ampliación individual y PDF completo.
 - Imágenes: banners con proporción 3:1 sin recorte; margen bajo la imagen evita que el glass cubra su información. Logos en cajas uniformes e insignias pequeñas con nombres legibles en HTML.
 - Evidencia local fuera del repositorio: `../academy-review/certificaciones-adobe.png` y `../academy-review/certificaciones-oferta.png`.
+
+## Ajuste de tarjetas y retiro de letras de fondo
+
+Solicitud de la usuaria: reemplazar las áreas genéricas con una imagen representativa y retirar letras grandes transparentes en todo el sitio. Se mantiene la dirección FCC/Podia aprobada; la fotografía ocupa el área superior de cada tarjeta y los nombres permanecen en texto legible. Activos originales inspeccionados: IT `d1b78369f3a4a797.png` (computadora y datos), Microsoft `138499de2f76e717.png` (personas frente a una computadora), Adobe `a3293c90320a2b9f.png` (creación audiovisual), Autodesk `bcc316556c8db9a9.png` (cámara y diseño). Usar recorte de presentación CSS hacia la fotografía; material completo conservado en la página del programa. No generar logos ni agregar medios ajenos.
+
+Retirar del HTML y de CSS: `home-photo-word`, `scene-word`, `vacancy-corner`. Son palabras decorativas de fondo. Los nombres de programas, textos de lectura, logos oficiales y sellos opacos mantienen su función informativa y de identidad.
+
+Validación del ajuste: cuatro imágenes originales y logos cargados en Chrome, encuadre IT y Microsoft corregido para excluir fragmentos del texto del banner. Navegación de Autodesk confirmada desde su tarjeta. Portada inspeccionada sin FCC translúcido; revisión global del HTML generado sin `home-photo-word`, `scene-word` ni `vacancy-corner` en ninguna de las 48 páginas. Tarjetas inspeccionadas en escritorio y a 390/320 px, sin desbordamiento horizontal. Tamaño normal del navegador restaurado. Captura final: `../academy-review/certificaciones-tarjetas-fotos.png`.

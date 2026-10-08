@@ -94,8 +94,6 @@
 .chip-first { top: 123px; left: 0; transform: rotate(4deg); }
 .chip-second { top: 306px; right: 0; transform: rotate(4deg); }
 .chip-third { bottom: 3px; left: 17px; transform: rotate(-2deg); }
-.vacancy-corner { position: absolute; right: 9px; bottom: 11px; line-height: .9; font-size: 47px; letter-spacing: -.055em; color: #8b768470; z-index: -1; }
-.vacancy-corner small { font-size: 17px; letter-spacing: .04em; }
 .registration-context { display: grid; grid-template-columns: 46px minmax(0, 1fr); column-gap: 24px; row-gap: 14px; padding-block: 45px 12px; max-width: 1080px; }
 .registration-context-icon { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid #cfc3b3; border-radius: 50%; }
 .registration-context p { font-size: 17px; margin-bottom: 18px; line-height: 1.8; }
@@ -260,7 +258,6 @@
   .chip-first { top: 120px; left: -9px; }
   .chip-second { top: 279px; right: -5px; }
   .chip-third { bottom: 6px; left: 0; }
-  .vacancy-corner { right: -3px; bottom: 48px; font-size: 35px; }
   .registration-context { grid-template-columns: 1fr; gap: 20px; padding-top: 35px; }
   .registration-context > a { grid-column: 1; }
   .process-flow { padding: 27px 20px; margin-block: 32px; border-radius: 26px; }
