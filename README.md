@@ -1,6 +1,24 @@
 # Vinculación FCC · BUAP
 
-Primera versión local del nuevo sitio del Departamento de Vinculación. HTML semántico, CSS nativo, JavaScript en módulos y Python con Jinja2 para generar páginas estáticas. No requiere WordPress, Node ni un servidor Python en producción.
+Sitio del Departamento de Vinculación en revisión. HTML semántico, CSS nativo, JavaScript en módulos y Python con Jinja2 para generar páginas estáticas. No requiere WordPress, Node ni un servidor Python en producción.
+
+## Repositorio y Visual Studio Code
+
+Repositorio privado: [danielalira20/vinculacion-fcc](https://github.com/danielalira20/vinculacion-fcc). La rama principal es `main` y conserva el historial de cambios por funcionalidad.
+
+En Visual Studio Code, usa **Archivo → Abrir carpeta** y selecciona `vinculacion-fcc`, la carpeta que contiene este README junto con `src/` y `scripts/`. Abre la carpeta completa para trabajar con el proyecto.
+
+Para descargarlo en otro equipo con acceso al repositorio:
+
+```sh
+git clone https://github.com/danielalira20/vinculacion-fcc.git
+cd vinculacion-fcc
+code .
+```
+
+Después sigue los pasos de preparación de Python indicados abajo. `dist/` y `.venv/` se generan localmente y quedan excluidos de Git.
+
+Al guardar un cambio, elige un mensaje convencional que describa su propósito, por ejemplo `feat(academias): añadir un catálogo de cursos`, `fix(navegacion): corregir el menú móvil` o `docs: actualizar la guía de instalación`. En **Control de código fuente**, revisa los archivos, crea el commit y sincroniza para subirlo a GitHub. Subir cambios al repositorio no publica el sitio.
 
 ## Abrir la versión generada
 
@@ -92,7 +110,7 @@ Es una versión de revisión, no una publicación oficial. La generación incluy
 
 Los formularios integrados se sirven desde sus proveedores actuales y también ofrecen un enlace opcional para abrirlos aparte. El sitio no captura ni almacena datos personales. Moodle está pendiente de requisitos; todavía no hay cuentas, seguimiento de progreso ni sincronización con esa plataforma.
 
-El repositorio es local. No se ha creado un repositorio remoto ni publicado el sitio. Las herramientas MCP de Refero no están conectadas. Se usaron las referencias visuales del usuario y se investigaron Podia, Heptabase y Syllabus en la biblioteca pública de Refero Styles; ver `docs/ACADEMY-REDESIGN.md`.
+El proyecto se guarda en un repositorio privado de GitHub; el sitio todavía no está publicado. La investigación visual usa las referencias del usuario y Podia, Heptabase y Syllabus en la biblioteca pública de Refero Styles; ver `docs/ACADEMY-REDESIGN.md`. El acceso a investigación en vivo de Refero requiere una suscripción y no estuvo disponible durante esta revisión.
 
 ## Reimportar un respaldo
 
