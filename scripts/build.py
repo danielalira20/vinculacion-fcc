@@ -33,6 +33,7 @@ def build():
     media_titles = load("embedded-resources.json")
     processes, employers = load("processes.json"), load("employers.json")
     alumni = load("alumni.json")
+    certifications = load("certifications.json")
     page_titles = {p["path"]: p["title"] for p in pages}
     pages = [prepare_presentation(prepare_page(page, media_titles, page_titles), processes) for page in pages]
     for page in pages:
@@ -90,7 +91,7 @@ def build():
                 return env.get_template("components/process-flow.html").render(flow=processes[key], flow_id=f"{key}-{flow_count}", url=url)
             body = re.sub(r'<!-- process-flow:([a-z]+) -->', process, body)
             return Markup(re.sub(r'@/([^"\s<>]+)', lambda m: url(m.group(1)), body))
-        html = env.get_template(template).render(site=site, pages=pages, media=media, experiences=experiences, coordinations=coordinations, department=department, academy_previews=academy_previews, processes=processes, url=url, local_body=local_body, current_path=path, **context)
+        html = env.get_template(template).render(site=site, pages=pages, media=media, experiences=experiences, coordinations=coordinations, department=department, academy_previews=academy_previews, processes=processes, certifications=certifications, url=url, local_body=local_body, current_path=path, **context)
         target = DIST / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html, encoding="utf-8")
@@ -110,7 +111,13 @@ def build():
         cisco_template = {"academias/cisco/ruta/index.html": "pages/cisco-route.html", "academias/cisco/cursos/index.html": "pages/cisco-courses.html"}.get(page["path"])
         template = cisco_template or ("pages/learning-catalog.html" if catalog else "pages/aws-guide.html" if page["path"] == "recursos/inscripcion-aws/index.html" else "pages/employer.html" if employer else "pages/coordinations.html" if page["path"] == "academias/coordinaciones/index.html" else "pages/academy.html" if experience else "pages/about.html" if page["path"] == "nosotros/index.html" else "pages/article.html")
         template = {"nosotros/labor/index.html": "pages/labor.html", "nosotros/coordinaciones/index.html": "pages/team.html", "egresados/seguimiento/index.html": "pages/alumni-followup.html"}.get(page["path"], template)
-        render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience, employer=employer, catalog=catalog, learning=learning, cisco=cisco, alumni=alumni)
+        cert_slug = page["path"].split("/")[1] if page["section"] == "certificaciones" else ""
+        cert = certifications["profiles"].get(cert_slug)
+        if cert:
+            template = "pages/certification-profile.html"
+        else:
+            template = {"certificaciones/oferta/index.html": "pages/certification-offer.html", "certificaciones/precios/index.html": "pages/certification-prices.html", "certificaciones/proceso/index.html": "pages/certification-process.html"}.get(page["path"], template)
+        render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience, employer=employer, catalog=catalog, learning=learning, cisco=cisco, alumni=alumni, cert=cert)
     render("buscar/index.html", "pages/search.html", title="Buscar", active="", description="Encuentra academias, certificaciones, trámites y recursos de Vinculación FCC.")
     search_index = [
         {"title": p["title"], "path": p["path"], "section": p["section"],

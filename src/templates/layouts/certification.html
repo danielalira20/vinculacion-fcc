@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<div class="cert-page">
+  <div class="wrap cert-navigation">
+    <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="{{ url('index.html') }}">Inicio</a><span aria-hidden="true">/</span><a href="{{ url('certificaciones/index.html') }}">Certificaciones</a><span aria-hidden="true">/</span><span>{{ page.title }}</span></nav>
+    <nav class="cert-section-nav" aria-label="Explorar certificaciones">{% for slug, label in [('oferta', 'Oferta'), ('precios', 'Precios'), ('proceso', 'Proceso')] %}<a href="{{ url('certificaciones/' + slug + '/index.html') }}" {% if current_path == 'certificaciones/' + slug + '/index.html' %}aria-current="page"{% endif %}>{{ label }} {{ icon('arrow') }}</a>{% endfor %}</nav>
+  </div>
+  {% block certification_content %}{% endblock %}
+  <aside class="wrap cert-contact"><span>{{ icon('mail') }}</span><div><h2>Te acompañamos en tu certificación.</h2><p>Confirma requisitos, disponibilidad e importes con Vinculación FCC.</p></div><a href="mailto:{{ site.email }}">{{ site.email }} {{ icon('arrow') }}</a></aside>
+</div>
+{% endblock %}

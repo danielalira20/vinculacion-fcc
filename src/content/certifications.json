@@ -1,0 +1,419 @@
+{
+  "profiles": {
+    "it-specialist": {
+      "title": "IT Specialist Certification",
+      "theme": "sage",
+      "icon": "code",
+      "area": "Tecnología de la información",
+      "tagline": "Valida tus habilidades en TI.",
+      "intro": "Temas para comenzar tu carrera en tecnología.",
+      "banner": "assets/media/d1b78369f3a4a797.png",
+      "logo": "assets/media/b707dc1a460cdaa2.png",
+      "paragraphs": [
+        "El programa de Especialista en Tecnología de la Información es una forma para que los estudiantes validen las habilidades de TI de nivel de entrada que buscan los empleadores. El programa de Especialista en TI está dirigido a candidatos que están considerando o recién comenzando una carrera en tecnología de la información. Los estudiantes pueden certificar sus conocimientos en una amplia gama de temas de TI, incluido el desarrollo de software, la administración de bases de datos, las redes y la seguridad, la movilidad y la gestión de dispositivos, y la codificación."
+      ],
+      "units": [
+        {
+          "name": "Inteligencia Artificial",
+          "href": "https://certiport.filecamp.com/s/i/n4mlgs8hJG6DV8kI",
+          "group": "Datos e IA",
+          "icon": "network",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Cloud Computing",
+          "href": "https://certiport.filecamp.com/s/i/Z0wZRXz5qzoepqab",
+          "group": "Cloud",
+          "icon": "cloud",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Pensamiento Computacional",
+          "href": "https://certiport.filecamp.com/s/i/22tCaB6b1wl8TBVB",
+          "group": "Desarrollo",
+          "icon": "code",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Cybersecurity",
+          "href": "https://certiport.filecamp.com/s/WZamgoVwSSKHa5gU/fi",
+          "group": "Redes y seguridad",
+          "icon": "shield",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Análisis de datos",
+          "href": "https://certiport.filecamp.com/s/GESxv0YPqKw5XRw3/fi",
+          "group": "Datos e IA",
+          "icon": "network",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Bases de Datos",
+          "href": "https://certiport.filecamp.com/s/XH9cRAprCfTRZjXa/fi",
+          "group": "Datos e IA",
+          "icon": "network",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Configuración y administración de dispositivos",
+          "href": "https://certiport.filecamp.com/s/i/P56Jcg2z5OwkrRZM",
+          "group": "Redes y seguridad",
+          "icon": "shield",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "HTML y CSS",
+          "href": "https://certiport.filecamp.com/s/i/opi5BFKLe6wB5W4s",
+          "group": "Desarrollo",
+          "icon": "code",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Desarrollo de aplicaciones HTML5",
+          "href": "https://certiport.filecamp.com/s/aNN4zQT4ZaxQiU4U/fi",
+          "group": "Desarrollo",
+          "icon": "code",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Java",
+          "href": "https://certiport.filecamp.com/s/4Nq9RIAOKd12wmPd/fi",
+          "group": "Desarrollo",
+          "icon": "code",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "JavaScript",
+          "href": "https://certiport.filecamp.com/s/FgMar1UonLsjRlhf/fi",
+          "group": "Desarrollo",
+          "icon": "code",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Redes",
+          "href": "https://certiport.filecamp.com/s/a9msZi0MeCb5GRqt/fi",
+          "group": "Redes y seguridad",
+          "icon": "shield",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Seguridad de Redes",
+          "href": "https://certiport.filecamp.com/s/SrAFlSAfRRFEnQBu/fi",
+          "group": "Redes y seguridad",
+          "icon": "shield",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Python",
+          "href": "https://certiport.filecamp.com/s/i/9Th6LzRzeAhrdCP7",
+          "group": "Desarrollo",
+          "icon": "code",
+          "detail": "Temario de certificación",
+          "asset": ""
+        },
+        {
+          "name": "Desarrollo de software",
+          "href": "https://certiport.filecamp.com/s/i/Y70nS0IIxuSro1iD",
+          "group": "Desarrollo",
+          "icon": "code",
+          "detail": "Temario de certificación",
+          "asset": ""
+        }
+      ],
+      "groups": [
+        "Datos e IA",
+        "Cloud",
+        "Desarrollo",
+        "Redes y seguridad"
+      ],
+      "practice": {
+        "title": "Pruebas de práctica de CertPREP, impulsadas por GMetrix",
+        "body": "Estas herramientas de evaluación y preparación de pruebas basadas en el desempeño ayudan obtener la certificación. Se evalúan los conocimiento de las aplicaciones antes de realizar los exámenes de certificación. Estas pruebas garantizan que estés adecuadamente preparado para realizar tu examen de certificación.",
+        "benefits": [
+          "Mejore el aprendizaje a través de preguntas de práctica a tu propio ritmo",
+          "Generan familiaridad con el entorno del examen",
+          "Aumentan la confianza hacia los exámenes de certificación",
+          "Preparar mejor a los estudiantes para aprobar los exámenes de certificación"
+        ],
+        "modes": [
+          {
+            "title": "Modo de prueba",
+            "icon": "clock",
+            "items": [
+              "Los estudiantes experimentan cómo serán los exámenes de certificación",
+              "Las pruebas de práctica cronometradas presentan escenarios para realizar como el examen de certificación real"
+            ]
+          },
+          {
+            "title": "Modo de entrenamiento",
+            "icon": "book",
+            "items": [
+              "Los estudiantes trabajan a su propio ritmo mientras reciben comentarios e instrucciones paso a paso para cada pregunta."
+            ]
+          }
+        ]
+      },
+      "support": null,
+      "video": "https://www.youtube.com/embed/JP1C-dxaRq4?start=3&feature=oembed",
+      "video_title": "CertPREP · Exámenes de práctica",
+      "brochure": ""
+    },
+    "adobe": {
+      "title": "Adobe Certified Professional",
+      "theme": "rose",
+      "icon": "spark",
+      "area": "Creatividad y medios digitales",
+      "tagline": "Pon a prueba tus conocimientos.",
+      "intro": "Herramientas para crear y comunicar.",
+      "banner": "assets/media/a3293c90320a2b9f.png",
+      "logo": "assets/media/570f97379b3aa747.png",
+      "paragraphs": [
+        "El futuro pertenece a los que crean. Ya sea para informar, persuadir, entretener o inspirar, el éxito en la era digital significa comunicarse de manera visualmente rica e interactiva. Con un dominio firme de las herramientas creativas más poderosas del mundo, los profesionales certificados de Adobe están listos para dejar su huella.",
+        "Adobe Certified Professional es la certificación reconocida por la industria que demuestra el dominio del software Adobe Creative Cloud y el conocimiento imprescindible para las carreras de medios digitales. Cada examen está integrado con una aplicación de Adobe y diseñado por expertos, lo que permite una evaluación auténtica de las habilidades de preparación para el trabajo."
+      ],
+      "units": [
+        {
+          "name": "After Effects",
+          "href": "https://certiport.pearsonvue.com/fc/aca/od/cc2021/after-effects",
+          "group": "Video y animación",
+          "icon": "play",
+          "detail": "Objetivos del examen",
+          "asset": "assets/media/9bd83531e463be3d.png"
+        },
+        {
+          "name": "Animate",
+          "href": "https://certiport.pearsonvue.com/fc/aca/od/cc2021/animate",
+          "group": "Video y animación",
+          "icon": "play",
+          "detail": "Objetivos del examen",
+          "asset": "assets/media/644ad995446278ec.png"
+        },
+        {
+          "name": "Dreamweaver",
+          "href": "https://certiport.pearsonvue.com/fc/aca/od/cc2021/dreamweaver",
+          "group": "Web",
+          "icon": "code",
+          "detail": "Objetivos del examen",
+          "asset": "assets/media/6ca03310fce9fed7.png"
+        },
+        {
+          "name": "Illustrator",
+          "href": "https://certiport.pearsonvue.com/fc/aca/od/cc2021/illustrator",
+          "group": "Diseño",
+          "icon": "spark",
+          "detail": "Objetivos del examen",
+          "asset": "assets/media/1a5da6707483c4af.png"
+        },
+        {
+          "name": "InDesign",
+          "href": "https://certiport.pearsonvue.com/fc/aca/od/cc2021/indesign",
+          "group": "Diseño",
+          "icon": "book",
+          "detail": "Objetivos del examen",
+          "asset": "assets/media/e57ad8abb7663d63.png"
+        },
+        {
+          "name": "Photoshop",
+          "href": "https://certiport.pearsonvue.com/fc/aca/od/cc2021/photoshop",
+          "group": "Diseño",
+          "icon": "capture",
+          "detail": "Objetivos del examen",
+          "asset": "assets/media/aab4668afb6182c1.png"
+        },
+        {
+          "name": "Premiere Pro",
+          "href": "https://certiport.pearsonvue.com/fc/aca/od/cc2021/premiere-pro",
+          "group": "Video y animación",
+          "icon": "play",
+          "detail": "Objetivos del examen",
+          "asset": "assets/media/88b086f184b1f3e5.png"
+        }
+      ],
+      "groups": [
+        "Video y animación",
+        "Web",
+        "Diseño"
+      ],
+      "practice": null,
+      "support": {
+        "title": "Aprende, practica y certifica",
+        "body": "Certiport proporciona una solución completa que los educadores pueden usar para preparar a los estudiantes para la certificación Adobe Certified Professional. Desde materiales de aprendizaje personalizados y pruebas de práctica hasta exámenes de certificación respaldados por Adobe, Certiport brinda asistencia en cada paso del camino."
+      },
+      "video": "https://www.youtube.com/embed/YPpmx_7l1Xc?start=1&feature=oembed",
+      "video_title": "Adobe Certified Professional · Presentación",
+      "brochure": ""
+    },
+    "microsoft-office": {
+      "title": "Microsoft Office Specialist",
+      "theme": "peach",
+      "icon": "document",
+      "area": "Productividad y herramientas de oficina",
+      "tagline": "Destaca y hazte ver.",
+      "intro": "Conocimientos que usas en proyectos reales.",
+      "banner": "assets/media/138499de2f76e717.png",
+      "logo": "assets/media/3bcb68c91a5011ec.png",
+      "paragraphs": [
+        "El Programa de especialistas de Microsoft Office proporciona evaluaciones de habilidades y conocimientos líderes en la industria a través de nuestras nuevas pruebas basadas en proyectos, que brindan a los estudiantes y profesionales ejercicios del mundo real para evaluar su comprensión de Microsoft Office.",
+        "Esto garantiza que cada usuario certificado haya demostrado la capacidad de dominar todas las características y funcionalidades de Microsoft Office, preparándolos para futuras oportunidades académicas o laborales."
+      ],
+      "units": [
+        {
+          "name": "Excel",
+          "href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Excel",
+          "detail": "Associate y Expert 2019 y 365",
+          "group": "Associate y Expert",
+          "icon": "document",
+          "asset": ""
+        },
+        {
+          "name": "Word",
+          "href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Word",
+          "detail": "Associate y Expert 2019 y 365",
+          "group": "Associate y Expert",
+          "icon": "document",
+          "asset": "assets/media/1ee881469e641fd5.png"
+        },
+        {
+          "name": "Outlook",
+          "href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Outlook",
+          "detail": "Associate 2019 y 365",
+          "group": "Associate",
+          "icon": "document",
+          "asset": ""
+        },
+        {
+          "name": "PowerPoint",
+          "href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/PowerPoint",
+          "detail": "Associate 2019 y 365",
+          "group": "Associate",
+          "icon": "document",
+          "asset": ""
+        },
+        {
+          "name": "Access",
+          "href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Access",
+          "detail": "2019 Expert",
+          "group": "Expert",
+          "icon": "document",
+          "asset": "assets/media/dd37b4ddc3f6a6cc.png"
+        }
+      ],
+      "groups": [
+        "Associate y Expert",
+        "Associate",
+        "Expert"
+      ],
+      "practice": null,
+      "support": {
+        "title": "Valor de la certificación de Microsoft",
+        "body": "La certificación de Microsoft brinda a los estudiantes y candidatos a la fuerza laboral el poder de trazar su propio curso, cumplir su ambición y desarrollar su potencial. Vea las estadísticas que validan que estas certificaciones le brindan las herramientas para construir un futuro más brillante y prepararse para una carrera exitosa."
+      },
+      "video": "",
+      "video_title": "",
+      "brochure": "https://certiport.pearsonvue.com/fc/mos/program-overview"
+    }
+  },
+  "programs": [
+    {
+      "slug": "it-specialist",
+      "title": "IT Specialist Certification",
+      "theme": "sage",
+      "icon": "code",
+      "logo": "assets/media/b707dc1a460cdaa2.png",
+      "description": "Temas para comenzar tu carrera en tecnología.",
+      "count": 15
+    },
+    {
+      "slug": "adobe",
+      "title": "Adobe Certified Professional",
+      "theme": "rose",
+      "icon": "spark",
+      "logo": "assets/media/570f97379b3aa747.png",
+      "description": "Herramientas para crear y comunicar.",
+      "count": 7
+    },
+    {
+      "slug": "microsoft-office",
+      "title": "Microsoft Office Specialist",
+      "theme": "peach",
+      "icon": "document",
+      "logo": "assets/media/3bcb68c91a5011ec.png",
+      "description": "Conocimientos que usas en proyectos reales.",
+      "count": 5
+    },
+    {
+      "slug": "autodesk",
+      "title": "Autodesk Certified User",
+      "theme": "lavender",
+      "icon": "cube",
+      "logo": "assets/media/319ce854b789cd4f.png",
+      "description": "Explora la certificación de herramientas Autodesk.",
+      "count": null
+    }
+  ],
+  "offer": {
+    "headline": "¡Las habilidades se han convertido en la moneda global de las economías del siglo XXI!",
+    "paragraph": "En un mundo donde la competencia por los trabajos, los aumentos salariales y el éxito académico continúan aumentando, las certificaciones ofrecen esperanza porque son una evaluación de terceros creíble de la habilidad y el conocimiento de una persona en un tema determinado.",
+    "benefits": [
+      "Validación de conocimientos",
+      "Mayor comerciabilidad",
+      "Mayor poder adquisitivo",
+      "Rendimiento académico mejorado",
+      "Reputación mejorada",
+      "Credibilidad mejorada",
+      "Mayor confianza",
+      "Respeto de los compañeros"
+    ],
+    "availability": [
+      "La oferta de exámenes de certificación está disponible todos los periodos académicos del año.",
+      "Así que no debes esperar a que se abra alguna convocatoria para solicitar tu examen."
+    ],
+    "video": "https://www.youtube.com/embed/4LffFW4qRzg?feature=oembed",
+    "video_title": "Microsoft Office Specialist · Documental",
+    "historical_graphic": "assets/media/87a91f69e62c59ea.png",
+    "certiport_logo": "assets/media/51b9569ea761cc19.png"
+  },
+  "pricing": {
+    "period": "Vigencia a marzo 2025",
+    "notice": "Los precios publicados corresponden a marzo de 2025. Consulta con Vinculación los importes actuales antes de realizar un pago.",
+    "variation": "Todos los precios pueden variar de acuerdo a ofertas o eventos especiales durante el año",
+    "rates": [
+      {
+        "audience": "Comunidad BUAP",
+        "amount": "$1,100",
+        "theme": "sage"
+      },
+      {
+        "audience": "Público en general",
+        "amount": "$1,450",
+        "theme": "peach"
+      }
+    ],
+    "programs": [
+      "Microsoft Office Specialist (MOS)",
+      "IT Specialist Certification",
+      "Asociado certificado de Adobe (ACA)",
+      "Autodesk Certified User"
+    ],
+    "poster": "assets/media/5dfedfa36f1ec2b0.png"
+  },
+  "process": {
+    "form": "https://forms.office.com/Pages/ResponsePage.aspx?id=x8fjOlHq3kaVQBL0EQ6sm1LztMIMB2hMjDa-DDMcbbdUMlFVRk5MVjBJODE5Vkg4SzhZM01WMVhYSy4u&embed=true",
+    "manual": "@/assets/media/a68c6efe6ff18ca9.pdf",
+    "sipago": "https://sipago.buap.mx/"
+  }
+}
