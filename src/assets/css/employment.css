@@ -75,10 +75,10 @@
 .employment-social p { font-size: 17px; margin-block: 18px; }
 .employment-social strong { display: flex; gap: 16px; align-items: center; font-size: 15px; font-weight: 600; }
 .employment-registration { background: radial-gradient(ellipse at 80% 20%, #d0c4df, transparent 60%), linear-gradient(120deg, #eee2d4, #e0d2d2); }
-.vacancy-composition { position: relative; min-height: 510px; isolation: isolate; align-self: center; }
+.vacancy-composition { position: relative; min-height: 510px; isolation: isolate; align-self: center; display: grid; align-content: center; padding-block: 15px; }
 .vacancy-orbit { position: absolute; width: 420px; height: 420px; border: 1px solid #88748950; border-radius: 50%; top: 0; left: 20px; z-index: -1; }
 .vacancy-dot { position: absolute; top: 36px; right: 16px; width: 62px; height: 62px; border-radius: 50%; background: #d5b49c; }
-.vacancy-paper { position: absolute; left: 12%; top: 32px; width: 77%; max-width: 380px; min-height: 397px; padding: 30px; background: #f7f0e5; border: 1px solid #fffdfa; border-radius: 26px 75px 26px 26px; transform: rotate(-7deg); box-shadow: 0 25px 50px #65504412; }
+.vacancy-paper { position: relative; width: 92%; max-width: 380px; margin-inline: auto; padding: 28px; background: #f7f0e5; border: 1px solid #fffdfa; border-radius: 26px 60px 26px 26px; box-shadow: 0 25px 50px #65504412; }
 .vacancy-paper-top { display: flex; align-items: center; gap: 13px; margin-bottom: 29px; }
 .vacancy-paper-top > span { width: 48px; height: 48px; border: 1px solid #bba990; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; }
 .vacancy-paper-top small { font-size: 11px; line-height: 1.5; max-width: 120px; letter-spacing: .06em; }
@@ -89,11 +89,9 @@
 .vacancy-paper-lines span:nth-child(2) { width: 76%; }
 .vacancy-paper-lines span:nth-child(3) { width: 63%; }
 .vacancy-paper-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 30px; font-size: 15px; }
-.vacancy-glass-chip { position: absolute; display: flex; align-items: center; gap: 13px; padding: 17px 22px; background: #fffdfa; border: 1px solid #fff; box-shadow: 0 14px 28px #6450440a; border-radius: 18px; font-size: 15px; font-weight: 600; }
-.vacancy-glass-chip svg { width: 19px; height: 19px; }
-.chip-first { top: 123px; left: 0; transform: rotate(4deg); }
-.chip-second { top: 306px; right: 0; transform: rotate(4deg); }
-.chip-third { bottom: 3px; left: 17px; transform: rotate(-2deg); }
+.vacancy-chips { position: relative; display: grid; gap: 8px; width: 85%; max-width: 360px; justify-self: end; margin-top: -12px; z-index: 1; }
+.vacancy-glass-chip { display: flex; align-items: center; gap: 13px; min-height: 52px; padding: 14px 18px; background: #fffdfa; border: 1px solid #fff; box-shadow: 0 14px 28px #6450440a; border-radius: 16px; font-size: 15px; font-weight: 600; }
+.vacancy-glass-chip svg { width: 19px; height: 19px; flex-shrink: 0; }
 .registration-context { display: grid; grid-template-columns: 46px minmax(0, 1fr); column-gap: 24px; row-gap: 14px; padding-block: 45px 12px; max-width: 1080px; }
 .registration-context-icon { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid #cfc3b3; border-radius: 50%; }
 .registration-context p { font-size: 17px; margin-bottom: 18px; line-height: 1.8; }
@@ -175,7 +173,7 @@
   .company-action h3 { font-size: 23px; }
   .employment-email { font-size: 17px; }
   .employment-mission { gap: 40px; }
-  .vacancy-paper { width: 82%; left: 8%; padding: 25px; }
+  .vacancy-paper { padding: 25px; }
   .vacancy-paper > strong { font-size: 34px; }
   .process-track.steps-4, .process-track.steps-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .steps-4 .process-stop:nth-child(2) .process-connector, .steps-5 .process-stop:nth-child(2n) .process-connector { display: none; }
@@ -191,7 +189,6 @@
   .network-origin small { font-size: 11px; }
   .employment-hero h1 { max-width: 650px; font-size: 62px; }
   .vacancy-composition { width: 100%; max-width: 510px; margin-inline: auto; }
-  .vacancy-paper { width: 75%; left: 12%; }
   .vacancy-paper > strong { font-size: 39px; }
   .company-bridge, .employment-mission, .employment-contact { grid-template-columns: 1fr; gap: 30px; }
   .employment-mission { padding-block: 56px; }
@@ -246,7 +243,7 @@
   .employment-email { font-size: 17px; gap: 10px; }
   .employment-social { padding: 28px; }
   .vacancy-composition { min-height: 445px; }
-  .vacancy-paper { left: 7%; top: 15px; width: 88%; min-height: 350px; padding: 23px; border-radius: 25px 60px 25px 25px; }
+  .vacancy-paper { width: 100%; padding: 23px; border-radius: 25px 50px 25px 25px; }
   .vacancy-paper > strong { font-size: 33px; }
   .vacancy-paper-label { font-size: 11px; }
   .vacancy-paper-top { margin-bottom: 25px; }
@@ -254,10 +251,8 @@
   .vacancy-paper-lines { margin-top: 23px; }
   .vacancy-orbit { width: 340px; height: 340px; top: 40px; left: -30px; }
   .vacancy-dot { width: 40px; height: 40px; right: 3px; top: 7px; }
-  .vacancy-glass-chip { padding: 14px 16px; font-size: 13px; gap: 10px; max-width: 96%; }
-  .chip-first { top: 120px; left: -9px; }
-  .chip-second { top: 279px; right: -5px; }
-  .chip-third { bottom: 6px; left: 0; }
+  .vacancy-chips { width: 94%; }
+  .vacancy-glass-chip { padding: 14px 16px; font-size: 13px; gap: 10px; }
   .registration-context { grid-template-columns: 1fr; gap: 20px; padding-top: 35px; }
   .registration-context > a { grid-column: 1; }
   .process-flow { padding: 27px 20px; margin-block: 32px; border-radius: 26px; }

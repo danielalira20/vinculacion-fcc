@@ -80,3 +80,7 @@ La Bolsa de Trabajo utiliza una red visual nativa que conecta Talento FCC con em
 Los procesos se convierten en tarjetas conectadas y numeradas. Cada tarjeta permite consultar detalles, requisitos y acciones correspondientes. El glass se reserva a acentos sobre fondos cálidos; la animación aparece en hover y revelado, respetando la preferencia de movimiento reducido.
 
 Regla de la usuaria: PROHIBIDO EMOJIS en la interfaz. Usar iconos SVG locales. Los símbolos heredados se sustituyen durante la generación; las copias históricas permanecen como respaldo.
+
+## Registro de empresas y vacantes · 7 de octubre de 2026
+
+Corrección directa según la captura del usuario: retirar la inclinación de la tarjeta y de las tres etiquetas. Se conserva la dirección FCC aprobada (nude, esquinas orgánicas y glass en overlays), con tarjeta recta y etiquetas de ancho uniforme en una columna. La ligera superposición sucede en el borde inferior, sin cubrir texto. Composición en flujo CSS, sin alturas rígidas de tarjeta ni coordenadas absolutas de etiquetas; contenido, formularios y procesos intactos. Validación: 48 páginas / 2353 referencias locales, Chrome escritorio y 390/320 px; ambas páginas sin desbordamiento y transformaciones de tarjeta/etiquetas `none`. Captura: `outputs/academy-review/registro-empresas-alineado.png`.
