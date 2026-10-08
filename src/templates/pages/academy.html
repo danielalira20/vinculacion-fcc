@@ -10,7 +10,8 @@
     <a class="button" href="{{ url(experience.cards[0].path) }}">{{ experience.cards[0].title }} {{ icon('arrow') }}</a>
     <div class="stage-tags">{% for tag in experience.tags %}<span>{{ tag }}</span>{% endfor %}</div>
   </div>
-  <div class="academy-stage-visual">
+  <div class="academy-stage-visual {% if experience.get('background') %}academy-image-layer{% endif %}">
+    {% if experience.get('background') %}<img class="academy-background" src="{{ url(experience.background) }}" alt="" width="1254" height="1254" fetchpriority="high"><span class="academy-image-wash" aria-hidden="true"></span>{% endif %}
     {% if experience.photo %}<img class="academy-stage-photo" src="{{ url(media[experience.photo]) }}" alt="{{ experience.photo_alt }}" width="960" height="720" fetchpriority="high">{% else %}<div class="academy-sculpture" aria-hidden="true"><span class="sculpture-orbit"></span><span class="sculpture-orbit second"></span><span class="sculpture-center">{{ icon(experience.icon) }}</span><span class="sculpture-node node-a">{{ icon('spark') }}</span><span class="sculpture-node node-b">{{ icon('code') }}</span></div>{% endif %}
     <div class="academy-brand"><img src="{{ url(experience.logo) }}" alt="{{ experience.name }}"><span>{{ experience.name }}</span></div>
     <div class="stage-photo-note glass-card"><span>{{ icon(experience.icon) }}</span><div><small>FORMACIÓN QUE CONECTA</small><strong>{{ experience.name }}</strong></div><a class="circle-link" href="#informacion" aria-label="Información de {{ experience.name }}">{{ icon('arrow') }}</a></div>

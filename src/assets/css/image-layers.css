@@ -1,0 +1,74 @@
+/* Approved FCC photo direction: themed backdrops and readable glass overlays. */
+.academy-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; opacity: .65; filter: saturate(.65); }
+.academy-image-wash { position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(135deg, #fffdfa66, #fffdfa12 65%, var(--theme-bg)); opacity: .75; }
+.academy-image-layer .academy-sculpture { z-index: 1; }
+.academy-image-layer .sculpture-orbit { border-color: #fffdfaaa; }
+.academy-image-layer .sculpture-center { background: #fffdfa9c; backdrop-filter: blur(9px); box-shadow: 12px 14px 0 #29272412; }
+.academy-image-layer .academy-brand, .academy-image-layer .stage-photo-note, .academy-image-layer .stage-corner { z-index: 2; }
+.academy-image-layer .stage-photo-note { background: #fffdfade; }
+
+.employer-photo-scene { position: relative; align-self: stretch; min-height: 480px; border-radius: 100px 24px 24px 24px; overflow: hidden; isolation: isolate; }
+.employer-photo-scene > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+.employer-photo-scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #29272415, transparent 40%, #2927244d); pointer-events: none; }
+.employer-photo-label { position: absolute; z-index: 1; top: 20px; right: 20px; background: #fffdfae6; border-radius: 30px; padding: 10px 15px; font-size: 11px; font-weight: 650; letter-spacing: .07em; }
+.employer-photo-note { position: absolute; z-index: 1; left: 18px; right: 18px; bottom: 18px; padding: 23px; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; background: #fffdfadc; }
+.employer-photo-note .eyebrow { grid-column: 1 / -1; font-size: 10px; }
+.employer-photo-note > strong { font-size: 33px; line-height: 1.15; font-weight: 500; letter-spacing: -.035em; }
+.employer-photo-action { align-self: center; width: 44px; height: 44px; border-radius: 50%; background: #fffdfa; display: grid; place-items: center; }
+.employer-photo-action svg { width: 20px; height: 20px; }
+.employer-photo-route { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px 18px; border-top: 1px solid #29272426; padding-top: 14px; font-size: 12px; }
+.employer-photo-route span { display: flex; align-items: center; gap: 6px; }
+.employer-photo-route svg { width: 15px; height: 15px; }
+
+.registration-story { display: grid; grid-template-columns: 1.4fr 1fr; gap: 18px; padding-block: 40px 8px; }
+.registration-story-lead { padding: 30px; border-radius: 28px 60px 28px 28px; background: var(--color-sand); }
+.registration-story-symbol { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 15px; background: #fffdfa90; margin-bottom: 20px; }
+.registration-story h2 { font-size: clamp(30px, 3vw, 40px); margin-block: 16px 22px; }
+.registration-story p { font-size: 17px; line-height: 1.75; }
+.registration-story .eyebrow { font-size: 11px; }
+.registration-story-stat { position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 32px; background: var(--color-lavender); border-radius: 60px 28px 28px 28px; }
+.registration-story-stat::before { content: ''; position: absolute; top: -80px; right: -100px; width: 280px; height: 280px; border: 1px solid #61577326; border-radius: 50%; pointer-events: none; }
+.registration-stat-number { font-size: clamp(70px, 8vw, 115px); font-weight: 500; line-height: 1; letter-spacing: -.065em; margin-bottom: 16px; }
+.registration-stat-number > span { font-size: .55em; vertical-align: top; line-height: 1.5; }
+.registration-story-stat small { font-size: 12px; color: #59515f; margin-top: 12px; }
+.registration-logo-pair { display: flex; align-items: center; gap: 14px; margin-top: 24px; }
+.registration-logo-pair img { width: 52px; height: 52px; object-fit: contain; padding: 5px; background: var(--color-ink); border-radius: 15px; }
+.registration-logo-pair > svg { width: 30px; height: 30px; color: #615773; }
+.registration-story-card { display: flex; align-items: flex-start; gap: 18px; padding: 27px; border-radius: 26px; border: 1px solid #fffdfa; }
+.story-community { background: var(--color-sage); }
+.story-agreements { background: var(--color-peach); }
+.registration-story-card > span { width: 44px; height: 44px; flex-shrink: 0; display: grid; place-items: center; background: #fffdfa80; border-radius: 14px; }
+.registration-story-card h3 { font-size: 22px; line-height: 1.3; margin-bottom: 12px; }
+.registration-story-invitation { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 8px 0; }
+.registration-story-invitation p { max-width: 750px; }
+.registration-story-invitation .button { flex-shrink: 0; }
+.vacancy-context { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; padding-block: 36px 8px; }
+.vacancy-context > div { padding: 28px; border-radius: 26px; background: var(--color-sand); }
+.vacancy-context > div:nth-child(2) { background: var(--color-sage); }
+.vacancy-context > div > span { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: #fffdfa80; margin-bottom: 18px; }
+.vacancy-context p { font-size: 17px; line-height: 1.75; }
+.vacancy-context > a { grid-column: 1 / -1; padding: 12px 0; }
+@media (max-width: 900px) {
+  .employer-photo-scene { min-height: 460px; }
+  .registration-story { grid-template-columns: 1fr 1fr; }
+  .registration-story-lead { grid-column: 1 / -1; }
+  .registration-story-stat { grid-column: 1 / -1; padding: 28px; }
+  .registration-logo-pair { position: absolute; right: 28px; top: 26px; }
+  .registration-story-card { display: block; }
+  .registration-story-card > span { margin-bottom: 16px; }
+  .registration-story-invitation { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .employer-photo-scene { min-height: 405px; border-radius: 65px 22px 22px 22px; }
+  .employer-photo-scene > img { object-position: 48% 35%; }
+  .employer-photo-label { top: 14px; right: 14px; font-size: 10px; }
+  .employer-photo-note { left: 12px; right: 12px; bottom: 12px; padding: 18px; gap: 12px; }
+  .employer-photo-note > strong { font-size: 28px; }
+  .employer-photo-route { gap: 9px 12px; font-size: 11px; }
+  .registration-story, .vacancy-context { grid-template-columns: 1fr; padding-top: 26px; gap: 14px; }
+  .registration-story-lead, .registration-story-stat, .registration-story-card, .vacancy-context > div { padding: 24px; }
+  .registration-story-stat { border-radius: 40px 24px 24px 24px; }
+  .registration-logo-pair { position: static; margin-top: 20px; }
+  .registration-story-invitation { padding: 14px 4px 0; gap: 16px; }
+  .registration-story-card h3 { font-size: 21px; }
+}
