@@ -1,0 +1,48 @@
+/* Interaction feedback only: no autoplay, loops or hidden reading content. */
+:root {
+  --motion-feedback: 140ms;
+  --motion-state: 200ms;
+  --motion-out: cubic-bezier(0, 0, .2, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .partner-logo {
+    transition: translate var(--motion-feedback) var(--motion-out),
+      border-color var(--motion-feedback) var(--motion-out),
+      box-shadow var(--motion-feedback) var(--motion-out);
+  }
+  .partner-logo[aria-current], .partner-logo:focus-visible { translate: 0 -3px; }
+  .partner-ready .partner-panel { animation: fcc-panel-enter var(--motion-state) var(--motion-out); }
+
+  .nav-dropdown[open] > .nav-panel { animation: fcc-panel-enter var(--motion-state) var(--motion-out); }
+  .nav-chevron svg { transition: transform var(--motion-feedback) var(--motion-out); }
+  .nav-destination { transition: background-color var(--motion-feedback) var(--motion-out); }
+  .nav-destination > svg { transition: translate var(--motion-feedback) var(--motion-out); }
+  .nav-destination:focus-visible > svg { translate: 3px 0; }
+
+  .certification-card-photo {
+    transform-origin: center;
+    transition: transform var(--motion-state) var(--motion-out);
+  }
+  .certification-card-corner svg, .academy-card .circle-link svg {
+    transition: translate var(--motion-feedback) var(--motion-out);
+  }
+  .certification-image-grid .academy-card:focus-within .certification-card-photo { transform: scale(1.025); }
+  .academy-card:focus-within .certification-card-corner svg,
+  .academy-card:focus-within .circle-link svg { translate: 2px -2px; }
+
+  @media (hover: hover) and (pointer: fine) {
+    .partner-logo:hover { translate: 0 -3px; }
+    .certification-image-grid .academy-card:hover .certification-card-photo { transform: scale(1.025); }
+    .academy-card:hover .certification-card-corner svg,
+    .academy-card:hover .circle-link svg { translate: 2px -2px; }
+    .nav-destination:hover > svg { translate: 3px 0; }
+  }
+  @media (max-width: 1020px) {
+    .nav-enhanced.is-open .site-nav { animation: fcc-panel-enter var(--motion-state) var(--motion-out); }
+  }
+  @keyframes fcc-panel-enter {
+    0% { opacity: 0; transform: translateY(6px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
