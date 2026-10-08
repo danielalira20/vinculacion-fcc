@@ -34,6 +34,8 @@ def build():
     processes, employers = load("processes.json"), load("employers.json")
     alumni = load("alumni.json")
     certifications = load("certifications.json")
+    partners = load("partners.json")
+    about_directory = load("about-directory.json")
     page_titles = {p["path"]: p["title"] for p in pages}
     pages = [prepare_presentation(prepare_page(page, media_titles, page_titles), processes) for page in pages]
     for page in pages:
@@ -91,7 +93,7 @@ def build():
                 return env.get_template("components/process-flow.html").render(flow=processes[key], flow_id=f"{key}-{flow_count}", url=url)
             body = re.sub(r'<!-- process-flow:([a-z]+) -->', process, body)
             return Markup(re.sub(r'@/([^"\s<>]+)', lambda m: url(m.group(1)), body))
-        html = env.get_template(template).render(site=site, pages=pages, media=media, experiences=experiences, coordinations=coordinations, department=department, academy_previews=academy_previews, processes=processes, certifications=certifications, url=url, local_body=local_body, current_path=path, **context)
+        html = env.get_template(template).render(site=site, pages=pages, media=media, experiences=experiences, coordinations=coordinations, department=department, academy_previews=academy_previews, processes=processes, certifications=certifications, partners=partners, about_directory=about_directory, url=url, local_body=local_body, current_path=path, **context)
         target = DIST / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html, encoding="utf-8")

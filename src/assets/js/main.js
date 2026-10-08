@@ -17,3 +17,6 @@ initializeAcademyVideos();
 
 initializeLearning();
 initializeCommunity();
+
+import { initializePartners } from './partners.js';
+initializePartners();

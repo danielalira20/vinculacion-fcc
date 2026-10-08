@@ -50,3 +50,5 @@ Edición de contenido: si el departamento requiere un panel, decidir quién edit
 Publicación: alojamiento estático, dominio oficial y redirecciones por confirmar. La configuración de indexación y el aviso de privacidad deben revisarse antes de activar la versión pública.
 
 Los pasos usan elementos `details` nativos abiertos inicialmente. `process.js` añade únicamente el control conjunto para abrir/cerrar los detalles; el contenido y las acciones no dependen de JavaScript. La reconstrucción visual mantiene requisitos y contactos publicados, sin simular registro, validación ni finalización del trámite.
+
+La portada conserva sus once organizaciones en `partners.json`; `partners.html` presenta el directorio y `partners.js` mejora la selección sin retirar contenido del HTML. `about-directory.json` conserva los párrafos y contactos originales de Nosotros en ocho tarjetas. `network-polish.css` agrupa únicamente la composición de convenios, el díptico de comunidad, la fotografía de compra y ese directorio.

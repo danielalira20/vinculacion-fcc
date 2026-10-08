@@ -1,0 +1,141 @@
+{
+  "introduction": [
+    "<p>El Departamento de Vinculación de la Facultad de Ciencias de la Computación de la Benemérita Universidad Autónoma de Puebla, tiene el compromiso de establecer el enlace entre los miembros de nuestra comunidad y los diversos sectores de la sociedad, en beneficio de la formación de nuestros estudiantes.</p>",
+    "<p>En el Depto. de Vinculación de la Facultad de Ciencias de la Computación (FCC) de la Benemérita Universidad Autónoma de Puebla -BUAP, encontrarás eventos, certificaciones, talleres, vinculación con empresas y mucho más.</p>",
+    "<p>El desempeño profesional de nuestros egresados trabajando en equipo con las siguientes Coordinaciones:</p>"
+  ],
+  "people": [
+    {
+      "name": "M.C. Yalú Galicia Hernández",
+      "area": "Vinculación",
+      "role": "Coordinadora Departamento de Vinculación",
+      "theme": "sage",
+      "icon": "network",
+      "photo": "assets/media/712e1efbcf5908b2.jpg",
+      "position": "50% 40%",
+      "emails": [
+        "vinculacion.fcc@correo.buap.mx",
+        "yalu.galicia@correo.buap.mx",
+        "academias.fcc@correo.buap.mx"
+      ],
+      "location": "Cubículo 308 · CCO2",
+      "extension": "7200",
+      "path": "nosotros/labor/index.html",
+      "link": "Conoce nuestra labor",
+      "contact_html": "<p>Ext. 7200, Cubículo: 308 – CCO2<br/>Correo: <a href=\"mailto:yalu.galicia@correo.buap.mx\">yalu.galicia@correo.buap.mx</a><br/>Correo: <a href=\"mailto:vinculacion.fcc@correo.buap.mx\">vinculacion.fcc@correo.buap.mx</a><br/>Correo: <a href=\"mailto:academias.fcc@correo.buap.mx\">academias.fcc@correo.buap.mx</a></p>",
+      "initials": "YG"
+    },
+    {
+      "name": "Dra. Patricia Silva Sánchez.",
+      "area": "Bolsa de Trabajo",
+      "icon": "briefcase",
+      "emails": [
+        "bolsadetrabajo.fcc@correo.buap.mx",
+        "patricia.silvas@correo.buap.mx"
+      ],
+      "location": "",
+      "path": "empresas/bolsa-de-trabajo/index.html",
+      "contact_html": "<p>Correo: <a href=\"mailto:bolsadetrabajo.fcc@correo.buap.mx\">bolsadetrabajo.fcc@correo.buap.mx</a><br/>Correo: <a href=\"mailto:patricia.silvas@correo.buap.mx\">patricia.silvas@correo.buap.mx</a></p>",
+      "initials": "PS"
+    },
+    {
+      "name": "Mtra. Adriana Hernández Beristain",
+      "area": "Cisco Networking Academy",
+      "role": "Coordinadora de Academia CISCO",
+      "theme": "lavender",
+      "icon": "network",
+      "photo": "assets/media/1b27bdc6ddc2bbdc.jpg",
+      "position": "35% 45%",
+      "emails": [
+        "buap.cisco@correo.buap.mx",
+        "adrianah.beristain@correo.buap.mx"
+      ],
+      "location": "Cubículo 301 · CCO2",
+      "extension": "",
+      "path": "academias/cisco/index.html",
+      "link": "Explorar Cisco Academy",
+      "contact_html": "<p>Cubículo: 301 – CCO2<br/>Correo: <a href=\"mailto:adrianah.beristain@correo.buap.mx\">adrianah.beristain@correo.buap.mx</a><br/>Correo: <a href=\"mailto:buap.cisco@correo.buap.mx\">buap.cisco@correo.buap.mx</a></p>",
+      "initials": "AH"
+    },
+    {
+      "name": "Dr. Abraham Maldonado García",
+      "area": "EC-Council Academy",
+      "icon": "shield",
+      "emails": [
+        "academia_ec_council.fcc@correo.buap.mx"
+      ],
+      "location": "Cubículo CCO3-009",
+      "path": "academias/ec-council/index.html",
+      "contact_html": "<p>Cubículo: CCO3-009<br/>Correo: <a href=\"mailto:academia_ec_council.fcc@correo.buap.mx\">academia_ec_council.fcc@correo.buap.mx</a></p>",
+      "initials": "AM"
+    },
+    {
+      "name": "Mtra. María Antonia Ruíz Díaz.",
+      "area": "Oracle Academy",
+      "role": "Coordinadora de Oracle Academy",
+      "theme": "rose",
+      "icon": "code",
+      "photo": "assets/media/0634be6d9337efbe.png",
+      "position": "50% 50%",
+      "emails": [
+        "coord_oracleacademia.fcc@correo.buap.mx",
+        "maria.ruizd@correo.buap.mx"
+      ],
+      "location": "Cubículo 301 · CCO2",
+      "extension": "",
+      "path": "academias/oracle/index.html",
+      "link": "Explorar Oracle Academy",
+      "contact_html": "<p>Cubículo: 301 – CCO2<br/>Correo: <a href=\"mailto:coord_oracleacademia.fcc@correo.buap.mx\">coord_oracleacademia.fcc@correo.buap.mx</a><br/>Correo: <a href=\"mailto:maria.ruizd@correo.buap.mx\">maria.ruizd@correo.buap.mx</a></p>",
+      "initials": "MA"
+    },
+    {
+      "name": "Dr. Juan Manuel González Calleros",
+      "area": "AWS Academy",
+      "icon": "cloud",
+      "emails": [
+        "academia.aws@correo.buap.mx"
+      ],
+      "location": "CCO3-007 · Ext. 3923",
+      "path": "academias/aws/index.html",
+      "contact_html": "<p>Cubículo: CCO3-007, Ext. 3923<br/>Correo: <a href=\"mailto:academia.aws@correo.buap.mx\">academia.aws@correo.buap.mx</a></p>",
+      "initials": "JM"
+    },
+    {
+      "name": "Dra. Erika Annabel Martínez Mirón",
+      "area": "Educación Continua",
+      "role": "Coordinadora de Educación Continua",
+      "theme": "sand",
+      "icon": "book",
+      "photo": "",
+      "position": "",
+      "emails": [
+        "econtinua.fcc@correo.buap.mx"
+      ],
+      "location": "CCO2-208 · CCO2-311",
+      "extension": "",
+      "path": "",
+      "link": "",
+      "contact_html": "<p>Cubículo: CCO2-208, CCO2-311<br/>Correo: <a href=\"mailto:econtinua.fcc@correo.buap.mx\">econtinua.fcc@correo.buap.mx</a></p>",
+      "initials": "EA"
+    },
+    {
+      "name": "Dra. Guillermina Sánchez Román",
+      "area": "Diplomado",
+      "role": "Coordinadora de Diplomado",
+      "theme": "peach",
+      "icon": "graduate",
+      "photo": "assets/media/0f9d5b5bda85763b.jpg",
+      "position": "50% 50%",
+      "emails": [
+        "diplomados.fcc@correo.buap.mx",
+        "guille.sroman@correo.buap.mx"
+      ],
+      "location": "Cubículo 103 · CCO5",
+      "extension": "2859",
+      "path": "https://diplomado.cs.buap.mx/",
+      "link": "Conocer el diplomado",
+      "contact_html": "<p>Ext. 2859, Cubículo: 103, edif. CCO5<br/>Correo: <a href=\"mailto:diplomados.fcc@correo.buap.mx\">diplomados.fcc@correo.buap.mx</a><br/>Correo: <a href=\"mailto:guille.sroman@correo.buap.mx\">guille.sroman@correo.buap.mx</a></p>",
+      "initials": "GS"
+    }
+  ]
+}

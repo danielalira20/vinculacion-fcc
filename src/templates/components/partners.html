@@ -1,0 +1,8 @@
+<section class="wrap partner-network" id="convenios" aria-labelledby="partners-title" data-partner-network>
+  <div class="partner-heading"><p class="eyebrow">CONVENIOS Y EMPRESAS</p><h2 id="partners-title">Conexiones que abren posibilidades.</h2><p>Explora nuestra red. Elige un logo para conocer su espacio en Vinculación FCC.</p></div>
+  <div class="partner-stage">
+    <div class="partner-logos" aria-label="Organizaciones de la red">{% for partner in partners %}<a class="partner-logo theme-{{ partner.theme }}" href="#empresa-{{ partner.slug }}" aria-controls="empresa-{{ partner.slug }}" aria-label="Conocer {{ partner.name }}" style="--column: {{ partner.column }}; --row: {{ partner.row }}"><img src="{{ url(partner.logo) }}" alt="{{ partner.name }}" loading="lazy"><span>{{ icon('arrow') }}</span></a>{% endfor %}<a class="partner-join" href="{{ url('empresas/registro/index.html') }}">{{ icon('building') }}<span>Vincula<br>tu empresa</span>{{ icon('arrow') }}</a></div>
+    <div class="partner-panels" aria-live="polite">{% for partner in partners %}<article class="partner-panel" id="empresa-{{ partner.slug }}"><div class="partner-panel-brand"><img src="{{ url(partner.logo) }}" alt="{{ partner.name }}" loading="lazy"></div><p class="eyebrow">{{ partner.category }}</p><h3>{{ partner.name }}</h3><p>{{ partner.description }}</p><a class="text-link" href="{% if partner.path.startswith('mailto:') %}{{ partner.path }}{% else %}{{ url(partner.path) }}{% endif %}">{{ partner.action }} {{ icon('arrow') }}</a></article>{% endfor %}</div>
+  </div>
+  <a class="text-link partner-directory-link" href="{{ url('empresas/index.html') }}">Empresas y oportunidades {{ icon('arrow') }}</a>
+</section>
