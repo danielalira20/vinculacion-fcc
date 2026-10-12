@@ -1,5 +1,7 @@
 # Migración del contenido
 
+La revisión del 11 de octubre de 2026 se documenta en [REVISION-DIEGO.md](REVISION-DIEGO.md). Actualiza los destinos de temarios IT y MOS, las opciones de correo y el registro AWS Otoño 2026. El formulario restringido de Oracle se sustituye por una consulta a su coordinación; Cisco conserva sus cursos históricos y deja de ofrecer el formulario de 2023 en la interfaz.
+
 Origen: `https://vinculacion.cs.buap.mx/index.html`. Respaldo revisado el 6 de octubre de 2026.
 
 Esta entrega importa los 41 registros agrupados del respaldo: 33 páginas/entradas, inicio y siete listados. Genera 48 páginas HTML al añadir las portadas de servicios y búsqueda. Incluye 102 recursos originales locales de contenido, fotografías, logotipo y PDF, más 18 imágenes derivadas de las páginas de la guía SiPAGO; no incluye los scripts, temas ni plugins del WordPress anterior.

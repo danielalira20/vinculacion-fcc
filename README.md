@@ -94,8 +94,8 @@ docs/
 - Cinco flujos en HTML seleccionable con detalles desplegables; iconos SVG sin emojis en la interfaz.
 - Coordinaciones con portada, directorio de contacto y galería de videos.
 - Videos, presentaciones de Canva, siete formularios y guía PDF integrados en sus páginas.
-- Catálogos filtrables: ocho cursos de Oracle y nueve de AWS; beneficios por audiencia, selector de programas EC-Council y mapa de formación en HTML.
-- Cisco: cinco rutas con 29 cursos seleccionables, conexiones y glosario; tres grupos CCNA con fechas, horarios e instructores de Primavera 2023. Google permite una vista previa del formulario histórico, con acceso opcional al registro del proveedor.
+- Catálogos filtrables: ocho cursos publicados de Oracle y diez opciones del formulario AWS Otoño 2026; beneficios por audiencia, selector de programas EC-Council y mapa de formación en HTML.
+- Cisco: cinco rutas con 29 cursos seleccionables, conexiones y glosario; tres grupos CCNA con fechas, horarios e instructores de Primavera 2023, identificados como históricos. La próxima convocatoria se consulta con la Academia; el formulario antiguo permanece en los datos de revisión.
 - Guía de inscripción AWS compacta, lista de preparación y preguntas desplegables.
 - Interfaz sin enlaces de procedencia ni dependencias del dominio que se retirará.
 - Texto accesible de cuatro materiales gráficos revisados durante el respaldo.
@@ -103,6 +103,9 @@ docs/
 - Portadas con campos de color nude y pastel, formas curvas, fotografías y tarjetas superpuestas; textos más grandes y glass localizado.
 - Sección de comunidad con accesos destacados a Facebook de Vinculación, Oracle y Cisco.
 - Movimiento suave con respeto a la preferencia de reducir animaciones.
+- Contacto con opciones de Gmail, Outlook, copiar dirección y aplicación de correo, conservando `mailto` cuando no hay JavaScript.
+
+Las correcciones de la revisión de Diego, su validación y los pendientes externos están documentados en [docs/REVISION-DIEGO.md](docs/REVISION-DIEGO.md).
 
 ## Estado de la entrega
 
