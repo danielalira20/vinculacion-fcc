@@ -15,7 +15,7 @@
       "person": "Mtra. María Antonia Ruíz Díaz",
       "parent": "academias/oracle/index.html",
       "form": "https://forms.office.com/r/cHBckaBpNM",
-      "form_status": "El formulario publicado no permite el acceso público. Solicita el registro vigente a la coordinación.",
+      "form_status": "El registro de la convocatoria de 2025 requiere permisos de Microsoft Forms. La coordinación puede confirmar el enlace y las condiciones del próximo periodo.",
       "facts": [
         [
           "08",
@@ -65,7 +65,8 @@
           "name": "Oracle Cloud Infrastructure Foundations I",
           "group": "Cloud"
         }
-      ]
+      ],
+      "form_available": false
     },
     "academias/aws/oferta/index.html": {
       "brand": "AWS Academy",
@@ -73,38 +74,31 @@
       "icon": "cloud",
       "logo": "assets/media/172ae1b4f68a707b.png",
       "heading": "Tu siguiente habilidad vive en la nube.",
-      "intro": "Formación en cloud, datos e inteligencia artificial para la comunidad BUAP. Encuentra los cursos de la oferta publicada.",
-      "period": "15 de noviembre — 28 de febrero de 2026",
-      "period_label": "Periodo de la oferta publicada",
-      "notice": "Esta oferta finalizó el 28 de febrero de 2026. Consulta con AWS Academy las próximas convocatorias.",
+      "intro": "Explora los cursos que muestra el formulario de AWS BUAP para Otoño 2026. Consulta las condiciones de inscripción con la coordinación.",
+      "period": "Otoño 2026",
+      "period_label": "Periodo que muestra el formulario disponible",
+      "notice": "El formulario de AWS BUAP muestra diez cursos para Otoño 2026. Confirma las fechas, los requisitos y las condiciones de inscripción con la Academia.",
       "poster": "assets/media/a23012c9e4ee4fa3.png",
       "contact": "academia.aws@correo.buap.mx",
       "person": "Dr. Juan Manuel González Calleros · CC03-007 · Ext. 3923",
       "parent": "academias/aws/index.html",
       "form": "https://forms.office.com/r/iEY2jMfJ4g",
-      "form_status": "El enlace publicado ahora muestra un formulario titulado «Inscripción a cursos de la academia AWS BUAP Otoño 2026». Confirma las fechas y condiciones del periodo con la Academia. El formulario solicita un registro individual por cada curso.",
+      "form_status": "El formulario disponible se titula «Inscripción a cursos de la academia AWS BUAP Otoño 2026». Muestra diez opciones y solicita un registro individual por cada curso. La Academia debe confirmar las fechas y condiciones de tu inscripción.",
       "facts": [
         [
-          "09",
-          "Cursos publicados"
+          "10",
+          "Cursos del formulario"
         ],
         [
-          "≈20 h",
-          "Por curso"
-        ],
-        [
-          "Sin costo",
-          "Alumnos BUAP"
-        ],
-        [
-          "A tu ritmo",
-          "Autogestivos"
+          "Otoño 2026",
+          "Periodo del registro"
         ]
       ],
       "groups": [
         "Cloud",
         "Datos e IA",
-        "Seguridad"
+        "Seguridad",
+        "Infraestructura"
       ],
       "courses": [
         {
@@ -142,9 +136,38 @@
         {
           "name": "AWS Academy Machine Learning for Natural Language Processing",
           "group": "Datos e IA"
+        },
+        {
+          "name": "AWS Academy Data Center Technician",
+          "group": "Infraestructura"
         }
       ],
-      "form_embed": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=x8fjOlHq3kaVQBL0EQ6sm4RLAG_G8tZKng1QYFfnU1NUMEdNQUZEOVFITEVORTBUMTBVMFcxUjJSRC4u"
+      "form_embed": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=x8fjOlHq3kaVQBL0EQ6sm4RLAG_G8tZKng1QYFfnU1NUMEdNQUZEOVFITEVORTBUMTBVMFcxUjJSRC4u",
+      "archived_offer": {
+        "period": "15 de noviembre — 28 de febrero de 2026",
+        "period_label": "Periodo de la oferta publicada",
+        "notice": "Esta oferta finalizó el 28 de febrero de 2026. Consulta con AWS Academy las próximas convocatorias.",
+        "facts": [
+          [
+            "09",
+            "Cursos publicados"
+          ],
+          [
+            "≈20 h",
+            "Por curso"
+          ],
+          [
+            "Sin costo",
+            "Alumnos BUAP"
+          ],
+          [
+            "A tu ritmo",
+            "Autogestivos"
+          ]
+        ]
+      },
+      "form_label": "Consultar registro de Otoño 2026",
+      "poster_label": "Ver cartel anterior · 2025–2026"
     }
   },
   "profiles": {
