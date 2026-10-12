@@ -7,6 +7,7 @@ import { initializeAcademyVideos } from './academy-video.js';
 
 import { initializeLearning } from './learning.js';
 import { initializeCommunity } from './community.js';
+import { initializeEmail } from './email.js';
 
 initializeNavigation();
 initializeCatalog();
@@ -17,6 +18,7 @@ initializeAcademyVideos();
 
 initializeLearning();
 initializeCommunity();
+initializeEmail();
 
 import { initializePartners } from './partners.js';
 initializePartners();

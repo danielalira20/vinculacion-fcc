@@ -1,0 +1,19 @@
+/* Existing warm surface and charcoal action roles, applied to contact choices. */
+.email-dialog { width: min(540px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 30px; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-paper); color: var(--color-ink); box-shadow: 0 24px 80px rgb(41 39 36 / 20%); overflow-y: auto; }
+.email-dialog::backdrop { background: rgb(41 39 36 / 38%); backdrop-filter: blur(5px); }
+.email-dialog-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.email-dialog-heading .circle-link svg { transform: none; }
+.email-dialog-icon { display: grid; place-items: center; width: 52px; height: 52px; background: var(--color-sage); border-radius: 16px; }
+.email-dialog-icon svg { width: 24px; height: 24px; }
+.email-dialog h2 { margin: 8px 0 16px; font-size: clamp(25px, 5vw, 32px); line-height: 1.2; }
+.email-dialog #email-dialog-help { font-size: 16px; line-height: 1.65; color: var(--color-muted); margin-bottom: 24px; }
+.email-address-label { display: block; font-size: 13px; margin-bottom: 8px; }
+.email-address-row { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 24px; }
+.email-address-row input { width: 100%; min-width: 0; padding: 14px; font: 14px var(--font-body); border: 1px solid var(--color-border); border-radius: var(--radius-small); background: var(--color-canvas); color: var(--color-ink); }
+.email-address-row button { justify-self: start; padding: 9px 12px; min-height: 44px; font: 600 13px var(--font-body); border: 1px solid var(--color-border); border-radius: var(--radius-small); background: var(--color-paper); cursor: pointer; }
+.email-provider-links { display: grid; gap: 12px; }
+.email-provider-links .button { justify-content: space-between; min-height: 48px; padding: 14px 20px; }
+.email-provider-links .button-secondary { background: var(--color-paper); border: 1px solid var(--color-border); color: var(--color-ink); }
+.email-provider-links .text-link { font-size: 14px; margin-top: 6px; }
+.email-status { min-height: 22px; margin: 16px 0 0; font-size: 13px; color: var(--color-muted); }
+@media (max-width: 480px) { .email-dialog { padding: 22px; } }

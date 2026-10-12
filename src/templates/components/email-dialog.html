@@ -1,0 +1,10 @@
+<dialog class="email-dialog" id="email-dialog" aria-labelledby="email-dialog-title" aria-describedby="email-dialog-help">
+  <div class="email-dialog-heading"><span class="email-dialog-icon" aria-hidden="true">{{ icon('mail') }}</span><button class="circle-link" type="button" data-email-close aria-label="Cerrar opciones de correo">{{ icon('close') }}</button></div>
+  <p class="eyebrow">CONTACTO DIRECTO</p>
+  <h2 id="email-dialog-title">Elige cómo escribirnos.</h2>
+  <p id="email-dialog-help">Abre un borrador en tu correo o copia la dirección para usarla donde prefieras.</p>
+  <label class="email-address-label" for="email-address">Correo de destino</label>
+  <div class="email-address-row"><input id="email-address" type="text" readonly spellcheck="false"><button type="button" data-email-copy>Copiar dirección</button></div>
+  <div class="email-provider-links"><a class="button" data-email-gmail target="_blank" rel="noopener">Escribir en Gmail {{ icon('external') }}</a><a class="button button-secondary" data-email-outlook target="_blank" rel="noopener">Escribir en Outlook {{ icon('external') }}</a><a class="text-link" data-email-native>Abrir mi aplicación de correo {{ icon('arrow') }}</a></div>
+  <p class="email-status" data-email-status role="status" aria-live="polite"></p>
+</dialog>
