@@ -47,7 +47,7 @@
 .cert-filters button { padding: 10px 13px; border: 1px solid #d8cfc4; border-radius: 22px; background: transparent; color: var(--color-ink); font-size: 14px; min-height: 42px; cursor: pointer; }
 .cert-filters button[aria-pressed='true'] { background: var(--color-ink); color: var(--color-paper); border-color: var(--color-ink); }
 .cert-page .cert-count { font-size: 14px; margin-block: 15px; color: var(--color-muted); }
-.cert-unit-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 13px; }
+.cert-unit-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 13px; align-items: start; }
 .cert-unit { display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 14px; padding: 22px; border: 1px solid #ddd5cb; border-radius: 22px; background: var(--color-paper); min-width: 0; }
 .cert-unit:nth-child(3n+1) { background: var(--theme-bg); border-color: transparent; border-top-right-radius: 45px; }
 .cert-unit-symbol { width: 48px; height: 50px; display: grid; place-items: center; align-self: start; background: #fffdfa95; border-radius: 13px; }
