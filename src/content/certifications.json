@@ -15,123 +15,138 @@
       "units": [
         {
           "name": "Inteligencia Artificial",
-          "href": "https://certiport.filecamp.com/s/i/n4mlgs8hJG6DV8kI",
+          "href": "https://certiport.filecamp.com/s/i/XWek98Rz8fymHKKb",
           "group": "Datos e IA",
           "icon": "network",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/i/n4mlgs8hJG6DV8kI"
         },
         {
           "name": "Cloud Computing",
-          "href": "https://certiport.filecamp.com/s/i/Z0wZRXz5qzoepqab",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/cloud",
           "group": "Cloud",
           "icon": "cloud",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/i/Z0wZRXz5qzoepqab"
         },
         {
           "name": "Pensamiento Computacional",
-          "href": "https://certiport.filecamp.com/s/i/22tCaB6b1wl8TBVB",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/thinking",
           "group": "Desarrollo",
           "icon": "code",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/i/22tCaB6b1wl8TBVB"
         },
         {
           "name": "Cybersecurity",
-          "href": "https://certiport.filecamp.com/s/WZamgoVwSSKHa5gU/fi",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/cybersecurity",
           "group": "Redes y seguridad",
           "icon": "shield",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/WZamgoVwSSKHa5gU/fi"
         },
         {
           "name": "Análisis de datos",
-          "href": "https://certiport.filecamp.com/s/GESxv0YPqKw5XRw3/fi",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/data-analytics",
           "group": "Datos e IA",
           "icon": "network",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/GESxv0YPqKw5XRw3/fi"
         },
         {
           "name": "Bases de Datos",
-          "href": "https://certiport.filecamp.com/s/XH9cRAprCfTRZjXa/fi",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/database",
           "group": "Datos e IA",
           "icon": "network",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/XH9cRAprCfTRZjXa/fi"
         },
         {
           "name": "Configuración y administración de dispositivos",
-          "href": "https://certiport.filecamp.com/s/i/P56Jcg2z5OwkrRZM",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/deviceconfig",
           "group": "Redes y seguridad",
           "icon": "shield",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/i/P56Jcg2z5OwkrRZM"
         },
         {
           "name": "HTML y CSS",
-          "href": "https://certiport.filecamp.com/s/i/opi5BFKLe6wB5W4s",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/htmlcss",
           "group": "Desarrollo",
           "icon": "code",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/i/opi5BFKLe6wB5W4s"
         },
         {
           "name": "Desarrollo de aplicaciones HTML5",
-          "href": "https://certiport.filecamp.com/s/aNN4zQT4ZaxQiU4U/fi",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/htmlappdevelopment",
           "group": "Desarrollo",
           "icon": "code",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/aNN4zQT4ZaxQiU4U/fi"
         },
         {
           "name": "Java",
-          "href": "https://certiport.filecamp.com/s/4Nq9RIAOKd12wmPd/fi",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/java",
           "group": "Desarrollo",
           "icon": "code",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/4Nq9RIAOKd12wmPd/fi"
         },
         {
           "name": "JavaScript",
-          "href": "https://certiport.filecamp.com/s/FgMar1UonLsjRlhf/fi",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/javascript",
           "group": "Desarrollo",
           "icon": "code",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/FgMar1UonLsjRlhf/fi"
         },
         {
           "name": "Redes",
-          "href": "https://certiport.filecamp.com/s/a9msZi0MeCb5GRqt/fi",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/networking",
           "group": "Redes y seguridad",
           "icon": "shield",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/a9msZi0MeCb5GRqt/fi"
         },
         {
           "name": "Seguridad de Redes",
-          "href": "https://certiport.filecamp.com/s/SrAFlSAfRRFEnQBu/fi",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/networksecurity",
           "group": "Redes y seguridad",
           "icon": "shield",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/SrAFlSAfRRFEnQBu/fi"
         },
         {
           "name": "Python",
-          "href": "https://certiport.filecamp.com/s/i/9Th6LzRzeAhrdCP7",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/python",
           "group": "Desarrollo",
           "icon": "code",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/i/9Th6LzRzeAhrdCP7"
         },
         {
           "name": "Desarrollo de software",
-          "href": "https://certiport.filecamp.com/s/i/Y70nS0IIxuSro1iD",
+          "href": "https://certiport.pearsonvue.com/fc/ITS/softwaredevelopment",
           "group": "Desarrollo",
           "icon": "code",
           "detail": "Temario de certificación",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.filecamp.com/s/i/Y70nS0IIxuSro1iD"
         }
       ],
       "groups": [
@@ -273,43 +288,106 @@
       "units": [
         {
           "name": "Excel",
-          "href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Excel",
+          "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-excel-2019/",
           "detail": "Associate y Expert 2019 y 365",
           "group": "Associate y Expert",
           "icon": "document",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Excel",
+          "objectives": [
+            {
+              "label": "Associate · 2019",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-excel-2019/"
+            },
+            {
+              "label": "Expert · 2019",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-excel-expert-2019/"
+            },
+            {
+              "label": "Associate · Microsoft 365",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-excel-associate-m365-apps/"
+            },
+            {
+              "label": "Expert · Microsoft 365",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-excel-expert-m365-apps/"
+            }
+          ]
         },
         {
           "name": "Word",
-          "href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Word",
+          "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-word-2019/",
           "detail": "Associate y Expert 2019 y 365",
           "group": "Associate y Expert",
           "icon": "document",
-          "asset": "assets/media/1ee881469e641fd5.png"
+          "asset": "assets/media/1ee881469e641fd5.png",
+          "original_href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Word",
+          "objectives": [
+            {
+              "label": "Associate · 2019",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-word-2019/"
+            },
+            {
+              "label": "Expert · 2019",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-word-expert-2019/"
+            },
+            {
+              "label": "Associate · Microsoft 365",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-word-associate-m365-apps/"
+            },
+            {
+              "label": "Expert · Microsoft 365",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-word-expert-m365-apps/"
+            }
+          ]
         },
         {
           "name": "Outlook",
-          "href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Outlook",
-          "detail": "Associate 2019 y 365",
+          "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-outlook-2019/",
+          "detail": "Associate 2019",
           "group": "Associate",
           "icon": "document",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Outlook",
+          "objectives": [
+            {
+              "label": "Associate · 2019",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-outlook-2019/"
+            }
+          ]
         },
         {
           "name": "PowerPoint",
-          "href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/PowerPoint",
+          "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-powerpoint-2019/",
           "detail": "Associate 2019 y 365",
           "group": "Associate",
           "icon": "document",
-          "asset": ""
+          "asset": "",
+          "original_href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/PowerPoint",
+          "objectives": [
+            {
+              "label": "Associate · 2019",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-powerpoint-2019/"
+            },
+            {
+              "label": "Associate · Microsoft 365",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-powerpoint-associate-m365-apps/"
+            }
+          ]
         },
         {
           "name": "Access",
-          "href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Access",
+          "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-access-expert-2019/",
           "detail": "2019 Expert",
           "group": "Expert",
           "icon": "document",
-          "asset": "assets/media/dd37b4ddc3f6a6cc.png"
+          "asset": "assets/media/dd37b4ddc3f6a6cc.png",
+          "original_href": "https://certiport.pearsonvue.com/Certifications/Microsoft/MOS/Certify/Access",
+          "objectives": [
+            {
+              "label": "Expert · 2019",
+              "href": "https://learn.microsoft.com/es-es/credentials/certifications/mos-access-expert-2019/"
+            }
+          ]
         }
       ],
       "groups": [
