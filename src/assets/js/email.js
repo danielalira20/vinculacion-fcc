@@ -52,6 +52,20 @@ export function initializeEmail() {
   });
   dialog.querySelector('[data-email-close]').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => trigger?.focus());
+  dialog.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+    const controls = [...dialog.querySelectorAll('button, a[href], input')]
+      .filter((control) => !control.disabled && control.tabIndex >= 0 && control.getClientRects().length);
+    const first = controls[0];
+    const last = controls.at(-1);
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
   copy.addEventListener('click', async () => {
     if (copying) return;
     copying = true;
