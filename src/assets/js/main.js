@@ -22,3 +22,6 @@ initializeEmail();
 
 import { initializePartners } from './partners.js';
 initializePartners();
+
+import { initializePromoDialog } from './promo-dialog.js';
+initializePromoDialog();

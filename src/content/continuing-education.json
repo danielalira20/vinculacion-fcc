@@ -8,6 +8,18 @@
     "qr_image": "assets/cultura-digital/registro-cultura-digital.png",
     "privacy_notice_url": ""
   },
+  "home_popup": {
+    "enabled": true,
+    "eyebrow": "NUEVA CERTIFICACIÓN · CONOCER ECM0121",
+    "title": "Cultura Digital",
+    "accent": "ya está aquí.",
+    "text": "Certifica tus competencias digitales —incluida la inteligencia artificial generativa— con aval de Microsoft México y SEP.",
+    "highlights": ["Diagnóstico, entrenamiento, evaluación y certificación", "$600 MXN · comunidad BUAP"],
+    "cta": "Ver la certificación",
+    "path": "educacion-continua/index.html",
+    "anchor": "oferta-eduit",
+    "dismiss": "Ahora no"
+  },
   "categories": [
     {"key": "todos", "name": "Todas"},
     {"key": "productividad", "name": "Productividad"},

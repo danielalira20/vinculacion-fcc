@@ -1,0 +1,25 @@
+{% set popup = education.home_popup %}
+{% if popup.enabled %}
+<dialog class="promo-dialog" id="promo-dialog" aria-labelledby="promo-dialog-title" aria-describedby="promo-dialog-text" data-promo-dialog data-promo-key="promo:{{ popup.path }}#{{ popup.anchor }}">
+  <div class="promo-dialog-visual" aria-hidden="true">
+    <span class="promo-dialog-ring promo-dialog-ring--one"></span>
+    <span class="promo-dialog-ring promo-dialog-ring--two"></span>
+    <span class="promo-dialog-mark">@</span>
+    <span class="promo-dialog-chip promo-dialog-chip--ai">{{ icon('spark') }} IA generativa</span>
+    <span class="promo-dialog-chip promo-dialog-chip--seal">{{ icon('shield') }} CONOCER</span>
+  </div>
+  <button class="promo-dialog-close" type="button" data-promo-close aria-label="Cerrar aviso">{{ icon('close') }}</button>
+  <div class="promo-dialog-body">
+    <p class="promo-dialog-eyebrow"><span class="status-dot" aria-hidden="true"></span> {{ popup.eyebrow }}</p>
+    <h2 id="promo-dialog-title">{{ popup.title }} <span class="serif">{{ popup.accent }}</span></h2>
+    <p id="promo-dialog-text" class="promo-dialog-text">{{ popup.text }}</p>
+    <ul class="promo-dialog-highlights">
+      {% for item in popup.highlights %}<li>{{ icon('check') }} <span>{{ item }}</span></li>{% endfor %}
+    </ul>
+    <div class="promo-dialog-actions">
+      <a class="button promo-dialog-cta" href="{{ url(popup.path) }}#{{ popup.anchor }}" data-promo-go>{{ popup.cta }} {{ icon('arrow') }}</a>
+      <button class="promo-dialog-dismiss" type="button" data-promo-close>{{ popup.dismiss }}</button>
+    </div>
+  </div>
+</dialog>
+{% endif %}

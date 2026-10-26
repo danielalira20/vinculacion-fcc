@@ -63,3 +63,10 @@ cd scripts && python3 -m unittest test_continuing_education
 ```
 
 Revisa que debajo del QR aparezca «consulta el aviso de privacidad» con el enlace, despliega `dist/` y quita la nota temporal del inicio del Microsoft Forms (o reemplázala por el enlace al aviso autorizado).
+
+## Pop-up de la portada
+
+- Al abrir la portada aparece un aviso de Cultura Digital que lleva a `educacion-continua/index.html#oferta-eduit`. Se muestra una vez por sesión del navegador; se cierra con la X, «Ahora no», Escape o clic fuera.
+- Textos, destino y encendido están en `home_popup` dentro de `src/content/continuing-education.json`. Para apagarlo: `"enabled": false`. Para mandar a otra página, cambia `path` y `anchor`.
+- Para verlo de nuevo aunque ya se haya cerrado, abre la portada con `?aviso` (por ejemplo `index.html?aviso`).
+- Archivos: `src/templates/components/home-popup.html`, `src/assets/css/promo-dialog.css`, `src/assets/js/promo-dialog.js`.

@@ -115,7 +115,7 @@ def build():
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html, encoding="utf-8")
 
-    render("index.html", "pages/home.html", title="Vinculación FCC · BUAP", active="inicio", description=site["description"])
+    render("index.html", "pages/home.html", title="Vinculación FCC · BUAP", active="inicio", description=site["description"], education=education)
     for landing in site["landings"]:
         if landing["key"] == "recursos":
             render(landing["path"], "pages/resource-library.html", title=landing["title"], active=landing["key"], description=landing["description"], landing=landing, **library)

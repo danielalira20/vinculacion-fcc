@@ -1,0 +1,99 @@
+/* Home announcement for Cultura Digital. Reuses the green banner language of continuing-education.css. */
+.promo-dialog {
+  --promo-green: #2d5b48;
+  --promo-green-deep: #1f4334;
+  --promo-mint: #dce7de;
+  width: min(880px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 30px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  box-shadow: 0 40px 120px rgb(31 49 39 / 28%), 0 2px 0 rgb(255 255 255 / 60%) inset;
+  overflow: hidden auto;
+}
+.promo-dialog[open] { display: grid; grid-template-columns: minmax(250px, 0.82fr) 1.18fr; }
+.promo-dialog::backdrop { background: rgb(28 38 32 / 46%); backdrop-filter: blur(7px); }
+html.promo-open { overflow: hidden; }
+
+.promo-dialog-visual {
+  position: relative;
+  min-height: 420px;
+  margin: 10px 0 10px 10px;
+  border-radius: 22px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgb(255 255 255 / 70%), transparent 42%),
+    linear-gradient(150deg, #e3ece2 0%, var(--promo-mint) 45%, #c9dccd 100%);
+}
+.promo-dialog-ring { position: absolute; border: 1px solid rgb(255 255 255 / 75%); border-radius: 50%; }
+.promo-dialog-ring--one { width: 360px; height: 360px; left: -150px; bottom: -170px; }
+.promo-dialog-ring--two { width: 230px; height: 230px; right: -90px; top: -80px; }
+.promo-dialog-mark {
+  position: absolute; left: 50%; top: 50%;
+  display: grid; place-items: center;
+  width: 132px; height: 132px;
+  translate: -50% -50%; rotate: -10deg;
+  border: 1.5px solid #fff; border-radius: 36px;
+  background: rgb(255 255 255 / 62%);
+  box-shadow: 0 18px 40px rgb(45 91 72 / 14%);
+  color: #3c7762; font-size: 78px; font-weight: 720; line-height: 1;
+}
+.promo-dialog-chip {
+  position: absolute; display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 13px; border-radius: var(--radius-pill);
+  background: rgb(255 255 255 / 86%); box-shadow: 0 10px 24px rgb(45 91 72 / 12%);
+  color: var(--promo-green-deep); font-size: 12px; font-weight: 750; letter-spacing: 0.02em; white-space: nowrap;
+}
+.promo-dialog-chip svg { width: 15px; height: 15px; }
+.promo-dialog-chip--ai { left: 22px; top: 26%; rotate: -4deg; }
+.promo-dialog-chip--seal { right: 22px; bottom: 23%; rotate: 5deg; }
+
+.promo-dialog-close {
+  position: absolute; top: 18px; right: 18px; z-index: 1;
+  display: grid; place-items: center; width: 44px; height: 44px;
+  border: 1px solid var(--color-border); border-radius: 50%;
+  background: var(--color-paper); color: var(--color-ink); cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.promo-dialog-close svg { width: 18px; height: 18px; }
+.promo-dialog-close:hover { background: var(--color-canvas); }
+
+.promo-dialog-body { display: flex; flex-direction: column; justify-content: center; padding: 52px 48px 44px 44px; }
+.promo-dialog-eyebrow { display: flex; align-items: center; gap: 8px; margin: 0 0 18px; padding-right: 40px; color: var(--promo-green); font-size: 11px; font-weight: 800; letter-spacing: 0.12em; }
+.promo-dialog h2 { margin: 0 0 16px; font-size: clamp(34px, 4.4vw, 50px); line-height: 1.04; letter-spacing: -0.045em; font-weight: 650; }
+.promo-dialog h2 .serif { display: block; color: var(--promo-green); font-weight: 400; letter-spacing: -0.02em; }
+.promo-dialog-text { margin: 0 0 22px; max-width: 420px; color: var(--color-muted); font-size: 16px; line-height: 1.65; }
+.promo-dialog-highlights { display: grid; gap: 10px; margin: 0 0 30px; padding: 0; list-style: none; }
+.promo-dialog-highlights li { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
+.promo-dialog-highlights svg { flex: none; width: 22px; height: 22px; padding: 4px; border-radius: 50%; background: var(--color-sage); color: var(--promo-green); }
+.promo-dialog-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; }
+.promo-dialog-cta { min-height: 52px; padding: 15px 24px; background: var(--promo-green); color: #fff; }
+.promo-dialog-cta:hover { background: var(--promo-green-deep); }
+.promo-dialog-dismiss { min-height: 44px; padding: 0 4px; border: 0; background: none; color: var(--color-muted); font: 600 14px var(--font-body); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.promo-dialog-dismiss:hover { color: var(--color-ink); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .promo-dialog[open] { animation: promo-in 420ms cubic-bezier(.2, .8, .2, 1); }
+  .promo-dialog[open]::backdrop { animation: promo-fade 320ms ease; }
+  .promo-dialog[open] .promo-dialog-mark { animation: promo-float 5s ease-in-out infinite; }
+}
+@keyframes promo-in { 0% { opacity: 0; transform: translateY(18px) scale(.97); } }
+@keyframes promo-fade { 0% { opacity: 0; } }
+@keyframes promo-float { 50% { translate: -50% calc(-50% - 8px); } }
+
+@media (max-width: 720px) {
+  .promo-dialog[open] { grid-template-columns: 1fr; }
+  .promo-dialog-visual { min-height: 170px; margin: 8px 8px 0; }
+  .promo-dialog-mark { width: 86px; height: 86px; border-radius: 24px; font-size: 50px; }
+  .promo-dialog-chip--ai { left: 14px; top: 18px; }
+  .promo-dialog-chip--seal { right: 14px; bottom: 16px; }
+  .promo-dialog-close { top: 16px; right: 16px; }
+  .promo-dialog-body { padding: 26px 22px 24px; }
+  .promo-dialog-eyebrow { padding-right: 0; margin-bottom: 12px; }
+  .promo-dialog-text { font-size: 15px; margin-bottom: 18px; }
+  .promo-dialog-highlights { margin-bottom: 22px; }
+  .promo-dialog-cta { flex: 1 1 100%; justify-content: space-between; }
+  .promo-dialog-dismiss { margin: 0 auto; }
+}
