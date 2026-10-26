@@ -23,32 +23,25 @@ html.promo-open { overflow: hidden; }
   margin: 10px 0 10px 10px;
   border-radius: 22px;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 18% 18%, rgb(255 255 255 / 70%), transparent 42%),
-    linear-gradient(150deg, #e3ece2 0%, var(--promo-mint) 45%, #c9dccd 100%);
+  background: var(--promo-mint);
 }
-.promo-dialog-ring { position: absolute; border: 1px solid rgb(255 255 255 / 75%); border-radius: 50%; }
-.promo-dialog-ring--one { width: 360px; height: 360px; left: -150px; bottom: -170px; }
-.promo-dialog-ring--two { width: 230px; height: 230px; right: -90px; top: -80px; }
-.promo-dialog-mark {
-  position: absolute; left: 50%; top: 50%;
-  display: grid; place-items: center;
-  width: 132px; height: 132px;
-  translate: -50% -50%; rotate: -10deg;
-  border: 1.5px solid #fff; border-radius: 36px;
-  background: rgb(255 255 255 / 62%);
-  box-shadow: 0 18px 40px rgb(45 91 72 / 14%);
-  color: #3c7762; font-size: 78px; font-weight: 720; line-height: 1;
+.promo-dialog-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 56% 40%; }
+/* Soft green wash so the photo sits in the site's palette and the chips stay legible. */
+.promo-dialog-visual::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgb(31 67 52 / 0%) 45%, rgb(31 67 52 / 38%) 100%),
+    linear-gradient(135deg, rgb(45 91 72 / 18%), rgb(220 231 222 / 6%));
 }
 .promo-dialog-chip {
-  position: absolute; display: inline-flex; align-items: center; gap: 7px;
+  position: absolute; z-index: 1; display: inline-flex; align-items: center; gap: 7px;
   padding: 9px 13px; border-radius: var(--radius-pill);
   background: rgb(255 255 255 / 86%); box-shadow: 0 10px 24px rgb(45 91 72 / 12%);
   color: var(--promo-green-deep); font-size: 12px; font-weight: 750; letter-spacing: 0.02em; white-space: nowrap;
 }
 .promo-dialog-chip svg { width: 15px; height: 15px; }
-.promo-dialog-chip--ai { left: 22px; top: 26%; rotate: -4deg; }
-.promo-dialog-chip--seal { right: 22px; bottom: 23%; rotate: 5deg; }
+.promo-dialog-chip--ai { left: 18px; top: 18px; }
+.promo-dialog-chip--seal { left: 18px; bottom: 18px; }
 
 .promo-dialog-close {
   position: absolute; top: 18px; right: 18px; z-index: 1;
@@ -77,18 +70,18 @@ html.promo-open { overflow: hidden; }
 @media (prefers-reduced-motion: no-preference) {
   .promo-dialog[open] { animation: promo-in 420ms cubic-bezier(.2, .8, .2, 1); }
   .promo-dialog[open]::backdrop { animation: promo-fade 320ms ease; }
-  .promo-dialog[open] .promo-dialog-mark { animation: promo-float 5s ease-in-out infinite; }
+  .promo-dialog[open] .promo-dialog-visual img { animation: promo-zoom 9s ease-out both; }
 }
 @keyframes promo-in { 0% { opacity: 0; transform: translateY(18px) scale(.97); } }
 @keyframes promo-fade { 0% { opacity: 0; } }
-@keyframes promo-float { 50% { translate: -50% calc(-50% - 8px); } }
+@keyframes promo-zoom { 0% { transform: scale(1.06); } }
 
 @media (max-width: 720px) {
   .promo-dialog[open] { grid-template-columns: 1fr; }
-  .promo-dialog-visual { min-height: 170px; margin: 8px 8px 0; }
-  .promo-dialog-mark { width: 86px; height: 86px; border-radius: 24px; font-size: 50px; }
-  .promo-dialog-chip--ai { left: 14px; top: 18px; }
-  .promo-dialog-chip--seal { right: 14px; bottom: 16px; }
+  .promo-dialog-visual { min-height: 200px; margin: 8px 8px 0; }
+  .promo-dialog-visual img { object-position: 55% 35%; }
+  .promo-dialog-chip--ai { left: 14px; top: 14px; }
+  .promo-dialog-chip--seal { left: 14px; bottom: 14px; }
   .promo-dialog-close { top: 16px; right: 16px; }
   .promo-dialog-body { padding: 26px 22px 24px; }
   .promo-dialog-eyebrow { padding-right: 0; margin-bottom: 12px; }

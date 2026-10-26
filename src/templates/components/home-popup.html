@@ -1,12 +1,10 @@
 {% set popup = education.home_popup %}
 {% if popup.enabled %}
 <dialog class="promo-dialog" id="promo-dialog" aria-labelledby="promo-dialog-title" aria-describedby="promo-dialog-text" data-promo-dialog data-promo-key="promo:{{ popup.path }}#{{ popup.anchor }}">
-  <div class="promo-dialog-visual" aria-hidden="true">
-    <span class="promo-dialog-ring promo-dialog-ring--one"></span>
-    <span class="promo-dialog-ring promo-dialog-ring--two"></span>
-    <span class="promo-dialog-mark">@</span>
-    <span class="promo-dialog-chip promo-dialog-chip--ai">{{ icon('spark') }} IA generativa</span>
-    <span class="promo-dialog-chip promo-dialog-chip--seal">{{ icon('shield') }} CONOCER</span>
+  <div class="promo-dialog-visual">
+    <img src="{{ url(popup.image) }}" alt="{{ popup.image_alt }}" width="1600" height="900" decoding="async">
+    <span class="promo-dialog-chip promo-dialog-chip--ai" aria-hidden="true">{{ icon('spark') }} IA generativa</span>
+    <span class="promo-dialog-chip promo-dialog-chip--seal" aria-hidden="true">{{ icon('shield') }} Certificación CONOCER</span>
   </div>
   <button class="promo-dialog-close" type="button" data-promo-close aria-label="Cerrar aviso">{{ icon('close') }}</button>
   <div class="promo-dialog-body">

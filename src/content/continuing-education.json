@@ -10,6 +10,8 @@
   },
   "home_popup": {
     "enabled": true,
+    "image": "assets/media/popup-cultura-digital.jpg",
+    "image_alt": "Grupo de estudiantes reunidos alrededor de una laptop en un aula",
     "eyebrow": "NUEVA CERTIFICACIÓN · CONOCER ECM0121",
     "title": "Cultura Digital",
     "accent": "ya está aquí.",
