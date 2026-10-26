@@ -23,12 +23,13 @@ def load(name):
 
 
 FORM_HOSTS = {"forms.office.com", "forms.cloud.microsoft"}
+FORM_PATH = re.compile(r"/pages/responsepage\.aspx|/r/[a-z0-9]+", re.IGNORECASE)
 
 
 def check_registration(registration):
     """Fail the build if the registration links are not the expected official kind."""
     form = urlsplit(registration["form_url"])
-    if form.scheme != "https" or form.hostname not in FORM_HOSTS or form.path.lower() != "/pages/responsepage.aspx":
+    if form.scheme != "https" or form.hostname not in FORM_HOSTS or not FORM_PATH.fullmatch(form.path):
         raise SystemExit(f"Formulario de registro no permitido: {registration['form_url']}")
     privacy = registration["privacy_notice_url"]
     if privacy and urlsplit(privacy).scheme != "https":

@@ -42,8 +42,8 @@ Para actualizar el catálogo, cambia los registros `programs` en el JSON. Los va
 
 - La URL del formulario, la imagen del QR y el aviso de privacidad están en `registration` dentro de `src/content/continuing-education.json`. No pegues la URL directamente en la plantilla.
 - El botón y el QR del formulario siempre se publican, acompañados de una línea de privacidad: si `privacy_notice_url` tiene un enlace https, enlaza al aviso; si está vacío, indica que se solicite el aviso por correo a la coordinación.
-- `scripts/build.py` detiene la compilación si `form_url` no es un Microsoft Forms (`forms.cloud.microsoft` o `forms.office.com`) o si el aviso no usa https.
-- `scripts/test_continuing_education.py` decodifica el QR y comprueba que apunte exactamente a `form_url`. Si cambias el formulario, regenera la imagen del QR o la prueba fallará.
+- `scripts/build.py` detiene la compilación si `form_url` no es un Microsoft Forms (`forms.cloud.microsoft` o `forms.office.com`, con ruta `/Pages/ResponsePage.aspx` o liga corta `/r/…`) o si el aviso no usa https.
+- `scripts/test_continuing_education.py` decodifica el QR y comprueba que apunte a `form_url` (se acepta el `?origin=QRCode` que agrega Microsoft Forms a sus QR). Si cambias el formulario, regenera la imagen del QR o la prueba fallará.
 
 ## Pendiente: aviso de privacidad en autorización
 

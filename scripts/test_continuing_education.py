@@ -21,13 +21,16 @@ class ContinuingEducationRegistration(unittest.TestCase):
         form = urlsplit(self.registration["form_url"])
         self.assertEqual(form.scheme, "https")
         self.assertIn(form.hostname, FORM_HOSTS)
-        self.assertEqual(form.path.lower(), "/pages/responsepage.aspx")
+        self.assertRegex(form.path, r"(?i)^(/pages/responsepage\.aspx|/r/[a-z0-9]+)$")
 
     def test_qr_points_to_the_same_form(self):
         image = Image.open(ROOT / "src" / self.registration["qr_image"]).convert("L")
         decoded = [result.text for result in zxingcpp.read_barcodes(image)]
-        self.assertEqual(decoded, [self.registration["form_url"]],
-                         "El QR no coincide con form_url; regenera la imagen o corrige el JSON.")
+        self.assertEqual(len(decoded), 1, "La imagen debe contener exactamente un QR.")
+        # Microsoft Forms adds ?origin=QRCode to its own QR codes to count scans; nothing else is allowed.
+        expected = {self.registration["form_url"], self.registration["form_url"] + "?origin=QRCode"}
+        self.assertIn(decoded[0], expected,
+                      "El QR no coincide con form_url; regenera la imagen o corrige el JSON.")
 
     def test_template_has_no_hardcoded_form_links(self):
         template = (ROOT / "src/templates/pages/continuing-education.html").read_text(encoding="utf-8")
