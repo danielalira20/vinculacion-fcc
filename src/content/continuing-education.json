@@ -1,0 +1,75 @@
+{
+  "title": "Educación Continua y Certificaciones Eduit",
+  "eyebrow": "EDUCACIÓN CONTINUA · FCC BUAP",
+  "intro": "La formación profesional no termina con un título. Explora áreas para actualizar conocimientos, fortalecer tus habilidades y conocer opciones de certificación.",
+  "notice": "Esta página presenta una selección orientativa del catálogo público de Eduit. La coordinación de Educación Continua debe confirmar convocatorias, elegibilidad, modalidades, costos y disponibilidad antes de inscribirte.",
+  "categories": [
+    {"key": "todos", "name": "Todas"},
+    {"key": "productividad", "name": "Productividad"},
+    {"key": "tecnologia", "name": "Tecnología"},
+    {"key": "diseno", "name": "Diseño"},
+    {"key": "gestion", "name": "Gestión"}
+  ],
+  "programs": [
+    {
+      "name": "Microsoft Office y Microsoft 365",
+      "subtitle": "Ofimática y productividad",
+      "description": "Explora certificaciones en herramientas de productividad, incluyendo opciones relacionadas con Excel, Word y PowerPoint.",
+      "category": "productividad", "category_label": "PRODUCTIVIDAD", "icon": "document", "theme": "sage",
+      "href": "https://www.grupoeduit.com/certificaciones/7/1"
+    },
+    {
+      "name": "Fundamentos de IA generativa",
+      "subtitle": "Nuevas tecnologías",
+      "description": "Conoce opciones de aprendizaje y certificación relacionadas con inteligencia artificial y su aplicación profesional.",
+      "category": "tecnologia", "category_label": "TECNOLOGÍA", "icon": "network", "theme": "lavender",
+      "href": "https://www.grupoeduit.com/certificaciones/3/2"
+    },
+    {
+      "name": "Nube y servicios digitales",
+      "subtitle": "Cloud e infraestructura",
+      "description": "Consulta rutas relacionadas con fundamentos de la nube, servicios digitales y tecnologías Microsoft.",
+      "category": "tecnologia", "category_label": "TECNOLOGÍA", "icon": "cloud", "theme": "peach",
+      "href": "https://www.grupoeduit.com/certificaciones/3/2"
+    },
+    {
+      "name": "AutoCAD y diseño digital",
+      "subtitle": "Herramientas de diseño",
+      "description": "Explora certificaciones orientadas al uso de herramientas de diseño y representación técnica.",
+      "category": "diseno", "category_label": "DISEÑO", "icon": "cube", "theme": "rose",
+      "href": "https://www.grupoeduit.com/certificaciones/3/1"
+    },
+    {
+      "name": "Fundamentos de programación",
+      "subtitle": "Desarrollo de software",
+      "description": "Encuentra opciones introductorias relacionadas con Python, desarrollo y conocimientos técnicos.",
+      "category": "tecnologia", "category_label": "TECNOLOGÍA", "icon": "code", "theme": "sage",
+      "href": "https://www.grupoeduit.com/certificaciones/3/2"
+    },
+    {
+      "name": "Administración de proyectos",
+      "subtitle": "Gestión profesional",
+      "description": "Conoce programas vinculados con herramientas de planeación, administración y gestión de proyectos.",
+      "category": "gestion", "category_label": "GESTIÓN", "icon": "briefcase", "theme": "sand",
+      "href": "https://www.grupoeduit.com/certificaciones/3/2"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Quiénes pueden solicitar información?",
+      "answer": "Estudiantes, egresados y personas interesadas en capacitación pueden consultar a Educación Continua. Los requisitos de cada programa deben confirmarse directamente con la coordinación."
+    },
+    {
+      "question": "¿Los cursos o exámenes tienen un costo fijo?",
+      "answer": "No se publica una tarifa única en esta página. Antes de realizar cualquier pago, confirma el precio y el procedimiento vigente con el área responsable."
+    },
+    {
+      "question": "¿La modalidad es presencial o en línea?",
+      "answer": "Depende del programa y de la convocatoria. El catálogo de Eduit incluye opciones con distintas modalidades; la oferta disponible para la comunidad FCC se debe consultar con Educación Continua."
+    },
+    {
+      "question": "¿Es lo mismo que las certificaciones Certiport de la FCC?",
+      "answer": "No necesariamente. El sitio de Vinculación tiene una sección propia para exámenes Certiport. Revisa la certificación de tu interés y confirma con la coordinación quién la ofrece y cuál es su proceso de inscripción."
+    }
+  ]
+}

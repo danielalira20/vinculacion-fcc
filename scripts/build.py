@@ -34,6 +34,7 @@ def build():
     processes, employers = load("processes.json"), load("employers.json")
     alumni = load("alumni.json")
     certifications = load("certifications.json")
+    education = load("continuing-education.json")
     partners = load("partners.json")
     about_directory = load("about-directory.json")
     page_titles = {p["path"]: p["title"] for p in pages}
@@ -120,6 +121,8 @@ def build():
         else:
             template = {"certificaciones/oferta/index.html": "pages/certification-offer.html", "certificaciones/precios/index.html": "pages/certification-prices.html", "certificaciones/proceso/index.html": "pages/certification-process.html"}.get(page["path"], template)
         render(page["path"], template, title=page["title"], active=active, description=page["summary"] or page["title"], page=page, experience=experience, employer=employer, catalog=catalog, learning=learning, cisco=cisco, alumni=alumni, cert=cert)
+    education_contact = next(member for member in department["members"] if member["area"] == "Educación Continua")
+    render("educacion-continua/index.html", "pages/continuing-education.html", title=education["title"], active="nosotros", description=education["intro"], education=education, education_contact=education_contact)
     render("buscar/index.html", "pages/search.html", title="Buscar", active="", description="Encuentra academias, certificaciones, trámites y recursos de Vinculación FCC.")
     search_index = [
         {"title": p["title"], "path": p["path"], "section": p["section"],
@@ -128,6 +131,7 @@ def build():
         for p in pages if p["id"] != "contenido-2141"
     ]
     search_index += [{"title": l["title"], "path": l["path"], "section": l["key"], "text": l["description"], "summary": l["description"]} for l in site["landings"]]
+    search_index.append({"title": education["title"], "path": "educacion-continua/index.html", "section": "nosotros", "text": education["intro"] + " " + " ".join(p["name"] + " " + p["description"] for p in education["programs"]), "summary": "Educación continua, áreas de certificación Eduit y contacto de la coordinación."})
     for record in search_index:
         if record["path"] == "academias/cisco/ruta/index.html":
             record["text"] += "\n" + "\n".join(course for route in cisco["routes"] for branch in route["branches"] for course in branch["courses"])

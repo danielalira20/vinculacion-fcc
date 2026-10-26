@@ -88,6 +88,7 @@ docs/
 ## Qué incluye
 
 - Portada, Academias, Certificaciones, Empresas, Egresados, Nosotros y Recursos.
+- Educación Continua y Certificaciones Eduit como **página HTML nativa** en `educacion-continua/index.html` (anteriormente enlace a Canva), con categorías filtrables, orientación y contacto institucional. Véase `docs/EDUCACION-CONTINUA.md`.
 - Menú móvil, filtros de Academias y búsqueda local que reconoce consultas sin acentos.
 - Tarjetas de Academias con miniaturas y reproducción en la misma página; enlaces opcionales a la academia y a YouTube. Solo se carga un reproductor al pulsar y se detiene al ocultar su tarjeta.
 - Bolsa de Trabajo y Vacantes con portadas propias, glass moderado y formularios integrados.
