@@ -5,6 +5,7 @@ import os
 import re
 import shutil
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from markupsafe import Markup
@@ -21,6 +22,19 @@ def load(name):
     return json.loads((SOURCE / "content" / name).read_text(encoding="utf-8"))
 
 
+FORM_HOSTS = {"forms.office.com", "forms.cloud.microsoft"}
+
+
+def check_registration(registration):
+    """Fail the build if the registration links are not the expected official kind."""
+    form = urlsplit(registration["form_url"])
+    if form.scheme != "https" or form.hostname not in FORM_HOSTS or form.path.lower() != "/pages/responsepage.aspx":
+        raise SystemExit(f"Formulario de registro no permitido: {registration['form_url']}")
+    privacy = registration["privacy_notice_url"]
+    if privacy and urlsplit(privacy).scheme != "https":
+        raise SystemExit(f"El aviso de privacidad debe usar https: {privacy}")
+
+
 def relative(target, current):
     return os.path.relpath(target, Path(current).parent).replace(os.sep, "/")
 
@@ -35,6 +49,7 @@ def build():
     alumni = load("alumni.json")
     certifications = load("certifications.json")
     education = load("continuing-education.json")
+    check_registration(education["registration"])
     partners = load("partners.json")
     about_directory = load("about-directory.json")
     page_titles = {p["path"]: p["title"] for p in pages}

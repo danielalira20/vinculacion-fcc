@@ -164,6 +164,8 @@
 .ec-cultura__qr{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:17px;padding:13px;margin:24px 0 10px;width:min(100%,247px);box-shadow:0 3px 15px rgba(47,66,48,.035);}
 .ec-cultura__qr img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;}
 .ec-cultura__qr-caption{color:#5b705c;letter-spacing:.11em;font-size:10px;font-weight:750;margin:0;}
+.ec-cultura__privacy{color:#69756a;font-size:12px;line-height:1.55;margin:14px 0 0;max-width:300px;}
+.ec-cultura__privacy a{color:#2d5b48;font-weight:700;}
 .ec-cultura__help{border-top:1px solid #d9e5d4;margin-top:auto;padding-top:22px;display:flex;gap:10px;color:#6c7e6b;font-size:11px;justify-content:center;align-items:center;width:100%;}
 .ec-cultura__help svg{width:14px;height:14px;}
 @media (max-width:920px){.ec-cultura__main{grid-template-columns:minmax(0,1fr) minmax(280px,320px);gap:20px;padding:22px;}.ec-cultura__topics{grid-template-columns:1fr;row-gap:12px;}.ec-cultura__steps{grid-template-columns:repeat(2,1fr);}.ec-cultura__available{display:none;}}

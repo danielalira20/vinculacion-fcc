@@ -107,17 +107,25 @@
           <div class="ec-cultura__register-symbol" aria-hidden="true">↗</div>
           <p class="ec-cultura__register-kicker">INSCRIPCIONES</p>
           <h4>Tu siguiente paso empieza aquí.</h4>
+          {% set registration = education.registration %}
+          {% if registration.privacy_notice_url %}
           <p class="ec-cultura__register-description">Accede al formulario de registro de Cultura Digital a través del botón o escaneando el código QR.</p>
-          
-
-<a class="ec-cultura__button" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=OjGYGihHnE6az7bSE1NX-201xb0ugutLt-0fzh3tsapUMzZFMFhVWkFaS0cxSEUyRkFEVVdXQ05NTS4u" target="_blank" rel="noopener noreferrer">
+          <a class="ec-cultura__button" href="{{ registration.form_url }}" target="_blank" rel="noopener noreferrer">
             Ir al registro <span aria-hidden="true">↗</span>
           </a>
-          <a class="ec-cultura__qr" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=OjGYGihHnE6az7bSE1NX-201xb0ugutLt-0fzh3tsapUMzZFMFhVWkFaS0cxSEUyRkFEVVdXQ05NTS4u" target="_blank" rel="noopener noreferrer" aria-label="Abrir formulario de registro de Cultura Digital">
-            <img src="{{ url('assets/cultura-digital/registro-cultura-digital.png') }}" width="212" height="212" alt="Código QR para abrir el formulario de registro de Cultura Digital" loading="lazy">
+          <a class="ec-cultura__qr" href="{{ registration.form_url }}" target="_blank" rel="noopener noreferrer" aria-label="Abrir formulario de registro de Cultura Digital">
+            <img src="{{ url(registration.qr_image) }}" width="212" height="212" alt="Código QR para abrir el formulario de registro de Cultura Digital" loading="lazy">
           </a>
           <p class="ec-cultura__qr-caption">ESCANEA PARA REGISTRARTE</p>
+          <p class="ec-cultura__privacy" data-privacy-notice>Antes de enviar tus datos, consulta el <a href="{{ registration.privacy_notice_url }}" target="_blank" rel="noopener noreferrer">aviso de privacidad</a> del registro.</p>
           <div class="ec-cultura__help">Registro mediante Microsoft Forms <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          {% else %}
+          <p class="ec-cultura__register-description">El registro en línea se habilitará cuando la coordinación publique su aviso de privacidad. Mientras tanto, solicita tu inscripción por correo.</p>
+          <a class="ec-cultura__button" href="mailto:{{ education_contact.emails[0] }}?subject=Registro%20a%20Cultura%20Digital%20ECM0121">
+            Solicitar registro <span aria-hidden="true">↗</span>
+          </a>
+          <div class="ec-cultura__help">{{ education_contact.emails[0] }}</div>
+          {% endif %}
         </aside>
       </div>
     </article>
