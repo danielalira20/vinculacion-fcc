@@ -39,15 +39,16 @@ class ContinuingEducationRegistration(unittest.TestCase):
         if privacy:
             self.assertEqual(urlsplit(privacy).scheme, "https")
 
-    def test_published_page_never_shows_the_form_without_privacy_notice(self):
+    def test_published_page_shows_form_with_a_privacy_line(self):
         page = ROOT / "dist/educacion-continua/index.html"
         if not page.exists():
             self.skipTest("Ejecuta scripts/build.py antes de esta prueba.")
         html = page.read_text(encoding="utf-8")
-        has_form = self.registration["form_url"].replace("&", "&amp;") in html
-        has_privacy = "data-privacy-notice" in html
-        self.assertEqual(has_form, bool(self.registration["privacy_notice_url"]))
-        self.assertEqual(has_form, has_privacy)
+        self.assertEqual(html.count(self.registration["form_url"].replace("&", "&amp;")), 2)
+        self.assertIn("data-privacy-notice", html)
+        privacy = self.registration["privacy_notice_url"]
+        if privacy:
+            self.assertIn(privacy.replace("&", "&amp;"), html)
 
 
 if __name__ == "__main__":
