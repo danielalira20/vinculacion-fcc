@@ -37,3 +37,11 @@ URLs consultadas:
 - `https://www.cs.buap.mx/Coordinadores.php`
 
 Para actualizar el catálogo, cambia los registros `programs` en el JSON. Los valores de `category` deben coincidir con un `key` de `categories`, los nombres de iconos deben existir en `src/assets/icons/` y los temas deben existir en los estilos compartidos.
+
+## Registro, QR y aviso de privacidad
+
+- La URL del formulario, la imagen del QR y el aviso de privacidad están en `registration` dentro de `src/content/continuing-education.json`. No pegues la URL directamente en la plantilla.
+- El botón y el QR del formulario **solo se publican cuando `privacy_notice_url` tiene un enlace https** al aviso de privacidad del registro. Mientras esté vacío, la página ofrece solicitar el registro por correo a la coordinación.
+- `scripts/build.py` detiene la compilación si `form_url` no es un Microsoft Forms (`forms.cloud.microsoft` o `forms.office.com`) o si el aviso no usa https.
+- `scripts/test_continuing_education.py` decodifica el QR y comprueba que apunte exactamente a `form_url`. Si cambias el formulario, regenera la imagen del QR o la prueba fallará.
+- Pendiente institucional: confirmar que el formulario pertenece a una cuenta `@correo.buap.mx`.
