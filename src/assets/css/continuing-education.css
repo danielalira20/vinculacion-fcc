@@ -140,7 +140,8 @@
 .ec-cultura h4{margin:0;font-size:clamp(20px,2vw,27px);letter-spacing:-.038em;line-height:1.26;font-weight:640;}
 .ec-cultura__topics{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;row-gap:17px;padding:0;margin:0;}
 .ec-cultura__topics li{font-size:13.5px;line-height:1.5;display:flex;gap:11px;align-items:flex-start;color:#404b43;}
-.ec-cultura__check{flex:0 0 23px;height:23px;width:23px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#4e8067;background:#e8f0e6;font-size:13px;font-weight:800;}
+.ec-cultura__check{flex:0 0 23px;height:23px;width:23px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#4e8067;background:#e8f0e6;}
+.ec-cultura__check svg{width:13px;height:13px;}
 .ec-cultura__divider{height:1px;background:var(--ec-line);margin:31px 0 29px;}
 .ec-cultura__method-title{margin:0 0 17px!important;}
 .ec-cultura__steps{padding:0;margin:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;}
