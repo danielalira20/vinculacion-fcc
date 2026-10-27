@@ -152,7 +152,7 @@ def build():
         if record["path"] == "academias/cisco/ruta/index.html":
             record["text"] += "\n" + "\n".join(course for route in cisco["routes"] for branch in route["branches"] for course in branch["courses"])
     (DIST / "assets/search-index.json").write_text(json.dumps(search_index, ensure_ascii=False), encoding="utf-8")
-    (DIST / "robots.txt").write_text("# Preview: enable indexing only after editorial approval.\nUser-agent: *\nDisallow: /\n", encoding="utf-8")
+    (DIST / "robots.txt").write_text("User-agent: *\nAllow: /\n", encoding="utf-8")
     aliases = [{"source": p["source_url"], "target": p["path"]} for p in pages]
     (DIST / "redirect-map.json").write_text(json.dumps(aliases, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Built {len(written)} HTML pages in {DIST}")

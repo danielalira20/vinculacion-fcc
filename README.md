@@ -110,7 +110,7 @@ Las correcciones de la revisión de Diego, su validación y los pendientes exter
 
 ## Estado de la entrega
 
-Es una versión de revisión, no una publicación oficial. La generación incluye `noindex` y `robots.txt` para evitar indexación accidental. Antes de publicar hay que validar responsables, contactos, precios, convocatorias, textos de carteles y materiales faltantes con el departamento; revisar el aviso de privacidad institucional aplicable; y definir dominio, alojamiento y redirecciones. La tabla `redirect-map.json` se genera como referencia, pero no configura el servidor por sí sola.
+La generación permite la indexación: las páginas llevan `index, follow` y `robots.txt` admite el rastreo completo. Antes de publicar hay que validar responsables, contactos, precios, convocatorias, textos de carteles y materiales faltantes con el departamento; revisar el aviso de privacidad institucional aplicable; y definir dominio, alojamiento y redirecciones. La tabla `redirect-map.json` se genera como referencia, pero no configura el servidor por sí sola.
 
 Los formularios integrados se sirven desde sus proveedores actuales y también ofrecen un enlace opcional para abrirlos aparte. El sitio no captura ni almacena datos personales. Moodle está pendiente de requisitos; todavía no hay cuentas, seguimiento de progreso ni sincronización con esa plataforma.
 
