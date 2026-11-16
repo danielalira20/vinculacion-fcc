@@ -36,6 +36,17 @@ def check_registration(registration):
         raise SystemExit(f"El aviso de privacidad debe usar https: {privacy}")
 
 
+def check_external_links(education, learning_data):
+    """Fail the build if an offer or academy link is not an https URL with a host."""
+    links = [(f"oferta {offer['id']}", offer["pass"]["url"]) for offer in education["offers"] if not offer["pass"].get("registration")]
+    for path, profile in learning_data["profiles"].items():
+        links += [(f"{path} · {key}", profile[key]) for key in ("registration_url", "form_url", "instagram_url") if profile.get(key)]
+    for label, link in links:
+        parsed = urlsplit(link)
+        if parsed.scheme != "https" or not parsed.hostname:
+            raise SystemExit(f"Enlace externo no permitido ({label}): {link}")
+
+
 def relative(target, current):
     return os.path.relpath(target, Path(current).parent).replace(os.sep, "/")
 
@@ -51,6 +62,7 @@ def build():
     certifications = load("certifications.json")
     education = load("continuing-education.json")
     check_registration(education["registration"])
+    check_external_links(education, learning_data)
     partners = load("partners.json")
     about_directory = load("about-directory.json")
     page_titles = {p["path"]: p["title"] for p in pages}
