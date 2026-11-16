@@ -1,0 +1,14 @@
+{# Tarjeta guía que completa la cuadrícula de academias y lleva a las coordinaciones. #}
+<article class="academy-guide">
+  <span class="academy-guide-dots" aria-hidden="true"></span>
+  <div class="academy-guide-top">
+    <span class="academy-guide-icon" aria-hidden="true">{{ icon('network') }}</span>
+    <p class="eyebrow">¿NO SABES POR DÓNDE EMPEZAR?</p>
+    <h3>Encuentra la academia <span class="serif">ideal para ti.</span></h3>
+    <p>Cada coordinación te orienta sobre cursos, requisitos y fechas para que elijas con confianza.</p>
+  </div>
+  <ul class="academy-guide-logos" aria-label="Academias FCC">
+    {% for person in coordinations.academies %}<li title="{{ person.name }}"><img src="{{ url(person.logo) }}" alt="{{ person.name }}" loading="lazy"></li>{% endfor %}
+  </ul>
+  <a class="button academy-guide-button" href="{{ url('academias/coordinaciones/index.html') }}">Conoce las coordinaciones {{ icon('arrow') }}</a>
+</article>

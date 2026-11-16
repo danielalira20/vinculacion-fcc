@@ -37,7 +37,8 @@
   .academy-video-hint { left: 83px; }
 }
 
-/* Home keeps its compact four-card overview while sharing the inline player. */
+/* Home: three columns (five academies + the guide card) sharing the inline player. */
+.home-academy-videos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
 .home-academy-videos .academy-video { border-radius: 17px; }
 .home-academy-videos .academy-video-screen { min-height: 0; }
 .home-academy-videos .academy-video-brand { top: 12px; left: 12px; padding: 6px 9px; font-size: 12px; gap: 6px; }
@@ -52,3 +53,23 @@
 .home-academy-videos .academy-video-controls button { min-height: 44px; }
 @media (max-width: 1000px) { .home-academy-videos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .home-academy-videos { grid-template-columns: 1fr; } }
+
+
+/* Tarjeta guía: completa la cuadrícula (5 academias + 1) y lleva a las coordinaciones. */
+.academy-guide { position: relative; isolation: isolate; display: flex; flex-direction: column; gap: 22px; min-width: 0; padding: clamp(24px, 2.6vw, 34px); overflow: hidden; border-radius: 30px; background: radial-gradient(110% 80% at 0% 0%, #e3ebf8 0%, transparent 60%), radial-gradient(80% 90% at 100% 100%, #f9dcc8 0%, transparent 62%), #eaf0f8; }
+.academy-guide-dots { position: absolute; inset: 0; z-index: -1; background: radial-gradient(circle, rgb(11 47 85 / 15%) 1.1px, transparent 1.6px) 0 0 / 18px 18px; -webkit-mask-image: linear-gradient(160deg, transparent 30%, #000 90%); mask-image: linear-gradient(160deg, transparent 30%, #000 90%); }
+.academy-guide-top { display: flex; flex-direction: column; align-items: flex-start; }
+.academy-guide-icon { display: grid; place-items: center; width: 58px; height: 58px; margin-bottom: 22px; border: 1.5px solid #fff; border-radius: 19px; background: linear-gradient(150deg, rgb(255 255 255 / 88%), rgb(255 255 255 / 45%)); color: var(--color-brand); transform: rotate(-7deg); box-shadow: 0 14px 28px -16px rgb(11 47 85 / 40%); }
+.academy-guide-icon svg { width: 28px; height: 28px; transform: rotate(7deg); }
+.academy-guide .eyebrow { margin: 0 0 10px; color: #1f5f9e; }
+.academy-guide h3 { margin: 0 0 12px; font-size: clamp(26px, 2.4vw, 32px); line-height: 1.12; letter-spacing: -.045em; font-weight: 650; }
+.academy-guide h3 .serif { display: block; color: #a0512c; }
+.academy-guide-top > p:not(.eyebrow) { margin: 0; max-width: 340px; color: var(--color-muted); font-size: 15.5px; line-height: 1.7; }
+.academy-guide-logos { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 7px; margin: auto 0 0; padding: 0; list-style: none; }
+.academy-guide-logos li { display: grid; place-items: center; min-width: 0; height: 46px; padding: 6px; border: 1px solid #fff; border-radius: 14px; background: rgb(255 255 255 / 85%); transition: transform var(--transition-fast); }
+.academy-guide-logos li:hover { transform: translateY(-2px); }
+.academy-guide-logos img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.academy-guide-button { align-self: flex-start; }
+.catalog-grid .academy-guide[hidden], .academy-grid:has(.academy-card[hidden]) .academy-guide { display: none; }
+@media (max-width: 600px) { .academy-guide { border-radius: 24px; } .academy-guide-button { align-self: stretch; justify-content: space-between; } }
+@media (prefers-reduced-motion: reduce) { .academy-guide-logos li { transition: none; } .academy-guide-logos li:hover { transform: none; } }

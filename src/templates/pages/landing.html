@@ -14,7 +14,8 @@
   <p class="result-count" data-catalog-count role="status">{{ site.academies|length }} academias</p>
 <div class="academy-grid catalog-grid academy-video-grid">{% for item in site.academies %}
 {% include 'components/academy-card.html' %}
-{% endfor %}</div>
+{% endfor %}
+{% include 'components/academy-guide.html' %}</div>
 <p class="empty-state" data-catalog-empty hidden>No encontramos coincidencias. Prueba con otra palabra o selecciona Todas.</p>
   {% elif landing.kind == 'certifications' %}
   <div class="academy-grid catalog-grid certification-image-grid">{% for item in site.certifications %}<article class="academy-card">
