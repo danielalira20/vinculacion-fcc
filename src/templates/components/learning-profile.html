@@ -1,6 +1,7 @@
 <div class="learning-content wrap theme-{{ experience.theme }}" id="informacion">
   <section class="learning-intro"><p class="eyebrow">CONOCE {{ experience.name }}</p><h2>{{ learning.heading }}<br><span class="serif">{{ learning.emphasis }}</span></h2><div><p>{{ learning.summary }}</p>{% if learning.kind == 'oracle' %}<p>{{ learning.promise }}</p>{% endif %}</div></section>
-  {% if learning.kind == 'oracle' %}
+  {% if learning.kind == 'redhat' %}{% include 'components/learning-redhat.html' %}
+  {% elif learning.kind == 'oracle' %}
   <section class="oracle-workbench" aria-labelledby="oracle-areas">
     <div class="learning-section-head"><div><p class="eyebrow">CURSOS Y TALLERES</p><h2 id="oracle-areas">Elige por dónde empezar.</h2></div><a class="text-link" href="{{ url(learning.catalog) }}">Explorar los 8 cursos {{ icon('arrow') }}</a></div>
     <div class="oracle-areas">{% for item in learning.areas %}<a href="{{ url(learning.catalog) }}" class="oracle-area"><span class="learning-line-icon">{{ icon(item[0]) }}</span><span class="learning-index">0{{ loop.index }}</span><h3>{{ item[1] }}</h3><p>{{ item[2] }}</p><span class="text-link">Ver cursos {{ icon('arrow') }}</span></a>{% endfor %}</div>

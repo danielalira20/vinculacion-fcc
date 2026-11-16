@@ -2103,5 +2103,19 @@
     "notice": "",
     "pending_books": false,
     "summary": "Autor: linkage Paginación de entradas Anteriores 1 2 Facebook Vinculación FCC - BUAP"
+  },
+  {
+    "id": "redhat-academy-fcc-2026",
+    "title": "Red Hat Academy · FCC BUAP",
+    "path": "academias/red-hat/index.html",
+    "section": "academias",
+    "source_url": "",
+    "original_text": "Red Hat Academy Linux automatización contenedores nube RH104 RH124 RH134 RH294 DO180 Club Red Hat FCC inscripción",
+    "body": "<p>Red Hat Academy es el programa educativo de Red Hat para instituciones académicas. La BUAP participa a través de la Facultad de Ciencias de la Computación.</p>",
+    "images": [],
+    "resources": [],
+    "summary": "Aprende Linux, automatización, contenedores y nube. Conoce cursos, beneficios, inscripción y Club Red Hat FCC.",
+    "notice": "",
+    "pending_books": false
   }
 ]

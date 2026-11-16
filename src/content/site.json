@@ -39,6 +39,13 @@
           "icon": "shield",
           "description": "Ciberseguridad",
           "theme": "lavender"
+        },
+        {
+          "label": "Red Hat",
+          "path": "academias/red-hat/index.html",
+          "icon": "code",
+          "description": "Linux y código abierto",
+          "theme": "rose"
         }
       ],
       "related": [
@@ -249,6 +256,20 @@
       "tags": [
         "Seguridad",
         "Certificaciones"
+      ]
+    },
+    {
+      "name": "Red Hat Academy",
+      "short": "Red Hat",
+      "theme": "rose",
+      "icon": "code",
+      "area": "Linux y código abierto",
+      "description": "Aprende Linux, automatización, contenedores y tecnologías de nube con recursos de Red Hat Academy.",
+      "path": "academias/red-hat/index.html",
+      "contact": "steffany.galicia@alumno.buap.mx",
+      "tags": [
+        "Linux",
+        "Código abierto"
       ]
     }
   ],

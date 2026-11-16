@@ -76,6 +76,25 @@
       "video": "https://www.youtube.com/embed/z3qOrIw6ZQk",
       "description": "Como programa educativo filantrópico global de Oracle, Oracle Academy promueve la educación informática en todo el mundo para aumentar el conocimiento, la innovación, el desarrollo de habilidades y la diversidad en los campos tecnológicos. Oracle Academy entiende y valora a los educadores como socios que están capacitados para facilitar el aprendizaje innovador de los estudiantes dentro y fuera del aula.",
       "message": ""
+    },
+    {
+      "name": "Red Hat Academy",
+      "short": "Red Hat",
+      "theme": "rose",
+      "icon": "code",
+      "area": "Linux y código abierto",
+      "path": "academias/red-hat/index.html",
+      "person": "Steffany Paola Galicia Arriaga",
+      "role": "Responsable de Red Hat Academy FCC",
+      "location": "Facultad de Ciencias de la Computación · BUAP",
+      "extension": "",
+      "email": "steffany.galicia@alumno.buap.mx",
+      "secondary_email": "",
+      "portrait": "",
+      "logo": "assets/media/redhat-academy-logo.png",
+      "video": "https://www.youtube.com/embed/6ZbptZBcXmQ",
+      "description": "Aprende Linux, automatización, contenedores y nube con contenido oficial y laboratorios prácticos de Red Hat Academy.",
+      "message": "Formación que conecta con el mundo open source."
     }
   ]
 }

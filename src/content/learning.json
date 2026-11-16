@@ -344,6 +344,81 @@
           "path": "academias/cisco/cursos/index.html"
         }
       ]
+    },
+    "academias/red-hat/index.html": {
+      "kind": "redhat",
+      "heading": "Formación que conecta",
+      "emphasis": "con el mundo open source.",
+      "summary": "Red Hat Academy es el programa educativo de Red Hat para instituciones académicas. Ofrece contenido oficial, laboratorios prácticos y rutas de certificación en tecnologías empresariales de código abierto: Linux, automatización, contenedores y nube. La BUAP forma parte de este programa a través de la Facultad de Ciencias de la Computación.",
+      "benefits": [
+        "Contenido oficial para aprender Linux, automatización, contenedores y nube desde un nivel introductorio.",
+        "Laboratorios y ejercicios prácticos basados en casos de uso empresariales.",
+        "Cursos que preparan para certificaciones profesionales como RHCSA y RHCE.",
+        "Conexión con la comunidad, instructores y otros estudiantes.",
+        "Habilidades de valor para administración de sistemas, DevOps y nube."
+      ],
+      "courses": [
+        {
+          "code": "RH104",
+          "name": "Getting Started with Linux Fundamentals",
+          "description": "Primeros pasos con Linux: terminal, archivos y conceptos básicos.",
+          "category": "Fundamentos"
+        },
+        {
+          "code": "RH124",
+          "name": "Red Hat System Administration I",
+          "description": "Administración de Linux desde cero: línea de comandos y herramientas empresariales.",
+          "category": "Administración"
+        },
+        {
+          "code": "RH134",
+          "name": "Red Hat System Administration II",
+          "description": "Almacenamiento, seguridad, control de tareas y despliegue de RHEL. Junto a RH124 prepara para RHCSA.",
+          "category": "Administración"
+        },
+        {
+          "code": "RH294",
+          "name": "Red Hat Enterprise Linux Automation with Ansible",
+          "description": "Automatización de tareas de administración con Ansible. Ruta hacia RHCE.",
+          "category": "Automatización"
+        },
+        {
+          "code": "DO180",
+          "name": "Containers, Kubernetes y Red Hat OpenShift",
+          "description": "Introducción a contenedores, Kubernetes y OpenShift.",
+          "category": "Contenedores"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Regístrate en Red Hat",
+          "description": "Crea tu cuenta de Red Hat usando tu correo institucional de la BUAP, no uno personal."
+        },
+        {
+          "title": "Elige y guarda tu usuario",
+          "description": "Anota el nombre de usuario de Red Hat exactamente como lo registraste: lo necesitarás en el formulario."
+        },
+        {
+          "title": "Confirma tu cuenta",
+          "description": "Si recibes un correo de verificación de Red Hat, completa la confirmación."
+        },
+        {
+          "title": "Llena el formulario de inscripción",
+          "description": "Proporciona tu usuario de Red Hat y el mismo correo institucional con el que creaste tu cuenta."
+        },
+        {
+          "title": "Espera tu confirmación",
+          "description": "Recibirás la confirmación de tu inscripción y el acceso a la plataforma. Si necesitas ayuda, contacta a la responsable."
+        }
+      ],
+      "video": "https://www.youtube.com/embed/6ZbptZBcXmQ",
+      "registration_url": "https://www.redhat.com/en/account",
+      "form_url": "https://forms.cloud.microsoft/r/sMk3yVusDy",
+      "instagram_url": "https://www.instagram.com/redhatfcc2026/",
+      "hat": "assets/media/redhat-academy-hat.png",
+      "art": "assets/media/redhat-academy-hero.png",
+      "logo": "assets/media/redhat-academy-logo.png",
+      "contact": "steffany.galicia@alumno.buap.mx"
     }
   }
 }

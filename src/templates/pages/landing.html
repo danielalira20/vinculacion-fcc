@@ -11,7 +11,7 @@
 <div class="filter-chips" role="group" aria-label="Filtrar academias">
 <button type="button" class="is-active" data-filter="all" aria-pressed="true">Todas</button>{% for item in site.academies %}<button type="button" data-filter="{{ item.short }}" aria-pressed="false">{{ item.short }}</button>{% endfor %}</div>
 </div>
-  <p class="result-count" data-catalog-count role="status">4 academias</p>
+  <p class="result-count" data-catalog-count role="status">{{ site.academies|length }} academias</p>
 <div class="academy-grid catalog-grid academy-video-grid">{% for item in site.academies %}
 {% include 'components/academy-card.html' %}
 {% endfor %}</div>
