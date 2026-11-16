@@ -9,20 +9,20 @@
 .academy-video { position: relative; border-radius: 21px; overflow: hidden; }
 .academy-video-screen { position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 200px; }
 .academy-video-cover { position: absolute; inset: 0; display: block; width: 100%; height: 100%; padding: 0; border: 0; background: var(--theme-bg); color: white; text-align: left; cursor: pointer; font: inherit; }
-.academy-video-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #15171335, transparent 45%, #151713a8); pointer-events: none; }
+.academy-video-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #06172a35, transparent 45%, #06172aa8); pointer-events: none; }
 .academy-video-thumbnail { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-soft); }
 .academy-video-brand { position: absolute; z-index: 1; top: 16px; left: 16px; display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px; border: 1px solid #ffffffb0; border-radius: 30px; background: #fffdfadc; color: var(--theme-ink); font-size: 14px; font-weight: 700; backdrop-filter: blur(12px); }
 .academy-video-brand svg { width: 20px; height: 20px; }
 .academy-video-play { position: absolute; z-index: 1; left: 20px; bottom: 44px; display: flex; align-items: center; gap: 13px; }
-.academy-video-play > span { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: #fffdfadb; color: #292724; border: 1px solid white; backdrop-filter: blur(12px); box-shadow: 0 6px 20px #00000019; }
+.academy-video-play > span { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: #fffdfadb; color: #16293d; border: 1px solid white; backdrop-filter: blur(12px); box-shadow: 0 6px 20px #00000019; }
 .academy-video-play svg { width: 24px; height: 24px; }
 .academy-video-play strong { font-size: 20px; text-shadow: 0 2px 12px #00000080; }
 .academy-video-hint { position: absolute; z-index: 1; left: 87px; bottom: 31px; font-size: 14px; text-shadow: 0 2px 12px #00000080; }
-.academy-video-cover:focus-visible { outline: 3px solid #292724; outline-offset: -5px; }
+.academy-video-cover:focus-visible { outline: 3px solid #16293d; outline-offset: -5px; }
 @media (hover: hover) { .academy-video-cover:hover .academy-video-thumbnail { transform: scale(1.035); } }
-.academy-video-screen iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #161616; }
+.academy-video-screen iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #05172a; }
 .academy-video-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 12px 14px; font-size: 13px; color: var(--theme-ink); }
-.academy-video-controls button { display: inline-flex; align-items: center; gap: 7px; border: 1px solid #29272435; background: #fffdfa; color: #292724; padding: 8px 10px; min-height: 40px; border-radius: 30px; font: inherit; cursor: pointer; }
+.academy-video-controls button { display: inline-flex; align-items: center; gap: 7px; border: 1px solid #16293d35; background: #fffdfa; color: #16293d; padding: 8px 10px; min-height: 40px; border-radius: 30px; font: inherit; cursor: pointer; }
 .academy-video-controls svg { width: 16px; height: 16px; }
 .academy-video-links { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 18px; padding-block: 12px; border-block: 1px solid var(--color-border); }
 .academy-video-links > a:last-child { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--color-muted); padding-block: 7px; }

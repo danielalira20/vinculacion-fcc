@@ -1,21 +1,21 @@
 /* FCC surfaces; Skillfire contributes only the layered, central composition. */
-.partner-network { margin-block: 0 75px; padding: 40px 18px 25px; background: linear-gradient(155deg, #ead7d32b, #e8ded25c 60%, #dfe7dd4d); border-radius: 75px 30px 75px 30px; }
+.partner-network { margin-block: 0 75px; padding: 40px 18px 25px; background: linear-gradient(155deg, #e9d8cc2b, #ecdcd25c 60%, #dde5ef4d); border-radius: 75px 30px 75px 30px; }
 .partner-heading { text-align: center; max-width: 740px; margin: 0 auto 36px; }
 .partner-heading .eyebrow { justify-content: center; }
 .partner-heading h2 { margin-top: 12px; font-size: clamp(32px, 3.2vw, 45px); text-wrap: balance; }
 .partner-heading > p:last-child { margin: 16px auto 0; max-width: 580px; font-size: 16px; color: var(--color-muted); }
 .partner-stage { position: relative; }
 .partner-logos { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
-.partner-logo, .partner-join { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px 13px; border: 1px solid #ffffff; background: var(--color-paper); border-radius: 20px; min-height: 140px; box-shadow: 0 7px 17px #5546390a; }
+.partner-logo, .partner-join { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px 13px; border: 1px solid #ffffff; background: var(--color-paper); border-radius: 20px; min-height: 140px; box-shadow: 0 7px 17px #683c270a; }
 .partner-logo img { width: 100%; height: 75px; object-fit: contain; }
-.partner-logo > span { position: absolute; right: 8px; bottom: 8px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #e8ded280; }
+.partner-logo > span { position: absolute; right: 8px; bottom: 8px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #ecdcd280; }
 .partner-logo > span svg { width: 13px; height: 13px; transform: rotate(-40deg); }
-.partner-logo[aria-current] { border-color: #796e65; box-shadow: 0 0 0 2px #796e651c, 0 14px 25px #55463912; }
-.partner-logo:hover { border-color: #b1a295; }
+.partner-logo[aria-current] { border-color: #657280; box-shadow: 0 0 0 2px #6572801c, 0 14px 25px #683c2712; }
+.partner-logo:hover { border-color: #cb9880; }
 .partner-join { gap: 10px; background: var(--color-lavender); font-size: 14px; font-weight: 650; line-height: 1.3; text-align: center; }
 .partner-join > svg:last-child { width: 16px; }
 .partner-panels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
-.partner-panel { display: flex; flex-direction: column; align-items: flex-start; padding: 24px; border: 1px solid #fff; border-radius: 26px; background: #fffdfa; box-shadow: 0 18px 36px #443b3012; min-width: 0; }
+.partner-panel { display: flex; flex-direction: column; align-items: flex-start; padding: 24px; border: 1px solid #ffffff; border-radius: 26px; background: #fffdfa; box-shadow: 0 18px 36px #313e4d12; min-width: 0; }
 .partner-panel-brand { width: 100%; height: 68px; margin-bottom: 20px; }
 .partner-panel-brand img { width: 100%; height: 100%; object-fit: contain; }
 .partner-panel .eyebrow { font-size: 10px; letter-spacing: .09em; }
@@ -38,9 +38,9 @@
 .cert-purchase-copy { padding: 34px; align-self: center; }
 .cert-purchase-copy h2 { font-size: clamp(32px, 3vw, 43px); text-wrap: balance; }
 .cert-purchase-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.75; max-width: 520px; }
-.purchase-route { display: flex; gap: 18px; padding: 22px 0 0; margin: 26px 0 0; border-top: 1px solid #56654e2b; list-style: none; }
+.purchase-route { display: flex; gap: 18px; padding: 22px 0 0; margin: 26px 0 0; border-top: 1px solid #4e62772b; list-style: none; }
 .purchase-route li { flex: 1; font-size: 12px; line-height: 1.55; font-weight: 650; }
-.purchase-route span { display: block; margin-bottom: 8px; font-size: 18px; color: #506449; }
+.purchase-route span { display: block; margin-bottom: 8px; font-size: 18px; color: #485f7a; }
 .cert-availability.cert-purchase > .cert-purchase-visual { display: block; padding: 0; position: relative; min-height: 470px; }
 .cert-purchase .cert-purchase-visual > img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center top; }
 .cert-purchase-actions { position: absolute; left: 18px; right: 18px; bottom: 18px; display: grid; gap: 8px; padding: 16px; border: 1px solid #fffffff0; border-radius: 20px; background: #fffdfaeb; backdrop-filter: blur(14px); }
@@ -51,7 +51,7 @@
 .social-section .social-photo-strip { display: grid; grid-template-columns: 1.3fr 1fr; gap: 12px; margin-top: 30px; position: relative; }
 .social-section .social-photo-strip img { width: 100%; height: 245px; object-fit: cover; filter: none; border-radius: 26px 65px 26px 26px; }
 .social-section .social-photo-strip img:nth-child(2) { width: 100%; height: 245px; border-radius: 65px 26px 26px 26px; object-position: 50% 45%; }
-.social-section .social-flower { position: absolute; bottom: -16px; left: calc(57% - 28px); width: 56px; height: 56px; border: 3px solid var(--color-sand); margin: 0; background: #e6dfef; }
+.social-section .social-flower { position: absolute; bottom: -16px; left: calc(57% - 28px); width: 56px; height: 56px; border: 3px solid var(--color-sand); margin: 0; background: #dfe1f2; }
 .social-story > p:not(.eyebrow) { max-width: 440px; }
 
 /* A readable department introduction followed by compact original contacts. */
@@ -62,7 +62,7 @@
 .directory-intro p { font-size: 16px; line-height: 1.8; }
 .directory-note { margin-block: 30px 20px; font-size: 16px; max-width: 740px; }
 .contact-directory-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
-.contact-directory-card { padding: 22px; border: 1px solid #fff; border-radius: 24px; min-width: 0; }
+.contact-directory-card { padding: 22px; border: 1px solid #ffffff; border-radius: 24px; min-width: 0; }
 .contact-directory-heading { display: flex; align-items: center; gap: 13px; min-height: 100px; }
 .contact-directory-heading > div { min-width: 0; }
 .contact-directory-heading .eyebrow { font-size: 10px; letter-spacing: .07em; }
@@ -70,7 +70,7 @@
 .contact-directory-avatar { width: 62px; height: 72px; flex: 0 0 62px; border-radius: 22px 22px 30px 22px; overflow: hidden; display: grid; place-items: center; background: #fffdfa80; }
 .contact-directory-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .contact-directory-avatar > svg { width: 30px; height: 30px; }
-.directory-contact { border-top: 1px solid #29272422; margin-top: 16px; }
+.directory-contact { border-top: 1px solid #16293d22; margin-top: 16px; }
 .directory-contact summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 9px; min-height: 56px; font-size: 13px; font-weight: 650; }
 .directory-contact summary::-webkit-details-marker { display: none; }
 .directory-contact summary > span { display: flex; align-items: center; gap: 9px; }
@@ -117,7 +117,7 @@
   .cert-availability.cert-purchase { grid-template-columns: 1fr; }
   .cert-purchase-copy { padding: 28px; }
   .cert-availability.cert-purchase > .cert-purchase-visual { min-height: 440px; }
-  .cert-purchase .cert-purchase-visual > img { object-fit: contain; object-position: center top; background: #fff; }
+  .cert-purchase .cert-purchase-visual > img { object-fit: contain; object-position: center top; background: #ffffff; }
   .directory-intro { grid-template-columns: 1fr; }
   .directory-intro > div { padding: 24px; }
 }

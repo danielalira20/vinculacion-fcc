@@ -3,20 +3,20 @@
 .academy-image-wash { position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(135deg, #fffdfa66, #fffdfa12 65%, var(--theme-bg)); opacity: .75; }
 .academy-image-layer .academy-sculpture { z-index: 1; }
 .academy-image-layer .sculpture-orbit { border-color: #fffdfaaa; }
-.academy-image-layer .sculpture-center { background: #fffdfa9c; backdrop-filter: blur(9px); box-shadow: 12px 14px 0 #29272412; }
+.academy-image-layer .sculpture-center { background: #fffdfa9c; backdrop-filter: blur(9px); box-shadow: 12px 14px 0 #16293d12; }
 .academy-image-layer .academy-brand, .academy-image-layer .stage-photo-note, .academy-image-layer .stage-corner { z-index: 2; }
 .academy-image-layer .stage-photo-note { background: #fffdfade; }
 
 .employer-photo-scene { position: relative; align-self: stretch; min-height: 480px; border-radius: 100px 24px 24px 24px; overflow: hidden; isolation: isolate; }
 .employer-photo-scene > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
-.employer-photo-scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #29272415, transparent 40%, #2927244d); pointer-events: none; }
+.employer-photo-scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #16293d15, transparent 40%, #16293d4d); pointer-events: none; }
 .employer-photo-label { position: absolute; z-index: 1; top: 20px; right: 20px; background: #fffdfae6; border-radius: 30px; padding: 10px 15px; font-size: 11px; font-weight: 650; letter-spacing: .07em; }
 .employer-photo-note { position: absolute; z-index: 1; left: 18px; right: 18px; bottom: 18px; padding: 23px; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; background: #fffdfadc; }
 .employer-photo-note .eyebrow { grid-column: 1 / -1; font-size: 10px; }
 .employer-photo-note > strong { font-size: 33px; line-height: 1.15; font-weight: 500; letter-spacing: -.035em; }
 .employer-photo-action { align-self: center; width: 44px; height: 44px; border-radius: 50%; background: #fffdfa; display: grid; place-items: center; }
 .employer-photo-action svg { width: 20px; height: 20px; }
-.employer-photo-route { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px 18px; border-top: 1px solid #29272426; padding-top: 14px; font-size: 12px; }
+.employer-photo-route { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px 18px; border-top: 1px solid #16293d26; padding-top: 14px; font-size: 12px; }
 .employer-photo-route span { display: flex; align-items: center; gap: 6px; }
 .employer-photo-route svg { width: 15px; height: 15px; }
 
@@ -27,13 +27,13 @@
 .registration-story p { font-size: 17px; line-height: 1.75; }
 .registration-story .eyebrow { font-size: 11px; }
 .registration-story-stat { position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 32px; background: var(--color-lavender); border-radius: 60px 28px 28px 28px; }
-.registration-story-stat::before { content: ''; position: absolute; top: -80px; right: -100px; width: 280px; height: 280px; border: 1px solid #61577326; border-radius: 50%; pointer-events: none; }
+.registration-story-stat::before { content: ''; position: absolute; top: -80px; right: -100px; width: 280px; height: 280px; border: 1px solid #565b7726; border-radius: 50%; pointer-events: none; }
 .registration-stat-number { font-size: clamp(70px, 8vw, 115px); font-weight: 500; line-height: 1; letter-spacing: -.065em; margin-bottom: 16px; }
 .registration-stat-number > span { font-size: .55em; vertical-align: top; line-height: 1.5; }
-.registration-story-stat small { font-size: 12px; color: #59515f; margin-top: 12px; }
+.registration-story-stat small { font-size: 12px; color: #515463; margin-top: 12px; }
 .registration-logo-pair { display: flex; align-items: center; gap: 14px; margin-top: 24px; }
 .registration-logo-pair img { width: 52px; height: 52px; object-fit: contain; padding: 5px; background: var(--color-ink); border-radius: 15px; }
-.registration-logo-pair > svg { width: 30px; height: 30px; color: #615773; }
+.registration-logo-pair > svg { width: 30px; height: 30px; color: #565b77; }
 .registration-story-card { display: flex; align-items: flex-start; gap: 18px; padding: 27px; border-radius: 26px; border: 1px solid #fffdfa; }
 .story-community { background: var(--color-sage); }
 .story-agreements { background: var(--color-peach); }

@@ -14,7 +14,7 @@ Numeración según las trece imágenes compartidas en la conversación:
 | 2 · Orizon | Composiciones contenidas, tarjetas superpuestas y una placa de glass sobre imagen |
 | 3 · Vespa | Título e imagen en una portada continua, módulos que se encajan y accesos integrados |
 | 4 · Travorra | Curvas amplias en fotografías, serif editorial y accesos destacados |
-| 8 · Q2 planning | Marfil, arena, calidez y contraste con elementos oscuros |
+| 8 · Q2 planning | Marfil, arena, calidez y contraste con elementos oscuros (hoy en azul marino) |
 | 9 · Custom Syllabus | Lavanda, rosa y salvia; bordes suaves y uso localizado de transparencia |
 | 10 · Hippo Campus | Tarjetas de catálogo con jerarquía y estructura constantes |
 | 11 · JAAC | Organización por servicios, presentación, recursos y contacto |
@@ -25,22 +25,27 @@ Las capturas inspiran decisiones, no se publican como imágenes del sitio ni se 
 
 ## Paleta
 
-El archivo central es `src/assets/css/tokens.css`.
+Paleta azul BUAP + durazno (noviembre de 2026). El azul institucional lleva el peso; el durazno y la terracota dan calidez para que el sitio no se vea solo azul. El archivo central es `src/assets/css/tokens.css`.
 
 | Función | Valor |
 | --- | --- |
+| Azul BUAP (botones, marca, foco) | `#0B2F55` |
+| Azul BUAP al pasar el cursor | `#16477C` |
+| Celeste (acentos puntuales) | `#3FA9DD` |
+| Terracota (acentos cálidos) | `#C9715A` |
 | Fondo marfil | `#F7F4EF` |
 | Superficie clara | `#FFFDFA` |
-| Texto carbón cálido | `#292724` |
-| Texto secundario | `#68635D` |
-| Arena | `#E8DED2` |
-| Salvia | `#DFE7DD` |
-| Durazno | `#F0DECE` |
-| Rosa empolvado | `#EAD7D3` |
-| Lavanda | `#DEDBEA` |
-| Foco de teclado | `#17354A` |
+| Texto azul marino | `#15253B` |
+| Texto secundario gris azulado | `#5B6474` |
+| Arena | `#EDE1D6` |
+| Hielo (antes salvia) | `#DCE6F5` |
+| Durazno | `#F6DCC9` |
+| Coral empolvado | `#F2D9D0` |
+| Lavanda azulada | `#E1E3F4` |
 
-Los pasteles distinguen áreas y fondos decorativos; no sustituyen nombres ni estados textuales. Los botones principales mantienen carbón y texto blanco en todas las secciones. Evitar texto blanco sobre pastel.
+Los nombres de las variables (`--color-sage`, `.theme-sage`) se conservan para no tocar las plantillas; `sage` ahora es el hielo azul. Los pasteles distinguen áreas y fondos decorativos; no sustituyen nombres ni estados textuales. Los botones principales usan azul BUAP con texto blanco en todas las secciones. Evitar texto blanco sobre pastel; sobre cada pastel, el texto usa el tono oscuro de su misma familia. Las frases editoriales en cursiva usan terracota o azul, según la sección. Red Hat conserva su rojo de marca en `redhat.css`.
+
+Las ofertas de Educación Continua usan `.is-iris` (azul) y `.is-peach` (durazno). Los QR se generan con `scripts/qr.py` en el tono oscuro de cada oferta.
 
 ## Tipografía y composición
 

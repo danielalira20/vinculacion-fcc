@@ -45,7 +45,7 @@
       {
         "id": "cultura",
         "tab": "Cultura Digital",
-        "theme": "sage",
+        "theme": "peach",
         "image": "assets/media/popup-cultura-digital.jpg",
         "image_alt": "Grupo de estudiantes reunidos alrededor de una laptop en un aula",
         "chips": [
@@ -88,7 +88,7 @@
         "anchor": "microcredenciales-ia"
       },
       {
-        "theme": "sage",
+        "theme": "peach",
         "mark": "@",
         "kicker": "Certificación CONOCER",
         "title": "Cultura Digital",
@@ -182,7 +182,7 @@
     },
     {
       "id": "oferta-eduit",
-      "theme": "sage",
+      "theme": "peach",
       "mark": "@",
       "status": "Certificación disponible",
       "kicker": "CERTIFICACIÓN CONOCER · ECM0121",

@@ -1,4 +1,4 @@
-/* Home announcement: one dialog, one tab per offer. Theme colors (is-iris, is-sage) live in the Educación Continua stylesheet. */
+/* Home announcement: one dialog, one tab per offer. Theme colors (is-iris, is-peach) live in the Educación Continua stylesheet. */
 .promo-dialog {
   width: min(900px, calc(100% - 32px));
   max-height: calc(100dvh - 32px);
@@ -11,7 +11,7 @@
   overflow: hidden auto;
 }
 .promo-dialog[open] { position: fixed; display: grid; grid-template-columns: minmax(250px, 0.82fr) 1.18fr; grid-template-rows: auto 1fr; }
-.promo-dialog::backdrop { background: rgb(30 34 44 / 46%); backdrop-filter: blur(7px); }
+.promo-dialog::backdrop { background: rgb(27 35 44 / 46%); backdrop-filter: blur(7px); }
 html.promo-open { overflow: hidden; }
 
 .promo-dialog-close {
@@ -28,7 +28,7 @@ html.promo-open { overflow: hidden; }
 .promo-dialog-tabs { grid-column: 2; grid-row: 1; z-index: 2; justify-self: start; display: flex; gap: 4px; margin: 22px 76px 0 42px; padding: 4px; border: 1px solid var(--color-border); border-radius: var(--radius-pill); background: var(--color-canvas); }
 .promo-dialog-tabs button { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 0 14px 0 12px; border: 0; border-radius: var(--radius-pill); background: transparent; color: var(--color-muted); font: 700 13px var(--font-body); white-space: nowrap; cursor: pointer; transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast); }
 .promo-dialog-tabs button:hover { color: var(--color-ink); }
-.promo-dialog-tabs button[aria-selected="true"] { background: #fff; color: var(--o-deep); box-shadow: 0 4px 14px rgb(40 40 60 / 10%); }
+.promo-dialog-tabs button[aria-selected="true"] { background: #ffffff; color: var(--o-deep); box-shadow: 0 4px 14px rgb(38 41 60 / 10%); }
 .promo-dialog-tab-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--o-accent); box-shadow: 0 0 0 3px var(--o-soft); }
 
 .promo-slide { grid-column: 1 / -1; grid-row: 1 / -1; display: grid; grid-template-columns: subgrid; grid-template-rows: subgrid; }
@@ -47,7 +47,7 @@ html.promo-open { overflow: hidden; }
 .promo-dialog-chip {
   position: absolute; z-index: 1; display: inline-flex; align-items: center; gap: 7px;
   padding: 9px 13px; border-radius: var(--radius-pill);
-  background: rgb(255 255 255 / 86%); box-shadow: 0 10px 24px rgb(40 50 80 / 12%);
+  background: rgb(255 255 255 / 86%); box-shadow: 0 10px 24px rgb(29 53 79 / 12%);
   color: var(--o-deep); font-size: 12px; font-weight: 750; letter-spacing: 0.02em; white-space: nowrap;
 }
 .promo-dialog-chip svg { width: 15px; height: 15px; }
@@ -64,7 +64,7 @@ html.promo-open { overflow: hidden; }
 .promo-dialog-highlights li { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
 .promo-dialog-highlights svg { flex: none; width: 22px; height: 22px; padding: 4px; border-radius: 50%; background: var(--o-soft); color: var(--o-accent); }
 .promo-dialog-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; }
-.promo-dialog-cta { min-height: 52px; padding: 15px 24px; border-color: var(--o-deep); background: var(--o-deep); color: #fff; }
+.promo-dialog-cta { min-height: 52px; padding: 15px 24px; border-color: var(--o-deep); background: var(--o-deep); color: #ffffff; }
 .promo-dialog-cta:hover { background: var(--o-accent); }
 .promo-dialog-dismiss { min-height: 44px; padding: 0 4px; border: 0; background: none; color: var(--color-muted); font: 600 14px var(--font-body); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
 .promo-dialog-dismiss:hover { color: var(--color-ink); }

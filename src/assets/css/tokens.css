@@ -1,16 +1,20 @@
-/* Shared design values. Update this file when refining the Refero direction. */
+/* Shared design values · paleta azul BUAP + durazno (docs/DESIGN.md). */
 :root {
   --color-canvas: #f7f4ef;
   --color-paper: #fffdfa;
-  --color-ink: #292724;
-  --color-muted: #68635d;
+  --color-ink: #15253b;
+  --color-muted: #5b6474;
   --color-border: #e4dfd7;
-  --color-sand: #e8ded2;
-  --color-sage: #dfe7dd;
-  --color-peach: #f0dece;
-  --color-rose: #ead7d3;
-  --color-lavender: #dedbea;
-  --color-focus: #17354a;
+  --color-sand: #ede1d6;
+  --color-sage: #dce6f5;
+  --color-peach: #f6dcc9;
+  --color-rose: #f2d9d0;
+  --color-lavender: #e1e3f4;
+  --color-focus: #0b2f55;
+  --color-brand: #0b2f55;
+  --color-brand-hover: #16477c;
+  --color-sky: #3fa9dd;
+  --color-terracotta: #c9715a;
   --font-body: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
   --font-editorial: Georgia, 'Times New Roman', serif;
   --radius-small: 12px;
@@ -27,7 +31,7 @@
   --space-16: 64px;
   --space-24: 96px;
   --content-width: 1240px;
-  --shadow-card: 0 10px 30px rgb(57 47 36 / 5%);
+  --shadow-card: 0 10px 30px rgb(11 47 85 / 6%);
   --transition-fast: 180ms ease;
   --transition-soft: 280ms ease;
 }

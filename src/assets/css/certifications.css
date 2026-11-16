@@ -23,11 +23,11 @@
 .cert-cover-media { min-width: 0; position: relative; padding: 16px 0 0; }
 .cert-cover-media figure { margin: 0; padding-bottom: 14px; border-radius: 24px; overflow: hidden; background: var(--color-paper); }
 .cert-cover-media figure img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; object-fit: contain; }
-.cert-cover-note { position: relative; display: flex; gap: 17px; align-items: center; margin: -13px 15px 0; padding: 20px; border: 1px solid #fffdfa; border-radius: 22px 22px 48px 22px; background: #fffdfad9; box-shadow: 0 10px 22px #29272408; }
+.cert-cover-note { position: relative; display: flex; gap: 17px; align-items: center; margin: -13px 15px 0; padding: 20px; border: 1px solid #fffdfa; border-radius: 22px 22px 48px 22px; background: #fffdfad9; box-shadow: 0 10px 22px #16293d08; }
 .cert-cover-note p { margin: 0; }
 .cert-cover-note strong { display: block; font-size: 21px; line-height: 1.3; margin-bottom: 4px; }
 .cert-cover-note p span { font-size: 15px; line-height: 1.5; display: block; }
-.cert-cover-symbol { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid #29272430; border-radius: 14px; flex-shrink: 0; }
+.cert-cover-symbol { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid #16293d30; border-radius: 14px; flex-shrink: 0; }
 .cert-cover-symbol svg { width: 26px; height: 26px; }
 .cert-overview { display: grid; grid-template-columns: .65fr 1.35fr; gap: 45px; margin-top: 35px; }
 .cert-overview h2 { margin-top: 12px; max-width: 330px; }
@@ -38,17 +38,17 @@
 .cert-section-heading h2 { margin-top: 10px; }
 .cert-section-heading > p { max-width: 280px; font-size: 15px; color: var(--color-muted); }
 .cert-library-tools { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding-block: 15px; border-block: 1px solid var(--color-border); }
-.cert-search { display: flex; align-items: center; gap: 10px; padding: 12px 15px; background: var(--color-paper); border: 1px solid #d8cfc4; border-radius: 15px; width: 310px; flex-shrink: 0; }
+.cert-search { display: flex; align-items: center; gap: 10px; padding: 12px 15px; background: var(--color-paper); border: 1px solid #c5d2e1; border-radius: 15px; width: 310px; flex-shrink: 0; }
 .cert-search svg { width: 20px; height: 20px; }
 .cert-search input { border: 0; color: var(--color-ink); background: transparent; min-width: 0; width: 100%; font-size: 16px; }
 .cert-search:focus-within { outline: 2px solid var(--color-focus); outline-offset: 3px; }
 .cert-search input:focus-visible { outline: none; }
 .cert-filters { display: flex; flex-wrap: wrap; gap: 7px; justify-content: end; }
-.cert-filters button { padding: 10px 13px; border: 1px solid #d8cfc4; border-radius: 22px; background: transparent; color: var(--color-ink); font-size: 14px; min-height: 42px; cursor: pointer; }
+.cert-filters button { padding: 10px 13px; border: 1px solid #c5d2e1; border-radius: 22px; background: transparent; color: var(--color-ink); font-size: 14px; min-height: 42px; cursor: pointer; }
 .cert-filters button[aria-pressed='true'] { background: var(--color-ink); color: var(--color-paper); border-color: var(--color-ink); }
 .cert-page .cert-count { font-size: 14px; margin-block: 15px; color: var(--color-muted); }
 .cert-unit-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 13px; align-items: start; }
-.cert-unit { display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 14px; padding: 22px; border: 1px solid #ddd5cb; border-radius: 22px; background: var(--color-paper); min-width: 0; }
+.cert-unit { display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 14px; padding: 22px; border: 1px solid #e0d4cb; border-radius: 22px; background: var(--color-paper); min-width: 0; }
 .cert-unit:nth-child(3n+1) { background: var(--theme-bg); border-color: transparent; border-top-right-radius: 45px; }
 .cert-unit-symbol { width: 48px; height: 50px; display: grid; place-items: center; align-self: start; background: #fffdfa95; border-radius: 13px; }
 .cert-unit-symbol svg { width: 26px; height: 26px; }
@@ -56,10 +56,10 @@
 .cert-page .cert-unit-group { font-size: 12px; color: var(--color-muted); line-height: 1.45; margin-bottom: 8px; }
 .cert-unit h3 { font-size: 20px; text-wrap: pretty; }
 .cert-page .cert-unit-detail { font-size: 14px; line-height: 1.5; margin-top: 10px; }
-.cert-unit a { grid-column: 1/-1; display: flex; align-items: center; justify-content: space-between; font-size: 14px; gap: 12px; padding-top: 13px; min-height: 42px; border-top: 1px solid #29272420; margin-top: 2px; }
+.cert-unit a { grid-column: 1/-1; display: flex; align-items: center; justify-content: space-between; font-size: 14px; gap: 12px; padding-top: 13px; min-height: 42px; border-top: 1px solid #16293d20; margin-top: 2px; }
 .cert-unit a svg { width: 17px; height: 17px; }
 .cert-unit a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.cert-unit-objectives { grid-column: 1/-1; align-self: end; border-top: 1px solid #29272420; }
+.cert-unit-objectives { grid-column: 1/-1; align-self: end; border-top: 1px solid #16293d20; }
 .cert-unit-objectives summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding-top: 10px; font-size: 14px; cursor: pointer; list-style: none; }
 .cert-unit-objectives summary::-webkit-details-marker { display: none; }
 .cert-unit-objectives summary svg { width: 17px; height: 17px; transform: rotate(90deg); }
@@ -90,7 +90,7 @@
 .cert-support:not(.cert-media-row) > div { max-width: 880px; }
 .cert-next, .cert-availability { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 35px; padding: 30px; background: var(--color-rose); border-radius: 28px 28px 65px 28px; }
 .cert-next h2, .cert-availability h2 { margin-top: 10px; }
-.cert-next nav a, .cert-payment-tools nav a { display: flex; align-items: center; gap: 15px; justify-content: space-between; padding-block: 17px; border-bottom: 1px solid #29272430; font-size: 16px; }
+.cert-next nav a, .cert-payment-tools nav a { display: flex; align-items: center; gap: 15px; justify-content: space-between; padding-block: 17px; border-bottom: 1px solid #16293d30; font-size: 16px; }
 .cert-next nav a span, .cert-payment-tools nav a span { display: flex; gap: 12px; align-items: center; }
 .cert-next nav svg, .cert-payment-tools nav svg { width: 20px; height: 20px; }
 .cert-contact { display: flex; gap: 20px; align-items: center; margin-top: 30px; padding: 24px 28px; border: 1px solid var(--color-border); border-radius: 23px; }
@@ -120,9 +120,9 @@
 .cert-offer-value .cert-media-row p:not(.eyebrow) { margin-top: 18px; }
 .cert-offer-value > h3 { margin-top: 30px; font-size: 21px; }
 .cert-benefits { list-style: none; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 0 24px; padding: 0; margin-top: 18px; }
-.cert-benefits li { display: flex; align-items: start; gap: 10px; border-top: 1px solid #29272425; padding-block: 15px; font-size: 15px; }
+.cert-benefits li { display: flex; align-items: start; gap: 10px; border-top: 1px solid #16293d25; padding-block: 15px; font-size: 15px; }
 .cert-benefits svg { width: 17px; height: 17px; margin-top: 5px; }
-.cert-original { margin-top: 24px; border: 1px solid #d6ccbf; border-radius: 20px; background: #fffdfa70; overflow: hidden; }
+.cert-original { margin-top: 24px; border: 1px solid #c0cfe1; border-radius: 20px; background: #fffdfa70; overflow: hidden; }
 .cert-original summary, .cert-manual summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; font-size: 16px; cursor: pointer; }
 .cert-original summary::-webkit-details-marker, .cert-manual summary::-webkit-details-marker { display: none; }
 .cert-original summary svg, .cert-manual summary svg { width: 20px; height: 20px; transform: rotate(90deg); }
@@ -136,9 +136,9 @@
 .cert-availability img { width: 160px; height: 65px; object-fit: contain; object-position: left; }
 .cert-price-heading { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin-block: 16px 25px; }
 .cert-price-heading h1 { margin-top: 14px; }
-.cert-heading-symbol { display: grid; place-items: center; width: 100px; height: 100px; border: 1px solid #cbbfb0; border-radius: 34px; transform: rotate(8deg); background: var(--color-sand); margin-right: 25px; }
+.cert-heading-symbol { display: grid; place-items: center; width: 100px; height: 100px; border: 1px solid #b1c3d7; border-radius: 34px; transform: rotate(8deg); background: var(--color-sand); margin-right: 25px; }
 .cert-heading-symbol svg { width: 43px; height: 43px; transform: rotate(-8deg); }
-.cert-price-notice { display: flex; align-items: center; gap: 18px; padding: 20px 24px; border: 1px solid #cfc1ad; background: #eee5d9; border-radius: 19px; }
+.cert-price-notice { display: flex; align-items: center; gap: 18px; padding: 20px 24px; border: 1px solid #eab69d; background: #f2e3d9; border-radius: 19px; }
 .cert-price-notice strong { font-size: 16px; }
 .cert-price-notice p { margin-top: 4px; font-size: 15px; max-width: 690px; }
 .cert-price-notice > a { display: flex; align-items: center; gap: 10px; margin-left: auto; font-size: 14px; font-weight: 600; max-width: 180px; }
@@ -150,7 +150,7 @@
 .cert-rate-top > span { width: 44px; height: 44px; display: grid; place-items: center; background: #fffdfa90; border: 1px solid #fffdfa; border-radius: 15px; }
 .cert-page .cert-rate-amount { font-size: 58px; font-weight: 650; line-height: 1.2; letter-spacing: -.05em; margin-top: 20px; }
 .cert-page .cert-rate-unit { font-size: 15px; margin-top: 7px; }
-.cert-page .cert-rate-period { font-size: 13px; border-top: 1px solid #29272430; padding-top: 14px; margin-top: 18px; }
+.cert-page .cert-rate-period { font-size: 13px; border-top: 1px solid #16293d30; padding-top: 14px; margin-top: 18px; }
 .cert-price-programs { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; padding: 28px; border: 1px solid var(--color-border); border-radius: 26px; }
 .cert-price-programs h2 { margin-top: 12px; }
 .cert-price-programs p:not(.eyebrow) { font-size: 15px; margin-top: 16px; }
@@ -167,7 +167,7 @@
 .cert-process-ready ul { list-style: none; margin-top: 17px; padding: 0; }
 .cert-process-ready li { display: flex; align-items: start; gap: 11px; padding-block: 8px; font-size: 15px; }
 .cert-process-ready li svg { width: 17px; height: 17px; margin-top: 5px; }
-.cert-process-ready p { border-top: 1px solid #29272425; padding-top: 15px; margin-top: 12px; font-size: 14px; }
+.cert-process-ready p { border-top: 1px solid #16293d25; padding-top: 15px; margin-top: 12px; font-size: 14px; }
 .cert-page .process-flow { margin-block: 30px; padding: 28px; }
 .cert-page .process-heading h2 { font-size: 32px; }
 .cert-page .process-heading p:not(.eyebrow) { font-size: 16px; }
@@ -193,7 +193,7 @@
 .cert-manual { padding: 27px; background: #eee7dd; border-radius: 26px; }
 .cert-manual h2 { font-size: 29px; }
 .cert-manual p { font-size: 15px; }
-.cert-manual details { border: 1px solid #d6ccbf; border-radius: 20px; overflow: hidden; min-width: 0; }
+.cert-manual details { border: 1px solid #c0cfe1; border-radius: 20px; overflow: hidden; min-width: 0; }
 .cert-manual .resource-embed { border: 0; border-radius: 0; }
 .cert-manual .pdf-pages { max-height: 520px; padding: 15px; overscroll-behavior: contain; }
 .cert-manual .pdf-pages img { max-width: 530px; }
@@ -267,7 +267,7 @@
   .cert-program-logo img { height: 42px; }
   .cert-program h3 { font-size: 21px; align-self: center; }
   .cert-program p, .cert-program .text-link { grid-column: 1/-1; margin: 0; }
-  .cert-program .text-link { padding-top: 15px; border-top: 1px solid #29272420; }
+  .cert-program .text-link { padding-top: 15px; border-top: 1px solid #16293d20; }
   .cert-benefits { gap: 0 16px; }
   .cert-benefits li { font-size: 14px; }
   .cert-offer-preview a { padding: 15px; gap: 11px; }
@@ -298,9 +298,9 @@
 .certification-card-photo { width: 100%; height: 100%; object-fit: cover; }
 .program-it-specialist .certification-card-photo { height: calc(100% + 30px); }
 .program-microsoft-office .certification-card-photo { height: calc(100% + 40px); }
-.certification-card-brand { position: absolute; z-index: 1; left: 12px; bottom: 12px; display: grid; place-items: center; height: 45px; width: 148px; padding: 8px 12px; border: 1px solid #fff; border-radius: 13px; background: #fffdfaed; backdrop-filter: blur(10px); }
+.certification-card-brand { position: absolute; z-index: 1; left: 12px; bottom: 12px; display: grid; place-items: center; height: 45px; width: 148px; padding: 8px 12px; border: 1px solid #ffffff; border-radius: 13px; background: #fffdfaed; backdrop-filter: blur(10px); }
 .certification-card-brand img { width: 100%; height: 100%; object-fit: contain; }
-.certification-card-corner { position: absolute; right: 12px; top: 12px; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #fff; background: #fffdfada; border-radius: 50%; }
+.certification-card-corner { position: absolute; right: 12px; top: 12px; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #ffffff; background: #fffdfada; border-radius: 50%; }
 .certification-card-corner svg { width: 16px; height: 16px; transform: rotate(-35deg); }
 .certification-image-grid .academy-copy > p:not(.eyebrow) { min-height: 110px; }
 @media (max-width: 1050px) { .certification-card-art { height: 230px; } }

@@ -2,15 +2,15 @@
 .hero-copy { padding-block: 20px; }
 .hero-copy > .eyebrow { margin-bottom: 26px; }
 .hero h1 { font-size: clamp(60px, 6.6vw, 91px); letter-spacing: -.065em; line-height: 1.06; }
-.hero h1 .serif { color: #765e50; }
+.hero h1 .serif { color: #855741; }
 .hero-description { margin-top: 28px; max-width: 365px; color: var(--color-muted); font-size: 17px; line-height: 1.8; }
 .hero-actions { display: flex; align-items: center; gap: 28px; margin-top: 28px; }
 .hero-footnote { display: flex; gap: 12px; align-items: center; margin-top: 36px; font-size: 12px; color: var(--color-muted); line-height: 1.6; }
-.small-symbol { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #ddd4c8; border-radius: 50%; }
+.small-symbol { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #e1d2c8; border-radius: 50%; }
 .small-symbol svg { width: 20px; height: 20px; }
 .hero-visual { position: relative; height: 545px; margin: 10px 0; border-radius: var(--radius-large); isolation: isolate; }
 .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: 54% center; border-radius: inherit; filter: saturate(.6); }
-.hero-photo-shade { position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(180deg, rgb(249 228 204 / 10%), transparent 50%, rgb(33 38 43 / 25%)); }
+.hero-photo-shade { position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(180deg, rgb(255 225 204 / 10%), transparent 50%, rgb(20 39 59 / 25%)); }
 .hero-image-tag { position: absolute; top: 25px; left: 25px; padding: 8px 13px; background: #fffdfae8; border-radius: var(--radius-pill); font-size: 12px; font-weight: 600; }
 .hero-glass { position: absolute; bottom: 24px; left: -28px; right: 24px; display: flex; align-items: center; gap: 17px; padding: 22px; }
 .hero-glass .eyebrow { font-size: 12px; letter-spacing: .09em; }
@@ -29,7 +29,7 @@
 .quick-links strong { display: block; font-size: 17px; letter-spacing: -.02em; font-weight: 600; }
 .quick-links small { display: block; font-size: 12px; color: var(--color-muted); margin-top: 3px; }
 .quick-links > a > svg { margin-left: auto; width: 17px; height: 17px; }
-.certification-feature { display: grid; grid-template-columns: 1.1fr 1fr; gap: 65px; background: #e9e3ed; border-radius: var(--radius-large); padding: 55px 65px; }
+.certification-feature { display: grid; grid-template-columns: 1.1fr 1fr; gap: 65px; background: #e3e5f0; border-radius: var(--radius-large); padding: 55px 65px; }
 .certification-copy .eyebrow { font-size: 12px; }
 .certification-copy h2 { margin-top: 25px; font-size: 56px; }
 .certification-copy p:not(.eyebrow) { margin-top: 22px; max-width: 335px; font-size: 16px; color: var(--color-muted); }
@@ -60,7 +60,7 @@
 .resource-icon svg { width: 32px; height: 32px; }
 .resource-card .eyebrow { font-size: 12px; margin-bottom: 12px; }
 .resource-card h3 { font-size: 21px; max-width: 300px; line-height: 1.35; }
-.resource-card p:not(.eyebrow) { font-size: 14px; color: #5b574f; margin-top: 12px; max-width: 290px; }
+.resource-card p:not(.eyebrow) { font-size: 14px; color: #505862; margin-top: 12px; max-width: 290px; }
 .resource-card .circle-link { width: 35px; height: 35px; align-self: end; margin-left: auto; }
 .page-intro { padding-block: 50px 40px; }
 .page-intro > .eyebrow { margin-bottom: 22px; }
@@ -75,7 +75,7 @@
 .related-links svg { width: 15px; height: 15px; }
 .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 10px; }
 .service-card { position: relative; padding: 34px; border-radius: 28px; }
-.service-icon { display: grid; place-items: center; width: 54px; height: 54px; border: 1px solid rgb(41 39 36 / 12%); border-radius: 17px; color: var(--theme-ink); margin-bottom: 45px; }
+.service-icon { display: grid; place-items: center; width: 54px; height: 54px; border: 1px solid rgb(22 41 61 / 12%); border-radius: 17px; color: var(--theme-ink); margin-bottom: 45px; }
 .service-icon svg { width: 27px; height: 27px; }
 .service-number { position: absolute; top: 36px; right: 32px; font-size: 14px; color: var(--theme-ink); }
 .service-card h2 { font-size: 27px; min-height: 65px; }
@@ -92,7 +92,7 @@ summary { cursor: pointer; padding-block: 15px; font-size: 16px; font-weight: 60
 .article-body h3, .article-body h4 { font-size: 20px; }
 .article-body h5, .article-body h6 { font-size: 17px; }
 .article-body a { text-decoration: underline; text-underline-offset: 4px; }
-.article-body a:hover { color: #765b4d; }
+.article-body a:hover { color: #83553f; }
 .article-body ul, .article-body ol { padding-left: 25px; margin-block: 18px; }
 .article-body li { margin-bottom: 8px; }
 .article-body img { max-width: 100%; max-height: 800px; width: auto; margin: 24px auto; object-fit: contain; background: white; border-radius: 12px; }

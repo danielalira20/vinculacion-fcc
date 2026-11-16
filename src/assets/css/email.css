@@ -1,6 +1,6 @@
 /* Existing warm surface and charcoal action roles, applied to contact choices. */
-.email-dialog { width: min(540px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 30px; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-paper); color: var(--color-ink); box-shadow: 0 24px 80px rgb(41 39 36 / 20%); overflow-y: auto; }
-.email-dialog::backdrop { background: rgb(41 39 36 / 38%); backdrop-filter: blur(5px); }
+.email-dialog { width: min(540px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 30px; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-paper); color: var(--color-ink); box-shadow: 0 24px 80px rgb(22 41 61 / 20%); overflow-y: auto; }
+.email-dialog::backdrop { background: rgb(22 41 61 / 38%); backdrop-filter: blur(5px); }
 .email-dialog-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
 .email-dialog-heading .circle-link svg { transform: none; }
 .email-dialog-icon { display: grid; place-items: center; width: 52px; height: 52px; background: var(--color-sage); border-radius: 16px; }
