@@ -48,5 +48,9 @@
 .redhat-club-tags { display:flex; flex-wrap:wrap; gap:7px; margin:24px 0; }
 .redhat-club-tags span { padding:8px 12px; border-radius:20px; color:#3f0a0a; background:#fffdfa; font-size:12px; }
 .redhat-club .button { background:#e00019; color:white; border-color:#e00019; }
+.redhat-benefits .redhat-benefit {display: flex;flex-direction: column;justify-content: flex-start;}
+.redhat-benefits .redhat-benefit p {margin-top: 24px;}
+.redhat-benefits .redhat-benefit {min-height: 0;height: auto;padding: 24px 28px;display: flex;flex-direction: column;justify-content: flex-start;gap: 14px;}
+.redhat-benefits .redhat-benefit p {margin: 0;}
 @media (max-width:900px){.redhat-benefits-grid,.redhat-course-grid {grid-template-columns:repeat(2,minmax(0,1fr));}.redhat-club {grid-template-columns:1fr 0.8fr;}.redhat-club > img {padding:12px;} }
 @media (max-width:650px){.redhat-benefits,.redhat-registration {border-radius:25px;padding:22px;}.redhat-benefits-grid,.redhat-course-grid,.redhat-steps {grid-template-columns:1fr;}.redhat-benefit {min-height:120px;}.redhat-course {min-height:225px;}.redhat-steps li:last-child {grid-column:auto;}.redhat-steps li {padding:17px;}.redhat-club {grid-template-columns:1fr;border-radius:25px;}.redhat-club > img {width:85%;max-height:245px;justify-self:center;padding:0 15px 20px;}.redhat-actions .button {width:100%;justify-content:center;}.learning-page:has(.redhat-courses) .academy-background{width:95%;left:2%;} }
