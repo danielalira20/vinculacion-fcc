@@ -48,7 +48,14 @@
 .home-academy-videos .academy-video-play svg { width: 20px; height: 20px; }
 .home-academy-videos .academy-video-play strong { font-size: 16px; }
 .home-academy-videos .academy-video-hint { display: none; }
-.home-academy-videos .academy-video-links { align-items: start; flex-direction: column; gap: 0; }
+/* Compact cards: no reserved empty lines; links share one row; the footer sits at the bottom. */
+.home-academy-videos .academy-card { display: flex; flex-direction: column; }
+.home-academy-videos .academy-copy { display: flex; flex: 1; flex-direction: column; padding: 18px 12px 8px; }
+.home-academy-videos .academy-copy .eyebrow { margin-bottom: 6px; }
+.home-academy-videos .academy-copy h3 { min-height: 0; font-size: 21px; }
+.home-academy-videos .academy-copy > p:not(.eyebrow) { min-height: 0; margin: 8px 0 18px; font-size: 15.5px; line-height: 1.65; }
+.home-academy-videos .academy-video-links { margin-top: auto; padding-block: 8px; border-bottom: 0; gap: 12px; }
+.home-academy-videos .card-bottom { margin-top: 6px; }
 .home-academy-videos .academy-video-controls { padding: 8px; }
 .home-academy-videos .academy-video-controls button { min-height: 44px; }
 @media (max-width: 1000px) { .home-academy-videos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
