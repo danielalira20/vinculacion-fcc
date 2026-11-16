@@ -1,0 +1,76 @@
+{# Ficha de una oferta de Educación Continua. Los datos viven en continuing-education.json → offers. #}
+{% set pass = offer.pass %}
+{% set pass_url = education.registration.form_url if pass.get('registration') else pass.url %}
+{% set pass_qr = education.registration.qr_image if pass.get('registration') else pass.qr_image %}
+<article class="ec-offer is-{{ offer.theme }}" id="{{ offer.id }}" aria-labelledby="{{ offer.id }}-title">
+  <div class="ec-offer__main">
+    <header class="ec-offer__cover">
+      <span class="ec-offer__dots" aria-hidden="true"></span>
+      <span class="ec-offer__orbit" aria-hidden="true"></span>
+      <div class="ec-offer__cover-top">
+        <span class="ec-offer__status"><span class="ec-offer__pulse" aria-hidden="true"></span>{{ offer.status }}</span>
+        <span class="ec-offer__index" aria-hidden="true">{{ '%02d' % offer_number }} / {{ '%02d' % offer_total }}</span>
+      </div>
+      <div class="ec-offer__cover-body">
+        <span class="ec-offer__mark" aria-hidden="true">{% if offer.get('mark') %}<b>{{ offer.mark }}</b>{% else %}{{ icon(offer.icon) }}{% endif %}<i></i><i></i></span>
+        <div class="ec-offer__cover-copy">
+          <p class="ec-offer__kicker">{{ offer.kicker }}</p>
+          <h3 id="{{ offer.id }}-title">{{ offer.title }} <span class="serif">{{ offer.accent }}</span></h3>
+          <p class="ec-offer__summary">{{ offer.summary }}</p>
+          <ul class="ec-offer__tags" aria-label="Detalles">{% for tag in offer.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+        </div>
+      </div>
+    </header>
+
+    <dl class="ec-offer__facts">{% for fact in offer.facts %}<div><dt>{{ fact.label }}</dt><dd>{{ fact.value }}</dd></div>{% endfor %}</dl>
+
+    {% if offer.get('topics') %}
+    <section class="ec-offer__block" aria-labelledby="{{ offer.id }}-topics">
+      <p class="ec-offer__kicker">{{ offer.topics.kicker }}</p>
+      <h4 id="{{ offer.id }}-topics">{{ offer.topics.title }}</h4>
+      <ul class="ec-offer__topics">{% for topic in offer.topics['items'] %}<li><span aria-hidden="true">{{ icon('check') }}</span>{{ topic }}</li>{% endfor %}</ul>
+    </section>
+    {% endif %}
+
+    <section class="ec-offer__block" aria-labelledby="{{ offer.id }}-path">
+      <div class="ec-offer__block-head">
+        <div><p class="ec-offer__kicker">{{ offer.path.kicker }}</p><h4 id="{{ offer.id }}-path">{{ offer.path.title }} <span class="serif">{{ offer.path.accent }}</span></h4></div>
+        {% if offer.path.get('total') %}<span class="ec-offer__total">{{ icon('clock') }} {{ offer.path.total }}</span>{% endif %}
+      </div>
+      <ol class="ec-offer__path{% if offer.path.steps[0].get('text') %} is-detailed{% endif %}" data-steps="{{ offer.path.steps|length }}">
+        {% for step in offer.path.steps %}<li><span class="ec-offer__step-top"><span class="ec-offer__step-num">{{ loop.index }}</span><span class="ec-offer__step-icon" aria-hidden="true">{{ icon(step.icon) }}</span></span><strong>{{ step.title }}</strong>{% if step.get('text') %}<p>{{ step.text }}</p>{% endif %}</li>{% endfor %}
+      </ol>
+    </section>
+
+    <div class="ec-offer__notes">{% for note in offer.notes %}<div class="ec-offer__note"><span class="ec-offer__note-icon" aria-hidden="true">{{ icon(note.icon) }}</span><p><strong>{{ note.title }}</strong> {{ note.text }}</p></div>{% endfor %}</div>
+
+    {% if offer.get('brochure') %}<a class="ec-offer__brochure" href="{{ url(offer.brochure.path) }}" target="_blank" rel="noopener noreferrer">{{ icon('document') }} {{ offer.brochure.label }} {{ icon('external') }}</a>{% endif %}
+  </div>
+
+  <aside class="ec-pass" aria-labelledby="{{ offer.id }}-pass">
+    <div class="ec-pass__top">
+      <p class="ec-pass__kicker"><span class="ec-pass__arrow" aria-hidden="true">{{ icon('arrow') }}</span>{{ pass.kicker }}</p>
+      <h4 id="{{ offer.id }}-pass">{{ pass.title }}</h4>
+      <p class="ec-pass__text">{{ pass.text }}</p>
+      {% set chip = pass.get('price') or pass.get('highlight') %}
+      <p class="ec-pass__chip"><strong>{{ chip.value }}</strong><span>{{ chip.label }}</span></p>
+      <a class="ec-pass__button" href="{{ pass_url }}" target="_blank" rel="noopener noreferrer">{{ pass.button }} {{ icon('external') }}</a>
+    </div>
+    <div class="ec-pass__perforation" aria-hidden="true"></div>
+    <div class="ec-pass__bottom">
+      <a class="ec-pass__qr" href="{{ pass_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ pass.button }} · {{ offer.title }}">
+        <img src="{{ url(pass_qr) }}" width="220" height="220" alt="{{ pass.qr_alt }}" loading="lazy">
+        <span class="ec-pass__corners" aria-hidden="true"></span>
+      </a>
+      <p class="ec-pass__caption">{{ pass.caption }}</p>
+      {% if pass.get('registration') %}
+      {% if education.registration.privacy_notice_url %}
+      <p class="ec-pass__privacy" data-privacy-notice>Antes de enviar tus datos, consulta el <a href="{{ education.registration.privacy_notice_url }}" target="_blank" rel="noopener noreferrer">aviso de privacidad</a> del registro.</p>
+      {% else %}
+      <p class="ec-pass__privacy" data-privacy-notice>Antes de enviar tus datos, solicita el aviso de privacidad del registro a <a href="mailto:{{ education_contact.emails[0] }}?subject=Aviso%20de%20privacidad%20-%20Registro%20Cultura%20Digital">{{ education_contact.emails[0] }}</a>.</p>
+      {% endif %}
+      {% endif %}
+      <p class="ec-pass__foot">{{ pass.footnote }}</p>
+    </div>
+  </aside>
+</article>

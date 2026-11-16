@@ -32,6 +32,18 @@ class ContinuingEducationRegistration(unittest.TestCase):
         self.assertIn(decoded[0], expected,
                       "El QR no coincide con form_url; regenera la imagen o corrige el JSON.")
 
+    def test_offer_qr_codes_match_their_links(self):
+        content = json.loads((ROOT / "src/content/continuing-education.json").read_text(encoding="utf-8"))
+        for offer in content["offers"]:
+            access = offer["pass"]
+            if access.get("registration"):
+                continue  # Uses the registration form checked above.
+            with self.subTest(offer=offer["id"]):
+                self.assertEqual(urlsplit(access["url"]).scheme, "https")
+                image = Image.open(ROOT / "src" / access["qr_image"]).convert("L")
+                decoded = [result.text for result in zxingcpp.read_barcodes(image)]
+                self.assertEqual(decoded, [access["url"]], "El QR no coincide con la URL de la oferta.")
+
     def test_template_has_no_hardcoded_form_links(self):
         template = (ROOT / "src/templates/pages/continuing-education.html").read_text(encoding="utf-8")
         for host in FORM_HOSTS:

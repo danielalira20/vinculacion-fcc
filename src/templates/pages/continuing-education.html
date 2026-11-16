@@ -7,7 +7,7 @@
     <h1 id="ed-title">Aprender más.<br><em>Ir más lejos.</em></h1>
     <p class="ed-hero-description">{{ education.intro }}</p>
     <div class="ed-actions">
-      <a class="button" href="#oferta-eduit">Ver Cultura Digital {{ icon('arrow') }}</a>
+      <a class="button" href="#oferta">Ver la oferta {{ icon('arrow') }}</a>
       <a class="ed-link" href="#contacto-educacion">Solicitar información {{ icon('arrow') }}</a>
     </div>
     <div class="ed-hero-foot"><span class="ed-foot-symbol">{{ icon('graduate') }}</span><span>Formación, actualización y oportunidades<br>para tu desarrollo profesional.</span></div>
@@ -25,113 +25,28 @@
 </div>
 <section class="wrap ed-intro" aria-labelledby="ed-intro-title">
   <div><p class="eyebrow">FORMACIÓN QUE SIGUE CONTIGO</p><h2 id="ed-intro-title">Sigue creciendo<br><span class="serif">a tu ritmo.</span></h2></div>
-  <div><p>Educación Continua de la Facultad de Ciencias de la Computación es un punto de contacto para conocer alternativas de actualización profesional.</p><p>Actualmente puedes conocer la certificación <strong>Cultura Digital ECM0121</strong>, sus competencias y el proceso para registrarte.</p></div>
+  <div><p>Educación Continua de la Facultad de Ciencias de la Computación es un punto de contacto para conocer alternativas de actualización profesional.</p><p>Actualmente puedes conocer el <strong>Programa de Microcredenciales en Inteligencia Artificial</strong> para la comunidad docente y la certificación <strong>Cultura Digital ECM0121</strong>, con sus rutas, competencias y el proceso para registrarte.</p></div>
 </section>
-<!--
-  SECCIÓN: Oferta única de Educación Continua FCC BUAP
-  Para integrarla en una página existente, cargar cultura-digital.css
-  y mantener la carpeta assets/ relativa a la página publicada.
--->
-<section class="ec-cultura" id="oferta-eduit" aria-labelledby="ec-cultura-title">
-  <div class="ec-cultura__wrap">
-    <div class="ec-cultura__eyebrow"><span class="ec-cultura__eyebrow-dot" aria-hidden="true"></span> EDUCACIÓN CONTINUA · CERTIFICACIONES</div>
-    <div class="ec-cultura__intro">
+<section class="ec-offers" id="oferta" aria-labelledby="ec-offers-title">
+  <div class="wrap">
+    <div class="ec-offers__head">
       <div>
-        <p class="ec-cultura__subhead">OFERTA DE CERTIFICACIÓN</p>
-        <h2 id="ec-cultura-title">Da el siguiente paso en <em>cultura digital.</em></h2>
-        <p class="ec-cultura__lead">Desarrolla habilidades digitales para estudiar, colaborar, comunicarte y crear con confianza.</p>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> EDUCACIÓN CONTINUA · CERTIFICACIONES</p>
+        <h2 id="ec-offers-title">Elige tu siguiente <span class="serif">paso.</span></h2>
+        <p>Programas para actualizar tus competencias digitales y llevar la inteligencia artificial a tu día a día.</p>
       </div>
-      <span class="ec-cultura__available"><span aria-hidden="true">●</span> Certificación disponible</span>
+      <nav class="ec-offers__index" aria-label="Ofertas disponibles">{% for offer in education.offers %}<a class="is-{{ offer.theme }}" href="#{{ offer.id }}"><small>{{ '%02d' % loop.index }}</small><span>{{ offer.title }}</span>{{ icon('arrow') }}</a>{% endfor %}</nav>
     </div>
-
-    <article class="ec-cultura__course" aria-label="Certificación Cultura Digital ECM0121">
-      <div class="ec-cultura__banner">
-        <div class="ec-cultura__mark" aria-hidden="true">@</div>
-        <div class="ec-cultura__banner-copy">
-          <span class="ec-cultura__micro">CERTIFICACIÓN CONOCER · ECM0121</span>
-          <h3>Cultura Digital</h3>
-          <p>Una certificación enfocada en competencias digitales relevantes para el estudio y el entorno profesional.</p>
-        </div>
-        <span class="ec-cultura__edition" aria-hidden="true">01 / 01</span>
-      </div>
-
-      <div class="ec-cultura__main">
-        <div class="ec-cultura__info">
-          <div class="ec-cultura__heading">
-            <div class="ec-cultura__heading-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v12H4z"/><path d="M8 21h8M12 17.5V21"/><path d="m9 11 2 2 4-4"/></svg>
-            </div>
-            <div>
-              <p class="ec-cultura__section-kicker">COMPETENCIAS QUE DESARROLLARÁS</p>
-              <h4>Lo que aprenderás</h4>
-            </div>
-          </div>
-          <ul class="ec-cultura__topics">
-            <li><span class="ec-cultura__check" aria-hidden="true">{{ icon('check') }}</span> Trabajar con computadoras</li>
-            <li><span class="ec-cultura__check" aria-hidden="true">{{ icon('check') }}</span> Colaborar y gestionar contenidos digitalmente</li>
-            <li><span class="ec-cultura__check" aria-hidden="true">{{ icon('check') }}</span> Acceder a información en línea</li>
-            <li><span class="ec-cultura__check" aria-hidden="true">{{ icon('check') }}</span> Comunicarse en línea</li>
-            <li><span class="ec-cultura__check" aria-hidden="true">{{ icon('check') }}</span> Crear contenido digital</li>
-            <li><span class="ec-cultura__check" aria-hidden="true">{{ icon('check') }}</span> Participar de forma segura y responsable en línea</li>
-            <li><span class="ec-cultura__check" aria-hidden="true">{{ icon('check') }}</span> Inteligencia artificial generativa</li>
-          </ul>
-
-          <div class="ec-cultura__divider" role="presentation"></div>
-
-          <p class="ec-cultura__section-kicker">RUTA DE CERTIFICACIÓN</p>
-          <h4 class="ec-cultura__method-title">Cuatro etapas, una meta</h4>
-          <ol class="ec-cultura__steps">
-            <li><span>01</span> Diagnóstico</li>
-            <li><span>02</span> Entrenamiento</li>
-            <li><span>03</span> Evaluación</li>
-            <li><span>04</span> Certificación</li>
-          </ol>
-
-          <div class="ec-cultura__benefit">
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 1.5 3.1.4.5 3.1L20 11l-1.6 2.9-.5 3.1-3.1.4L12 19l-2.8-1.6-3.1-.4-.5-3.1L4 11l1.6-3 .5-3.1 3.1-.4L12 3Z"/><path d="m9 11 2 2 4-4"/></svg>
-            <p><strong>Respaldo de la certificación:</strong> el brochure indica la certificación CONOCER y su aval por Microsoft México y SEP; contempla un código de seguridad que permite validar la autenticidad del documento.</p>
-          </div>
-          <a class="ec-cultura__brochure" href="{{ url('assets/cultura-digital/brochure-cultura-digital.pdf') }}" target="_blank" rel="noopener noreferrer">
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 14h6M10 18h6"/></svg>
-            Consultar brochure de Cultura Digital <span aria-hidden="true">↗</span>
-          </a>
-<div class="ec-cultura__price">
-  <span>INVERSIÓN · COMUNIDAD BUAP</span>
-  <strong>$600 MXN</strong>
-  <small>Precio exclusivo para la comunidad BUAP</small>
-</div>
-
-        </div>
-
-        <aside class="ec-cultura__register" aria-label="Registro a Cultura Digital">
-          <div class="ec-cultura__register-symbol" aria-hidden="true">↗</div>
-          <p class="ec-cultura__register-kicker">INSCRIPCIONES</p>
-          <h4>Tu siguiente paso empieza aquí.</h4>
-          {% set registration = education.registration %}
-          <p class="ec-cultura__register-description">Accede al formulario de registro de Cultura Digital a través del botón o escaneando el código QR.</p>
-          <a class="ec-cultura__button" href="{{ registration.form_url }}" target="_blank" rel="noopener noreferrer">
-            Ir al registro <span aria-hidden="true">↗</span>
-          </a>
-          <a class="ec-cultura__qr" href="{{ registration.form_url }}" target="_blank" rel="noopener noreferrer" aria-label="Abrir formulario de registro de Cultura Digital">
-            <img src="{{ url(registration.qr_image) }}" width="212" height="212" alt="Código QR para abrir el formulario de registro de Cultura Digital" loading="lazy">
-          </a>
-          <p class="ec-cultura__qr-caption">ESCANEA PARA REGISTRARTE</p>
-          {% if registration.privacy_notice_url %}
-          <p class="ec-cultura__privacy" data-privacy-notice>Antes de enviar tus datos, consulta el <a href="{{ registration.privacy_notice_url }}" target="_blank" rel="noopener noreferrer">aviso de privacidad</a> del registro.</p>
-          {% else %}
-          <p class="ec-cultura__privacy" data-privacy-notice>Antes de enviar tus datos, solicita el aviso de privacidad del registro a <a href="mailto:{{ education_contact.emails[0] }}?subject=Aviso%20de%20privacidad%20-%20Registro%20Cultura%20Digital">{{ education_contact.emails[0] }}</a>.</p>
-          {% endif %}
-          <div class="ec-cultura__help">Registro mediante Microsoft Forms <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
-        </aside>
-      </div>
-    </article>
+    <div class="ec-offers__list">
+      {% for offer in education.offers %}{% set offer_number = loop.index %}{% set offer_total = loop.length %}{% include 'components/education-offer.html' %}{% endfor %}
+    </div>
   </div>
 </section>
 
 <section class="wrap ed-steps" id="como-participar" aria-labelledby="ed-steps-title">
  <div class="ed-section-head"><div><p class="eyebrow">TU SIGUIENTE PASO</p><h2 id="ed-steps-title">¿Cómo empezar <span class="serif">tu proceso?</span></h2></div></div>
  <div class="ed-step-grid">
-  <div><span class="ed-step-number">01</span>{{ icon('search') }}<h3>Explora tu interés</h3><p>Conoce las competencias y las etapas de la certificación Cultura Digital.</p></div>
+  <div><span class="ed-step-number">01</span>{{ icon('search') }}<h3>Explora tu interés</h3><p>Conoce las rutas, competencias y etapas de cada programa.</p></div>
   <div><span class="ed-step-number">02</span>{{ icon('mail') }}<h3>Pregunta por la convocatoria</h3><p>Contacta a Educación Continua para conocer requisitos, fechas, modalidades y costos vigentes.</p></div>
   <div><span class="ed-step-number">03</span>{{ icon('check') }}<h3>Confirma antes de inscribirte</h3><p>Sigue únicamente las indicaciones y medios oficiales que te proporcione el área responsable.</p></div>
  </div>

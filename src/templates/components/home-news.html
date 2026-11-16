@@ -1,0 +1,20 @@
+{% set strip = education.home_strip %}
+{% if strip.enabled %}
+<section class="home-news wrap" aria-labelledby="home-news-title">
+  <div class="home-news__intro">
+    <p class="home-news__kicker"><span class="home-news__live" aria-hidden="true"></span>{{ strip.kicker }}</p>
+    <h2 id="home-news-title">{{ strip.title }} <span class="serif">{{ strip.accent }}</span></h2>
+  </div>
+  {% for item in strip['items'] %}
+  <a class="home-news__item is-{{ item.theme }}" href="{{ url('educacion-continua/index.html') }}#{{ item.anchor }}">
+    <span class="home-news__icon" aria-hidden="true">{% if item.get('mark') %}<b>{{ item.mark }}</b>{% else %}{{ icon(item.icon) }}{% endif %}</span>
+    <span class="home-news__copy">
+      <small>{{ item.kicker }}{% if item.get('badge') %} <em>{{ item.badge }}</em>{% endif %}</small>
+      <strong>{{ item.title }}</strong>
+      <span>{{ item.meta }}</span>
+    </span>
+    <span class="home-news__go" aria-hidden="true">{{ icon('arrow') }}</span>
+  </a>
+  {% endfor %}
+</section>
+{% endif %}

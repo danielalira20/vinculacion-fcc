@@ -1,23 +1,39 @@
 {% set popup = education.home_popup %}
 {% if popup.enabled %}
-<dialog class="promo-dialog" id="promo-dialog" aria-labelledby="promo-dialog-title" aria-describedby="promo-dialog-text" data-promo-dialog data-promo-key="promo:{{ popup.path }}#{{ popup.anchor }}">
-  <div class="promo-dialog-visual">
-    <img src="{{ url(popup.image) }}" alt="{{ popup.image_alt }}" width="1600" height="900" decoding="async">
-    <span class="promo-dialog-chip promo-dialog-chip--ai" aria-hidden="true">{{ icon('spark') }} IA generativa</span>
-    <span class="promo-dialog-chip promo-dialog-chip--seal" aria-hidden="true">{{ icon('shield') }} Certificación CONOCER</span>
-  </div>
+<dialog class="promo-dialog" id="promo-dialog" aria-label="{{ popup.label }}" data-promo-dialog data-promo-key="{{ popup.key }}">
   <button class="promo-dialog-close" type="button" data-promo-close aria-label="Cerrar aviso">{{ icon('close') }}</button>
-  <div class="promo-dialog-body">
-    <p class="promo-dialog-eyebrow"><span class="status-dot" aria-hidden="true"></span> {{ popup.eyebrow }}</p>
-    <h2 id="promo-dialog-title">{{ popup.title }} <span class="serif">{{ popup.accent }}</span></h2>
-    <p id="promo-dialog-text" class="promo-dialog-text">{{ popup.text }}</p>
-    <ul class="promo-dialog-highlights">
-      {% for item in popup.highlights %}<li>{{ icon('check') }} <span>{{ item }}</span></li>{% endfor %}
-    </ul>
-    <div class="promo-dialog-actions">
-      <a class="button promo-dialog-cta" href="{{ url(popup.path) }}#{{ popup.anchor }}" data-promo-go>{{ popup.cta }} {{ icon('arrow') }}</a>
-      <button class="promo-dialog-dismiss" type="button" data-promo-close>{{ popup.dismiss }}</button>
-    </div>
+  <div class="promo-dialog-tabs" role="tablist" aria-label="{{ popup.label }}" data-promo-tabs>
+    {% for slide in popup.slides %}<button class="is-{{ slide.theme }}" type="button" role="tab" id="promo-tab-{{ slide.id }}" aria-controls="promo-slide-{{ slide.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="{{ '0' if loop.first else '-1' }}"><span class="promo-dialog-tab-dot" aria-hidden="true"></span>{{ slide.tab }}</button>{% endfor %}
   </div>
+  {% for slide in popup.slides %}
+  <section class="promo-slide is-{{ slide.theme }}" role="tabpanel" id="promo-slide-{{ slide.id }}" aria-labelledby="promo-tab-{{ slide.id }}" {% if not loop.first %}data-inactive inert{% endif %} data-promo-slide>
+    {% if slide.get('image') %}
+    <div class="promo-dialog-visual">
+      <img src="{{ url(slide.image) }}" alt="{{ slide.image_alt }}" width="1600" height="900" decoding="async">
+      {% for chip in slide.chips %}<span class="promo-dialog-chip promo-dialog-chip--{{ loop.index }}" aria-hidden="true">{{ icon(chip[0]) }} {{ chip[1] }}</span>{% endfor %}
+    </div>
+    {% else %}
+    <div class="promo-dialog-visual promo-dialog-visual--ai" aria-hidden="true">
+      <span class="promo-ai-dots"></span>
+      <svg class="promo-ai-net" viewBox="0 0 320 420" fill="none" preserveAspectRatio="xMidYMid slice"><g stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M40 70 120 120 210 80 280 140M120 120 150 210 60 250M150 210 250 240 290 330M150 210 120 320 200 380M250 240 210 80M60 250 120 320"/></g><g fill="currentColor"><circle cx="40" cy="70" r="4"/><circle cx="120" cy="120" r="6"/><circle cx="210" cy="80" r="4"/><circle cx="280" cy="140" r="5"/><circle cx="150" cy="210" r="8"/><circle cx="60" cy="250" r="4"/><circle cx="250" cy="240" r="6"/><circle cx="290" cy="330" r="4"/><circle cx="120" cy="320" r="5"/><circle cx="200" cy="380" r="4"/></g></svg>
+      <span class="promo-ai-chip promo-ai-chip--top">{{ icon('spark') }} Nuevo · Docentes BUAP</span>
+      <div class="promo-ai-badge"><strong>{{ slide.badge.value }}</strong><span>{{ slide.badge.label }}</span></div>
+      <ol class="promo-ai-routes">{% for route in slide.routes %}<li><span>{{ loop.index }}</span>{{ route }}</li>{% endfor %}</ol>
+    </div>
+    {% endif %}
+    <div class="promo-dialog-body">
+      <p class="promo-dialog-eyebrow"><span class="promo-dialog-dot" aria-hidden="true"></span> {{ slide.eyebrow }}</p>
+      <h2>{{ slide.title }} <span class="serif">{{ slide.accent }}</span></h2>
+      <p class="promo-dialog-text">{{ slide.text }}</p>
+      <ul class="promo-dialog-highlights">
+        {% for item in slide.highlights %}<li>{{ icon('check') }} <span>{{ item }}</span></li>{% endfor %}
+      </ul>
+      <div class="promo-dialog-actions">
+        <a class="button promo-dialog-cta" href="{{ url(slide.path) }}#{{ slide.anchor }}" data-promo-go>{{ slide.cta }} {{ icon('arrow') }}</a>
+        <button class="promo-dialog-dismiss" type="button" data-promo-close>{{ popup.dismiss }}</button>
+      </div>
+    </div>
+  </section>
+  {% endfor %}
 </dialog>
 {% endif %}

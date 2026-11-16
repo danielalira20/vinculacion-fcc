@@ -10,66 +10,348 @@
   },
   "home_popup": {
     "enabled": true,
-    "image": "assets/media/popup-cultura-digital.jpg",
-    "image_alt": "Grupo de estudiantes reunidos alrededor de una laptop en un aula",
-    "eyebrow": "NUEVA CERTIFICACIÓN · CONOCER ECM0121",
-    "title": "Cultura Digital",
-    "accent": "ya está aquí.",
-    "text": "Certifica tus competencias digitales —incluida la inteligencia artificial generativa— con aval de Microsoft México y SEP.",
-    "highlights": ["Diagnóstico, entrenamiento, evaluación y certificación", "$600 MXN · comunidad BUAP"],
-    "cta": "Ver la certificación",
-    "path": "educacion-continua/index.html",
-    "anchor": "oferta-eduit",
-    "dismiss": "Ahora no"
+    "key": "promo:2026-11-educacion-continua",
+    "label": "Novedades de Educación Continua",
+    "dismiss": "Ahora no",
+    "slides": [
+      {
+        "id": "ia",
+        "tab": "Microcredenciales IA",
+        "theme": "iris",
+        "eyebrow": "NUEVO · COMUNIDAD DOCENTE BUAP",
+        "title": "Microcredenciales",
+        "accent": "en Inteligencia Artificial.",
+        "text": "Tres rutas autodirigidas de 2 horas para llevar la IA a tu docencia, a tus proyectos y a la gestión institucional.",
+        "highlights": [
+          "IA para docentes, líderes de proyecto y directivos",
+          "6 horas en total · a tu ritmo, desde cualquier lugar"
+        ],
+        "cta": "Ver el programa",
+        "path": "educacion-continua/index.html",
+        "anchor": "microcredenciales-ia",
+        "routes": [
+          "IA para docentes",
+          "IA para líderes de proyecto",
+          "IA para directivos"
+        ],
+        "badge": {
+          "value": "15,000",
+          "label": "microcredenciales"
+        }
+      },
+      {
+        "id": "cultura",
+        "tab": "Cultura Digital",
+        "theme": "sage",
+        "image": "assets/media/popup-cultura-digital.jpg",
+        "image_alt": "Grupo de estudiantes reunidos alrededor de una laptop en un aula",
+        "chips": [
+          [
+            "spark",
+            "IA generativa"
+          ],
+          [
+            "shield",
+            "Certificación CONOCER"
+          ]
+        ],
+        "eyebrow": "CERTIFICACIÓN · CONOCER ECM0121",
+        "title": "Cultura Digital",
+        "accent": "ya está aquí.",
+        "text": "Certifica tus competencias digitales —incluida la inteligencia artificial generativa— con aval de Microsoft México y SEP.",
+        "highlights": [
+          "Diagnóstico, entrenamiento, evaluación y certificación",
+          "$600 MXN · comunidad BUAP"
+        ],
+        "cta": "Ver la certificación",
+        "path": "educacion-continua/index.html",
+        "anchor": "oferta-eduit"
+      }
+    ]
   },
+  "home_strip": {
+    "enabled": true,
+    "kicker": "NOVEDADES · EDUCACIÓN CONTINUA",
+    "title": "Dos formas nuevas",
+    "accent": "de seguir creciendo.",
+    "items": [
+      {
+        "theme": "iris",
+        "icon": "spark",
+        "badge": "Nuevo",
+        "kicker": "Para docentes BUAP",
+        "title": "Microcredenciales en IA",
+        "meta": "3 rutas · 2 h cada una · autodirigido",
+        "anchor": "microcredenciales-ia"
+      },
+      {
+        "theme": "sage",
+        "mark": "@",
+        "kicker": "Certificación CONOCER",
+        "title": "Cultura Digital",
+        "meta": "4 etapas · $600 MXN comunidad BUAP",
+        "anchor": "oferta-eduit"
+      }
+    ]
+  },
+  "offers": [
+    {
+      "id": "microcredenciales-ia",
+      "theme": "iris",
+      "icon": "spark",
+      "status": "Nuevo programa",
+      "kicker": "PROGRAMA DE MICROCREDENCIALES · IA",
+      "title": "Microcredenciales en IA",
+      "accent": "para la comunidad docente.",
+      "summary": "Actualiza tus competencias e impulsa tu labor académica. El Departamento de Vinculación y Educación Continua de la FCC, en alianza con Red por la Ciberseguridad, te invita a este programa con tres rutas de aprendizaje especializado.",
+      "tags": [
+        "Comunidad docente BUAP",
+        "En alianza con Red por la Ciberseguridad"
+      ],
+      "facts": [
+        {
+          "value": "15,000",
+          "label": "microcredenciales ofertadas"
+        },
+        {
+          "value": "2 h",
+          "label": "por microcredencial"
+        },
+        {
+          "value": "6 h",
+          "label": "la ruta completa"
+        },
+        {
+          "value": "A tu ritmo",
+          "label": "formato autodirigido"
+        }
+      ],
+      "path": {
+        "kicker": "TU RUTA DE FORMACIÓN",
+        "title": "Tres rutas,",
+        "accent": "un mismo impulso.",
+        "total": "6 horas de formación autodirigida",
+        "steps": [
+          {
+            "icon": "book",
+            "title": "IA para docentes",
+            "text": "Aplica herramientas de IA para fortalecer tus procesos de enseñanza y aprendizaje."
+          },
+          {
+            "icon": "network",
+            "title": "IA para líderes de proyecto",
+            "text": "Utiliza la inteligencia artificial para planear, gestionar y optimizar proyectos."
+          },
+          {
+            "icon": "building",
+            "title": "IA para directivos",
+            "text": "Integra la IA en la toma de decisiones y la gestión institucional."
+          }
+        ]
+      },
+      "notes": [
+        {
+          "icon": "cube",
+          "title": "Modular y flexible",
+          "text": "Cada microcredencial es independiente, dura 2 horas y es autodirigida. Puedes cursar solo una, si así lo decides."
+        },
+        {
+          "icon": "shield",
+          "title": "Apilable",
+          "text": "Si deseas profundizar, completa las tres microcredenciales y estarás listo para presentar un examen de certificación."
+        }
+      ],
+      "pass": {
+        "kicker": "ACCESO AL PROGRAMA",
+        "title": "Empieza tu ruta hoy.",
+        "text": "Ingresa a la plataforma de Red por la Ciberseguridad desde el botón o escaneando el código QR.",
+        "highlight": {
+          "value": "3 rutas · 6 h",
+          "label": "Aprende a tu ritmo, desde cualquier lugar"
+        },
+        "button": "Ir a la plataforma",
+        "url": "https://academia.redporlaciberseguridad.org/?lang=es_mx",
+        "qr_image": "assets/microcredenciales-ia/qr-plataforma.png",
+        "qr_alt": "Código QR para abrir la plataforma del Programa de Microcredenciales en IA",
+        "caption": "ESCANEA PARA INGRESAR",
+        "footnote": "Plataforma de Red por la Ciberseguridad"
+      }
+    },
+    {
+      "id": "oferta-eduit",
+      "theme": "sage",
+      "mark": "@",
+      "status": "Certificación disponible",
+      "kicker": "CERTIFICACIÓN CONOCER · ECM0121",
+      "title": "Cultura Digital",
+      "accent": "para crear con confianza.",
+      "summary": "Una certificación enfocada en competencias digitales relevantes para el estudio y el entorno profesional, incluida la inteligencia artificial generativa.",
+      "tags": [
+        "Comunidad BUAP",
+        "Aval de Microsoft México y SEP"
+      ],
+      "facts": [
+        {
+          "value": "4",
+          "label": "etapas hacia tu certificado"
+        },
+        {
+          "value": "7",
+          "label": "competencias digitales"
+        },
+        {
+          "value": "ECM0121",
+          "label": "estándar CONOCER"
+        },
+        {
+          "value": "$600",
+          "label": "MXN · comunidad BUAP"
+        }
+      ],
+      "topics": {
+        "kicker": "COMPETENCIAS QUE DESARROLLARÁS",
+        "title": "Lo que aprenderás",
+        "items": [
+          "Trabajar con computadoras",
+          "Acceder a información en línea",
+          "Crear contenido digital",
+          "Colaborar y gestionar contenidos digitalmente",
+          "Comunicarse en línea",
+          "Participar de forma segura y responsable en línea",
+          "Inteligencia artificial generativa"
+        ]
+      },
+      "path": {
+        "kicker": "RUTA DE CERTIFICACIÓN",
+        "title": "Cuatro etapas,",
+        "accent": "una meta.",
+        "steps": [
+          {
+            "icon": "search",
+            "title": "Diagnóstico"
+          },
+          {
+            "icon": "book",
+            "title": "Entrenamiento"
+          },
+          {
+            "icon": "check",
+            "title": "Evaluación"
+          },
+          {
+            "icon": "graduate",
+            "title": "Certificación"
+          }
+        ]
+      },
+      "notes": [
+        {
+          "icon": "shield",
+          "title": "Respaldo de la certificación",
+          "text": "El brochure indica la certificación CONOCER y su aval por Microsoft México y SEP; contempla un código de seguridad que permite validar la autenticidad del documento."
+        }
+      ],
+      "brochure": {
+        "label": "Consultar brochure de Cultura Digital",
+        "path": "assets/cultura-digital/brochure-cultura-digital.pdf"
+      },
+      "pass": {
+        "kicker": "INSCRIPCIONES",
+        "title": "Tu siguiente paso empieza aquí.",
+        "text": "Accede al formulario de registro de Cultura Digital a través del botón o escaneando el código QR.",
+        "price": {
+          "value": "$600 MXN",
+          "label": "Precio exclusivo para la comunidad BUAP"
+        },
+        "button": "Ir al registro",
+        "registration": true,
+        "qr_alt": "Código QR para abrir el formulario de registro de Cultura Digital",
+        "caption": "ESCANEA PARA REGISTRARTE",
+        "footnote": "Registro mediante Microsoft Forms"
+      }
+    }
+  ],
   "categories": [
-    {"key": "todos", "name": "Todas"},
-    {"key": "productividad", "name": "Productividad"},
-    {"key": "tecnologia", "name": "Tecnología"},
-    {"key": "diseno", "name": "Diseño"},
-    {"key": "gestion", "name": "Gestión"}
+    {
+      "key": "todos",
+      "name": "Todas"
+    },
+    {
+      "key": "productividad",
+      "name": "Productividad"
+    },
+    {
+      "key": "tecnologia",
+      "name": "Tecnología"
+    },
+    {
+      "key": "diseno",
+      "name": "Diseño"
+    },
+    {
+      "key": "gestion",
+      "name": "Gestión"
+    }
   ],
   "programs": [
     {
       "name": "Microsoft Office y Microsoft 365",
       "subtitle": "Ofimática y productividad",
       "description": "Explora certificaciones en herramientas de productividad, incluyendo opciones relacionadas con Excel, Word y PowerPoint.",
-      "category": "productividad", "category_label": "PRODUCTIVIDAD", "icon": "document", "theme": "sage",
+      "category": "productividad",
+      "category_label": "PRODUCTIVIDAD",
+      "icon": "document",
+      "theme": "sage",
       "href": "https://www.grupoeduit.com/certificaciones/7/1"
     },
     {
       "name": "Fundamentos de IA generativa",
       "subtitle": "Nuevas tecnologías",
       "description": "Conoce opciones de aprendizaje y certificación relacionadas con inteligencia artificial y su aplicación profesional.",
-      "category": "tecnologia", "category_label": "TECNOLOGÍA", "icon": "network", "theme": "lavender",
+      "category": "tecnologia",
+      "category_label": "TECNOLOGÍA",
+      "icon": "network",
+      "theme": "lavender",
       "href": "https://www.grupoeduit.com/certificaciones/3/2"
     },
     {
       "name": "Nube y servicios digitales",
       "subtitle": "Cloud e infraestructura",
       "description": "Consulta rutas relacionadas con fundamentos de la nube, servicios digitales y tecnologías Microsoft.",
-      "category": "tecnologia", "category_label": "TECNOLOGÍA", "icon": "cloud", "theme": "peach",
+      "category": "tecnologia",
+      "category_label": "TECNOLOGÍA",
+      "icon": "cloud",
+      "theme": "peach",
       "href": "https://www.grupoeduit.com/certificaciones/3/2"
     },
     {
       "name": "AutoCAD y diseño digital",
       "subtitle": "Herramientas de diseño",
       "description": "Explora certificaciones orientadas al uso de herramientas de diseño y representación técnica.",
-      "category": "diseno", "category_label": "DISEÑO", "icon": "cube", "theme": "rose",
+      "category": "diseno",
+      "category_label": "DISEÑO",
+      "icon": "cube",
+      "theme": "rose",
       "href": "https://www.grupoeduit.com/certificaciones/3/1"
     },
     {
       "name": "Fundamentos de programación",
       "subtitle": "Desarrollo de software",
       "description": "Encuentra opciones introductorias relacionadas con Python, desarrollo y conocimientos técnicos.",
-      "category": "tecnologia", "category_label": "TECNOLOGÍA", "icon": "code", "theme": "sage",
+      "category": "tecnologia",
+      "category_label": "TECNOLOGÍA",
+      "icon": "code",
+      "theme": "sage",
       "href": "https://www.grupoeduit.com/certificaciones/3/2"
     },
     {
       "name": "Administración de proyectos",
       "subtitle": "Gestión profesional",
       "description": "Conoce programas vinculados con herramientas de planeación, administración y gestión de proyectos.",
-      "category": "gestion", "category_label": "GESTIÓN", "icon": "briefcase", "theme": "sand",
+      "category": "gestion",
+      "category_label": "GESTIÓN",
+      "icon": "briefcase",
+      "theme": "sand",
       "href": "https://www.grupoeduit.com/certificaciones/3/2"
     }
   ],
