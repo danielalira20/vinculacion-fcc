@@ -7,20 +7,10 @@
   </div>
   {% for slide in popup.slides %}
   <section class="promo-slide is-{{ slide.theme }}" role="tabpanel" id="promo-slide-{{ slide.id }}" aria-labelledby="promo-tab-{{ slide.id }}" {% if not loop.first %}data-inactive inert{% endif %} data-promo-slide>
-    {% if slide.get('image') %}
     <div class="promo-dialog-visual">
       <img src="{{ url(slide.image) }}" alt="{{ slide.image_alt }}" width="1600" height="900" decoding="async">
       {% for chip in slide.chips %}<span class="promo-dialog-chip promo-dialog-chip--{{ loop.index }}" aria-hidden="true">{{ icon(chip[0]) }} {{ chip[1] }}</span>{% endfor %}
     </div>
-    {% else %}
-    <div class="promo-dialog-visual promo-dialog-visual--ai" aria-hidden="true">
-      <span class="promo-ai-dots"></span>
-      <svg class="promo-ai-net" viewBox="0 0 320 420" fill="none" preserveAspectRatio="xMidYMid slice"><g stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M40 70 120 120 210 80 280 140M120 120 150 210 60 250M150 210 250 240 290 330M150 210 120 320 200 380M250 240 210 80M60 250 120 320"/></g><g fill="currentColor"><circle cx="40" cy="70" r="4"/><circle cx="120" cy="120" r="6"/><circle cx="210" cy="80" r="4"/><circle cx="280" cy="140" r="5"/><circle cx="150" cy="210" r="8"/><circle cx="60" cy="250" r="4"/><circle cx="250" cy="240" r="6"/><circle cx="290" cy="330" r="4"/><circle cx="120" cy="320" r="5"/><circle cx="200" cy="380" r="4"/></g></svg>
-      <span class="promo-ai-chip promo-ai-chip--top">{{ icon('spark') }} Nuevo · Docentes BUAP</span>
-      <div class="promo-ai-badge"><strong>{{ slide.badge.value }}</strong><span>{{ slide.badge.label }}</span></div>
-      <ol class="promo-ai-routes">{% for route in slide.routes %}<li><span>{{ loop.index }}</span>{{ route }}</li>{% endfor %}</ol>
-    </div>
-    {% endif %}
     <div class="promo-dialog-body">
       <p class="promo-dialog-eyebrow"><span class="promo-dialog-dot" aria-hidden="true"></span> {{ slide.eyebrow }}</p>
       <h2>{{ slide.title }} <span class="serif">{{ slide.accent }}</span></h2>

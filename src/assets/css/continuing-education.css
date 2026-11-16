@@ -108,9 +108,9 @@
 
 /* OFERTAS · Microcredenciales en IA y Cultura Digital
    Cada ficha toma su color de .is-iris o .is-sage; el resto de la estructura es común. */
-.is-iris { --o-accent:#4150a0; --o-deep:#26306b; --o-soft:#dfe2f6; --o-tint:#eff1fb; --o-line:#d3d8f0; --o-dot:rgb(38 48 107 / 17%); --o-glow:rgb(65 80 160 / 22%);
+.is-iris { --o-wash:38 48 107; --o-accent:#4150a0; --o-deep:#26306b; --o-soft:#dfe2f6; --o-tint:#eff1fb; --o-line:#d3d8f0; --o-dot:rgb(38 48 107 / 17%); --o-glow:rgb(65 80 160 / 22%);
   --o-aurora: radial-gradient(110% 90% at 0% 0%, #e9e4f8 0%, transparent 58%), radial-gradient(90% 120% at 100% 0%, #d5e5f7 0%, transparent 62%), radial-gradient(70% 90% at 80% 100%, #f2dcea 0%, transparent 62%), #eceef9; }
-.is-sage { --o-accent:#3b6c57; --o-deep:#1f4334; --o-soft:#dbe8da; --o-tint:#eff4ec; --o-line:#d2e0d0; --o-dot:rgb(31 67 52 / 16%); --o-glow:rgb(59 108 87 / 20%);
+.is-sage { --o-wash:31 67 52; --o-accent:#3b6c57; --o-deep:#1f4334; --o-soft:#dbe8da; --o-tint:#eff4ec; --o-line:#d2e0d0; --o-dot:rgb(31 67 52 / 16%); --o-glow:rgb(59 108 87 / 20%);
   --o-aurora: radial-gradient(110% 90% at 0% 0%, #e3eedf 0%, transparent 58%), radial-gradient(90% 120% at 100% 0%, #dcebec 0%, transparent 62%), radial-gradient(70% 90% at 80% 100%, #f0e8d3 0%, transparent 62%), #e9f0e6; }
 
 .ec-offers { position:relative; padding:clamp(72px,8vw,112px) 0 clamp(80px,9vw,120px); background:radial-gradient(circle at 1px 1px, rgb(41 39 36 / 8%) 1px, transparent 0) 0 0 / 22px 22px, #efebe5; }

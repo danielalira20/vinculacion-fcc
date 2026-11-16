@@ -18,6 +18,18 @@
         "id": "ia",
         "tab": "Microcredenciales IA",
         "theme": "iris",
+        "image": "assets/media/popup-microcredenciales-ia.jpg",
+        "image_alt": "Grupo de docentes sonrientes revisando juntos una laptop",
+        "chips": [
+          [
+            "spark",
+            "Nuevo · Docentes BUAP"
+          ],
+          [
+            "graduate",
+            "15,000 microcredenciales"
+          ]
+        ],
         "eyebrow": "NUEVO · COMUNIDAD DOCENTE BUAP",
         "title": "Microcredenciales",
         "accent": "en Inteligencia Artificial.",
@@ -28,16 +40,7 @@
         ],
         "cta": "Ver el programa",
         "path": "educacion-continua/index.html",
-        "anchor": "microcredenciales-ia",
-        "routes": [
-          "IA para docentes",
-          "IA para líderes de proyecto",
-          "IA para directivos"
-        ],
-        "badge": {
-          "value": "15,000",
-          "label": "microcredenciales"
-        }
+        "anchor": "microcredenciales-ia"
       },
       {
         "id": "cultura",
