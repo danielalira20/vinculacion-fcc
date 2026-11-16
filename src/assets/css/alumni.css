@@ -24,12 +24,12 @@
 .alumni-service-icon { width: 46px; height: 46px; display: grid; place-items: center; background: #fffdfaab; border: 1px solid #fffdfab8; border-radius: 16px; }
 .alumni-service h3 { font-size: 27px; line-height: 1.15; margin-top: 19px; }
 .alumni-service > p { font-size: 16px; line-height: 1.75; margin-top: 16px; }
-.alumni-service .alumni-service-note { font-size: 13px; line-height: 1.6; color: #525569; margin-top: 12px; }
+.alumni-service .alumni-service-note { font-size: 13px; line-height: 1.6; color: #455a67; margin-top: 12px; }
 .alumni-service-action { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 15px; font-weight: 600; min-height: 44px; margin-top: auto; padding-top: 25px; }
 .alumni-service-action svg { width: 19px; height: 19px; }
 .alumni-service-action:hover { text-decoration: underline; text-underline-offset: 4px; }
 .alumni-registration { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); gap: 28px; margin-top: 52px; align-items: start; }
-.alumni-registration-guide { padding: 30px; border: 1px solid #e2d2c8; border-radius: 28px; background: #eee7dd; }
+.alumni-registration-guide { padding: 30px; border: 1px solid #cbd7e4; border-radius: 28px; background: #e1e9f2; }
 .alumni-registration-guide > h2 { font-size: 36px; margin-top: 16px; }
 .alumni-registration-guide > p:not(.eyebrow) { margin-top: 20px; font-size: 16px; line-height: 1.75; }
 .alumni-preparation { margin-top: 26px; padding-top: 23px; border-top: 1px solid #e9b49c; }
@@ -47,7 +47,7 @@
 .alumni-registration-form .resource-embed { margin: 0; border-radius: 28px; }
 .alumni-registration-form .embed-heading { background: #dfe6f0; font-size: 17px; }
 .alumni-registration-form .embed-viewport { height: 780px; }
-.alumni-registration-form .embed-caption { background: #ebded5; }
+.alumni-registration-form .embed-caption { background: #d8e2ed; }
 .alumni-more { margin-top: 45px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 32px; border: 1px solid #fffdfa; background: var(--color-rose); border-radius: 28px 70px 28px 28px; }
 .alumni-more h2 { font-size: 36px; margin-top: 14px; }
 .alumni-more nav a { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 16px 0; border-bottom: 1px solid #abbbcd; font-size: 16px; }

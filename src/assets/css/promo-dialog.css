@@ -7,7 +7,7 @@
   border-radius: 30px;
   background: var(--color-paper);
   color: var(--color-ink);
-  box-shadow: 0 40px 120px rgb(38 40 60 / 28%), 0 2px 0 rgb(255 255 255 / 60%) inset;
+  box-shadow: 0 40px 120px rgb(23 45 58 / 28%), 0 2px 0 rgb(255 255 255 / 60%) inset;
   overflow: hidden auto;
 }
 .promo-dialog[open] { position: fixed; display: grid; grid-template-columns: minmax(250px, 0.82fr) 1.18fr; grid-template-rows: auto 1fr; }
@@ -28,7 +28,7 @@ html.promo-open { overflow: hidden; }
 .promo-dialog-tabs { grid-column: 2; grid-row: 1; z-index: 2; justify-self: start; display: flex; gap: 4px; margin: 22px 76px 0 42px; padding: 4px; border: 1px solid var(--color-border); border-radius: var(--radius-pill); background: var(--color-canvas); }
 .promo-dialog-tabs button { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 0 14px 0 12px; border: 0; border-radius: var(--radius-pill); background: transparent; color: var(--color-muted); font: 700 13px var(--font-body); white-space: nowrap; cursor: pointer; transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast); }
 .promo-dialog-tabs button:hover { color: var(--color-ink); }
-.promo-dialog-tabs button[aria-selected="true"] { background: #ffffff; color: var(--o-deep); box-shadow: 0 4px 14px rgb(38 41 60 / 10%); }
+.promo-dialog-tabs button[aria-selected="true"] { background: #ffffff; color: var(--o-deep); box-shadow: 0 4px 14px rgb(25 45 58 / 10%); }
 .promo-dialog-tab-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--o-accent); box-shadow: 0 0 0 3px var(--o-soft); }
 
 .promo-slide { grid-column: 1 / -1; grid-row: 1 / -1; display: grid; grid-template-columns: subgrid; grid-template-rows: subgrid; }

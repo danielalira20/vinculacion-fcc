@@ -1,6 +1,6 @@
 /* Cisco continues the Academias reference lock: warm territories, organic
    framing, compact libraries and diagrams built with real selectable text. */
-.cisco-cover { background: linear-gradient(120deg, #dde7f2, #efe3d8); }
+.cisco-cover { background: linear-gradient(120deg, #dde7f2, #dce7f3); }
 .cisco-cover-art { position: relative; min-height: 310px; margin: 0 10px; isolation: isolate; }
 .cisco-orbit { position: absolute; width: 265px; height: 265px; border: 1px solid #42576e37; border-radius: 50%; left: 50%; top: 0; transform: translateX(-50%); }
 .cisco-orbit.inner { width: 174px; height: 174px; top: 46px; border-style: dashed; }
@@ -19,7 +19,7 @@
 .cisco-cover-plaque strong { font-size: 32px; letter-spacing: -.05em; line-height: 1; }
 .cisco-cover-plaque small { font-size: 13px; }
 .cisco-map { margin-block: 40px; scroll-margin-top: 140px; }
-.cisco-route-tabs { position: relative; display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 6px; padding: 8px; background: #efe3d7a6; border-radius: 22px; margin-bottom: 20px; }
+.cisco-route-tabs { position: relative; display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 6px; padding: 8px; background: #dce7f3a6; border-radius: 22px; margin-bottom: 20px; }
 .cisco-route-tabs button { padding: 14px 10px; min-height: 54px; font-size: 15px; border-radius: 15px; }
 .cisco-route-panel { padding: 30px; border-radius: 30px 76px 30px 30px; scroll-margin-top: 140px; }
 .route-heading { display: grid; grid-template-columns: 58px 1fr auto; gap: 20px; align-items: start; margin-bottom: 24px; }
@@ -81,7 +81,7 @@
 .schedule-stamp svg { width: 22px; height: 22px; }
 .schedule-stamp > span { color: #616d7b; }
 .cisco-cohort-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
-.cisco-cohort { border: 1px solid #e1d3ca; border-radius: 26px 60px 26px 26px; padding: 24px; display: flex; flex-direction: column; overflow: hidden; }
+.cisco-cohort { border: 1px solid #cdd7e3; border-radius: 26px 60px 26px 26px; padding: 24px; display: flex; flex-direction: column; overflow: hidden; }
 .cisco-cohort:nth-child(2) { border-radius: 26px; }
 .cisco-cohort:nth-child(3) { border-radius: 26px 26px 60px 26px; }
 .cohort-top { display: flex; gap: 12px; justify-content: space-between; align-items: center; font-size: 13px; }

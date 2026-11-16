@@ -27,13 +27,13 @@
 .registration-story p { font-size: 17px; line-height: 1.75; }
 .registration-story .eyebrow { font-size: 11px; }
 .registration-story-stat { position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 32px; background: var(--color-lavender); border-radius: 60px 28px 28px 28px; }
-.registration-story-stat::before { content: ''; position: absolute; top: -80px; right: -100px; width: 280px; height: 280px; border: 1px solid #565b7726; border-radius: 50%; pointer-events: none; }
+.registration-story-stat::before { content: ''; position: absolute; top: -80px; right: -100px; width: 280px; height: 280px; border: 1px solid #44617426; border-radius: 50%; pointer-events: none; }
 .registration-stat-number { font-size: clamp(70px, 8vw, 115px); font-weight: 500; line-height: 1; letter-spacing: -.065em; margin-bottom: 16px; }
 .registration-stat-number > span { font-size: .55em; vertical-align: top; line-height: 1.5; }
-.registration-story-stat small { font-size: 12px; color: #515463; margin-top: 12px; }
+.registration-story-stat small { font-size: 12px; color: #485761; margin-top: 12px; }
 .registration-logo-pair { display: flex; align-items: center; gap: 14px; margin-top: 24px; }
 .registration-logo-pair img { width: 52px; height: 52px; object-fit: contain; padding: 5px; background: var(--color-ink); border-radius: 15px; }
-.registration-logo-pair > svg { width: 30px; height: 30px; color: #565b77; }
+.registration-logo-pair > svg { width: 30px; height: 30px; color: #446174; }
 .registration-story-card { display: flex; align-items: flex-start; gap: 18px; padding: 27px; border-radius: 26px; border: 1px solid #fffdfa; }
 .story-community { background: var(--color-sage); }
 .story-agreements { background: var(--color-peach); }

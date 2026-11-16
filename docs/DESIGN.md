@@ -37,13 +37,13 @@ Paleta azul BUAP + durazno (noviembre de 2026). El azul institucional lleva el p
 | Superficie clara | `#FFFDFA` |
 | Texto azul marino | `#15253B` |
 | Texto secundario gris azulado | `#5B6474` |
-| Arena | `#EDE1D6` |
+| Niebla (antes arena) | `#E9EDF3` |
 | Hielo (antes salvia) | `#DCE6F5` |
 | Durazno | `#F6DCC9` |
-| Coral empolvado | `#F2D9D0` |
-| Lavanda azulada | `#E1E3F4` |
+| Durazno claro (antes rosa) | `#FBE7DA` |
+| Celeste claro (antes lavanda) | `#D9EDF8` |
 
-Los nombres de las variables (`--color-sage`, `.theme-sage`) se conservan para no tocar las plantillas; `sage` ahora es el hielo azul. Los pasteles distinguen áreas y fondos decorativos; no sustituyen nombres ni estados textuales. Los botones principales usan azul BUAP con texto blanco en todas las secciones. Evitar texto blanco sobre pastel; sobre cada pastel, el texto usa el tono oscuro de su misma familia. Las frases editoriales en cursiva usan terracota o azul, según la sección. Red Hat conserva su rojo de marca en `redhat.css`.
+Todo el sitio usa solo dos familias: azules (azul BUAP, celeste, hielo, niebla) y durazno (durazno, durazno claro, terracota), sobre marfil. No hay lilas, beiges ni rosas; solo las marcas conservan sus colores propios (Red Hat, logotipos y fotografías). Los nombres de las variables (`--color-sage`, `--color-sand`, `.theme-lavender`…) se conservan para no tocar las plantillas: `sage` es hielo, `sand` es niebla, `rose` es durazno claro y `lavender` es celeste claro. Los pasteles distinguen áreas y fondos decorativos; no sustituyen nombres ni estados textuales. Los botones principales usan azul BUAP con texto blanco en todas las secciones. Evitar texto blanco sobre pastel; sobre cada pastel, el texto usa el tono oscuro de su misma familia. Las frases editoriales en cursiva usan terracota o azul, según la sección. Red Hat conserva su rojo de marca en `redhat.css`.
 
 Las ofertas de Educación Continua usan `.is-iris` (azul) y `.is-peach` (durazno). Los QR se generan con `scripts/qr.py` en el tono oscuro de cada oferta.
 

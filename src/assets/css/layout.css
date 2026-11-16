@@ -44,7 +44,7 @@ h3 { font-size: 21px; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 35px; }
 .section-heading .eyebrow { margin-bottom: 13px; }
 .section-heading > .text-link { white-space: nowrap; margin-bottom: 5px; }
-.site-footer { margin-top: 55px; background: #e9e3d9; border-top: 1px solid #e6d8cf; border-radius: 42px 42px 0 0; }
+.site-footer { margin-top: 55px; background: #dde5ee; border-top: 1px solid #d2dce8; border-radius: 42px 42px 0 0; }
 .footer-top { display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; padding-block: 70px 60px; }
 .footer-top h2 { font-size: 52px; margin-top: 18px; }
 .contact-mail { display: inline-flex; align-items: center; gap: 14px; font-size: 17px; margin-top: 26px; border-bottom: 1px solid #9fb0c3; padding-bottom: 6px; overflow-wrap: anywhere; }
